@@ -17,3 +17,12 @@
 
   min-height: 100vh;
 }
+
+.main-wrapper {
+  display: flex;
+}
+
+.page-wrapper {
+  flex-grow: 1;
+  padding: 2rem;
+}
