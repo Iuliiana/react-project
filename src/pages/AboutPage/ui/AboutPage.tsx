@@ -7,7 +7,6 @@ const AboutPage: React.FC = () => {
     return (
         <div>
             {t('О нас')}
-            {t('наyyyyyy')}
         </div>
     );
 };
