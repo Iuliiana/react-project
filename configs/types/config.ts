@@ -3,7 +3,6 @@ export enum AppMode {
     DEVELOPMENT_MODE = 'development'
 }
 
-
 export type BuildMode = AppMode.PRODUCTION_MODE | AppMode.DEVELOPMENT_MODE;
 
 export interface BuildPath {
