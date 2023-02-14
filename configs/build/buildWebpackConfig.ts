@@ -5,6 +5,7 @@ import { buildLoaders } from './buildLoaders';
 import { buildResolve } from './buildResolve';
 import { buildDevServer } from './buildDevServer';
 
+// eslint-disable-next-line max-len
 export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration => {
     const { mode, paths, isDev } = options;
     return {

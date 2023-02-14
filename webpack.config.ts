@@ -1,7 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
-import { buildWebpackConfig } from './configs/buildWebpackConfig';
-import { AppMode, BuildEnv, BuildPath } from './configs/types/config';
+import { buildWebpackConfig } from './configs/build/buildWebpackConfig';
+import { AppMode, BuildEnv, BuildPath } from './configs/build/types/config';
 
 export default (env: BuildEnv): webpack.Configuration => {
     const paths: BuildPath = {
@@ -15,12 +15,10 @@ export default (env: BuildEnv): webpack.Configuration => {
     const isDev = mode === AppMode.DEVELOPMENT_MODE;
     const PORT = env.port || 3000;
 
-    const config: webpack.Configuration = buildWebpackConfig({
+    return buildWebpackConfig({
         mode,
         paths,
         isDev,
         port: PORT,
     });
-
-    return config;
 };
