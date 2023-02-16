@@ -2,9 +2,9 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 
-// eslint-disable-next-line max-len
 export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstance[] => {
     const { paths, isDev } = options;
     const plugins: webpack.WebpackPluginInstance[] = [
@@ -24,6 +24,7 @@ export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstan
     if (isDev) {
         plugins.push(new webpack.HotModuleReplacementPlugin());
         plugins.push(new ReactRefreshPlugin({ overlay: false }));
+        plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
     }
 
     return plugins;

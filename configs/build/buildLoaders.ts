@@ -2,7 +2,6 @@ import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types/config';
 
-// eslint-disable-next-line max-len
 export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => {
     const tsLoader = {
         test: /\.tsx?$/,
@@ -20,7 +19,6 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
                 loader: 'css-loader',
                 options: {
                     modules: {
-                        // eslint-disable-next-line max-len
                         auto: (resPath: string) => Boolean(resPath.includes('.module.')),
                         localIdentName: isDev
                             ? '[path][name]__[local]--[hash:base64:8]'
