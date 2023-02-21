@@ -1,4 +1,4 @@
-import { classNames } from './classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 describe('classNames', () => {
     test('add class', () => {
@@ -39,7 +39,7 @@ describe('classNames', () => {
             classNames(
                 'active',
                 { hovered: undefined },
-                ['color-red'],
+                ['color-red', undefined],
             ),
         ).toBe('active color-red');
     });
