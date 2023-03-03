@@ -4,23 +4,61 @@
     background-color: var(--inversion-bg-color);
     transition: width 0.3s;
     position: relative;
-}
-
-.collapsed {
-    width: var(--sidebar-width-collapsed);
+    padding: var(--sidebar-padding);
 }
 
 .switcherContainer {
-    position: absolute;
     display: flex;
     flex-direction: column;
+    position: absolute;
     align-items: center;
-    width: 100%;
+    width: calc(100% - var(--sidebar-padding));
     bottom: 2rem;
+    gap: 1rem;
 }
 
 .collapsedButton {
     position: absolute;
     bottom: 2rem;
     right: -2rem;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+
+    svg {
+        fill: var(--inversion-primary-color);
+    }
+
+    .linkTitle {
+        opacity: 0;
+        width: 0;
+        transition: 0.2s all;
+    }
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    .switcherContainer {
+        flex-direction: row;
+        transition: 0.3s all;
+    }
+
+    .link {
+        justify-content: flex-start;
+    }
+
+    .linkTitle {
+        opacity: 1;
+        width: fit-content;
+    }
 }
