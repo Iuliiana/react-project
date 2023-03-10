@@ -5,11 +5,11 @@ import {
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || Theme.LIGHT;
 
-interface ThemeInitialProps {
+interface ThemeProviderlProps {
     initialTheme?: Theme;
     children: React.ReactNode
 }
-const ThemeProvider: React.FC<ThemeInitialProps> = (props) => {
+const ThemeProvider: React.FC<ThemeProviderlProps> = (props) => {
     const {
         initialTheme,
         children,
