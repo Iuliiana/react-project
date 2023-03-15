@@ -14,12 +14,14 @@ const config = {
         'json',
         'node',
     ],
-    moduleDirectories: [
-        'node_modules',
-    ],
-    modulePaths: [
-        '<rootDir>src',
-    ],
+    // moduleDirectories: [
+    //     'node_modules',
+    // ],
+    moduleDirectories: ['node_modules'],
+    // modulePaths: [
+    //     '<rootDir>src',
+    // ],
+    modulePaths: ['node_modules', '<rootDir>src'],
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
@@ -29,6 +31,9 @@ const config = {
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
     setupFilesAfterEnv: ['<rootDir>configs/jest/jest-setup.ts'],
+    globals: {
+        __IS_DEV__: true,
+    },
 };
 export default config;
 

@@ -4,7 +4,7 @@ import {
 } from 'shared/lib/tests/helpers/withComponentRender/withComponentRender';
 import { Sidebar } from './Sidebar';
 
-describe('Button test', () => {
+describe('Sidebar test', () => {
     test('show in the document', () => {
         withComponentRender(<Sidebar />);
         expect(screen.getByTestId('test-sidebar')).toBeInTheDocument();

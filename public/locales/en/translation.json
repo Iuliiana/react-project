@@ -6,5 +6,7 @@
   "Перезагрузить страницу": "Reload page",
   "Главная": "Home",
   "О нас": "About",
-  "Войти": "Sign in"
+  "Войти": "Sign in",
+  "decrement": "decrement",
+  "increment": "increment"
 }
