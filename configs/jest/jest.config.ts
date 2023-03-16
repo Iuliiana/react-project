@@ -14,13 +14,7 @@ const config = {
         'json',
         'node',
     ],
-    // moduleDirectories: [
-    //     'node_modules',
-    // ],
     moduleDirectories: ['node_modules'],
-    // modulePaths: [
-    //     '<rootDir>src',
-    // ],
     modulePaths: ['node_modules', '<rootDir>src'],
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
