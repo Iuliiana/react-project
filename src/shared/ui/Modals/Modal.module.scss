@@ -22,11 +22,9 @@
 .content {
     width: 60%;
     padding: 1rem;
-
-    // background: var(--inversion-bg-color);
+    background: var(--inversion-bg-color);
     transform: scale(0.5);
     transition: 0.3s transform;
-    background: wheat;
 }
 
 .opened {

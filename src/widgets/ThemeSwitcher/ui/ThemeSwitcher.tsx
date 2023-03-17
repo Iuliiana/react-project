@@ -1,8 +1,7 @@
 import { FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import LightThemeButton from 'shared/assets/icons/theme-light.svg';
-import DarkThemeButton from 'shared/assets/icons/theme-dark.svg';
-import { Theme, useTheme } from 'app/providers/ThemeProvider';
+import ThemeButton from 'shared/assets/icons/app-theme.svg';
+import { useTheme } from 'app/providers/ThemeProvider';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import cls from './ThemeSwitcher.module.scss';
 
@@ -12,7 +11,7 @@ interface ThemeSwitcherProps {
 
 export const ThemeSwitcher: FC<ThemeSwitcherProps> = (props) => {
     const { className } = props;
-    const { theme, toggleTheme } = useTheme();
+    const { toggleTheme } = useTheme();
 
     return (
         <Button
@@ -20,7 +19,7 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = (props) => {
             themeButton={ButtonTheme.CLEAR}
             onClick={toggleTheme}
         >
-            {theme === Theme.LIGHT ? <LightThemeButton /> : <DarkThemeButton />}
+            <ThemeButton />
         </Button>
     );
 };

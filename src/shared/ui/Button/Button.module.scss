@@ -9,25 +9,26 @@
     outline: none;
     border: none;
     background: none;
-    color: var(--primary-color);
+    font-weight: bold;
+    color: var(--inversion-secondary-color);
 }
 
 .outline {
     border: 2px solid var(--inversion-primary-color);
-    color: var(--primary-color);
+    color: var(--button-color);
     border-radius: 5px;
     background: none;
 }
 
 .background {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     background-color: var(--inversion-bg-color);
     border: none;
 }
 
 .backgroundInverted {
-    color: var(--inversion-bg-color);
-    background-color: var(--primary-color);
+    color: var(--button-color);
+    background-color: var(--secondary-color);
     border: none;
 }
 
