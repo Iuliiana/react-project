@@ -15,12 +15,21 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
     const svgLoader = buildSvgLoader();
 
     const fileLoader = {
-        test: /\.(png|jpe?g|gif|woff|woff2|ttf)$/i,
+        // test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+        test: /\.(png|jpe?g|gif)$/i,
         use: [
             {
                 loader: 'file-loader',
             },
         ],
+    };
+
+    const fontsLoader = {
+        test: /\.(woff(2)?|ttf|eot)$/,
+        type: 'asset/resource',
+        generator: {
+            filename: 'fonts/[name][ext]',
+        },
     };
 
     const babelLoader = {
@@ -41,6 +50,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
     };
 
     return [
+        fontsLoader,
         fileLoader,
         svgLoader,
         babelLoader,

@@ -8,5 +8,7 @@
   "О нас": "About",
   "Войти": "Sign in",
   "decrement": "decrement",
-  "increment": "increment"
+  "increment": "increment",
+  "Введите логин": "Login",
+  "Введите пароль": "Password"
 }

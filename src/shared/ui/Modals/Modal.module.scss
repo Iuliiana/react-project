@@ -46,3 +46,9 @@
         transition: 0.3s transform;
     }
 }
+
+.clear {
+    .content {
+        background: transparent;
+    }
+}
