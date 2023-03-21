@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+#имитация ci пайплайна, после оплаты github переписать на проверку линтинга изменённых файлов
 npm run lint:ts
 npm run stylelint:scss
 npm run test:unit
