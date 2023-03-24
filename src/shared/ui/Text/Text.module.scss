@@ -1,0 +1,35 @@
+.Text {
+    padding: 0.5rem 0;
+}
+
+.TextItem:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.TextTitle {
+    font: var(--font-l);
+}
+
+.TextParagraph {
+    font: var(--font-m);
+}
+
+.error {
+    .TextTitle {
+        color: var(--error-title-color);
+    }
+
+    .TextParagraph {
+        color: var(--error-text-color);
+    }
+}
+
+.primary {
+    .TextTitle {
+        color: var(--primary-color);
+    }
+
+    .TextParagraph {
+        color: var(--secondary-color);
+    }
+}

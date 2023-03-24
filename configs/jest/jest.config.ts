@@ -15,7 +15,7 @@ const config = {
         'node',
     ],
     moduleDirectories: ['node_modules'],
-    modulePaths: ['node_modules', '<rootDir>src'],
+    modulePaths: ['<rootDir>src'],
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
@@ -23,6 +23,8 @@ const config = {
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        // axios: 'axios/dist/node/axios.cjs',
+        axios: '<rootDir>/node_modules/axios/dist/node/axios.cjs',
     },
     setupFilesAfterEnv: ['<rootDir>configs/jest/jest-setup.ts'],
     globals: {

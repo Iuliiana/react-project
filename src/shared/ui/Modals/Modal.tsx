@@ -9,7 +9,7 @@ export const ModalTheme = {
     CLEAR: 'clear',
 } as const;
 
- type ValueOf<T> = T[keyof T];
+type ValueOf<T> = T[keyof T];
 // type ModalTheme = typeof ModalTheme[keyof typeof ModalTheme]
 type ModalThemeType = ValueOf<typeof ModalTheme>;
 interface ModalsProps {

@@ -127,3 +127,18 @@ OutlineXL.args = {
     themeButton: ButtonTheme.OUTLINE,
     size: ButtonSize.XL,
 };
+
+export const DisabledBackground = Template.bind({});
+DisabledBackground.args = {
+    themeButton: ButtonTheme.BACKGROUND,
+    size: ButtonSize.M,
+    disabled: true,
+};
+
+export const DisabledBackgroundDark = Template.bind({});
+DisabledBackgroundDark.args = {
+    themeButton: ButtonTheme.BACKGROUND,
+    size: ButtonSize.M,
+    disabled: true,
+};
+DisabledBackgroundDark.decorators = [ThemeDecorator(Theme.DARK)];
