@@ -4,10 +4,10 @@ import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
-import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/configs/routerConfig/routerConfig';
 import HomePageIcon from 'shared/assets/icons/home-page-icon.svg';
 import AboutPageIcon from 'shared/assets/icons/about-page-icon.svg';
+import { NavLink } from 'react-router-dom';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -40,18 +40,25 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
             </Button>
 
             <div className={cls.items}>
-                <AppLink to={RoutePath.main} className={cls.link}>
+                <NavLink
+                    className={({ isActive }) => classNames(cls.link, { [cls.active]: isActive })}
+                    to={RoutePath.main}
+                >
                     <HomePageIcon />
                     <span className={cls.linkTitle}>
                         {t('Главная')}
                     </span>
-                </AppLink>
-                <AppLink to={RoutePath.about} className={cls.link}>
+                </NavLink>
+
+                <NavLink
+                    className={({ isActive }) => classNames(cls.link, { [cls.active]: isActive })}
+                    to={RoutePath.about}
+                >
                     <AboutPageIcon />
                     <span className={cls.linkTitle}>
                         {t('О нас')}
                     </span>
-                </AppLink>
+                </NavLink>
             </div>
 
             <div className={cls.switcherContainer}>
