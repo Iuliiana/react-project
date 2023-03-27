@@ -25,6 +25,9 @@
     background: var(--inversion-bg-color);
     transform: scale(0.5);
     transition: 0.3s transform;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .opened {
