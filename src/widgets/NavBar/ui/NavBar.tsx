@@ -48,7 +48,9 @@ export const NavBar = ({ className }: NavBarProps) => {
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
             <div className={cls.navLinks}>
-                <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+                {
+                    isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+                }
                 <Button
                     onClick={onShowModal}
                     type="button"
