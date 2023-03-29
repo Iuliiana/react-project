@@ -11,7 +11,7 @@ import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLogi
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
-import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName';
+import { loginByUsername } from '../../model/services/loginByUserName/loginByUsername';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 
@@ -42,7 +42,7 @@ const LoginForm = memo(({ className, onSuccess }:LoginFormProps) => {
     }, [dispatch]);
 
     const onLogin = useCallback(async () => {
-        const result = await dispatch(loginByUserName({ username, password }));
+        const result = await dispatch(loginByUsername({ username, password }));
         if (result.meta.requestStatus === 'fulfilled') {
             onSuccess();
         }

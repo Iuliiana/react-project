@@ -29,6 +29,7 @@ const config = {
     setupFilesAfterEnv: ['<rootDir>configs/jest/jest-setup.ts'],
     globals: {
         __IS_DEV__: true,
+        __API__: '',
     },
 };
 export default config;

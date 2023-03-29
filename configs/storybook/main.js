@@ -14,5 +14,6 @@ module.exports = {
     env: (config) => ({
         ...config,
         __IS_DEV__: true,
+        __API__: '',
     }),
 };
