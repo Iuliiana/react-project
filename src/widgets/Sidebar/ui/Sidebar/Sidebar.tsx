@@ -1,25 +1,34 @@
-import React, { FC, useState } from 'react';
+import React, {
+    memo, useMemo, useState,
+} from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
-import { useTranslation } from 'react-i18next';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
-import { RoutePath } from 'shared/configs/routerConfig/routerConfig';
-import HomePageIcon from 'shared/assets/icons/home-page-icon.svg';
-import AboutPageIcon from 'shared/assets/icons/about-page-icon.svg';
-import { NavLink } from 'react-router-dom';
+import { SidebarItem } from '../SidebarItem/SidebarItem';
+import { SidebarItemsList } from '../../model/items';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
     className?: string,
 }
 
-export const Sidebar: FC<SidebarProps> = ({ className }) => {
+export const Sidebar = memo(({ className } :SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
-    const { t } = useTranslation();
     const toggleCollapsed = () => {
         setCollapsed((prevState) => !prevState);
     };
+
+    const itemsList = useMemo(() => (
+        SidebarItemsList.map((item) => (
+            <SidebarItem
+                item={item}
+                key={item.path}
+                collapsed={collapsed}
+            />
+        ))
+    ), [collapsed]);
+
     return (
         <div
             data-testid="test-sidebar"
@@ -40,25 +49,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
             </Button>
 
             <div className={cls.items}>
-                <NavLink
-                    className={({ isActive }) => classNames(cls.link, { [cls.active]: isActive })}
-                    to={RoutePath.main}
-                >
-                    <HomePageIcon />
-                    <span className={cls.linkTitle}>
-                        {t('Главная')}
-                    </span>
-                </NavLink>
-
-                <NavLink
-                    className={({ isActive }) => classNames(cls.link, { [cls.active]: isActive })}
-                    to={RoutePath.about}
-                >
-                    <AboutPageIcon />
-                    <span className={cls.linkTitle}>
-                        {t('О нас')}
-                    </span>
-                </NavLink>
+                {itemsList}
             </div>
 
             <div className={cls.switcherContainer}>
@@ -67,4 +58,4 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
             </div>
         </div>
     );
-};
+});

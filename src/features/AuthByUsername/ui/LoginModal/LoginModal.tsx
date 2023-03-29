@@ -21,7 +21,7 @@ export const LoginModal:FC<LoginModalProps> = (props) => {
             modalTheme={ModalTheme.CLEAR}
         >
             <Suspense fallback={<Loader />}>
-                <LoginFormAsync />
+                <LoginFormAsync onSuccess={onClose} />
             </Suspense>
         </Modal>
     );
