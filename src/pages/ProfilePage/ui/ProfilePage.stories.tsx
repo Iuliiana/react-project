@@ -14,10 +14,30 @@ export default {
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
 
-export const PagePrimary = Template.bind({});
-PagePrimary.args = {};
-PagePrimary.decorators = [StoreDecorator({})];
+export const ProfilePagePrimary = Template.bind({});
+ProfilePagePrimary.args = {};
+ProfilePagePrimary.decorators = [StoreDecorator({
+    profile: {
+        data: {
+            first: 'Test',
+            lastname: 'Test',
+        },
+    },
+    user: {
+        authData: {},
+    },
+})];
 
-export const PagePrimaryDark = Template.bind({});
-PagePrimaryDark.args = {};
-PagePrimaryDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+export const ProfilePagePrimaryDark = Template.bind({});
+ProfilePagePrimaryDark.args = {};
+ProfilePagePrimaryDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
+    profile: {
+        data: {
+            first: 'Test',
+            lastname: 'Test',
+        },
+    },
+    user: {
+        authData: {},
+    },
+})];

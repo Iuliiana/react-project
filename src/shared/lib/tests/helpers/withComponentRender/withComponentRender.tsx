@@ -4,7 +4,6 @@ import { MemoryRouter } from 'react-router-dom';
 import i18nForTest from 'shared/configs/i18n/i18nForTest';
 import { I18nextProvider } from 'react-i18next';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
-import { DeepPartial } from '@reduxjs/toolkit';
 
 export interface withComponentRenderParams {
     route?: string,

@@ -17,7 +17,7 @@ import cls from './LoginForm.module.scss';
 
 export interface LoginFormProps {
     className?: string,
-    onSuccess: () => void
+    onSuccess?: () => void
 }
 
 const asyncReducers: ReducersList = {
@@ -44,7 +44,9 @@ const LoginForm = memo(({ className, onSuccess }:LoginFormProps) => {
     const onLogin = useCallback(async () => {
         const result = await dispatch(loginByUsername({ username, password }));
         if (result.meta.requestStatus === 'fulfilled') {
-            onSuccess();
+            if (onSuccess) {
+                onSuccess();
+            }
         }
     }, [dispatch, onSuccess, password, username]);
 
