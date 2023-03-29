@@ -1,0 +1,19 @@
+.ProfileCard {
+    max-width: 40rem;
+}
+
+.header {
+    display: flex;
+}
+
+.editBtn {
+    margin-left: auto;
+}
+
+.content {
+    padding: 1rem 0;
+}
+
+.input:not(:last-child) {
+    margin-bottom: 0.5rem;
+}

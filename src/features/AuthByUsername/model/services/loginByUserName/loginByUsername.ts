@@ -11,7 +11,7 @@ export interface LoginByUsernameProps {
 // можно достать из state, здесь как второй вариант
 export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, ThunkConfig<string>>(
 
-    'login/loginByUserName',
+    'login/loginByUsername',
     async (authData, thunkAPI) => {
         const { dispatch, rejectWithValue, extra } = thunkAPI;
         try {
