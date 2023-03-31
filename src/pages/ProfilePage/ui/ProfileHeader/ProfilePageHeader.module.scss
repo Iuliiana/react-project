@@ -1,0 +1,9 @@
+.ProfilePageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnItem:not(:last-child) {
+    margin-right: 1rem;
+}

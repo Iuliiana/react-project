@@ -14,5 +14,10 @@
   "Форма авторизации":"Login Form",
   "Введен неверный логин или пароль":"Invalid username or password",
   "Выйти": "Logout",
-  "Профиль": "Profile"
+  "Профиль": "Profile",
+  "Валюта": "Currency",
+  "Страна": "Country",
+  "Сохранить": "Save",
+  "Отменить": "Cancel",
+  "Редактировать": "Edit"
 }

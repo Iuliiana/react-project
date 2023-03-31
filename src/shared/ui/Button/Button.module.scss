@@ -16,6 +16,14 @@
 .outline {
     border: 2px solid var(--inversion-primary-color);
     color: var(--button-color);
+    font-weight: bold;
+    border-radius: 5px;
+    background: none;
+}
+
+.cancel {
+    border: 2px solid var(--error-title-color);
+    color: var(--error-title-color);
     border-radius: 5px;
     background: none;
 }

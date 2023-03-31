@@ -4,12 +4,14 @@ import {
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
 
-type InputPropsType = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
+type InputPropsType = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
 interface InputProps extends InputPropsType {
     className?: string,
     onChange?: (value: string) => void,
-    value?: string,
-    autoFocus?:boolean
+    value?: string | number,
+    autoFocus?:boolean,
+    readonly?: boolean
+
 }
 
 export const Input:FC<InputProps> = memo((props: InputProps) => {
@@ -20,6 +22,7 @@ export const Input:FC<InputProps> = memo((props: InputProps) => {
         type = 'text',
         placeholder,
         autoFocus,
+        readonly,
         ...otherProps
     } = props;
 
@@ -52,7 +55,7 @@ export const Input:FC<InputProps> = memo((props: InputProps) => {
     };
 
     return (
-        <div className={classNames(cls.InputWrapper, {}, [className])}>
+        <div className={classNames(cls.InputWrapper, { [cls.readonly]: readonly }, [className])}>
             {placeholder && (
                 <div className={cls.inputPlaceholder}>
                     {`${placeholder}`}
@@ -69,6 +72,7 @@ export const Input:FC<InputProps> = memo((props: InputProps) => {
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onSelect={(e) => onSelect(e)}
+                    readOnly={readonly}
                     {...otherProps}
                 />
                 {

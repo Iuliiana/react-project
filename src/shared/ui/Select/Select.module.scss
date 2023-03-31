@@ -1,0 +1,62 @@
+.WrapperContainer {
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    display: inline-block;
+    margin-right: 0.3rem;
+}
+
+.SelectWrapper {
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        border-style: solid;
+        border-width: 6px 5px 0;
+        border-color: var(--inversion-bg-color) transparent transparent;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        z-index: 1;
+        margin-top: -3px;
+    }
+}
+
+.select,
+.select:focus,
+.select:hover {
+    outline: none;
+    border: none;
+    background-color: var(--bg-color);
+}
+
+/* stylelint-disable */
+.select {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 2.5rem 0.25rem 1rem;
+    appearance: none;
+    color: var(--primary-color);
+    font: inherit;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        border-color: var(--primary-color);
+        background-color: var(--bg-color);
+    }
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+/* stylelint-enable */
+.option {
+    color: var(--inverted-primary-color);
+    background: var(--inverted-bg-color);
+}

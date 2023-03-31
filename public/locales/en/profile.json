@@ -2,5 +2,13 @@
   "Профиль": "Profile",
   "Редактировать": "Edit",
   "Ваше имя": "Name",
-  "Ваша фамилия": "Lastname"
+  "Ваша фамилия": "Lastname",
+  "Возраст":"Age",
+  "Валюта": "Currency",
+  "Страна": "Country",
+  "Город": "City",
+  "Логин": "Username",
+  "Фото": "Photo",
+  "Произошла ошибка": "An error occurred",
+  "Попробуйте перезагрузить страницу": "Try reloading the page"
 }

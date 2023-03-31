@@ -2,8 +2,9 @@
     max-width: 40rem;
 }
 
-.header {
+.avatar {
     display: flex;
+    justify-content: center;
 }
 
 .editBtn {
@@ -16,4 +17,12 @@
 
 .input:not(:last-child) {
     margin-bottom: 0.5rem;
+}
+
+.loading,
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
 }
