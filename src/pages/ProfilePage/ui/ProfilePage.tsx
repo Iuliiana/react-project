@@ -10,14 +10,17 @@ import {
     getProfileForm,
     getProfileIsLoading,
     getProfileReadonly,
+    getProfileValidateErrors,
     profileActions,
-    ProfileCard,
+    ProfileCard, ProfileErrorsCode,
     profileReducer,
 } from 'entities/Profile';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { useTranslation } from 'react-i18next';
 
 interface ProfilePageProps {
     className?: string,
@@ -30,6 +33,8 @@ const asyncReducers: ReducersList = {
 const ProfilePage = memo((props:ProfilePageProps) => {
     const { className } = props;
     const dispatch = useAppDispatch();
+    const { t } = useTranslation('profile');
+
     useEffect(() => {
         dispatch(fetchProfileData());
     }, [dispatch]);
@@ -38,6 +43,16 @@ const ProfilePage = memo((props:ProfilePageProps) => {
     const error = useSelector(getProfileError);
     const isLoading = useSelector(getProfileIsLoading);
     const readonly = useSelector(getProfileReadonly);
+    const validateErrors = useSelector(getProfileValidateErrors);
+
+    const errorsMap = {
+        [ProfileErrorsCode.INCORRECT_USERDATA]: t('Введите корректные пользовательские данные'),
+        [ProfileErrorsCode.INCORRECT_AGE]: t('Введите корректный возраст'),
+        [ProfileErrorsCode.INCORRECT_CITY]: t('Введите корректный город'),
+        [ProfileErrorsCode.INCORRECT_USERNAME]: t('Введите корректный логин'),
+        [ProfileErrorsCode.EMPTY_DATA]: t('Вы пытаетесь отправить пустой профиль'),
+        [ProfileErrorsCode.SERVER_ERROR]: t('Ошибка при обновлении данных. Попробуйте ещё раз.'),
+    };
 
     const onChangeFirst = useCallback((value?: string) => {
         dispatch(profileActions.setFormData({ first: value || '' }));
@@ -48,7 +63,7 @@ const ProfilePage = memo((props:ProfilePageProps) => {
     }, [dispatch]);
 
     const onChangeAge = useCallback((value?: string) => {
-        const age = value?.trim().replace('[^0-9]', '') || 0;
+        const age = value?.trim().replace('[^0-9]', '');
         dispatch(profileActions.setFormData({ age: Number(age) }));
     }, [dispatch]);
 
@@ -74,6 +89,12 @@ const ProfilePage = memo((props:ProfilePageProps) => {
 
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount>
+            {
+                validateErrors && validateErrors.map((error) => (
+                    <Text textTheme={TextTheme.ERROR} text={errorsMap[error]} key={errorsMap[error]} />
+                ))
+            }
+
             <div className={classNames('', {}, [className])}>
                 <ProfileCard
                     data={data}
