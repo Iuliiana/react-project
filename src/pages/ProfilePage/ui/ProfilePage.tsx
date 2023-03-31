@@ -12,7 +12,9 @@ import {
     getProfileReadonly,
     getProfileValidateErrors,
     profileActions,
-    ProfileCard, ProfileErrorsCode,
+    ProfileCard,
+    ProfileErrorsCode,
+    ProfilePageHeader,
     profileReducer,
 } from 'entities/Profile';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
@@ -36,7 +38,9 @@ const ProfilePage = memo((props:ProfilePageProps) => {
     const { t } = useTranslation('profile');
 
     useEffect(() => {
-        dispatch(fetchProfileData());
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchProfileData());
+        }
     }, [dispatch]);
 
     const data = useSelector(getProfileForm);
@@ -96,6 +100,7 @@ const ProfilePage = memo((props:ProfilePageProps) => {
             }
 
             <div className={classNames('', {}, [className])}>
+                <ProfilePageHeader />
                 <ProfileCard
                     data={data}
                     readonly={readonly}

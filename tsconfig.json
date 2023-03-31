@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "outDir": "./build/",
     "noImplicitAny": true,
     "module": "ESNext",
@@ -8,8 +10,6 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"]

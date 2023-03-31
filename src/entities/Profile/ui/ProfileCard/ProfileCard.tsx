@@ -4,7 +4,7 @@ import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { Input } from 'shared/ui/Input/Input';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Loader } from 'shared/ui/Loader/Loader';
-import { Profile, ProfilePageHeader } from 'entities/Profile';
+import { Profile } from 'entities/Profile';
 import { Currency, CurrencySelect } from 'entities/Currency';
 import { Country, CountrySelect } from 'entities/Country';
 import cls from './ProfileCard.module.scss';
@@ -67,8 +67,6 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     return (
         <div className={classNames(cls.ProfileCard, {}, [className])}>
-
-            <ProfilePageHeader />
             <div className={cls.content}>
                 <div className={cls.avatar}>
                     {data?.avatar && <Avatar alt={t('Фото')} pic={data?.avatar} size={150} />}

@@ -3,6 +3,9 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/configs/storybook/StoreDecorator';
+import AvatariPicTest from 'shared/assets/pic/test/test-avatar.jpg';
+import { Currency } from 'entities/Currency';
+import { Country } from 'entities/Country';
 import ProfilePage from './ProfilePage';
 
 export default {
@@ -18,13 +21,17 @@ export const ProfilePagePrimary = Template.bind({});
 ProfilePagePrimary.args = {};
 ProfilePagePrimary.decorators = [StoreDecorator({
     profile: {
-        data: {
-            first: 'Test',
-            lastname: 'Test',
+        form: {
+            first: 'Джейн',
+            lastname: 'Доу',
+            age: 28,
+            currency: Currency.USD,
+            country: Country.Canada,
+            city: 'Moscow',
+            username: 'admin',
+            avatar: AvatariPicTest,
         },
-    },
-    user: {
-        authData: {},
+        readonly: true,
     },
 })];
 
@@ -32,12 +39,52 @@ export const ProfilePagePrimaryDark = Template.bind({});
 ProfilePagePrimaryDark.args = {};
 ProfilePagePrimaryDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
     profile: {
-        data: {
-            first: 'Test',
-            lastname: 'Test',
+        form: {
+            first: 'Джейн',
+            lastname: 'Доу',
+            age: 28,
+            currency: Currency.USD,
+            country: Country.Canada,
+            city: 'Moscow',
+            username: 'admin',
+            avatar: AvatariPicTest,
         },
+        readonly: true,
     },
-    user: {
-        authData: {},
+})];
+
+export const ProfilePageEditState = Template.bind({});
+ProfilePageEditState.args = {};
+ProfilePageEditState.decorators = [StoreDecorator({
+    profile: {
+        form: {
+            first: 'Джейн',
+            lastname: 'Доу',
+            age: 28,
+            currency: Currency.USD,
+            country: Country.Canada,
+            city: 'Moscow',
+            username: 'admin',
+            avatar: AvatariPicTest,
+        },
+        readonly: false,
+    },
+})];
+
+export const ProfilePageEditStateDark = Template.bind({});
+ProfilePageEditStateDark.args = {};
+ProfilePageEditStateDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
+    profile: {
+        form: {
+            first: 'Джейн',
+            lastname: 'Доу',
+            age: 28,
+            currency: Currency.USD,
+            country: Country.Canada,
+            city: 'Moscow',
+            username: 'admin',
+            avatar: AvatariPicTest,
+        },
+        readonly: false,
     },
 })];
