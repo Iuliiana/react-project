@@ -5,6 +5,7 @@ import cls from './Text.module.scss';
 export const TextTheme = {
     ERROR: 'error',
     PRIMARY: 'primary',
+    INVERT: 'invert',
 } as const;
 
 export const TextAlign = {

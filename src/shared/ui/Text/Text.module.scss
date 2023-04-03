@@ -1,5 +1,5 @@
 .Text {
-    padding: 0.5rem 0;
+    margin-bottom: 1rem;
 }
 
 .TextItem:not(:last-child) {
@@ -31,6 +31,16 @@
 
     .TextParagraph {
         color: var(--secondary-color);
+    }
+}
+
+.invert {
+    .TextTitle {
+        color: var(--inversion-primary-color);
+    }
+
+    .TextParagraph {
+        color: var(--inversion-secondary-color);
     }
 }
 

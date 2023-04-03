@@ -3,10 +3,10 @@
 @import "./variables/global";
 @import "./themes/app_dark_theme";
 @import "./themes/app_light_theme";
+@import "./themes/app_chocolate_theme";
 
 ::selection {
     background: var(--button-color);
-    color: var(--inversion-primary-color);
 }
 
 body {

@@ -30,12 +30,12 @@
 
 .background {
     color: var(--secondary-color);
-    background-color: var(--inversion-bg-color);
+    background-color: var(--button-color);
     border: none;
 }
 
 .backgroundInverted {
-    color: var(--inversion-bg-color);
+    color: var(--inversion-primary-color);
     background-color: var(--secondary-color);
     border: none;
     font-weight: bold;

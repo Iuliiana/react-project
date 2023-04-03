@@ -4,7 +4,8 @@
     flex-direction: column;
     flex-grow: 1;
     padding: 2rem;
-    background: var(--inversion-bg-color);
+    background: var(--bg-color);
+    color: var(--primary-color);
     max-width: 40rem;
     margin: 0 auto;
 }
@@ -15,4 +16,5 @@
 
 .loginBtn {
     border-radius: var(--modal-border-radius);
+    background: var(--button-color);
 }

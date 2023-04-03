@@ -21,12 +21,12 @@
 .inputPlaceholder {
     margin-right: 0.3rem;
     word-wrap: break-word;
-    color: var(--primary-color);
+    color: inherit;
 
     .arrow {
         display: inline-block;
         margin-left: 0.1rem;
-        color: var(--primary-color);
+        color: inherit;
         font-weight: bold;
         vertical-align: middle;
     }
@@ -43,7 +43,7 @@
     left: 0;
     height: 3px;
     width: 9px;
-    background: var(--primary-color);
+    background: var(--icon-color);
     animation: blink 0.7s forwards infinite;
 }
 
