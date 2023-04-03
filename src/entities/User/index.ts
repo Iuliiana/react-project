@@ -1,4 +1,8 @@
 export {
+    getUserIsInitAuth,
+} from './model/selectors/getUserIsInitAuth/getUserIsInitAuth';
+
+export {
     getUserAuthData,
 } from './model/selectors/getUserAuthData/getUserAuthData';
 
