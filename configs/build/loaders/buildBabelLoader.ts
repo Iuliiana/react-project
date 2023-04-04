@@ -16,7 +16,7 @@ export const buildBabelLoader = ({ isDev }: BuildOptions) => ({
                     },
                 ],
                 isDev && require.resolve('react-refresh/babel'),
-            ],
+            ].filter(Boolean),
         },
     },
 });
