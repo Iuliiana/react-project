@@ -9,12 +9,13 @@ export enum ButtonTheme {
     SQUARE = 'square',
     BACKGROUND = 'background',
     BACKGROUND_INVERTRD = 'backgroundInverted',
+    HIGHLIGHT = 'highlight'
 }
 
 export enum ButtonSize {
-    M='size_m',
-    L='size_l',
-    XL='size_xl',
+    M = 'size_m',
+    L = 'size_l',
+    XL = 'size_xl',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

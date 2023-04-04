@@ -1,0 +1,20 @@
+.Code {
+    width: 100%;
+    padding: 2rem;
+    border: 2px solid var(--accent-color);
+    overflow: auto;
+    background: var(--code-bg-color);
+    color: var(--primary-color);
+    position: relative;
+}
+
+.icon {
+    stroke: var(--icon-color);
+    fill: transparent;
+}
+
+.btnCopy {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}

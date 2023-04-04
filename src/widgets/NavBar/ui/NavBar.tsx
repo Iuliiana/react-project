@@ -1,7 +1,7 @@
 import React, { memo, useCallback, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Button } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
@@ -37,6 +37,7 @@ export const NavBar = memo(({ className }: NavBarProps) => {
                     <Button
                         onClick={onLogoutClick}
                         type="button"
+                        themeButton={ButtonTheme.HIGHLIGHT}
                     >
                         {t('Выйти')}
                     </Button>
@@ -54,6 +55,7 @@ export const NavBar = memo(({ className }: NavBarProps) => {
                 <Button
                     onClick={onShowModal}
                     type="button"
+                    themeButton={ButtonTheme.HIGHLIGHT}
                 >
                     {t('Войти')}
                 </Button>

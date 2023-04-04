@@ -8,6 +8,18 @@
     cursor: pointer;
     color: var(--primary-color);
 
+    svg {
+        fill: var(--icon-color);
+        margin-right: 1rem;
+    }
+
+    &:hover {
+        svg {
+            transform: scale(1.1);
+            fill: var(--accent-color);
+        }
+    }
+
     &.active {
         background: var(--bg-color);
         border-radius: 1rem 0 0 1rem;
@@ -32,11 +44,6 @@
             right: 0;
             box-shadow: 1rem -1rem 0 var(--bg-color);
         }
-    }
-
-    svg {
-        fill: var(--icon-color);
-        margin-right: 1rem;
     }
 
     .linkTitle {

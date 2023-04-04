@@ -1,0 +1,33 @@
+.ArticleDetails {
+    display: block;
+}
+
+.avatar {
+    margin: 0 auto 2rem;
+}
+
+.mBottom2Rem {
+    margin-bottom: 2rem;
+}
+
+.block {
+    margin-bottom: 2rem;
+}
+
+.articleInfo {
+    display: flex;
+    align-items: center;
+
+    .iconTitle {
+        margin-bottom: 0;
+    }
+
+    .icon {
+        margin-right: 0.8rem;
+        width: 23px;
+    }
+}
+
+.articleInfo:not(:last-child) {
+    margin-bottom: 0.5rem;
+}

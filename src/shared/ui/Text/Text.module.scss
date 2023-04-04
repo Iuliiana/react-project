@@ -6,12 +6,34 @@
     margin-bottom: 1rem;
 }
 
-.TextTitle {
-    font: var(--font-l);
+.size_s {
+    .TextTitle {
+        font: var(--font-m);
+    }
+
+    .TextParagraph {
+        font: var(--font-s);
+    }
 }
 
-.TextParagraph {
-    font: var(--font-m);
+.size_m {
+    .TextTitle {
+        font: var(--font-l);
+    }
+
+    .TextParagraph {
+        font: var(--font-m);
+    }
+}
+
+.size_l {
+    .TextTitle {
+        font: var(--font-xl);
+    }
+
+    .TextParagraph {
+        font: var(--font-l);
+    }
 }
 
 .error {

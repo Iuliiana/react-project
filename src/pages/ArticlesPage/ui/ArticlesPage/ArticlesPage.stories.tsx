@@ -5,7 +5,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import ArticlesPage from './ArticlesPage';
 
 export default {
-    title: 'STORIES_DIR/ArticlesPage',
+    title: 'pages/ArticlesPage',
     component: ArticlesPage,
     argTypes: {},
     args: {},

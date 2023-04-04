@@ -1,8 +1,9 @@
 .Sidebar {
-    width: var(--sidebar-width);
+    max-width: var(--sidebar-width);
+    width: 100%;
     height: calc(100vh - var(--navbar-height));
     background-color: var(--block-bg-color);
-    transition: width 0.3s;
+    transition: max-width 0.3s;
     position: relative;
 
     // padding: var(--sidebar-padding);
@@ -36,7 +37,7 @@
 }
 
 .collapsed {
-    width: var(--sidebar-width-collapsed);
+    max-width: var(--sidebar-width-collapsed);
 
     .switcherContainer {
         flex-direction: row;
