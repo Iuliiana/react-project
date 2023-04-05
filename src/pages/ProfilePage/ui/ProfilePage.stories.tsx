@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/configs/storybook/StoreDecorator';
-import AvatariPicTest from 'shared/assets/pic/test/test-avatar.jpg';
+// import AvatariPicTest from 'shared/assets/pic/test/test-avatar.jpg';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import ProfilePage from './ProfilePage';
@@ -29,7 +29,7 @@ ProfilePagePrimary.decorators = [StoreDecorator({
             country: Country.Canada,
             city: 'Moscow',
             username: 'admin',
-            avatar: AvatariPicTest,
+            avatar: 'https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png',
         },
         readonly: true,
     },
@@ -47,7 +47,7 @@ ProfilePagePrimaryDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator(
             country: Country.Canada,
             city: 'Moscow',
             username: 'admin',
-            avatar: AvatariPicTest,
+            avatar: 'https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png',
         },
         readonly: true,
     },
@@ -65,7 +65,7 @@ ProfilePageEditState.decorators = [StoreDecorator({
             country: Country.Canada,
             city: 'Moscow',
             username: 'admin',
-            avatar: AvatariPicTest,
+            avatar: 'https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png',
         },
         readonly: false,
     },
@@ -83,7 +83,7 @@ ProfilePageEditStateDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorato
             country: Country.Canada,
             city: 'Moscow',
             username: 'admin',
-            avatar: AvatariPicTest,
+            avatar: 'https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png',
         },
         readonly: false,
     },
