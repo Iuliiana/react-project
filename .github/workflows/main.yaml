@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Tests
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
@@ -38,5 +38,11 @@ jobs:
       - name: Build storybook
         run: npm run storybook:build
         if: always()
-      - name: Ui testing
+      - name: Run Loki (UI)
         run: npm run test:ui:ci
+      - name: Archive screenshots
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v1
+        with:
+            name: design-system
+            path: .loki
