@@ -1,4 +1,4 @@
-import { ProfileErrorsCode, putProfileData } from 'entities/Profile';
+import { ProfileErrorsCode, updateProfileData } from 'entities/Profile';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import { profileActions, profileReducer } from './profileSlice';
@@ -53,7 +53,7 @@ describe('profileSlice.test', () => {
         });
     });
 
-    test('putProfileData.pending', () => {
+    test('updateProfileData.pending', () => {
         const state: ProfileSchema = {
             readonly: false,
             validationErrors: [ProfileErrorsCode.SERVER_ERROR],
@@ -61,7 +61,7 @@ describe('profileSlice.test', () => {
         };
 
         expect(
-            profileReducer(state, putProfileData.pending),
+            profileReducer(state, updateProfileData.pending),
         ).toEqual({
             readonly: false,
             validationErrors: undefined,
@@ -70,13 +70,13 @@ describe('profileSlice.test', () => {
         });
     });
 
-    test('putProfileData.fulfilled', () => {
+    test('updateProfileData.fulfilled', () => {
         const state: ProfileSchema = {
             readonly: false,
             isLoading: false,
         };
         expect(
-            profileReducer(state, putProfileData.fulfilled(data, '')),
+            profileReducer(state, updateProfileData.fulfilled(data, '')),
         ).toEqual({
             readonly: true,
             validationErrors: undefined,

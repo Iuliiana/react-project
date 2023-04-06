@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect } from 'react';
+import { memo, useCallback } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader,
@@ -23,6 +23,8 @@ import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
+import { useInitialEffect } from 'shared/hooks/useInitialEffect/useInitialEffect';
 
 interface ProfilePageProps {
     className?: string,
@@ -36,12 +38,13 @@ const ProfilePage = memo((props:ProfilePageProps) => {
     const { className } = props;
     const dispatch = useAppDispatch();
     const { t } = useTranslation('profile');
+    const { id } = useParams<{id : string}>();
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchProfileData());
+    useInitialEffect(() => {
+        if (id) {
+            dispatch(fetchProfileData(id));
         }
-    }, [dispatch]);
+    });
 
     const data = useSelector(getProfileForm);
     const error = useSelector(getProfileError);

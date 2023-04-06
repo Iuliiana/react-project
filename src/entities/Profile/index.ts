@@ -11,8 +11,8 @@ export {
 } from './model/services/fetchProfileData/fetchProfileData';
 
 export {
-    putProfileData,
-} from './model/services/putProfileData/putProfileData';
+    updateProfileData,
+} from './model/services/updateProfileData/updateProfileData';
 
 export {
     profileReducer,

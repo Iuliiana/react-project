@@ -8,6 +8,8 @@ import { AxiosInstance } from 'axios';
 import { NavigateOptions } from 'react-router';
 import { To } from 'react-router-dom';
 import { ArticleDetailsSchema } from 'entities/Article';
+import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
+import { AddCommentFormSchema } from 'features/AddCommentForm';
 
 export interface StateSchema {
     counter: CounterSchema,
@@ -16,7 +18,9 @@ export interface StateSchema {
     // асинхронные редьюсеры
     loginForm?: LoginShema,
     profile?: ProfileSchema,
-    articleDetails?: ArticleDetailsSchema
+    articleDetails?: ArticleDetailsSchema,
+    articleDetailsComments?: ArticleDetailsCommentsSchema,
+    addCommentForm?: AddCommentFormSchema,
 
 }
 

@@ -1,0 +1,27 @@
+.CommentItem {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--icon-color);
+}
+
+.CommentItem:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.avatar {
+    margin-right: 0.5rem;
+}
+
+.headerTitle {
+    margin: 0;
+}
+
+.contentText {
+    margin-bottom: 0;
+}

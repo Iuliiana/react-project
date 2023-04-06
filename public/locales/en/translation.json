@@ -15,9 +15,14 @@
   "Введен неверный логин или пароль":"Invalid username or password",
   "Выйти": "Logout",
   "Профиль": "Profile",
+  "Статьи": "Articles",
   "Валюта": "Currency",
   "Страна": "Country",
   "Сохранить": "Save",
   "Отменить": "Cancel",
-  "Редактировать": "Edit"
+  "Редактировать": "Edit",
+  "Комментарии": "Comments",
+  "Комментарии отсутствуют": "Comments not found",
+  "Отправить": "Send",
+  "Введите текст комментария": "Enter comment text"
 }

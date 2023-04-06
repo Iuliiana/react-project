@@ -4,8 +4,9 @@ import { memo, useCallback } from 'react';
 import { Text } from 'shared/ui/Text/Text';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
-import { profileActions, putProfileData } from 'entities/Profile';
+import { getProfileData, profileActions, updateProfileData } from 'entities/Profile';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
+import { getUserAuthData } from 'entities/User';
 import { getProfileReadonly } from '../../../../entities/Profile/model/selectors/getProfileReadonly/getProfileReadonly';
 import cls from './ProfilePageHeader.module.scss';
 
@@ -21,6 +22,10 @@ export const ProfilePageHeader = memo((props: ProfilePageHeaderProps) => {
 
     const readonly = useSelector(getProfileReadonly);
     const dispatch = useAppDispatch();
+    const authData = useSelector(getUserAuthData);
+    const profileData = useSelector(getProfileData);
+
+    const isEditProfile = authData?.id === profileData?.id;
 
     const onEdit = useCallback(() => {
         dispatch(profileActions.setReadonly(false));
@@ -31,42 +36,44 @@ export const ProfilePageHeader = memo((props: ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     const onSave = useCallback(() => {
-        dispatch(putProfileData());
+        dispatch(updateProfileData());
     }, [dispatch]);
 
     return (
         <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
             <Text title={t('Профиль')} />
-            <div className={cls.btns}>
-                {
-                    readonly ? (
-                        <Button
-                            className={classNames(cls.editBtn, {}, [cls.btnItem])}
-                            onClick={onEdit}
-                            themeButton={ButtonTheme.OUTLINE}
-                        >
-                            {t('Редактировать')}
-                        </Button>
-                    ) : (
-                        <>
+            { isEditProfile && (
+                <div className={cls.btns}>
+                    {
+                        readonly ? (
                             <Button
-                                className={classNames(cls.cancelBtn, {}, [cls.btnItem])}
-                                onClick={onCancel}
-                                themeButton={ButtonTheme.CANCEL}
-                            >
-                                {t('Отменить')}
-                            </Button>
-                            <Button
-                                className={classNames(cls.saveBtn, {}, [cls.btnItem])}
-                                onClick={onSave}
+                                className={classNames(cls.editBtn, {}, [cls.btnItem])}
+                                onClick={onEdit}
                                 themeButton={ButtonTheme.OUTLINE}
                             >
-                                {t('Сохранить')}
+                                {t('Редактировать')}
                             </Button>
-                        </>
-                    )
-                }
-            </div>
+                        ) : (
+                            <>
+                                <Button
+                                    className={classNames(cls.cancelBtn, {}, [cls.btnItem])}
+                                    onClick={onCancel}
+                                    themeButton={ButtonTheme.CANCEL}
+                                >
+                                    {t('Отменить')}
+                                </Button>
+                                <Button
+                                    className={classNames(cls.saveBtn, {}, [cls.btnItem])}
+                                    onClick={onSave}
+                                    themeButton={ButtonTheme.OUTLINE}
+                                >
+                                    {t('Сохранить')}
+                                </Button>
+                            </>
+                        )
+                    }
+                </div>
+            )}
         </div>
     );
 });

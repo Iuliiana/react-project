@@ -3,9 +3,9 @@ import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { ProfileErrorsCode } from '../../types/ProfileSchema';
-import { putProfileData } from './putProfileData';
+import { updateProfileData } from './updateProfileData';
 
-describe('putProfileData.test', () => {
+describe('updateProfileData.test', () => {
     const data = {
         first: 'Джейн',
         lastname: 'Доу',
@@ -23,7 +23,7 @@ describe('putProfileData.test', () => {
             },
         };
 
-        const thunk = new TestAsyncThunk(putProfileData, state);
+        const thunk = new TestAsyncThunk(updateProfileData, state);
         thunk.api.put.mockReturnValue(Promise.resolve({ data: { ...data, first: 'Джулия' } }));
 
         const result = await thunk.callThunk();
@@ -39,7 +39,7 @@ describe('putProfileData.test', () => {
                 form: data,
             },
         };
-        const thunk = new TestAsyncThunk(putProfileData, state);
+        const thunk = new TestAsyncThunk(updateProfileData, state);
         thunk.api.put.mockReturnValue(Promise.resolve({ status: 403 }));
 
         const result = await thunk.callThunk();
@@ -57,7 +57,7 @@ describe('putProfileData.test', () => {
                 form: { ...data, first: '' },
             },
         };
-        const thunk = new TestAsyncThunk(putProfileData, state);
+        const thunk = new TestAsyncThunk(updateProfileData, state);
         const result = await thunk.callThunk();
 
         expect(result.meta.requestStatus).toBe('rejected');
