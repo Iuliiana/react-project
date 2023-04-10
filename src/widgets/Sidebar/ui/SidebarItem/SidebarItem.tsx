@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from 'entities/User';
 import cls from './SidebarItem.module.scss';
-import { SidebarItemType } from '../../model/items';
+import { SidebarItemType } from '../../model/types/SidebarItemsType';
 
 interface SidebarItemProps {
     item: SidebarItemType,
