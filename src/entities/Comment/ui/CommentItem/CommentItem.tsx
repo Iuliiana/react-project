@@ -11,7 +11,7 @@ import cls from './CommentItem.module.scss';
 interface CommentItemProps {
     className?: string,
     isLoading?: boolean,
-    comment: Comment
+    comment?: Comment
 }
 
 export const CommentItem = memo((props: CommentItemProps) => {
@@ -29,6 +29,10 @@ export const CommentItem = memo((props: CommentItemProps) => {
                 </div>
             </div>
         );
+    }
+
+    if (!comment) {
+        return null;
     }
 
     return (
