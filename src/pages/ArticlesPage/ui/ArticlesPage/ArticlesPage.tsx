@@ -1,6 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
+import { ArticleList } from 'entities/Article';
 import cls from './ArticlesPage.module.scss';
 
 interface ArticlesPageProps {
@@ -9,10 +10,10 @@ interface ArticlesPageProps {
 
 const ArticlesPage = (props: ArticlesPageProps) => {
     const { className } = props;
-    const { t } = useTranslation('articles');
+    // const { t } = useTranslation('articles');
     return (
         <div className={classNames(cls.ArticlesPage, {}, [className])}>
-            {t('Статьи')}
+            <ArticleList articles={[]} />
         </div>
     );
 };
