@@ -6,7 +6,9 @@ import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/hooks/useInitialEffect/useInitialEffect';
 import { ArticleViewSelector } from 'features/ArticleViewSelector';
-import { fetchArticlesList } from '../../model/services/fetchArticlesList';
+import { Page } from 'shared/ui/Page/Page';
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { getArticlesPageIsLoading, getArticlesPageView } from '../../model/selectors/articlesPage';
 import { articlesPageReducer, articlesPageActions, getArticles } from '../../model/slice/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
@@ -31,13 +33,24 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(fetchArticlesList());
         dispatch(articlesPageActions.initialView());
+        dispatch(fetchArticlesList({
+            page: 1,
+        }));
     });
+
+    const onLoadMoreArticles = useCallback(() => {
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchNextArticlesPage());
+        }
+    }, [dispatch]);
 
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers}>
-            <div className={classNames(cls.ArticlesPage, {}, [className])}>
+            <Page
+                className={classNames(cls.ArticlesPage, {}, [className])}
+                onScrollEnd={onLoadMoreArticles}
+            >
                 <ArticleViewSelector
                     view={view}
                     onChangeViewArticles={onChangeViewArticles}
@@ -48,7 +61,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
                     view={view}
                     articles={articles}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
 
     );

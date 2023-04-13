@@ -91,9 +91,16 @@ describe('fetchArticlesList.test', () => {
         const thunk = new TestAsyncThunk(fetchArticlesList);
         thunk.api.get.mockReturnValue(Promise.resolve({ data: articles }));
 
-        const result = await thunk.callThunk();
+        const result = await thunk.callThunk({ page: 3 });
 
         expect(thunk.api.get).toHaveBeenCalled();
+        expect(thunk.api.get).toHaveBeenCalledWith('/articles', {
+            params: {
+                _expand: 'user',
+                _page: 3,
+                _limit: 15,
+            },
+        });
         expect(result.meta.requestStatus).toBe('fulfilled');
         expect(result.payload).toEqual(articles);
     });
@@ -102,7 +109,7 @@ describe('fetchArticlesList.test', () => {
         const thunk = new TestAsyncThunk(fetchArticlesList);
         thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
 
-        const result = await thunk.callThunk();
+        const result = await thunk.callThunk({ page: 1 });
 
         expect(thunk.api.get).toHaveBeenCalled();
         expect(result.meta.requestStatus).toBe('rejected');

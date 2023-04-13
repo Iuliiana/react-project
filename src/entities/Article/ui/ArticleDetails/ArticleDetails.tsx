@@ -88,6 +88,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                 <Skeleton width="100px" height={20} className={cls.articleInfo} />
                 <Skeleton width="100px" height={20} className={cls.mBottom2Rem} />
                 <Skeleton width="100%" height={200} className={cls.mBottom2Rem} />
+                <Skeleton width="100%" height={200} className={cls.mBottom2Rem} />
             </>
         );
     } else if (error) {

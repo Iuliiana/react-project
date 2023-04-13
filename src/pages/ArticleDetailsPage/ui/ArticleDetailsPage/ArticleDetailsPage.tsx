@@ -12,6 +12,7 @@ import { useSelector } from 'react-redux';
 import { AddCommentForm } from 'features/AddCommentForm';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/configs/routerConfig/routerConfig';
+import { Page } from 'shared/ui/Page/Page';
 import { addArticleDetailsComment } from '../../model/services/addArticleDetailsComment/addArticleDetailsComment';
 import { getArticleDetailsCommentsIsLoading } from '../../model/selectors/comments';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
@@ -46,12 +47,16 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     }, [navigate]);
 
     if (!id) {
-        return <Text title={t('Статья не найдена')} />;
+        return (
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+                <Text title={t('Статья не найдена')} />
+            </Page>
+        );
     }
 
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount>
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <Button
                     onClick={onBackToArticles}
                     themeButton={ButtonTheme.HIGHLIGHT}
@@ -72,7 +77,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                         isLoading={commentsIsLoading}
                     />
                 </div>
-            </div>
+            </Page>
         </DynamicModuleLoader>
 
     );

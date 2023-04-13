@@ -25,6 +25,7 @@ import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { useInitialEffect } from 'shared/hooks/useInitialEffect/useInitialEffect';
+import { Page } from 'shared/ui/Page/Page';
 
 interface ProfilePageProps {
     className?: string,
@@ -102,7 +103,7 @@ const ProfilePage = memo((props:ProfilePageProps) => {
                 ))
             }
 
-            <div className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
                 <ProfileCard
                     data={data}
@@ -119,7 +120,7 @@ const ProfilePage = memo((props:ProfilePageProps) => {
                     onChangeCountry={onChangeCountry}
 
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
 
     );

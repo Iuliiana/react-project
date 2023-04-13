@@ -1,9 +1,10 @@
 .grid {
     max-width: 16rem;
+    width: 100%;
     flex-grow: 1;
-    padding: 1rem;
     transition: 0.2s all;
     cursor: pointer;
+    margin-bottom: 2rem;
 
     .img {
         position: relative;

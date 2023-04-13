@@ -2,7 +2,7 @@ import { Article, ArticleViewType } from 'entities/Article';
 import { ArticleBlocksType, ArticleType } from 'entities/Article/model/types/article';
 import {
     fetchArticlesList,
-} from '../services/fetchArticlesList';
+} from '../services/fetchArticlesList/fetchArticlesList';
 import {
     articlesPageReducer,
 } from './articlesPageSlice';
@@ -99,6 +99,8 @@ describe('articlesPageSlice.test', () => {
             error: undefined,
             isLoading: true,
             view: ArticleViewType.GRID,
+            hasMore: true,
+            page: 1,
         });
     });
 
@@ -109,10 +111,12 @@ describe('articlesPageSlice.test', () => {
             error: undefined,
             isLoading: false,
             view: ArticleViewType.GRID,
+            hasMore: true,
+            page: 1,
         };
 
         expect(
-            articlesPageReducer(state, fetchArticlesList.fulfilled(articles, '')),
+            articlesPageReducer(state, fetchArticlesList.fulfilled(articles, '', { page: 1 })),
         ).toEqual({
             ids: ['0', '1', '2'],
             entities: {
@@ -123,6 +127,8 @@ describe('articlesPageSlice.test', () => {
             error: undefined,
             isLoading: false,
             view: ArticleViewType.GRID,
+            hasMore: true,
+            page: 1,
         });
     });
 });

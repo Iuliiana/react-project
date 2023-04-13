@@ -1,5 +1,5 @@
 import React, {
-    memo, Suspense, useCallback, useMemo,
+    memo, Suspense, useCallback,
 } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { AppRoutePrups, routeConfig } from 'shared/configs/routerConfig/routerConfig';
@@ -8,7 +8,7 @@ import { RequireAuth } from './RequireAuth';
 
 const AppRouter = () => {
     const renderWidthRequireAuth = useCallback((route: AppRoutePrups) => {
-        const element = <div className="page-wrapper">{route.element}</div>;
+        const element = <Suspense fallback={<PageLoader />}>{route.element}</Suspense>;
 
         return (
             <Route
@@ -19,14 +19,8 @@ const AppRouter = () => {
         );
     }, []);
 
-    const routes = useMemo(() => (
-        Object.values(routeConfig).map(renderWidthRequireAuth)
-    ), [renderWidthRequireAuth]);
-
     return (
-        <Suspense fallback={<PageLoader />}>
-            <Routes>{routes}</Routes>
-        </Suspense>
+        <Routes>{ Object.values(routeConfig).map(renderWidthRequireAuth) }</Routes>
     );
 };
 export default memo(AppRouter);
