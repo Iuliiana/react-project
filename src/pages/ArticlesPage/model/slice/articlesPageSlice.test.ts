@@ -101,6 +101,7 @@ describe('articlesPageSlice.test', () => {
             view: ArticleViewType.GRID,
             hasMore: true,
             page: 1,
+            _inited: false,
         });
     });
 
@@ -113,6 +114,7 @@ describe('articlesPageSlice.test', () => {
             view: ArticleViewType.GRID,
             hasMore: true,
             page: 1,
+            _inited: true,
         };
 
         expect(
@@ -129,6 +131,7 @@ describe('articlesPageSlice.test', () => {
             view: ArticleViewType.GRID,
             hasMore: true,
             page: 1,
+            _inited: true,
         });
     });
 });

@@ -23,6 +23,7 @@ export const articlesPageSlice = createSlice({
         view: ArticleViewType.GRID,
         page: 1,
         hasMore: true,
+        _inited: false,
     }),
     reducers: {
         setView: (state, action:PayloadAction<ArticleViewType>) => {
@@ -33,6 +34,7 @@ export const articlesPageSlice = createSlice({
             state.page = action.payload;
         },
         initialView: (state) => {
+            state._inited = true;
             if (localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY)) {
                 state.view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleViewType;
             }
