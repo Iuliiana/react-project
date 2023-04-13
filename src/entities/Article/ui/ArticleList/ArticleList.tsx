@@ -2,8 +2,8 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import { Article, ArticleViewType } from '../../model/types/article';
 import cls from './ArticleList.module.scss';
-import { ArticleListItem } from '../ArticleItem/ArticleListItem';
-import { ArticleListItemSkeleton } from '../ArticleItem/ArticleListItemSkeleton';
+import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 
 interface ArticleListProps {
     className?: string,

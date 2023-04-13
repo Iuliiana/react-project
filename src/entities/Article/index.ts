@@ -1,3 +1,5 @@
+export { ArticleViewType } from './model/types/article';
+
 export {
     ArticleList,
 } from './ui/ArticleList/ArticleList';
