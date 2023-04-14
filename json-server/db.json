@@ -17,11 +17,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 78,
+      "createdAt": "03.05.2013",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -89,11 +89,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 612,
+      "createdAt": "25.03.2016",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -161,11 +161,12 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 852,
+      "createdAt": "20.10.2018",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -232,9 +233,9 @@
       "id": "4",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 875,
+      "createdAt": "25.06.2010",
       "userId": "2",
       "type": [
         "IT"
@@ -305,11 +306,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 669,
+      "createdAt": "16.08.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -376,12 +377,12 @@
       "id": "6",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 221,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "14.11.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -449,8 +450,8 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 849,
+      "createdAt": "10.02.2019",
       "userId": "1",
       "type": [
         "IT"
@@ -521,11 +522,12 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 528,
+      "createdAt": "25.01.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -593,8 +595,8 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 840,
+      "createdAt": "22.03.2011",
       "userId": "1",
       "type": [
         "IT"
@@ -664,12 +666,12 @@
       "id": "10",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 425,
+      "createdAt": "06.07.2013",
       "userId": "2",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -737,11 +739,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 433,
+      "createdAt": "14.07.2012",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -808,12 +810,12 @@
       "id": "12",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 878,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "17.02.2019",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -881,11 +883,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 597,
+      "createdAt": "19.11.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -953,11 +955,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 513,
+      "createdAt": "26.06.2021",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -1025,11 +1027,12 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 500,
+      "createdAt": "10.06.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -1096,9 +1099,9 @@
       "id": "16",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 377,
+      "createdAt": "30.01.2020",
       "userId": "2",
       "type": [
         "IT"
@@ -1169,11 +1172,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 695,
+      "createdAt": "28.07.2010",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -1240,12 +1243,13 @@
       "id": "18",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 410,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "17.09.2013",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -1313,8 +1317,8 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 967,
+      "createdAt": "04.05.2011",
       "userId": "1",
       "type": [
         "IT"
@@ -1385,8 +1389,8 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 944,
+      "createdAt": "27.08.2019",
       "userId": "1",
       "type": [
         "IT"
@@ -1457,8 +1461,8 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 856,
+      "createdAt": "15.02.2016",
       "userId": "1",
       "type": [
         "IT"
@@ -1528,12 +1532,12 @@
       "id": "22",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 159,
+      "createdAt": "01.10.2017",
       "userId": "2",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -1601,11 +1605,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 294,
+      "createdAt": "30.08.2013",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -1672,9 +1676,9 @@
       "id": "24",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 41,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "30.03.2016",
       "userId": "1",
       "type": [
         "IT"
@@ -1745,11 +1749,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 124,
+      "createdAt": "20.08.2018",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -1817,11 +1821,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 461,
+      "createdAt": "14.08.2013",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -1889,11 +1893,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 438,
+      "createdAt": "15.10.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -1960,12 +1964,12 @@
       "id": "28",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 775,
+      "createdAt": "20.04.2020",
       "userId": "2",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -2033,11 +2037,12 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 540,
+      "createdAt": "29.11.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -2104,12 +2109,13 @@
       "id": "30",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 500,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "10.01.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -2177,11 +2183,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 823,
+      "createdAt": "18.08.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -2249,11 +2255,12 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 294,
+      "createdAt": "11.03.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -2321,11 +2328,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 221,
+      "createdAt": "26.04.2010",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -2392,12 +2399,13 @@
       "id": "34",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 970,
+      "createdAt": "10.09.2014",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -2465,11 +2473,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 574,
+      "createdAt": "16.04.2016",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -2536,12 +2544,12 @@
       "id": "36",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 540,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "04.03.2016",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -2609,8 +2617,8 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 240,
+      "createdAt": "01.04.2018",
       "userId": "1",
       "type": [
         "IT"
@@ -2681,11 +2689,12 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 805,
+      "createdAt": "20.05.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -2753,11 +2762,12 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 260,
+      "createdAt": "27.08.2018",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -2824,12 +2834,13 @@
       "id": "40",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 37,
+      "createdAt": "19.09.2016",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -2897,11 +2908,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 298,
+      "createdAt": "19.02.2018",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -2968,12 +2979,12 @@
       "id": "42",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 7,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "26.08.2014",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -3041,11 +3052,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 840,
+      "createdAt": "01.10.2021",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -3113,11 +3124,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 591,
+      "createdAt": "14.08.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -3185,11 +3196,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 240,
+      "createdAt": "25.06.2016",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -3256,12 +3267,12 @@
       "id": "46",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 627,
+      "createdAt": "05.10.2019",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -3329,11 +3340,12 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 308,
+      "createdAt": "24.10.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -3400,12 +3412,12 @@
       "id": "48",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 597,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "08.05.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -3473,11 +3485,12 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 493,
+      "createdAt": "20.02.2019",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -3545,11 +3558,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 672,
+      "createdAt": "21.02.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -3617,11 +3630,12 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 331,
+      "createdAt": "19.11.2016",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -3688,12 +3702,12 @@
       "id": "52",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 83,
+      "createdAt": "05.08.2015",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -3761,11 +3775,12 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 583,
+      "createdAt": "03.10.2018",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -3832,12 +3847,13 @@
       "id": "54",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 515,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "16.05.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -3905,11 +3921,12 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 298,
+      "createdAt": "12.08.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -3977,11 +3994,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 199,
+      "createdAt": "25.11.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -4049,11 +4066,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 119,
+      "createdAt": "03.10.2013",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -4120,12 +4137,13 @@
       "id": "58",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 824,
+      "createdAt": "18.05.2020",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -4193,11 +4211,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 533,
+      "createdAt": "24.05.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -4264,12 +4282,13 @@
       "id": "60",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 406,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "27.06.2014",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -4337,11 +4356,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 643,
+      "createdAt": "22.08.2021",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -4409,11 +4428,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 568,
+      "createdAt": "10.09.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -4481,11 +4500,12 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 39,
+      "createdAt": "02.02.2010",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -4552,12 +4572,12 @@
       "id": "64",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 612,
+      "createdAt": "17.03.2019",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -4625,8 +4645,8 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 684,
+      "createdAt": "23.07.2010",
       "userId": "1",
       "type": [
         "IT"
@@ -4696,9 +4716,9 @@
       "id": "66",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 134,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "04.09.2014",
       "userId": "1",
       "type": [
         "IT"
@@ -4769,11 +4789,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 331,
+      "createdAt": "26.01.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -4841,11 +4861,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 991,
+      "createdAt": "07.03.2019",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -4913,11 +4933,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 368,
+      "createdAt": "09.08.2012",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -4984,12 +5004,12 @@
       "id": "70",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 430,
+      "createdAt": "02.04.2018",
       "userId": "2",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -5057,11 +5077,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 368,
+      "createdAt": "05.09.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -5128,12 +5148,12 @@
       "id": "72",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 749,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "01.02.2012",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -5201,8 +5221,8 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 325,
+      "createdAt": "29.05.2020",
       "userId": "1",
       "type": [
         "IT"
@@ -5273,8 +5293,8 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 27,
+      "createdAt": "03.07.2012",
       "userId": "1",
       "type": [
         "IT"
@@ -5345,11 +5365,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 784,
+      "createdAt": "09.02.2019",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -5416,12 +5436,12 @@
       "id": "76",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 755,
+      "createdAt": "12.01.2019",
       "userId": "2",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -5489,11 +5509,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 67,
+      "createdAt": "23.03.2012",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -5560,12 +5580,12 @@
       "id": "78",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 764,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "11.01.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -5633,11 +5653,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 964,
+      "createdAt": "06.02.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -5705,11 +5725,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 988,
+      "createdAt": "30.08.2013",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -5777,8 +5797,8 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 463,
+      "createdAt": "19.08.2019",
       "userId": "1",
       "type": [
         "IT"
@@ -5848,12 +5868,12 @@
       "id": "82",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 130,
+      "createdAt": "28.03.2011",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -5921,11 +5941,12 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 915,
+      "createdAt": "27.07.2010",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -5992,12 +6013,12 @@
       "id": "84",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 56,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "26.08.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -6065,8 +6086,8 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 746,
+      "createdAt": "18.10.2012",
       "userId": "1",
       "type": [
         "IT"
@@ -6137,11 +6158,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 655,
+      "createdAt": "01.10.2021",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -6209,8 +6230,8 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 874,
+      "createdAt": "17.04.2017",
       "userId": "1",
       "type": [
         "IT"
@@ -6280,12 +6301,12 @@
       "id": "88",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 110,
+      "createdAt": "08.04.2017",
       "userId": "2",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -6353,11 +6374,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 515,
+      "createdAt": "28.10.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -6424,12 +6445,12 @@
       "id": "90",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 116,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "30.10.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -6497,11 +6518,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 112,
+      "createdAt": "16.02.2018",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -6569,11 +6590,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 336,
+      "createdAt": "07.04.2014",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -6641,11 +6662,12 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 978,
+      "createdAt": "08.07.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -6712,12 +6734,13 @@
       "id": "94",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 366,
+      "createdAt": "10.07.2016",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -6785,8 +6808,8 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 852,
+      "createdAt": "13.03.2019",
       "userId": "1",
       "type": [
         "IT"
@@ -6856,12 +6879,12 @@
       "id": "96",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 465,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "07.01.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -6929,11 +6952,12 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 955,
+      "createdAt": "30.04.2014",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -7001,11 +7025,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 889,
+      "createdAt": "02.03.2010",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -7073,11 +7097,12 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 229,
+      "createdAt": "02.06.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -7144,9 +7169,9 @@
       "id": "100",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 174,
+      "createdAt": "19.05.2021",
       "userId": "2",
       "type": [
         "IT"
@@ -7217,11 +7242,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 363,
+      "createdAt": "29.04.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -7288,9 +7313,9 @@
       "id": "102",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 531,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "25.07.2016",
       "userId": "1",
       "type": [
         "IT"
@@ -7361,11 +7386,12 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 403,
+      "createdAt": "08.01.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -7433,11 +7459,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 762,
+      "createdAt": "13.08.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -7505,11 +7531,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 187,
+      "createdAt": "07.02.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -7576,12 +7602,13 @@
       "id": "106",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 915,
+      "createdAt": "02.04.2013",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -7649,11 +7676,12 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 941,
+      "createdAt": "14.01.2016",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -7720,12 +7748,12 @@
       "id": "108",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 25,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "22.11.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -7793,11 +7821,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 429,
+      "createdAt": "03.03.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -7865,11 +7893,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 777,
+      "createdAt": "27.11.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -7937,11 +7965,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 383,
+      "createdAt": "16.09.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -8008,12 +8036,12 @@
       "id": "112",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 346,
+      "createdAt": "30.07.2010",
       "userId": "2",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -8081,11 +8109,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 594,
+      "createdAt": "07.05.2014",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -8152,12 +8180,13 @@
       "id": "114",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 165,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "06.06.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -8225,8 +8254,8 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 791,
+      "createdAt": "28.05.2017",
       "userId": "1",
       "type": [
         "IT"
@@ -8297,11 +8326,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 649,
+      "createdAt": "16.07.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -8369,11 +8398,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 529,
+      "createdAt": "07.11.2018",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -8440,12 +8469,12 @@
       "id": "118",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 33,
+      "createdAt": "14.02.2018",
       "userId": "2",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -8513,11 +8542,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 691,
+      "createdAt": "17.01.2014",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -8584,12 +8613,12 @@
       "id": "120",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 47,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "22.05.2010",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -8657,11 +8686,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 5,
+      "createdAt": "08.10.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -8729,11 +8758,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 606,
+      "createdAt": "07.03.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -8801,8 +8830,8 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 859,
+      "createdAt": "13.01.2013",
       "userId": "1",
       "type": [
         "IT"
@@ -8872,12 +8901,12 @@
       "id": "124",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 979,
+      "createdAt": "12.06.2017",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -8945,11 +8974,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 498,
+      "createdAt": "01.11.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -9016,12 +9045,12 @@
       "id": "126",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 847,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "20.08.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -9089,11 +9118,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 477,
+      "createdAt": "05.06.2019",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -9161,11 +9190,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 4,
+      "createdAt": "22.03.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -9233,11 +9262,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 863,
+      "createdAt": "18.09.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -9304,12 +9333,12 @@
       "id": "130",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 412,
+      "createdAt": "29.09.2010",
       "userId": "2",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -9377,11 +9406,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 446,
+      "createdAt": "05.04.2014",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -9448,12 +9477,12 @@
       "id": "132",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 807,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "15.11.2016",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -9521,11 +9550,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 78,
+      "createdAt": "16.06.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -9593,11 +9622,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 400,
+      "createdAt": "28.03.2014",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -9665,8 +9694,8 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 46,
+      "createdAt": "21.05.2015",
       "userId": "1",
       "type": [
         "IT"
@@ -9736,9 +9765,9 @@
       "id": "136",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 147,
+      "createdAt": "21.09.2011",
       "userId": "2",
       "type": [
         "IT"
@@ -9809,8 +9838,8 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 590,
+      "createdAt": "23.04.2014",
       "userId": "1",
       "type": [
         "IT"
@@ -9880,12 +9909,12 @@
       "id": "138",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 782,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "10.04.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -9953,11 +9982,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 688,
+      "createdAt": "29.06.2016",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -10025,11 +10054,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 449,
+      "createdAt": "16.10.2018",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -10097,11 +10126,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 345,
+      "createdAt": "03.07.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -10168,12 +10197,12 @@
       "id": "142",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 525,
+      "createdAt": "27.11.2011",
       "userId": "2",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -10241,11 +10270,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 957,
+      "createdAt": "03.10.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -10312,12 +10341,12 @@
       "id": "144",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 964,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "12.04.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -10385,11 +10414,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 852,
+      "createdAt": "10.03.2018",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -10457,11 +10486,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 319,
+      "createdAt": "29.01.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -10529,8 +10558,8 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 40,
+      "createdAt": "18.06.2016",
       "userId": "1",
       "type": [
         "IT"
@@ -10600,12 +10629,13 @@
       "id": "148",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 52,
+      "createdAt": "20.03.2015",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -10673,11 +10703,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 47,
+      "createdAt": "22.05.2012",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -10744,9 +10774,9 @@
       "id": "150",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 854,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "25.06.2010",
       "userId": "1",
       "type": [
         "IT"
@@ -10817,8 +10847,8 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 634,
+      "createdAt": "24.10.2010",
       "userId": "1",
       "type": [
         "IT"
@@ -10889,11 +10919,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 103,
+      "createdAt": "23.05.2014",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -10961,11 +10991,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 285,
+      "createdAt": "23.01.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -11032,9 +11062,9 @@
       "id": "154",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 199,
+      "createdAt": "06.04.2015",
       "userId": "2",
       "type": [
         "IT"
@@ -11105,11 +11135,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 774,
+      "createdAt": "10.07.2010",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -11176,12 +11206,12 @@
       "id": "156",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 16,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "11.08.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -11249,11 +11279,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 887,
+      "createdAt": "03.02.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -11321,11 +11351,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 325,
+      "createdAt": "18.05.2018",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -11393,11 +11423,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 584,
+      "createdAt": "11.03.2014",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -11464,12 +11494,13 @@
       "id": "160",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 931,
+      "createdAt": "27.04.2018",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -11537,8 +11568,8 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 38,
+      "createdAt": "21.09.2016",
       "userId": "1",
       "type": [
         "IT"
@@ -11608,12 +11639,12 @@
       "id": "162",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 632,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "18.05.2014",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -11681,11 +11712,12 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 684,
+      "createdAt": "15.07.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -11753,8 +11785,8 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 100,
+      "createdAt": "11.03.2021",
       "userId": "1",
       "type": [
         "IT"
@@ -11825,11 +11857,12 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 746,
+      "createdAt": "16.11.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -11896,12 +11929,12 @@
       "id": "166",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 527,
+      "createdAt": "22.04.2014",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -11969,11 +12002,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 716,
+      "createdAt": "04.02.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -12040,12 +12073,12 @@
       "id": "168",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 190,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "29.02.2010",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -12113,11 +12146,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 986,
+      "createdAt": "06.08.2019",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -12185,11 +12218,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 547,
+      "createdAt": "05.04.2019",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -12257,11 +12290,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 189,
+      "createdAt": "05.10.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -12328,12 +12361,13 @@
       "id": "172",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 888,
+      "createdAt": "17.10.2016",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -12401,11 +12435,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 773,
+      "createdAt": "16.05.2012",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -12472,12 +12506,12 @@
       "id": "174",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 897,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "16.03.2010",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -12545,11 +12579,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 740,
+      "createdAt": "12.04.2012",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -12617,8 +12651,8 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 580,
+      "createdAt": "02.02.2019",
       "userId": "1",
       "type": [
         "IT"
@@ -12689,11 +12723,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 242,
+      "createdAt": "26.08.2013",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -12760,12 +12794,12 @@
       "id": "178",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 160,
+      "createdAt": "01.08.2012",
       "userId": "2",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -12833,11 +12867,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 202,
+      "createdAt": "24.01.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -12904,9 +12938,9 @@
       "id": "180",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 927,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "30.05.2019",
       "userId": "1",
       "type": [
         "IT"
@@ -12977,11 +13011,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 70,
+      "createdAt": "17.10.2018",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -13049,11 +13083,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 762,
+      "createdAt": "20.05.2014",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -13121,11 +13155,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 264,
+      "createdAt": "06.08.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -13192,12 +13226,13 @@
       "id": "184",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 455,
+      "createdAt": "14.10.2011",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -13265,11 +13300,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 953,
+      "createdAt": "28.05.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -13336,12 +13371,13 @@
       "id": "186",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 863,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "02.10.2019",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -13409,11 +13445,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 612,
+      "createdAt": "19.03.2016",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -13481,11 +13517,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 714,
+      "createdAt": "23.08.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -13553,8 +13589,8 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 394,
+      "createdAt": "22.04.2011",
       "userId": "1",
       "type": [
         "IT"
@@ -13624,12 +13660,13 @@
       "id": "190",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 218,
+      "createdAt": "09.06.2018",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -13697,11 +13734,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 90,
+      "createdAt": "07.09.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -13768,12 +13805,12 @@
       "id": "192",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 78,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "25.09.2010",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -13841,11 +13878,12 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 811,
+      "createdAt": "28.10.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -13913,11 +13951,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 435,
+      "createdAt": "25.09.2018",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -13985,11 +14023,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 513,
+      "createdAt": "13.08.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -14056,12 +14094,12 @@
       "id": "196",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 479,
+      "createdAt": "20.01.2013",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -14129,8 +14167,8 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 478,
+      "createdAt": "10.08.2020",
       "userId": "1",
       "type": [
         "IT"
@@ -14200,12 +14238,12 @@
       "id": "198",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 561,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "22.09.2013",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -14273,11 +14311,12 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 791,
+      "createdAt": "06.11.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -14345,11 +14384,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 886,
+      "createdAt": "19.04.2012",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -14417,11 +14456,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 104,
+      "createdAt": "12.03.2014",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -14488,12 +14527,13 @@
       "id": "202",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 904,
+      "createdAt": "09.09.2010",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -14561,11 +14601,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 139,
+      "createdAt": "01.07.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -14632,12 +14672,12 @@
       "id": "204",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 411,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "23.06.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -14705,11 +14745,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 342,
+      "createdAt": "11.02.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -14777,11 +14817,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 885,
+      "createdAt": "28.08.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -14849,11 +14889,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 385,
+      "createdAt": "24.04.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -14920,12 +14960,12 @@
       "id": "208",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 467,
+      "createdAt": "29.05.2019",
       "userId": "2",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -14993,11 +15033,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 819,
+      "createdAt": "10.03.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -15064,12 +15104,12 @@
       "id": "210",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 451,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "30.01.2018",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -15137,11 +15177,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 197,
+      "createdAt": "06.07.2013",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -15209,11 +15249,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 186,
+      "createdAt": "13.08.2014",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -15281,11 +15321,12 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 732,
+      "createdAt": "24.10.2013",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -15352,12 +15393,13 @@
       "id": "214",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 553,
+      "createdAt": "17.01.2018",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -15425,11 +15467,12 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 651,
+      "createdAt": "04.08.2013",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -15496,12 +15539,12 @@
       "id": "216",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 25,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "21.04.2021",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -15569,8 +15612,8 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 222,
+      "createdAt": "07.01.2012",
       "userId": "1",
       "type": [
         "IT"
@@ -15641,8 +15684,8 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 858,
+      "createdAt": "23.08.2010",
       "userId": "1",
       "type": [
         "IT"
@@ -15713,11 +15756,12 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 395,
+      "createdAt": "27.01.2021",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -15784,12 +15828,12 @@
       "id": "220",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 742,
+      "createdAt": "27.09.2011",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -15857,11 +15901,12 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 156,
+      "createdAt": "14.02.2016",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -15928,12 +15973,12 @@
       "id": "221",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 688,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "12.02.2018",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -16001,11 +16046,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 428,
+      "createdAt": "29.11.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -16073,11 +16118,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 474,
+      "createdAt": "09.07.2021",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -16145,11 +16190,12 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 476,
+      "createdAt": "13.07.2016",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -16216,12 +16262,12 @@
       "id": "226",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 714,
+      "createdAt": "05.07.2019",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -16289,8 +16335,8 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 486,
+      "createdAt": "05.02.2020",
       "userId": "1",
       "type": [
         "IT"
@@ -16360,9 +16406,9 @@
       "id": "228",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 186,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "28.07.2020",
       "userId": "1",
       "type": [
         "IT"
@@ -16433,11 +16479,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 129,
+      "createdAt": "24.09.2011",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMY"
       ],
       "blocks": [
         {
@@ -16505,11 +16551,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 600,
+      "createdAt": "26.05.2010",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -16577,11 +16623,12 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 336,
+      "createdAt": "14.04.2012",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -16648,12 +16695,13 @@
       "id": "232",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 308,
+      "createdAt": "04.02.2013",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -16721,8 +16769,8 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 860,
+      "createdAt": "29.11.2015",
       "userId": "1",
       "type": [
         "IT"
@@ -16792,12 +16840,12 @@
       "id": "234",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 121,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "30.11.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -16865,11 +16913,12 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 788,
+      "createdAt": "24.09.2016",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE",
+        "POLICY"
       ],
       "blocks": [
         {
@@ -16937,11 +16986,11 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://usercontent.one/wp/scientificprogrammer.net/wp-content/uploads/2020/12/Python-768x512.png",
-      "views": 586,
-      "createdAt": "26.02.2022",
+      "views": 423,
+      "createdAt": "18.04.2017",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -17009,11 +17058,11 @@
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://image.pngaaa.com/5/2197005-middle.png",
-      "views": 485,
-      "createdAt": "26.02.2022",
+      "views": 281,
+      "createdAt": "19.01.2013",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -17080,12 +17129,12 @@
       "id": "238",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://masterjosh.com/storage/logos/yxyC3aSIvYB1h5qZW6jpGCwRmEDp6nGnD59OgDHb.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://mx-style.net/wp-content/uploads/2021/08/speczialist-kotlin-uroven-2-razrabotka-prilozhenij-2020-marat-hakimov_6121a3c989e3d.png",
+      "views": 875,
+      "createdAt": "08.08.2016",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -17153,11 +17202,11 @@
       "title": "MySQL news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://ijicrack.com/wp-content/uploads/2021/02/MySQL-Crack-380x200.jpg",
-      "views": 253,
-      "createdAt": "26.02.2022",
+      "views": 20,
+      "createdAt": "02.07.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "POLICY"
       ],
       "blocks": [
         {
@@ -17224,12 +17273,12 @@
       "id": "240",
       "title": "Laravel news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "views": 585,
+      "views": 719,
       "img": "https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/09/03025255/laravel.png",
-      "createdAt": "26.02.2022",
+      "createdAt": "02.04.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
