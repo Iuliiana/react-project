@@ -1,5 +1,6 @@
-import { Article, ArticleViewType } from 'entities/Article';
-import { ArticleBlocksType, ArticleType } from 'entities/Article/model/types/article';
+import {
+    Article, ArticleBlocksType, ArticleSortBy, ArticleType, ArticleViewType,
+} from 'entities/Article';
 import {
     fetchArticlesList,
 } from '../services/fetchArticlesList/fetchArticlesList';
@@ -88,11 +89,17 @@ const articles: Article[] = new Array(3)
         ...article,
         id: String(index),
     }));
+const articles2: Article[] = new Array(3)
+    .fill(0)
+    .map((item, index) => ({
+        ...article,
+        id: String(index + 3),
+    }));
 
 describe('articlesPageSlice.test', () => {
     test('undefined state', () => {
         expect(
-            articlesPageReducer(undefined, fetchArticlesList.pending),
+            articlesPageReducer(undefined, fetchArticlesList.pending('', {})),
         ).toEqual({
             ids: [],
             entities: {},
@@ -102,10 +109,15 @@ describe('articlesPageSlice.test', () => {
             hasMore: true,
             page: 1,
             _inited: false,
+            limit: 9,
+            type: ArticleType.ALL,
+            order: 'asc',
+            search: '',
+            sort: ArticleSortBy.CREATED,
         });
     });
 
-    test('fetchArticleDetailsData.fulfilled', () => {
+    test('fetchArticleDetailsData.fulfilled replace: true', () => {
         const state: ArticlesPageSchema = {
             ids: [],
             entities: {},
@@ -115,11 +127,38 @@ describe('articlesPageSlice.test', () => {
             hasMore: true,
             page: 1,
             _inited: true,
+            limit: 9,
+            type: ArticleType.ALL,
+            order: 'asc',
+            search: '',
+            sort: ArticleSortBy.CREATED,
         };
 
         expect(
-            articlesPageReducer(state, fetchArticlesList.fulfilled(articles, '', { page: 1 })),
+            articlesPageReducer(state, fetchArticlesList.fulfilled(articles, '', { replace: true })),
         ).toEqual({
+            ids: ['0', '1', '2'],
+            entities: {
+                0: articles[0],
+                1: articles[1],
+                2: articles[2],
+            },
+            error: undefined,
+            isLoading: false,
+            view: ArticleViewType.GRID,
+            hasMore: false,
+            page: 1,
+            _inited: true,
+            limit: 9,
+            type: ArticleType.ALL,
+            order: 'asc',
+            search: '',
+            sort: ArticleSortBy.CREATED,
+        });
+    });
+
+    test('fetchArticleDetailsData.fulfilled replace: false', () => {
+        const state: ArticlesPageSchema = {
             ids: ['0', '1', '2'],
             entities: {
                 0: articles[0],
@@ -132,6 +171,36 @@ describe('articlesPageSlice.test', () => {
             hasMore: true,
             page: 1,
             _inited: true,
+            limit: 9,
+            type: ArticleType.ALL,
+            order: 'asc',
+            search: '',
+            sort: ArticleSortBy.CREATED,
+        };
+
+        expect(
+            articlesPageReducer(state, fetchArticlesList.fulfilled([...articles, ...articles2], '', { replace: false })),
+        ).toEqual({
+            ids: ['0', '1', '2', '3', '4', '5'],
+            entities: {
+                0: articles[0],
+                1: articles[1],
+                2: articles[2],
+                3: articles2[0],
+                4: articles2[1],
+                5: articles2[2],
+            },
+            error: undefined,
+            isLoading: false,
+            view: ArticleViewType.GRID,
+            hasMore: false,
+            page: 1,
+            _inited: true,
+            limit: 9,
+            type: ArticleType.ALL,
+            order: 'asc',
+            search: '',
+            sort: ArticleSortBy.CREATED,
         });
     });
 });

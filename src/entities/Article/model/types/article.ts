@@ -30,6 +30,7 @@ export interface ArticleBlocksImage extends ArticleBlocksBase {
 
 export type ArticleBlock = ArticleBlocksText | ArticleBlocksImage | ArticleBlocksCode;
 export enum ArticleType {
+    ALL = 'ALL',
     IT = 'IT',
     SCIENCE = 'SCIENCE',
     POLICY = 'POLICY',
@@ -50,4 +51,10 @@ export interface Article {
 export enum ArticleViewType {
     LIST = 'list',
     GRID = 'grid'
+}
+
+export enum ArticleSortBy {
+    VIEWS = 'views',
+    TITLE = 'title',
+    CREATED = 'createdAt',
 }

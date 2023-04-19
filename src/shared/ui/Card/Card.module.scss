@@ -1,5 +1,14 @@
 .Card {
-    background: var(--card-bg-color);
     padding: 1.5rem;
     border-radius: var(--modal-border-radius);
+    color: var(--primary-color);
+}
+
+.standard {
+    background: var(--card-bg-color);
+}
+
+.outline {
+    background: var(--button-color);
+    transform: scale(1.1);
 }

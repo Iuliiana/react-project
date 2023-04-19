@@ -1,3 +1,12 @@
+export {
+    ArticleBlocksType,
+} from './model/types/article';
+
+export {
+    ArticleType,
+    ArticleSortBy,
+} from './model/types/article';
+
 export { ArticleViewType } from './model/types/article';
 
 export {

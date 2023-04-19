@@ -1,0 +1,16 @@
+.Tabs {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.TabItem {
+    padding: 1rem;
+    cursor: pointer;
+    transition: 0.3s all;
+
+    &:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}

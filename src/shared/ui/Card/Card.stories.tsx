@@ -1,9 +1,9 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Text } from 'shared/ui/Text/Text';
-import { Card } from './Card';
+import { Card, CardTheme } from './Card';
 
 export default {
     title: 'shared/Card',
@@ -22,3 +22,14 @@ CardNormal.args = {};
 export const CardDark = Template.bind({});
 CardDark.args = {};
 CardDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const CardOutline = Template.bind({});
+CardOutline.args = {
+    theme: CardTheme.OUTLINE,
+};
+
+export const CardOutlineDark = Template.bind({});
+CardOutlineDark.args = {
+    theme: CardTheme.OUTLINE,
+};
+CardOutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
