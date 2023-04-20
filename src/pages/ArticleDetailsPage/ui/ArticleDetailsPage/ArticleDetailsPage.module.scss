@@ -10,3 +10,13 @@
     display: block;
     margin-bottom: 2rem;
 }
+
+.recommendationsWrapper {
+    margin-bottom: 2rem;
+}
+
+.recomendationsList {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1rem 0;
+}

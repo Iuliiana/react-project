@@ -6,7 +6,7 @@ import { AnyAction, EnhancedStore, Reducer } from '@reduxjs/toolkit';
 import { ProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
 import { ArticleDetailsSchema } from 'entities/Article';
-import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
+import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { ArticlesPageSchema } from 'pages/ArticlesPage/model/types/ArticlesPageSchema';
 import { SaveScrollSchema } from 'features/SaveScroll';
@@ -20,7 +20,7 @@ export interface StateSchema {
     loginForm?: LoginShema,
     profile?: ProfileSchema,
     articleDetails?: ArticleDetailsSchema,
-    articleDetailsComments?: ArticleDetailsCommentsSchema,
+    articleDetailsPage?: ArticleDetailsPageSchema,
     addCommentForm?: AddCommentFormSchema,
     articlesPage?: ArticlesPageSchema
 

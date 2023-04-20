@@ -6,6 +6,7 @@ import { profileReducer } from 'entities/Profile';
 import { articleDetailsReducer } from 'entities/Article';
 import { addCommentFormReducer } from 'features/AddCommentForm';
 import { articlesPageReducer } from 'pages/ArticlesPage';
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage';
 
 const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
     loginForm: loginReducer,
@@ -13,6 +14,7 @@ const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentFormReducer,
     articlesPage: articlesPageReducer,
+    articleDetailsPage: articleDetailsPageReducer,
 };
 export const StoreDecorator = (
     state: DeepPartial<StateSchema>,

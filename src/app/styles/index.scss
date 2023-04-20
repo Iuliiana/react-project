@@ -9,6 +9,21 @@
     background: var(--button-color);
 }
 
+*::-webkit-scrollbar {
+    width: 0.7rem;               /* width of the entire scrollbar */
+    height: 0.7rem;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--bg-color);        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--block-bg-color);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 2px solid var(--inversion-bg-color);  /* creates padding around scroll thumb */
+}
+
 body {
     font: var(--font-m);
     color: var(--primary-color);

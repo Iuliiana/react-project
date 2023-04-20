@@ -12,6 +12,7 @@ interface ArticleListProps {
     articles: Article[],
     view?: ArticleViewType,
     isLoading?: boolean,
+    target?: string
 }
 
 const getSkeletons = (view: ArticleViewType) => new Array(view === ArticleViewType.GRID ? 15 : 5)
@@ -23,12 +24,14 @@ const getSkeletons = (view: ArticleViewType) => new Array(view === ArticleViewTy
 
 export const ArticleList = memo((props: ArticleListProps) => {
     const {
-        className, articles, isLoading, view = ArticleViewType.LIST,
+        className, articles, isLoading, target, view = ArticleViewType.LIST,
     } = props;
 
     const { t } = useTranslation('articles');
 
-    const renderArticles = (article: Article) => <ArticleListItem key={article.id} article={article} view={view} />;
+    const renderArticles = (article: Article) => (
+        <ArticleListItem key={article.id} article={article} view={view} target={target} />
+    );
 
     if (!isLoading && articles.length === 0) {
         return (
