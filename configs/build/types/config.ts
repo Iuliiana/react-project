@@ -10,7 +10,9 @@ export interface BuildPath {
     html: string,
 
     entry: string,
-    src: string
+    src: string,
+    locales: string,
+    buildLocales: string
 }
 
 export interface BuildOptions {
