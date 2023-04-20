@@ -11,3 +11,32 @@
 .secondary {
     color: var(--inversion-secondary-color);
 }
+
+.normal {
+    color: var(--primary-color);
+    transition: 0.2s all;
+
+    &::before,
+    &:hover::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        background: var(--accent-color);
+        height: 2px;
+        transition: 0.2s width;
+    }
+    /* stylelint-disable */
+    &::before {
+        width: 0;
+    }
+    /* stylelint-enable */
+
+    &:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
+}
