@@ -8,6 +8,7 @@ import { Card } from 'shared/ui/Card/Card';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { RoutePath } from 'shared/configs/routerConfig/routerConfig';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 import {
     Article, ArticleBlocksText, ArticleBlocksType, ArticleViewType,
 } from '../../model/types/article';
@@ -18,14 +19,21 @@ interface ArticleItemProps {
     className?: string,
     article: Article,
     view: ArticleViewType,
-    target?: string
+    target?: string,
+    index?: number,
 }
 
 export const ArticleListItem = memo((props: ArticleItemProps) => {
     const {
-        className, article, view, target,
+        className, article, view, target, index,
     } = props;
     const { t } = useTranslation();
+
+    const onSaveIndex = (index?: number) => () => {
+        if (index) {
+            localStorage.setItem(ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY, String(index));
+        }
+    };
 
     if (view === ArticleViewType.LIST) {
         const block = article.blocks.find((block) => block.type === ArticleBlocksType.TEXT) as ArticleBlocksText;
@@ -58,7 +66,8 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
                     <AppLink
                         to={RoutePath.articles_details + article.id}
                         target={target}
-                        theme={AppLinkTheme.SECONDARY}
+                        theme={AppLinkTheme.NORMAL}
+                        onClick={onSaveIndex(index)}
                     >
                         {t('Читать далее...')}
                     </AppLink>
@@ -76,6 +85,7 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
             <AppLink
                 to={RoutePath.articles_details + article.id}
                 target={target}
+                onClick={onSaveIndex(index)}
             >
                 <Card>
                     <div className={cls.img}>

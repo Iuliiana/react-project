@@ -5,9 +5,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/hooks/useInitialEffect/useInitialEffect';
-import { Page } from 'widgets/Page/Page';
 import { useSearchParams } from 'react-router-dom';
-import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import {
@@ -45,17 +43,17 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount={false}>
-            <Page
+            <div
                 className={classNames(cls.ArticlesPage, {}, [className])}
-                onScrollEnd={onLoadMoreArticles}
             >
-                <ArticlesPageFilters />
                 <ArticleList
                     isLoading={isLoading}
                     view={view}
                     articles={articles}
+                    onScrollEnd={onLoadMoreArticles}
+                    isVirtuoso
                 />
-            </Page>
+            </div>
         </DynamicModuleLoader>
 
     );

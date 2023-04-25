@@ -54,7 +54,7 @@ export const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps
 
     return (
         <Card
-            className={classNames(cls.ArticleItem, {}, [className, cls[view]])}
+            className={classNames(cls.ArticleItem, {}, [className, cls[view], cls.gridSkeletonItem])}
         >
             <div className={cls.img}>
                 <Skeleton width="100%" height={250} />

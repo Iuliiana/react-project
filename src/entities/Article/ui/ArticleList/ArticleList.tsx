@@ -1,46 +1,127 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { memo } from 'react';
+import React, {
+    memo, useEffect, useRef, useState,
+} from 'react';
 import { Text } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import {
+    Virtuoso, VirtuosoGrid, VirtuosoGridHandle, VirtuosoHandle,
+} from 'react-virtuoso';
+import { ArticlesPageFilters } from 'pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters';
+import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 import { Article, ArticleViewType } from '../../model/types/article';
 import cls from './ArticleList.module.scss';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
-import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
+import { ArticlesListFooter, getSkeletons } from './ArticlesListFooter';
 
 interface ArticleListProps {
     className?: string,
     articles: Article[],
     view?: ArticleViewType,
     isLoading?: boolean,
-    target?: string
+    target?: string,
+    onScrollEnd?: () => void,
+    isVirtuoso?: boolean
 }
-
-const getSkeletons = (view: ArticleViewType) => new Array(view === ArticleViewType.GRID ? 15 : 5)
-    .fill(0)
-    .map((item, index) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <ArticleListItemSkeleton key={index} view={view} />
-    ));
 
 export const ArticleList = memo((props: ArticleListProps) => {
     const {
-        className, articles, isLoading, target, view = ArticleViewType.LIST,
+        className,
+        articles,
+        isLoading,
+        target,
+        onScrollEnd,
+        view = ArticleViewType.LIST,
+        isVirtuoso = false,
     } = props;
 
+    const [articleIndex, setArticleIndex] = useState<number>(0);
+    const virtuosoListRef = useRef<VirtuosoHandle>(null);
+    const virtuosoGridRef = useRef<VirtuosoGridHandle>(null);
     const { t } = useTranslation('articles');
 
-    const renderArticles = (article: Article) => (
-        <ArticleListItem key={article.id} article={article} view={view} target={target} />
+    useEffect(() => {
+        const index = localStorage.getItem(ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY);
+        if (index) {
+            setArticleIndex(Number(index));
+        }
+    }, []);
+
+    useEffect(() => {
+        let timer: ReturnType<typeof setTimeout>;
+        const currentRef = (view === ArticleViewType.GRID) ? virtuosoGridRef : virtuosoListRef;
+        if (articleIndex !== 0) {
+            timer = setTimeout(() => {
+                if (currentRef.current) {
+                    currentRef.current.scrollToIndex(articleIndex);
+                }
+            }, 100);
+        }
+
+        return () => clearTimeout(timer);
+    }, [articleIndex, view]);
+
+    const renderArticles = (article: Article, index?: number) => (
+        <ArticleListItem
+            key={article.id}
+            article={article}
+            view={view}
+            target={target}
+            index={index}
+        />
     );
 
     if (!isLoading && articles.length === 0) {
         return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+            <div className={classNames(cls.ArticleList, {}, [className])}>
                 <Text title={t('Статьи не найдены')} />
             </div>
         );
     }
 
+    if (isVirtuoso) {
+        return (
+            <div className={classNames(cls.ArticleList, {}, [className])}>
+                {
+                    (view === ArticleViewType.LIST) ? (
+                        <Virtuoso
+                            ref={virtuosoListRef}
+                            context={{ isLoading, view }}
+                            style={{
+                                height: 'calc(100vh - var(--navbar-height))',
+                            }}
+                            data={articles}
+                            endReached={onScrollEnd}
+                            components={{
+                                Header: ArticlesPageFilters,
+                                Footer: ArticlesListFooter,
+                            }}
+                            itemContent={(index, article) => renderArticles(article, index)}
+                        />
+                    ) : (
+                        <VirtuosoGrid
+                            ref={virtuosoGridRef}
+                            context={{ isLoading, view }}
+                            style={{
+                                height: 'calc(100vh - var(--navbar-height))',
+                                width: '100%',
+                            }}
+                            totalCount={articles?.length}
+                            data={articles}
+                            listClassName={classNames(cls.grid)}
+                            itemClassName={classNames(cls.ArticleItem)}
+                            itemContent={(index, article) => renderArticles(article, index)}
+                            endReached={onScrollEnd}
+                            components={{
+                                Header: ArticlesPageFilters,
+                                Footer: ArticlesListFooter,
+                            }}
+                        />
+                    )
+                }
+            </div>
+        );
+    }
     return (
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
             {

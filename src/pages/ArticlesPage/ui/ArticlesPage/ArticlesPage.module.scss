@@ -1,3 +1,8 @@
 .ArticlesPage {
-    opacity: 1;
+    flex-grow: 1;
+
+    // padding: 2rem 2rem 2rem 3rem;
+    // height: calc(100vh - var(--navbar-height));
+    // overflow-y: auto;
+    width: 100%;
 }

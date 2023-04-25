@@ -52,6 +52,5 @@ export const Page = (props: PageProps) => {
             { children }
             <div className={cls.trigger} ref={triggerRef} />
         </section>
-
     );
 };

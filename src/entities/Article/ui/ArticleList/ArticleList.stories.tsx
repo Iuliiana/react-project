@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { StoreDecorator } from 'shared/configs/storybook/StoreDecorator';
 import {
     Article, ArticleBlocksType, ArticleType, ArticleViewType,
 } from '../../model/types/article';
@@ -99,7 +100,7 @@ ArticlesGrid.args = {
         })),
     view: ArticleViewType.GRID,
 };
-
+ArticlesGrid.decorators = [StoreDecorator({})];
 export const ArticlesGridDark = Template.bind({});
 ArticlesGridDark.args = {
     articles: new Array(10)
@@ -110,7 +111,7 @@ ArticlesGridDark.args = {
         })),
     view: ArticleViewType.GRID,
 };
-ArticlesGridDark.decorators = [ThemeDecorator(Theme.DARK)];
+ArticlesGridDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
 
 export const ArticlesList = Template.bind({});
 ArticlesList.args = {
@@ -122,6 +123,7 @@ ArticlesList.args = {
         })),
     view: ArticleViewType.LIST,
 };
+ArticlesList.decorators = [StoreDecorator({})];
 
 export const ArticlesListDark = Template.bind({});
 ArticlesListDark.args = {
@@ -133,30 +135,36 @@ ArticlesListDark.args = {
         })),
     view: ArticleViewType.LIST,
 };
-ArticlesListDark.decorators = [ThemeDecorator(Theme.DARK)];
+ArticlesListDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
 
 export const ArticlesGridIsLoading = Template.bind({});
 ArticlesGridIsLoading.args = {
+    articles: [],
     view: ArticleViewType.GRID,
     isLoading: true,
 };
+ArticlesGridIsLoading.decorators = [StoreDecorator({})];
 
 export const ArticlesGridIsLoadingDark = Template.bind({});
 ArticlesGridIsLoadingDark.args = {
+    articles: [],
     view: ArticleViewType.GRID,
     isLoading: true,
 };
-ArticlesGridIsLoadingDark.decorators = [ThemeDecorator(Theme.DARK)];
+ArticlesGridIsLoadingDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
 
 export const ArticlesListIsLoading = Template.bind({});
 ArticlesListIsLoading.args = {
+    articles: [],
     view: ArticleViewType.LIST,
     isLoading: true,
 };
+ArticlesListIsLoading.decorators = [StoreDecorator({})];
 
 export const ArticlesListIsLoadingDark = Template.bind({});
 ArticlesListIsLoadingDark.args = {
+    articles: [],
     view: ArticleViewType.LIST,
     isLoading: true,
 };
-ArticlesListIsLoadingDark.decorators = [ThemeDecorator(Theme.DARK)];
+ArticlesListIsLoadingDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];

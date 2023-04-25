@@ -1,6 +1,5 @@
 .grid {
     min-width: 16rem;
-    width: 30%;
     flex-grow: 1;
     transition: 0.2s all;
     cursor: pointer;
@@ -59,8 +58,13 @@
     }
 }
 
+.gridSkeletonItem {
+    width: 30%;
+}
+
 .list {
     margin-bottom: 3rem;
+    margin-right: 2rem;
     padding: 2rem;
 
     .header {

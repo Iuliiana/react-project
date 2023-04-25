@@ -1,5 +1,20 @@
+.ArticleList {
+    padding-left: 3rem;
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 2rem;
+    margin-right: 2rem;
+}
+
+.ArticleItem {
+    width: 30%;
+}
+
+.ArticlesListFooter {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
