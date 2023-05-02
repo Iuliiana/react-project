@@ -1,8 +1,8 @@
-import { ProfileErrorsCode, updateProfileData } from 'entities/Profile';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { ProfileErrorsCode, ProfileSchema } from '../types/ProfileSchema';
+import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 import { profileActions, profileReducer } from './profileSlice';
-import { ProfileSchema } from '../types/ProfileSchema';
 
 const data = {
     first: 'Джейн',

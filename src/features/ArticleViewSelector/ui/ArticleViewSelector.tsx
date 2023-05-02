@@ -1,9 +1,9 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import { ArticleViewType } from 'entities/Article';
-import { articleViewButtons } from 'features/ArticleViewSelector/model/articleViewButtons';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { Button } from 'shared/ui/Button/Button';
+import { articleViewButtons } from '../model/articleViewButtons';
 import cls from './ArticleViewSelector.module.scss';
 
 interface ArticleViewSelectorProps {

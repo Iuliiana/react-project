@@ -1,8 +1,9 @@
-import { Article } from 'entities/Article';
-import { ArticleBlocksType, ArticleType } from 'entities/Article/model/types/article';
+import {
+    ArticleBlocksType, ArticleType, Article,
+} from '../types/article';
 import {
     fetchArticleDetailsData,
-} from 'entities/Article/model/services/fetchArticleDetailsData/fetchArticleDetailsData';
+} from '../services/fetchArticleDetailsData/fetchArticleDetailsData';
 import {
     articleDetailsReducer,
 } from './articleDetailsSlice';

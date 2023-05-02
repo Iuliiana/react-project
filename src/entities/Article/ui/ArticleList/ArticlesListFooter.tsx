@@ -1,6 +1,6 @@
 import { FC, memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { ArticleViewType } from 'entities/Article';
+import { ArticleViewType } from '../../model/types/article';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import cls from './ArticleList.module.scss';
 

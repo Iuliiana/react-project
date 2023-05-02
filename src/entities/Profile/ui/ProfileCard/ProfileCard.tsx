@@ -6,9 +6,9 @@ import {
 import { Input } from 'shared/ui/Input/Input';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Loader } from 'shared/ui/Loader/Loader';
-import { Profile } from 'entities/Profile';
 import { Currency, CurrencySelect } from 'entities/Currency';
 import { Country, CountrySelect } from 'entities/Country';
+import { Profile } from '../../model/types/ProfileSchema';
 import cls from './ProfileCard.module.scss';
 
 interface ProfileCardProps {
