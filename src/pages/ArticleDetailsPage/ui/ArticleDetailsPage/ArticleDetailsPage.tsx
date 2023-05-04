@@ -53,7 +53,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
     if (!id) {
         return (
-            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 <Text title={t('Статья не найдена')} />
             </Page>
         );
@@ -61,7 +61,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount>
-            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 <ArticleDetailsHeader />
                 <ArticleDetails id={id} />
 

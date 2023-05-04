@@ -6,6 +6,7 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getArticleDetailsData } from 'entities/Article';
+import { HStack } from 'shared/ui/Stack';
 import { isCanEdit } from '../../model/selectors/article/article';
 import cls from './ArticleDetailsHeader.module.scss';
 
@@ -29,7 +30,7 @@ export const ArticleDetailsHeader = memo((props: ArticleDetailsHeaderProps) => {
     }, [article?.id, navigate]);
 
     return (
-        <div className={classNames(cls.ArticleDetailsHeader, {}, [className])}>
+        <HStack className={classNames('', {}, [className])}>
             <Button
                 onClick={onBackToArticles}
                 themeButton={ButtonTheme.HIGHLIGHT}
@@ -50,6 +51,6 @@ export const ArticleDetailsHeader = memo((props: ArticleDetailsHeaderProps) => {
                 )
             }
 
-        </div>
+        </HStack>
     );
 });

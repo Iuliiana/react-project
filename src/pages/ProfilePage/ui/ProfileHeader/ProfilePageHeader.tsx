@@ -7,16 +7,18 @@ import { useSelector } from 'react-redux';
 import { getProfileData, profileActions, updateProfileData } from 'entities/Profile';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
 import { getUserAuthData } from 'entities/User';
+import { HStack } from 'shared/ui/Stack';
 import { getProfileReadonly } from '../../../../entities/Profile/model/selectors/getProfileReadonly/getProfileReadonly';
-import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
-    className?: string
+    className?: string,
+    isLoading?: boolean
 }
 
 export const ProfilePageHeader = memo((props: ProfilePageHeaderProps) => {
     const {
         className,
+        isLoading,
     } = props;
     const { t } = useTranslation();
 
@@ -40,40 +42,40 @@ export const ProfilePageHeader = memo((props: ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+        <HStack className={classNames('', {}, [className])}>
             <Text title={t('Профиль')} />
             { isEditProfile && (
-                <div className={cls.btns}>
+                <div>
                     {
                         readonly ? (
                             <Button
-                                className={classNames(cls.editBtn, {}, [cls.btnItem])}
                                 onClick={onEdit}
                                 themeButton={ButtonTheme.OUTLINE}
+                                disabled={isLoading}
                             >
                                 {t('Редактировать')}
                             </Button>
                         ) : (
-                            <>
+                            <HStack gap="16">
                                 <Button
-                                    className={classNames(cls.cancelBtn, {}, [cls.btnItem])}
                                     onClick={onCancel}
                                     themeButton={ButtonTheme.CANCEL}
+                                    disabled={isLoading}
                                 >
                                     {t('Отменить')}
                                 </Button>
                                 <Button
-                                    className={classNames(cls.saveBtn, {}, [cls.btnItem])}
                                     onClick={onSave}
                                     themeButton={ButtonTheme.OUTLINE}
+                                    disabled={isLoading}
                                 >
                                     {t('Сохранить')}
                                 </Button>
-                            </>
+                            </HStack>
                         )
                     }
                 </div>
             )}
-        </div>
+        </HStack>
     );
 });

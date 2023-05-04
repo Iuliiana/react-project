@@ -29,13 +29,6 @@
     color: var(--icon-color);
 }
 
-.items {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-end;
-}
-
 .collapsed {
     max-width: var(--sidebar-width-collapsed);
 

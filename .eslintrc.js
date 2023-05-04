@@ -47,7 +47,12 @@ module.exports = {
             { argsIgnorePattern: '^_' },
         ],
         'i18next/no-literal-string': [
-            'error', { markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'name', 'target'] },
+            'error', {
+                markupOnly: true,
+                ignoreAttribute: [
+                    'data-testid', 'to', 'name', 'target', 'justify', 'align', 'gap', 'direction', 'role',
+                ],
+            },
         ],
         'max-len': ['error', { ignoreComments: true, code: 120 }],
         'jsx-a11y/no-static-element-interactions': 'off',

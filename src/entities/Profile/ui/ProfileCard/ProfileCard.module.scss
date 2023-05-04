@@ -1,28 +1,7 @@
-.ProfileCard {
-    max-width: 40rem;
-}
-
-.avatar {
-    display: flex;
-    justify-content: center;
-}
-
-.editBtn {
-    margin-left: auto;
-}
-
 .content {
     padding: 1rem 0;
 }
 
 .input:not(:last-child) {
-    margin-bottom: 0.5rem;
-}
-
-.loading,
-.error {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20rem;
+    width: 100%;
 }

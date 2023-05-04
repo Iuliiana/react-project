@@ -8,6 +8,7 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Currency, CurrencySelect } from 'entities/Currency';
 import { Country, CountrySelect } from 'entities/Country';
+import { HStack, VStack } from 'shared/ui/Stack';
 import { Profile } from '../../model/types/ProfileSchema';
 import cls from './ProfileCard.module.scss';
 
@@ -48,15 +49,15 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     if (isLoading) {
         return (
-            <div className={classNames(cls.ProfileCard, { [cls.loading]: true }, [className])}>
+            <VStack justify="center" className={classNames('', {}, [className])}>
                 <Loader />
-            </div>
+            </VStack>
         );
     }
 
     if (error) {
         return (
-            <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+            <VStack justify="center" className={classNames('', {}, [className])}>
                 <Text
                     textTheme={TextTheme.ERROR}
                     size={TextSize.L}
@@ -64,17 +65,17 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     text={t('Попробуйте перезагрузить страницу')}
                     align={TextAlign.CENTER}
                 />
-            </div>
+            </VStack>
         );
     }
 
     return (
-        <div className={classNames(cls.ProfileCard, {}, [className])}>
+        <div className={classNames('', {}, [className])}>
             <div className={cls.content}>
-                <div className={cls.avatar}>
+                <HStack justify="center">
                     {data?.avatar && <Avatar alt={t('Фото')} pic={data?.avatar} size={150} />}
-                </div>
-                <div className={cls.fields}>
+                </HStack>
+                <VStack gap="16" align="start" max>
                     <Input
                         className={cls.input}
                         value={data?.first}
@@ -134,8 +135,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                         onChange={onChangeCountry}
                     />
 
-                </div>
-
+                </VStack>
             </div>
         </div>
     );

@@ -104,7 +104,7 @@ const ProfilePage = memo((props:ProfilePageProps) => {
             }
 
             <Page className={classNames('', {}, [className])}>
-                <ProfilePageHeader />
+                <ProfilePageHeader isLoading={isLoading} />
                 <ProfileCard
                     data={data}
                     readonly={readonly}
