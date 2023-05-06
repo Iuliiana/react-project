@@ -49,7 +49,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     if (isLoading) {
         return (
-            <VStack justify="center" className={classNames('', {}, [className])}>
+            <VStack justify="center" className={classNames('', {}, [className, cls.minH])}>
                 <Loader />
             </VStack>
         );
@@ -57,7 +57,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     if (error) {
         return (
-            <VStack justify="center" className={classNames('', {}, [className])}>
+            <VStack justify="center" className={classNames('', {}, [className, cls.minH])}>
                 <Text
                     textTheme={TextTheme.ERROR}
                     size={TextSize.L}

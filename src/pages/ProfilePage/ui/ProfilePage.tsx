@@ -97,13 +97,12 @@ const ProfilePage = memo((props:ProfilePageProps) => {
 
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount>
-            {
-                validateErrors && validateErrors.map((error) => (
-                    <Text textTheme={TextTheme.ERROR} text={errorsMap[error]} key={errorsMap[error]} />
-                ))
-            }
-
             <Page className={classNames('', {}, [className])}>
+                {
+                    validateErrors && validateErrors.map((error) => (
+                        <Text textTheme={TextTheme.ERROR} text={errorsMap[error]} key={errorsMap[error]} />
+                    ))
+                }
                 <ProfilePageHeader isLoading={isLoading} />
                 <ProfileCard
                     data={data}
