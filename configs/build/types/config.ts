@@ -8,11 +8,11 @@ export type BuildMode = AppMode.PRODUCTION_MODE | AppMode.DEVELOPMENT_MODE;
 export interface BuildPath {
     build: string,
     html: string,
-
     entry: string,
     src: string,
     locales: string,
-    buildLocales: string
+    buildLocales: string,
+    favicon: string
 }
 
 export interface BuildOptions {

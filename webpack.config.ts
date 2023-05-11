@@ -11,6 +11,7 @@ export default (env: BuildEnv): webpack.Configuration => {
         src: path.resolve(__dirname, 'src'),
         locales: path.resolve(__dirname, 'public', 'locales'),
         buildLocales: path.resolve(__dirname, 'build', 'locales'),
+        favicon: path.resolve(__dirname, 'src', 'shared', 'assets', 'icons', 'favicon.svg'),
     };
 
     const mode = env.mode || AppMode.DEVELOPMENT_MODE;

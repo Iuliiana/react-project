@@ -13,6 +13,7 @@ export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstan
     const plugins: webpack.WebpackPluginInstance[] = [
         new HtmlWebpackPlugin({
             template: paths.html,
+            favicon: paths.favicon,
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',

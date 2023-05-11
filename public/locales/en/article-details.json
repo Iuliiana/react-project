@@ -4,5 +4,8 @@
   "Комментарии": "Comments",
   "Назад к списку статей": "Back to articles",
   "Читайте также": "Read more",
-  "Редактировать": "Edit"
+  "Редактировать": "Edit",
+  "Пожалуйста, обновите страницу": "Please refresh the page",
+  "Возникла ошибка при загрузки списка рекомендуемых статей": "An error occurred while loading featured articles"
+
 }
