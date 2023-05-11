@@ -21,7 +21,8 @@
     "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
     "test:ui:update": "npx loki approve",
     "storybook": "start-storybook -p 6006 -c ./configs/storybook",
-    "storybook:build": "build-storybook -c ./configs/storybook"
+    "storybook:build": "build-storybook -c ./configs/storybook",
+    "create:fsd": "node ./scripts/createFSDSlice/index.js "
   },
   "author": "",
   "license": "ISC",
