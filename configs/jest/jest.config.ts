@@ -32,6 +32,15 @@ const config = {
         __API__: '',
         __PROJECT__: 'jest',
     },
+    reporters: [
+        'default',
+        ['jest-html-reporters', {
+            publicPath: '<rootDir>reporters/jest',
+            filename: 'report.html',
+            openReport: true,
+            inlineSource: false,
+        }],
+    ],
 };
 export default config;
 
@@ -47,7 +56,7 @@ export default config;
 // bail: 0,
 
 // The directory where Jest should store its cached dependency information
-// cacheDirectory: "C:\\Users\\gubko\\AppData\\Local\\Temp\\jest",
+// cacheDirectory: "C:\\Users\\...\\AppData\\Local\\Temp\\jest",
 
 // Automatically clear mock calls, instances and results before every test
 
