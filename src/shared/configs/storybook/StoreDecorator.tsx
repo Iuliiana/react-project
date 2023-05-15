@@ -2,15 +2,15 @@ import { Story } from '@storybook/react';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { ReducersMapObject } from '@reduxjs/toolkit';
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
-import { profileReducer } from 'entities/Profile';
 import { articleDetailsReducer } from 'entities/Article';
 import { addCommentFormReducer } from 'features/AddCommentForm';
 import { articlesPageReducer } from 'pages/ArticlesPage';
 import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage';
+import { editableProfileCardReducer } from 'features/EditableProfileCard';
 
 const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
     loginForm: loginReducer,
-    profile: profileReducer,
+    editableProfileCard: editableProfileCardReducer,
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentFormReducer,
     articlesPage: articlesPageReducer,

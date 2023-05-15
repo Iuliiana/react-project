@@ -20,7 +20,7 @@ const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...
 export const ProfilePagePrimary = Template.bind({});
 ProfilePagePrimary.args = {};
 ProfilePagePrimary.decorators = [StoreDecorator({
-    profile: {
+    editableProfileCard: {
         form: {
             first: 'Джейн',
             lastname: 'Доу',
@@ -38,7 +38,7 @@ ProfilePagePrimary.decorators = [StoreDecorator({
 export const ProfilePagePrimaryDark = Template.bind({});
 ProfilePagePrimaryDark.args = {};
 ProfilePagePrimaryDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    profile: {
+    editableProfileCard: {
         form: {
             first: 'Джейн',
             lastname: 'Доу',
@@ -56,7 +56,7 @@ ProfilePagePrimaryDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator(
 export const ProfilePageEditState = Template.bind({});
 ProfilePageEditState.args = {};
 ProfilePageEditState.decorators = [StoreDecorator({
-    profile: {
+    editableProfileCard: {
         form: {
             first: 'Джейн',
             lastname: 'Доу',
@@ -74,7 +74,7 @@ ProfilePageEditState.decorators = [StoreDecorator({
 export const ProfilePageEditStateDark = Template.bind({});
 ProfilePageEditStateDark.args = {};
 ProfilePageEditStateDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    profile: {
+    editableProfileCard: {
         form: {
             first: 'Джейн',
             lastname: 'Доу',
