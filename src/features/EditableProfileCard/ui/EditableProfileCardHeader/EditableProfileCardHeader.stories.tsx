@@ -2,10 +2,11 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { StoreDecorator } from 'shared/configs/storybook/StoreDecorator';
 import { EditableProfileCardHeader } from './EditableProfileCardHeader';
 
 export default {
-    title: 'STORIES_DIR/EditableProfileCardHeader',
+    title: 'features/ProfileCard/EditableProfileCardHeader',
     component: EditableProfileCardHeader,
     argTypes: {},
     args: {},
@@ -15,7 +16,32 @@ const Template: ComponentStory<typeof EditableProfileCardHeader> = (args) => <Ed
 
 export const EditableProfileCardHeaderNormal = Template.bind({});
 EditableProfileCardHeaderNormal.args = {};
+EditableProfileCardHeaderNormal.decorators = [StoreDecorator({
+    editableProfileCard: {
+        readonly: false,
+    },
+})];
 
 export const EditableProfileCardHeaderDark = Template.bind({});
 EditableProfileCardHeaderDark.args = {};
-EditableProfileCardHeaderDark.decorators = [ThemeDecorator(Theme.DARK)];
+EditableProfileCardHeaderDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
+    editableProfileCard: {
+        readonly: false,
+    },
+})];
+
+export const EditableProfileCardHeaderNormalReadonly = Template.bind({});
+EditableProfileCardHeaderNormalReadonly.args = {};
+EditableProfileCardHeaderNormalReadonly.decorators = [StoreDecorator({
+    editableProfileCard: {
+        readonly: true,
+    },
+})];
+
+export const EditableProfileCardHeaderReadonlyDark = Template.bind({});
+EditableProfileCardHeaderReadonlyDark.args = {};
+EditableProfileCardHeaderReadonlyDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
+    editableProfileCard: {
+        readonly: true,
+    },
+})];

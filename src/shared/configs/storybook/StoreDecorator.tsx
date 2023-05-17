@@ -7,6 +7,7 @@ import { addCommentFormReducer } from 'features/AddCommentForm';
 import { articlesPageReducer } from 'pages/ArticlesPage';
 import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage';
 import { editableProfileCardReducer } from 'features/EditableProfileCard';
+import { rtkApi } from 'shared/api/rtkApi';
 
 const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
     loginForm: loginReducer,
@@ -15,6 +16,7 @@ const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
     addCommentForm: addCommentFormReducer,
     articlesPage: articlesPageReducer,
     articleDetailsPage: articleDetailsPageReducer,
+    [rtkApi.reducerPath]: rtkApi.reducer,
 };
 export const StoreDecorator = (
     state: DeepPartial<StateSchema>,
