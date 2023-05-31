@@ -17,14 +17,14 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
     const { t } = useTranslation('article-details');
 
     const {
-        data: recomendationsList,
-        isLoading: recomendationsIsLoading,
-        error: recomendationsError,
+        data: recommendationsList,
+        isLoading: recommendationsIsLoading,
+        error: recommendationsError,
     } = useGetArticleRecommendationsQuery(4, {
         skip: (__PROJECT__ === 'storybook'),
     });
 
-    if (recomendationsIsLoading) {
+    if (recommendationsIsLoading) {
         return (
             <VStack gap="16" className={classNames(cls.ArticleRecommendationsList, {}, [className])}>
                 <Loader />
@@ -32,7 +32,7 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
         );
     }
 
-    if (!recomendationsIsLoading && recomendationsError) {
+    if ((!recommendationsIsLoading && recommendationsError) || !recommendationsList) {
         return (
             <VStack gap="16" className={classNames(cls.ArticleRecommendationsList, {}, [className])}>
                 <Text
@@ -51,10 +51,10 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
         >
             <Text title={t('Читайте также')} className={cls.commentsTitle} />
             <ArticleList
-                isLoading={recomendationsIsLoading}
-                articles={recomendationsList}
+                isLoading={recommendationsIsLoading}
+                articles={recommendationsList}
                 view={ArticleViewType.GRID}
-                className={cls.recomendationsList}
+                className={cls.recommendationsList}
                 target="_blank"
             />
         </VStack>
