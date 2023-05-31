@@ -35,12 +35,13 @@ export const HeadTagBySize: Record<TextSizeType, HeadTagType> = {
 type HeadTagBySizeType = ValueOf<typeof HeadTagBySize>;
 
 interface TextProps {
-    className?: string,
-    title?: string,
-    text?: string,
-    textTheme?:TextThemeType,
-    align?: TextAlignType,
-    size?: TextSizeType
+    className?: string;
+    title?: string;
+    text?: string;
+    textTheme?:TextThemeType;
+    align?: TextAlignType;
+    size?: TextSizeType;
+    'data-testid'?: string
 }
 
 export const Text = memo((props: TextProps) => {
@@ -51,14 +52,29 @@ export const Text = memo((props: TextProps) => {
         textTheme = TextTheme.PRIMARY,
         align = TextAlign.LEFT,
         size = TextSize.M,
+        'data-testid': dataTestId = 'Text',
     } = props;
 
     const HeadTag: HeadTagBySizeType = HeadTagBySize[size];
 
     return (
         <div className={classNames(cls.Text, {}, [className, cls[textTheme], cls[align], cls[size]])}>
-            {title && <HeadTag className={classNames(cls.TextTitle, {}, [cls.TextItem])}>{title}</HeadTag>}
-            {text && <p className={classNames(cls.TextParagraph, {}, [cls.TextItem])}>{text}</p>}
+            {title && (
+                <HeadTag
+                    className={classNames(cls.TextTitle, {}, [cls.TextItem])}
+                    data-testid={`${dataTestId}.Head`}
+                >
+                    {title}
+                </HeadTag>
+            )}
+            {text && (
+                <p
+                    className={classNames(cls.TextParagraph, {}, [cls.TextItem])}
+                    data-testid={`${dataTestId}.Paragraph`}
+                >
+                    {text}
+                </p>
+            )}
         </div>
     );
 });

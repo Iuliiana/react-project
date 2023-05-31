@@ -98,7 +98,12 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
             <EditableProfileCardHeader isLoading={isLoading} />
             {
                 validateErrors && validateErrors.map((error) => (
-                    <Text textTheme={TextTheme.ERROR} text={errorsMap[error]} key={errorsMap[error]} />
+                    <Text
+                        textTheme={TextTheme.ERROR}
+                        text={errorsMap[error]}
+                        key={errorsMap[error]}
+                        data-testid="EditableProfileCard.Error"
+                    />
                 ))
             }
             <ProfileCard
@@ -115,6 +120,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
                 onChangeCurrency={onChangeCurrency}
                 onChangeCountry={onChangeCountry}
                 className={classNames('', {}, [className])}
+                data-testid="EditableProfileCard.ProfileCard"
             />
         </DynamicModuleLoader>
     );
