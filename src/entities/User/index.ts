@@ -7,6 +7,12 @@ export {
 } from './model/selectors/getUserAuthData/getUserAuthData';
 
 export {
+    getUserRoles,
+    isAdminRole,
+    isManagerRole,
+} from './model/selectors/getUserRoles/getUserRoles';
+
+export {
     userReducer,
     userActions,
 } from './model/slice/userSlice';
@@ -14,4 +20,5 @@ export {
 export {
     User,
     UserSchema,
+    UserRole,
 } from './model/types/UserSchema';
