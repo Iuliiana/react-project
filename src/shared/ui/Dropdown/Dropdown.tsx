@@ -1,12 +1,13 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Fragment, memo, ReactNode } from 'react';
+import { memo, ReactNode } from 'react';
 import { Menu } from '@headlessui/react';
 import { DropdownDirection } from 'shared/lib/types/ui';
+import { Button } from '../Button/Button';
 import { AppLink } from '../AppLink/AppLink';
 import cls from './Dropdown.module.scss';
 
-export interface DropdownItems {
-    content: ReactNode;
+export interface DropdownItem {
+    content?: ReactNode;
     href?: string;
     disabled?: boolean;
     onClick?: () => void;
@@ -22,7 +23,7 @@ const mapDirectionClass: Record<DropdownDirection, string> = {
 
 interface DropdownProps {
     className?: string,
-    items?: DropdownItems[],
+    items: DropdownItem[],
     direction?: DropdownDirection,
     btn: ReactNode,
 }
@@ -38,14 +39,14 @@ export const Dropdown = memo((props: DropdownProps) => {
             as="div"
             className={classNames(cls.Dropdown, {}, [className])}
         >
-            <Menu.Button as="div" className={cls.btn}>
+            <Menu.Button className={cls.btn}>
                 {btn}
             </Menu.Button>
             <Menu.Items className={classNames(cls.MenuItems, {}, menuClasses)}>
                 {
                     items?.map((item, index) => {
                         const content = ({ active }: { active: boolean }) => (
-                            <button
+                            <Button
                                 type="button"
                                 disabled={item.disabled}
                                 onClick={item.onClick}
@@ -57,7 +58,7 @@ export const Dropdown = memo((props: DropdownProps) => {
                                 )}
                             >
                                 {item.content}
-                            </button>
+                            </Button>
                         );
                         if (item.href) {
                             return (
@@ -70,7 +71,7 @@ export const Dropdown = memo((props: DropdownProps) => {
 
                         return (
                             // eslint-disable-next-line react/no-array-index-key
-                            <Menu.Item as={Fragment} disabled={item.disabled} key={index}>
+                            <Menu.Item disabled={item.disabled} key={index} as="div">
                                 {content}
                             </Menu.Item>
                         );

@@ -41,6 +41,7 @@
     cursor: pointer;
     background: var(--bg-color);
     width: 100%;
+    white-space: nowrap;
 
     &.active {
         background-color: var(--accent-color);

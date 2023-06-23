@@ -2,8 +2,8 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 #имитация ci пайплайна, после оплаты github переписать на проверку линтинга изменённых файлов
-#npm run lint:ts
-#npm run stylelint:scss
-#npm run test:unit
-#npm run storybook:build
-#npm run test:ui
+npm run lint:ts
+npm run stylelint:scss
+npm run test:unit
+npm run storybook:build
+npm run test:ui
