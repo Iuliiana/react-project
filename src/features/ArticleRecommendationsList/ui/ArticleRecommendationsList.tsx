@@ -20,9 +20,7 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
         data: recommendationsList,
         isLoading: recommendationsIsLoading,
         error: recommendationsError,
-    } = useGetArticleRecommendationsQuery(4, {
-        skip: (__PROJECT__ === 'storybook'),
-    });
+    } = useGetArticleRecommendationsQuery(4);
 
     if (recommendationsIsLoading) {
         return (

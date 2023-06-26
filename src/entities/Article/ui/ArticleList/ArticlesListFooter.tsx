@@ -1,4 +1,4 @@
-import { FC, memo } from 'react';
+import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { ArticleViewType } from '../../model/types/article';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
@@ -11,7 +11,7 @@ export const getSkeletons = (view: ArticleViewType) => new Array(view === Articl
         <ArticleListItemSkeleton key={index} view={view} />
     ));
 
-export const ArticlesListFooter = memo<FC<{ context?: { isLoading?: boolean; view: ArticleViewType}| undefined}>>(
+export const ArticlesListFooter = memo(
     ({ context }: { context?: { isLoading?: boolean; view: ArticleViewType } | undefined}) => {
         // @ts-ignore
         const { isLoading, view } = context;

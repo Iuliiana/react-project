@@ -2,12 +2,14 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/configs/storybook/StoreDecorator';
+import { RouterDecorator } from 'shared/configs/storybook/RouterDecorator';
 import { Sidebar } from './Sidebar';
 
 export default {
     title: 'widgets/Sidebar',
     component: Sidebar,
     argTypes: {},
+    decorators: [RouterDecorator()],
 } as ComponentMeta<typeof Sidebar>;
 
 const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />;

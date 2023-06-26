@@ -1,14 +1,6 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
-import { RouterDecorator } from 'shared/configs/storybook/RouterDecorator';
-import {
-    Article, ArticleBlocksType, ArticleType, ArticleViewType,
-} from '../../model/types/article';
-import { ArticleListItem } from './ArticleListItem';
+import { Article, ArticleBlocksType, ArticleType } from '../model/types/article';
 
-const article: Article = {
+export const articleData: Article = {
     id: '1',
     title: 'Javascript news',
     subtitle: 'Что нового в JS за 2022 год?',
@@ -19,7 +11,7 @@ const article: Article = {
     user: {
         id: '1',
         username: 'admin',
-        avatar: 'https://sun1-95.userapi.com/s/v1/ig2/xzx1BbeV9lr8KAWLbMiKM6fnfCD0H2p8R8xUUx25QcZHh4a8H4hjFSGrBKDd7O-_BkZmwM2-eokVbZWliFqknf47.jpg?size=400x400&quality=95&crop=95,79,426,426&ava=1',
+        avatar: 'https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200',
     },
     blocks: [
         {
@@ -82,36 +74,3 @@ const article: Article = {
         },
     ],
 };
-
-export default {
-    title: 'entities/Article/ArticleListItem',
-    component: ArticleListItem,
-    argTypes: {},
-    args: {
-        article,
-    },
-    decorators: [RouterDecorator()],
-} as ComponentMeta<typeof ArticleListItem>;
-
-const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
-export const ArticleItemGrid = Template.bind({});
-ArticleItemGrid.args = {
-    view: ArticleViewType.GRID,
-};
-
-export const ArticleItemGridDark = Template.bind({});
-ArticleItemGridDark.args = {
-    view: ArticleViewType.GRID,
-};
-ArticleItemGridDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const ArticleItemList = Template.bind({});
-ArticleItemList.args = {
-    view: ArticleViewType.LIST,
-};
-
-export const ArticleItemListDark = Template.bind({});
-ArticleItemListDark.args = {
-    view: ArticleViewType.LIST,
-};
-ArticleItemListDark.decorators = [ThemeDecorator(Theme.DARK)];

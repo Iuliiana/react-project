@@ -43,7 +43,7 @@ export const NavBar = memo(({ className }: NavBarProps) => {
     if (authData) {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
-                <Text title={t('MyApp')} className={cls.mainTitle} />
+                <Text title={t('Iuliia_App')} className={cls.mainTitle} />
                 <AppLink
                     to={RoutePath.articles_create}
                     className={cls.btnNewArtile}

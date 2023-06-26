@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/configs/storybook/StoreDecorator';
+import { RouterDecorator } from 'shared/configs/storybook/RouterDecorator';
 import ArticleEditPage from './ArticleEditPage';
 
 export default {
@@ -10,6 +11,7 @@ export default {
     component: ArticleEditPage,
     argTypes: {},
     args: {},
+    decorators: [RouterDecorator()],
 } as ComponentMeta<typeof ArticleEditPage>;
 
 const Template: ComponentStory<typeof ArticleEditPage> = (args) => <ArticleEditPage {...args} />;

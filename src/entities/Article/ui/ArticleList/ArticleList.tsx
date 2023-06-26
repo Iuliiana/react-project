@@ -94,6 +94,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
                             data={articles}
                             endReached={onScrollEnd}
                             components={{
+                                // @ts-ignore
                                 Header: ArticlesPageFilters,
                                 Footer: ArticlesListFooter,
                             }}
@@ -114,6 +115,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
                             itemContent={(index, article) => renderArticles(article, index)}
                             endReached={onScrollEnd}
                             components={{
+                                // @ts-ignore
                                 Header: ArticlesPageFilters,
                                 Footer: ArticlesListFooter,
                             }}

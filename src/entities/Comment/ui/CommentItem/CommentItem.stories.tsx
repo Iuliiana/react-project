@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { RouterDecorator } from 'shared/configs/storybook/RouterDecorator';
 import { CommentItem } from './CommentItem';
 
 export default {
@@ -19,6 +20,7 @@ export default {
             },
         },
     },
+    decorators: [RouterDecorator()],
 } as ComponentMeta<typeof CommentItem>;
 
 const Template: ComponentStory<typeof CommentItem> = (args) => <CommentItem {...args} />;

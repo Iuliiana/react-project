@@ -2,12 +2,14 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/configs/storybook/StoreDecorator';
+import { RouterDecorator } from 'shared/configs/storybook/RouterDecorator';
 import { NavBar } from './NavBar';
 
 export default {
     title: 'widgets/NavBar',
     component: NavBar,
     argTypes: {},
+    decorators: [RouterDecorator()],
 } as ComponentMeta<typeof NavBar>;
 
 const Template: ComponentStory<typeof NavBar> = (args) => <NavBar {...args} />;

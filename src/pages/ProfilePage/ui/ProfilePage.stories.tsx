@@ -6,6 +6,7 @@ import { StoreDecorator } from 'shared/configs/storybook/StoreDecorator';
 // import AvatariPicTest from 'shared/assets/pic/test/test-avatar.jpg';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { RouterDecorator } from 'shared/configs/storybook/RouterDecorator';
 import ProfilePage from './ProfilePage';
 
 export default {
@@ -13,6 +14,10 @@ export default {
     component: ProfilePage,
     argTypes: {},
     args: {},
+    decorators: [RouterDecorator({
+        path: '/profile/:id',
+        initialEntries: ['/profile/1'],
+    })],
 } as ComponentMeta<typeof ProfilePage>;
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;

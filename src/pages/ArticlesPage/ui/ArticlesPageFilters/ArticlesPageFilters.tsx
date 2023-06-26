@@ -1,6 +1,8 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import React, { FC, memo, useCallback } from 'react';
+import React, {
+    memo, useCallback,
+} from 'react';
 import { ArticleViewSelector } from 'features/ArticleViewSelector';
 import { ArticleType, ArticleViewType, ArticleSortBy } from 'entities/Article';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
@@ -29,7 +31,7 @@ interface ArticlesPageFiltersProps {
 // const typedMemo: <T>(c: T) => T = memo;
 // export const Select = typedMemo(<T extends string>(props: ISelectProps<T>) => {...}
 
-export const ArticlesPageFilters = memo<FC<ArticlesPageFiltersProps>>((props: ArticlesPageFiltersProps) => {
+export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     const { className } = props;
     const { t } = useTranslation('articles');
     const dispatch = useAppDispatch();

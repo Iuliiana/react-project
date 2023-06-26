@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { RouterDecorator } from 'shared/configs/storybook/RouterDecorator';
 import { CommentList } from './CommentList';
 
 export default {
@@ -9,6 +10,7 @@ export default {
     component: CommentList,
     argTypes: {},
     args: {},
+    decorators: [RouterDecorator()],
 } as ComponentMeta<typeof CommentList>;
 
 const Template: ComponentStory<typeof CommentList> = (args) => <CommentList {...args} />;

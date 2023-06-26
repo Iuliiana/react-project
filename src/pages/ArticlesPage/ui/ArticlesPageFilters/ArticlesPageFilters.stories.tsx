@@ -3,12 +3,14 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/configs/storybook/StoreDecorator';
+import { RouterDecorator } from 'shared/configs/storybook/RouterDecorator';
 import { ArticlesPageFilters } from './ArticlesPageFilters';
 
 export default {
     title: 'pages/ArticlesPage/ArticlesPageFilters',
     component: ArticlesPageFilters,
     argTypes: {},
+    decorators: [RouterDecorator()],
     args: {},
 } as ComponentMeta<typeof ArticlesPageFilters>;
 

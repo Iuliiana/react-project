@@ -1,9 +1,28 @@
 import React from 'react';
 import { Story } from '@storybook/react';
-import { BrowserRouter } from 'react-router-dom';
+import {
+    BrowserRouter, MemoryRouter, Route, Routes,
+} from 'react-router-dom';
 
-export const RouterDecorator = (StoryComponent: Story) => (
-    <BrowserRouter>
-        <StoryComponent />
-    </BrowserRouter>
-);
+interface RouterDecoratorProps {
+    initialEntries: string[],
+    path: string
+}
+export const RouterDecorator = (
+    params?: RouterDecoratorProps,
+) => (StoryComponent: Story) => {
+    if (!params) {
+        return (
+            <BrowserRouter>
+                <StoryComponent />
+            </BrowserRouter>
+        );
+    }
+    return (
+        <MemoryRouter initialEntries={params.initialEntries}>
+            <Routes>
+                <Route path={params.path} element={<StoryComponent />} />
+            </Routes>
+        </MemoryRouter>
+    );
+};

@@ -1,14 +1,17 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { Country } from '../../model/types/country';
 import { CountrySelect } from './CountrySelect';
 
 export default {
     title: 'entities/CountrySelect',
     component: CountrySelect,
     argTypes: {},
-    args: {},
+    args: {
+        value: Country.Canada,
+    },
 } as ComponentMeta<typeof CountrySelect>;
 
 const Template: ComponentStory<typeof CountrySelect> = (args) => <CountrySelect {...args} />;
