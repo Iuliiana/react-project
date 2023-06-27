@@ -1,15 +1,6 @@
-import {
-    Article, ArticleBlockType, ArticleSortField, ArticleType, ArticleView,
-} from 'entities/Article';
-import {
-    fetchArticlesList,
-} from '../services/fetchArticlesList/fetchArticlesList';
-import {
-    articlesPageReducer,
-} from './articlesPageSlice';
-import { ArticlesPageSchema } from '../types/ArticlesPageSchema';
+import { Article, ArticleBlockType, ArticleType } from 'entities/Article';
 
-const article: Article = {
+export const article: Article = {
     id: '1',
     title: 'Javascript news',
     subtitle: 'Что нового в JS за 2022 год?',
@@ -20,7 +11,7 @@ const article: Article = {
     user: {
         id: '1',
         username: 'admin',
-        avatar: 'https://sun1-95.userapi.com/s/v1/ig2/xzx1BbeV9lr8KAWLbMiKM6fnfCD0H2p8R8xUUx25QcZHh4a8H4hjFSGrBKDd7O-_BkZmwM2-eokVbZWliFqknf47.jpg?size=400x400&quality=95&crop=95,79,426,426&ava=1',
+        avatar: 'https://i.pinimg.com/736x/49/d5/12/49d51222423ba846b57918a386da8660--frogs-funny-cat-pictures.jpg',
     },
     blocks: [
         {
@@ -83,124 +74,3 @@ const article: Article = {
         },
     ],
 };
-const articles: Article[] = new Array(3)
-    .fill(0)
-    .map((item, index) => ({
-        ...article,
-        id: String(index),
-    }));
-const articles2: Article[] = new Array(3)
-    .fill(0)
-    .map((item, index) => ({
-        ...article,
-        id: String(index + 3),
-    }));
-
-describe('articlesPageSlice.test', () => {
-    test('undefined state', () => {
-        expect(
-            articlesPageReducer(undefined, fetchArticlesList.pending('', {})),
-        ).toEqual({
-            ids: [],
-            entities: {},
-            error: undefined,
-            isLoading: true,
-            view: ArticleView.GRID,
-            hasMore: true,
-            page: 1,
-            _inited: false,
-            limit: 9,
-            type: ArticleType.ALL,
-            order: 'asc',
-            search: '',
-            sort: ArticleSortField.CREATED,
-        });
-    });
-
-    test('fetchArticleDetailsData.fulfilled replace: true', () => {
-        const state: ArticlesPageSchema = {
-            ids: [],
-            entities: {},
-            error: undefined,
-            isLoading: false,
-            view: ArticleView.GRID,
-            hasMore: true,
-            page: 1,
-            _inited: true,
-            limit: 9,
-            type: ArticleType.ALL,
-            order: 'asc',
-            search: '',
-            sort: ArticleSortField.CREATED,
-        };
-
-        expect(
-            articlesPageReducer(state, fetchArticlesList.fulfilled(articles, '', { replace: true })),
-        ).toEqual({
-            ids: ['0', '1', '2'],
-            entities: {
-                0: articles[0],
-                1: articles[1],
-                2: articles[2],
-            },
-            error: undefined,
-            isLoading: false,
-            view: ArticleView.GRID,
-            hasMore: false,
-            page: 1,
-            _inited: true,
-            limit: 9,
-            type: ArticleType.ALL,
-            order: 'asc',
-            search: '',
-            sort: ArticleSortField.CREATED,
-        });
-    });
-
-    test('fetchArticleDetailsData.fulfilled replace: false', () => {
-        const state: ArticlesPageSchema = {
-            ids: ['0', '1', '2'],
-            entities: {
-                0: articles[0],
-                1: articles[1],
-                2: articles[2],
-            },
-            error: undefined,
-            isLoading: false,
-            view: ArticleView.GRID,
-            hasMore: true,
-            page: 1,
-            _inited: true,
-            limit: 9,
-            type: ArticleType.ALL,
-            order: 'asc',
-            search: '',
-            sort: ArticleSortField.CREATED,
-        };
-
-        expect(
-            articlesPageReducer(state, fetchArticlesList.fulfilled([...articles, ...articles2], '', { replace: false })),
-        ).toEqual({
-            ids: ['0', '1', '2', '3', '4', '5'],
-            entities: {
-                0: articles[0],
-                1: articles[1],
-                2: articles[2],
-                3: articles2[0],
-                4: articles2[1],
-                5: articles2[2],
-            },
-            error: undefined,
-            isLoading: false,
-            view: ArticleView.GRID,
-            hasMore: false,
-            page: 1,
-            _inited: true,
-            limit: 9,
-            type: ArticleType.ALL,
-            order: 'asc',
-            search: '',
-            sort: ArticleSortField.CREATED,
-        });
-    });
-});

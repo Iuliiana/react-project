@@ -1,10 +1,10 @@
 export { articleDetailsPageReducer } from './model/slice';
 
-export {
+export type {
     ArticleDetailsPageSchema,
 } from './model/types';
 
-export {
+export type {
     ArticleDetailsCommentsSchema,
 } from './model/types/ArticleDetailsCommentsSchema';
 

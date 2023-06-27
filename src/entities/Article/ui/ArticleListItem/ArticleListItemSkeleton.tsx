@@ -2,18 +2,18 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import React, { memo } from 'react';
 import { Card } from 'shared/ui/Card/Card';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
-import { ArticleViewType } from '../../model/types/article';
+import { ArticleView } from '../../model/consts/articleViewConst';
 import cls from './ArticleListItem.module.scss';
 
 interface ArticleListItemSkeletonProps {
     className?: string,
-    view: ArticleViewType
+    view: ArticleView
 }
 
 export const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps) => {
     const { className, view } = props;
 
-    if (view === ArticleViewType.LIST) {
+    if (view === ArticleView.LIST) {
         return (
             <Card className={classNames(cls.ArticleItem, {}, [className, cls[view]])}>
                 <div className={cls.header}>

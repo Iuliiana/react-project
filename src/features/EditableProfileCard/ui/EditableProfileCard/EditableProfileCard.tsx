@@ -9,10 +9,10 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { ProfileCard } from 'entities/Profile';
 import { useTranslation } from 'react-i18next';
+import { ProfileErrorsCode } from '../../model/consts/profileErrorsCodeConsts';
 import {
     EditableProfileCardHeader,
 } from '../EditableProfileCardHeader/EditableProfileCardHeader';
-import { ProfileErrorsCode } from '../../model/types/EditableProfileCardSchema';
 import {
     editableProfileCardActions,
     editableProfileCardReducer,

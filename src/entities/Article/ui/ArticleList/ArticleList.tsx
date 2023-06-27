@@ -10,7 +10,8 @@ import {
 
 import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 import { ArticlesPageFilters } from 'pages/ArticlesPage';
-import { Article, ArticleViewType } from '../../model/types/article';
+import { ArticleView } from '../../model/consts/articleViewConst';
+import { Article } from '../../model/types/article';
 import cls from './ArticleList.module.scss';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticlesListFooter, getSkeletons } from './ArticlesListFooter';
@@ -18,7 +19,7 @@ import { ArticlesListFooter, getSkeletons } from './ArticlesListFooter';
 interface ArticleListProps {
     className?: string,
     articles: Article[],
-    view?: ArticleViewType,
+    view?: ArticleView,
     isLoading?: boolean,
     target?: string,
     onScrollEnd?: () => void,
@@ -32,7 +33,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         isLoading,
         target,
         onScrollEnd,
-        view = ArticleViewType.LIST,
+        view = ArticleView.LIST,
         isVirtuoso = false,
     } = props;
 
@@ -50,7 +51,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
     useEffect(() => {
         let timer: ReturnType<typeof setTimeout>;
-        const currentRef = (view === ArticleViewType.GRID) ? virtuosoGridRef : virtuosoListRef;
+        const currentRef = (view === ArticleView.GRID) ? virtuosoGridRef : virtuosoListRef;
         if (articleIndex !== 0) {
             timer = setTimeout(() => {
                 if (currentRef.current) {
@@ -84,7 +85,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         return (
             <div className={classNames(cls.ArticleList, {}, [className])}>
                 {
-                    (view === ArticleViewType.LIST) ? (
+                    (view === ArticleView.LIST) ? (
                         <Virtuoso
                             ref={virtuosoListRef}
                             context={{ isLoading, view }}

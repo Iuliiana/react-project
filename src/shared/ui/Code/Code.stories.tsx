@@ -9,7 +9,7 @@ export default {
     component: Code,
     argTypes: {},
     args: {
-        text: ' case ArticleBlocksType.CODE:\n'
+        text: ' case ArticleBlockType.CODE:\n'
             + '            return (\n'
             + '                <ArticleCodeBlockComponent\n'
             + '                    block={block}\n'
@@ -17,7 +17,7 @@ export default {
             + '                    className={cls.block}\n'
             + '                />\n'
             + '            );\n'
-            + '        case ArticleBlocksType.TEXT:\n'
+            + '        case ArticleBlockType.TEXT:\n'
             + '            return (\n'
             + '                <ArticleTextBlockComponent\n'
             + '                    block={block}\n'

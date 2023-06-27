@@ -10,10 +10,11 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import ViewsIcon from 'shared/assets/icons/view.svg';
 import CalendarIcon from 'shared/assets/icons/calendar.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
+import { ArticleBlockType } from '../../model/consts/articleBlockTypeConst';
 import { ArticleCodeBlockComponent } from '../../ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleTextBlockComponent } from '../../ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleImageBlockComponent } from '../../ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
-import { ArticleBlock, ArticleBlocksType } from '../../model/types/article';
+import { ArticleBlock } from '../../model/types/article';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
@@ -48,7 +49,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     const renderBlocks = useCallback((block: ArticleBlock) => {
         switch (block.type) {
-        case ArticleBlocksType.CODE:
+        case ArticleBlockType.CODE:
             return (
                 <ArticleCodeBlockComponent
                     block={block}
@@ -56,7 +57,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                     className={cls.block}
                 />
             );
-        case ArticleBlocksType.TEXT:
+        case ArticleBlockType.TEXT:
             return (
                 <ArticleTextBlockComponent
                     block={block}
@@ -64,7 +65,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                     className={cls.block}
                 />
             );
-        case ArticleBlocksType.IMAGE:
+        case ArticleBlockType.IMAGE:
             return (
                 <ArticleImageBlockComponent
                     block={block}

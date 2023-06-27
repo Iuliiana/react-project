@@ -7,7 +7,7 @@ import withMock from 'storybook-addon-mock';
 import { RouterDecorator } from 'shared/configs/storybook/RouterDecorator';
 import {
     articleRecommendationsListData,
-} from '../mockData/articleRecommendationsListData';
+} from '../model/tests/articleRecommendationsListData';
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
 
 export default {

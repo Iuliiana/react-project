@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import React, { memo } from 'react';
 import { Text } from 'shared/ui/Text/Text';
-import { ArticleList, ArticleViewType } from 'entities/Article';
+import { ArticleList, ArticleView } from 'entities/Article';
 import { VStack } from 'shared/ui/Stack';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { useGetArticleRecommendationsQuery } from '../api/aritcleRecommendationsApi';
@@ -51,7 +51,7 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
             <ArticleList
                 isLoading={recommendationsIsLoading}
                 articles={recommendationsList}
-                view={ArticleViewType.GRID}
+                view={ArticleView.GRID}
                 className={cls.recommendationsList}
                 target="_blank"
             />

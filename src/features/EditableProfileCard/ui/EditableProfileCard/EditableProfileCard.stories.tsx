@@ -5,7 +5,7 @@ import { StoreDecorator } from 'shared/configs/storybook/StoreDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
-import { ProfileErrorsCode } from '../../model/types/EditableProfileCardSchema';
+import { ProfileErrorsCode } from '../../model/consts/profileErrorsCodeConsts';
 import { EditableProfileCard } from './EditableProfileCard';
 
 export default {

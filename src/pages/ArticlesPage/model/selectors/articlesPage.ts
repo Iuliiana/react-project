@@ -1,8 +1,8 @@
 import { StateSchema } from 'app/providers/StoreProvider';
 import {
-    ArticleViewType,
+    ArticleView,
     ArticleType,
-    ArticleSortBy,
+    ArticleSortField,
 } from 'entities/Article';
 
 export const getArticlesPageIsLoading = (state: StateSchema) => (
@@ -13,7 +13,7 @@ export const getArticlesPageError = (state: StateSchema) => (
     state?.articlesPage?.error || undefined
 );
 export const getArticlesPageView = (state: StateSchema) => (
-    state?.articlesPage?.view || ArticleViewType.GRID
+    state?.articlesPage?.view || ArticleView.GRID
 );
 
 export const getArticlesPageNum = (state: StateSchema) => (
@@ -33,7 +33,7 @@ export const getArticlesPageIsInited = (state: StateSchema) => (
 );
 
 export const getArticlesSort = (state: StateSchema) => (
-    state?.articlesPage?.sort ?? ArticleSortBy.CREATED
+    state?.articlesPage?.sort ?? ArticleSortField.CREATED
 );
 export const getArticlesOrder = (state: StateSchema) => (
     state?.articlesPage?.order ?? 'asc'

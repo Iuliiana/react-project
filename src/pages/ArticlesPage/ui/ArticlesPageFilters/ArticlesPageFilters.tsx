@@ -4,7 +4,7 @@ import React, {
     memo, useCallback,
 } from 'react';
 import { ArticleViewSelector } from 'features/ArticleViewSelector';
-import { ArticleType, ArticleViewType, ArticleSortBy } from 'entities/Article';
+import { ArticleType, ArticleView, ArticleSortField } from 'entities/Article';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Input } from 'shared/ui/Input/Input';
@@ -41,7 +41,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     const search = useSelector(getArticlesSearch);
     const type = useSelector(getArticlesType);
 
-    const onChangeViewArticles = useCallback((view: ArticleViewType) => {
+    const onChangeViewArticles = useCallback((view: ArticleView) => {
         dispatch(articlesPageActions.setView(view));
     }, [dispatch]);
 
@@ -52,7 +52,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
 
     const debounceData = useDebounce(fetchData, 1000);
 
-    const onChangeSort = useCallback((sort: ArticleSortBy) => {
+    const onChangeSort = useCallback((sort: ArticleSortField) => {
         dispatch(articlesPageActions.setSort(sort));
         fetchData();
     }, [dispatch, fetchData]);

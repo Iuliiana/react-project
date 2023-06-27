@@ -1,13 +1,6 @@
-export {
-    ArticleBlocksType,
-} from './model/types/article';
-
-export {
-    ArticleType,
-    ArticleSortBy,
-} from './model/types/article';
-
-export { ArticleViewType } from './model/types/article';
+export { ArticleView } from './model/consts/articleViewConst';
+export { ArticleSortField } from './model/consts/articleSortFieldConst';
+export { ArticleType } from './model/consts/articleTypeConst';
 
 export {
     ArticleList,
@@ -26,10 +19,12 @@ export {
     articleDetailsActions,
 } from './model/slice/articleDetailsSlice';
 
-export {
+export type {
     ArticleDetailsSchema,
 } from './model/types/ArticleDetailsSchema';
 
-export {
+export type {
     Article,
 } from './model/types/article';
+
+export { ArticleBlockType } from './model/consts/articleBlockTypeConst';

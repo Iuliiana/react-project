@@ -1,4 +1,6 @@
-import { Article, ArticleBlocksType, ArticleType } from '../model/types/article';
+import { ArticleType } from '../consts/articleTypeConst';
+import { ArticleBlockType } from '../consts/articleBlockTypeConst';
+import { Article } from '../types/article';
 
 export const articleData: Article = {
     id: '1',
@@ -11,12 +13,12 @@ export const articleData: Article = {
     user: {
         id: '1',
         username: 'admin',
-        avatar: 'https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200',
+        avatar: 'https://i.pinimg.com/736x/49/d5/12/49d51222423ba846b57918a386da8660--frogs-funny-cat-pictures.jpg',
     },
     blocks: [
         {
             id: '1',
-            type: ArticleBlocksType.TEXT,
+            type: ArticleBlockType.TEXT,
             title: 'Заголовок этого блока',
             paragraphs: [
                 'Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.',
@@ -26,12 +28,12 @@ export const articleData: Article = {
         },
         {
             id: '4',
-            type: ArticleBlocksType.CODE,
+            type: ArticleBlockType.CODE,
             code: '<!DOCTYPE html>\n<html>\n  <body>\n    <p id="hello"></p>\n\n    <script>\n      document.getElementById("hello").innerHTML = "Hello, world!";\n    </script>\n  </body>\n</html>;',
         },
         {
             id: '5',
-            type: ArticleBlocksType.TEXT,
+            type: ArticleBlockType.TEXT,
             title: 'Заголовок этого блока',
             paragraphs: [
                 'Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.',
@@ -40,18 +42,18 @@ export const articleData: Article = {
         },
         {
             id: '2',
-            type: ArticleBlocksType.IMAGE,
+            type: ArticleBlockType.IMAGE,
             src: 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
             title: 'Рисунок 1 - скриншот сайта',
         },
         {
             id: '3',
-            type: ArticleBlocksType.CODE,
+            type: ArticleBlockType.CODE,
             code: "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);",
         },
         {
             id: '7',
-            type: ArticleBlocksType.TEXT,
+            type: ArticleBlockType.TEXT,
             title: 'Заголовок этого блока',
             paragraphs: [
                 'JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.',
@@ -60,13 +62,13 @@ export const articleData: Article = {
         },
         {
             id: '8',
-            type: ArticleBlocksType.IMAGE,
+            type: ArticleBlockType.IMAGE,
             src: 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
             title: 'Рисунок 1 - скриншот сайта',
         },
         {
             id: '9',
-            type: ArticleBlocksType.TEXT,
+            type: ArticleBlockType.TEXT,
             title: 'Заголовок этого блока',
             paragraphs: [
                 'JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.',

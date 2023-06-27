@@ -1,5 +1,5 @@
 import { TestAsyncThunk } from 'shared/lib/tests/helpers/TestAsyncThunk/TestAsyncThunk';
-import { ArticleViewType } from 'entities/Article';
+import { ArticleView } from 'entities/Article';
 import { initArticlesPage } from './initArticlesPage';
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList';
 
@@ -10,7 +10,7 @@ describe('initArticlesPage.test', () => {
         const thunk = new TestAsyncThunk(initArticlesPage, {
             articlesPage: {
                 page: 1,
-                view: ArticleViewType.GRID,
+                view: ArticleView.GRID,
                 hasMore: true,
                 ids: [],
                 entities: {},
@@ -29,7 +29,7 @@ describe('initArticlesPage.test', () => {
         const thunk = new TestAsyncThunk(initArticlesPage, {
             articlesPage: {
                 page: 3,
-                view: ArticleViewType.GRID,
+                view: ArticleView.GRID,
                 hasMore: false,
                 ids: [],
                 entities: {},

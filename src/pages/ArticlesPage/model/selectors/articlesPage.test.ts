@@ -1,5 +1,5 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { ArticleViewType } from 'entities/Article';
+import { ArticleView } from 'entities/Article';
 import {
     getArticlesPageIsLoading,
     getArticlesPageError,
@@ -15,7 +15,7 @@ describe('getArticlesPageIsLoading', () => {
             articlesPage: {
                 isLoading: true,
                 error: 'error',
-                view: ArticleViewType.LIST,
+                view: ArticleView.LIST,
                 hasMore: true,
                 page: 1,
             },
@@ -35,7 +35,7 @@ describe('getArticlesPageError', () => {
             articlesPage: {
                 isLoading: false,
                 error: 'error',
-                view: ArticleViewType.LIST,
+                view: ArticleView.LIST,
                 hasMore: true,
                 page: 1,
             },
@@ -55,17 +55,17 @@ describe('getArticlesPageView', () => {
             articlesPage: {
                 isLoading: false,
                 error: 'error',
-                view: ArticleViewType.LIST,
+                view: ArticleView.LIST,
                 hasMore: true,
                 page: 1,
             },
         };
-        expect(getArticlesPageView(state as StateSchema)).toBe(ArticleViewType.LIST);
+        expect(getArticlesPageView(state as StateSchema)).toBe(ArticleView.LIST);
     });
 
     test('should return empty value', () => {
         const state: DeepPartial<StateSchema> = {};
-        expect(getArticlesPageView(state as StateSchema)).toBe(ArticleViewType.GRID);
+        expect(getArticlesPageView(state as StateSchema)).toBe(ArticleView.GRID);
     });
 });
 
@@ -75,7 +75,7 @@ describe('getArticlesPageLimit', () => {
             articlesPage: {
                 isLoading: false,
                 error: 'error',
-                view: ArticleViewType.LIST,
+                view: ArticleView.LIST,
                 hasMore: true,
                 page: 1,
             },
@@ -95,7 +95,7 @@ describe('getArticlesPageNum', () => {
             articlesPage: {
                 isLoading: false,
                 error: 'error',
-                view: ArticleViewType.LIST,
+                view: ArticleView.LIST,
                 hasMore: true,
                 page: 6,
             },
@@ -114,7 +114,7 @@ describe('getArticlesPageHasMore', () => {
             articlesPage: {
                 isLoading: false,
                 error: 'error',
-                view: ArticleViewType.LIST,
+                view: ArticleView.LIST,
                 hasMore: false,
                 page: 1,
             },

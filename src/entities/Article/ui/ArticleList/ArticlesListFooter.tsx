@@ -1,10 +1,10 @@
 import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { ArticleViewType } from '../../model/types/article';
+import { ArticleView } from '../../model/consts/articleViewConst';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import cls from './ArticleList.module.scss';
 
-export const getSkeletons = (view: ArticleViewType) => new Array(view === ArticleViewType.GRID ? 15 : 5)
+export const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.GRID ? 15 : 5)
     .fill(0)
     .map((item, index) => (
         // eslint-disable-next-line react/no-array-index-key
@@ -12,7 +12,7 @@ export const getSkeletons = (view: ArticleViewType) => new Array(view === Articl
     ));
 
 export const ArticlesListFooter = memo(
-    ({ context }: { context?: { isLoading?: boolean; view: ArticleViewType } | undefined}) => {
+    ({ context }: { context?: { isLoading?: boolean; view: ArticleView } | undefined}) => {
         // @ts-ignore
         const { isLoading, view } = context;
         return (

@@ -1,6 +1,6 @@
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
-import { ProfileErrorsCode } from '../../types/EditableProfileCardSchema';
+import { ProfileErrorsCode } from '../../consts/profileErrorsCodeConsts';
 import { validateProfileData } from './validateProfileData';
 
 const data = {

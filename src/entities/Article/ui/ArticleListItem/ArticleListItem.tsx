@@ -9,8 +9,10 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { RoutePath } from 'shared/configs/routerConfig/routerConfig';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
+import { ArticleView } from '../../model/consts/articleViewConst';
+import { ArticleBlockType } from '../../model/consts/articleBlockTypeConst';
 import {
-    Article, ArticleBlocksText, ArticleBlocksType, ArticleViewType,
+    Article, ArticleBlocksText,
 } from '../../model/types/article';
 import cls from './ArticleListItem.module.scss';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
@@ -18,7 +20,7 @@ import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleT
 interface ArticleItemProps {
     className?: string,
     article: Article,
-    view: ArticleViewType,
+    view: ArticleView,
     target?: string,
     index?: number,
 }
@@ -35,8 +37,8 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
         }
     };
 
-    if (view === ArticleViewType.LIST) {
-        const block = article.blocks.find((block) => block.type === ArticleBlocksType.TEXT) as ArticleBlocksText;
+    if (view === ArticleView.LIST) {
+        const block = article.blocks.find((block) => block.type === ArticleBlockType.TEXT) as ArticleBlocksText;
         return (
             <Card className={classNames(cls.ArticleItem, {}, [className, cls[view]])}>
                 <div className={cls.header}>

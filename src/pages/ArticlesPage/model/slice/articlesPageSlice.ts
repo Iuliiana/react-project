@@ -1,6 +1,6 @@
 import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import {
-    Article, ArticleType, ArticleViewType, ArticleSortBy,
+    Article, ArticleType, ArticleView, ArticleSortField,
 } from 'entities/Article';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
@@ -23,7 +23,7 @@ export const articlesPageSlice = createSlice({
         entities: {},
         error: undefined,
         isLoading: false,
-        view: ArticleViewType.GRID,
+        view: ArticleView.GRID,
         page: 1,
         hasMore: true,
         _inited: false,
@@ -31,12 +31,12 @@ export const articlesPageSlice = createSlice({
         type: ArticleType.ALL,
         order: 'asc',
         search: '',
-        sort: ArticleSortBy.CREATED,
+        sort: ArticleSortField.CREATED,
     }),
     reducers: {
-        setView: (state, action:PayloadAction<ArticleViewType>) => {
+        setView: (state, action:PayloadAction<ArticleView>) => {
             state.view = action.payload;
-            state.limit = action.payload === ArticleViewType.GRID ? 15 : 5;
+            state.limit = action.payload === ArticleView.GRID ? 15 : 5;
             localStorage.setItem(ARTICLES_VIEW_LOCALSTORAGE_KEY, action.payload);
         },
         setPage: (state, action:PayloadAction<number>) => {
@@ -51,15 +51,15 @@ export const articlesPageSlice = createSlice({
         setSearch: (state, action:PayloadAction<string>) => {
             state.search = action.payload;
         },
-        setSort: (state, action:PayloadAction<ArticleSortBy>) => {
+        setSort: (state, action:PayloadAction<ArticleSortField>) => {
             state.sort = action.payload;
         },
         initState: (state) => {
             state._inited = true;
             if (localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY)) {
-                state.view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleViewType;
+                state.view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView;
             }
-            state.limit = state.view === ArticleViewType.GRID ? 15 : 5;
+            state.limit = state.view === ArticleView.GRID ? 15 : 5;
         },
     },
     extraReducers: (builder) => {
