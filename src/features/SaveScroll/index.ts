@@ -2,7 +2,7 @@ export {
     getSaveScrollByPath,
 } from './model/selectors/getSaveScrollSelectors';
 
-export { SaveScrollSchema } from './model/types/SaveScrollSchema';
+export type { SaveScrollSchema } from './model/types/SaveScrollSchema';
 
 export {
     saveScrollActions, saveScrollReducer,

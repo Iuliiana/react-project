@@ -1,4 +1,4 @@
-export {
+export type {
     LoginShema,
 } from './model/types/LoginShema';
 

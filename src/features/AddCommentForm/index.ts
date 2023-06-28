@@ -3,7 +3,7 @@ export {
     addCommentFormActions,
 } from './model/slice/addCommentFormSlice';
 
-export {
+export type {
     AddCommentFormSchema,
 } from './model/types/AddCommentFormSchema';
 
