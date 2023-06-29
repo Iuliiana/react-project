@@ -5,7 +5,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { ArticleSortSelector } from './ArticleSortSelector';
 
 export default {
-    title: 'features/Article/ArticleSortSelector',
+    title: 'entities/Article/ArticleSortSelector',
     component: ArticleSortSelector,
     argTypes: {},
     args: {},

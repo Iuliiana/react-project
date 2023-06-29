@@ -23,6 +23,8 @@
     --modal-border-radius: 1rem;
     --sidebar-nav-rounding: 2rem;
     --sidebar-nav-rounding-inverted: -2rem;
+    --filter-articles-height: 17rem;
+    --head-articles-height: calc(var(--navbar-height) + var(--filter-articles-height));
 
     /* colors */
 

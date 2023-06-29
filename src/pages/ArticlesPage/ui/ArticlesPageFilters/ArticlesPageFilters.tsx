@@ -3,16 +3,20 @@ import { useTranslation } from 'react-i18next';
 import React, {
     memo, useCallback,
 } from 'react';
-import { ArticleViewSelector } from 'features/ArticleViewSelector';
-import { ArticleType, ArticleView, ArticleSortField } from 'entities/Article';
+import {
+    ArticleType,
+    ArticleView,
+    ArticleSortField,
+    ArticleViewSelector,
+    ArticleSortSelector,
+    ArticleTypeTabs,
+} from 'entities/Article';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Input } from 'shared/ui/Input/Input';
 import { Card } from 'shared/ui/Card/Card';
 import { OrderBy } from 'shared/lib/types';
 import { useDebounce } from 'shared/hooks/useDebounce/useDebounce';
-import { ArticleSortSelector } from 'features/ArticleSortSelector';
-import { ArticleTypeTabs } from 'features/ArticleTypeTabs/';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slice/articlesPageSlice';
 import {

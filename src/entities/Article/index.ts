@@ -6,6 +6,10 @@ export {
     ArticleList,
 } from './ui/ArticleList/ArticleList';
 
+export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
+export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
+export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
+
 export {
     getArticleDetailsData,
 } from './model/selectors/getArticlesDetailsData';
@@ -13,11 +17,6 @@ export {
 export {
     ArticleDetails,
 } from './ui/ArticleDetails/ArticleDetails';
-
-export {
-    articleDetailsReducer,
-    articleDetailsActions,
-} from './model/slice/articleDetailsSlice';
 
 export type {
     ArticleDetailsSchema,

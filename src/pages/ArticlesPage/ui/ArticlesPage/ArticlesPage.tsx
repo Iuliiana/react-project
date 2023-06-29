@@ -4,6 +4,8 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/hooks/useInitialEffect/useInitialEffect';
 import { useSearchParams } from 'react-router-dom';
+import { VStack } from 'shared/ui/Stack';
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { articlesPageReducer } from '../../model/slice/articlesPageSlice';
@@ -27,7 +29,11 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount={false}>
-            <ArticleInfiniteList className={classNames('', {}, [className])} />
+            <VStack max justify="between" align="stretch">
+                <ArticlesPageFilters />
+                <ArticleInfiniteList className={classNames('', {}, [className])} />
+            </VStack>
+
         </DynamicModuleLoader>
     );
 };
