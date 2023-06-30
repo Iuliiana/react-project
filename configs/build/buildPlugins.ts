@@ -5,6 +5,7 @@ import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import CopyPlugin from 'copy-webpack-plugin';
 import CircularDependencyPlugin from 'circular-dependency-plugin';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import { BuildOptions } from './types/config';
 
 export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstance[] => {
@@ -40,6 +41,15 @@ export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstan
         plugins.push(new CircularDependencyPlugin({
             exclude: /node_modules/,
             failOnError: true,
+        }));
+        plugins.push(new ForkTsCheckerWebpackPlugin({
+            typescript: {
+                diagnosticOptions: {
+                    semantic: true,
+                    syntactic: true,
+                },
+                mode: 'write-references',
+            },
         }));
     }
 
