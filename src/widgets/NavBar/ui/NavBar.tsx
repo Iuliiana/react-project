@@ -3,15 +3,16 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { LoginModal } from 'features/AuthByUsername';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import {
-    getUserAuthData, isAdminRole, isManagerRole, userActions,
+    getUserAuthData,
 } from 'entities/User';
 import { RoutePath } from 'shared/configs/routerConfig/routerConfig';
 import { Text } from 'shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { HStack } from 'shared/ui/Stack';
+import { NotificationButton } from 'features/NotificationButton';
+import { AvatarDropdown } from 'features/AvatarDropdown';
 import cls from './NavBar.module.scss';
 
 interface NavBarProps {
@@ -21,10 +22,7 @@ interface NavBarProps {
 export const NavBar = memo(({ className }: NavBarProps) => {
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
-    const dispatch = useDispatch();
     const authData = useSelector(getUserAuthData);
-    const isAdmin = useSelector(isAdminRole);
-    const isManager = useSelector(isManagerRole);
 
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
@@ -33,12 +31,6 @@ export const NavBar = memo(({ className }: NavBarProps) => {
     const onShowModal = useCallback(() => {
         setIsAuthModal(true);
     }, []);
-
-    const onLogoutClick = useCallback(() => {
-        dispatch(userActions.logoutUser());
-    }, [dispatch]);
-
-    const isAdminPanelAvailable = isAdmin || isManager;
 
     if (authData) {
         return (
@@ -51,27 +43,10 @@ export const NavBar = memo(({ className }: NavBarProps) => {
                 >
                     {t('Создать статью')}
                 </AppLink>
-                <Dropdown
-                    btn={<Avatar size={50} pic={authData?.avatar} />}
-                    direction="bottom left"
-                    items={[
-                        {
-                            content: t('Выйти'),
-                            onClick: onLogoutClick,
-                        },
-                        {
-                            content: t('Профиль'),
-                            href: RoutePath.profile + authData.id,
-                        },
-                        ...(isAdminPanelAvailable ? [{
-                            content: t('Админка'),
-                            href: RoutePath.admin_panel,
-                        }] : []
-                        ),
-                    ]}
-                    className={cls.navLinks}
-
-                />
+                <HStack gap="16" className={cls.navLinks}>
+                    <NotificationButton />
+                    <AvatarDropdown />
+                </HStack>
             </header>
         );
     }
