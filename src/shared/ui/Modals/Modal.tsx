@@ -1,7 +1,8 @@
 import React, {
-    FC, MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState,
+    FC, ReactNode,
 } from 'react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { useModal } from 'shared/hooks/useModal/useModal';
 import { Portal } from '../Portal/Portal';
 import cls from './Modal.module.scss';
 import { Overlay } from '../Overlay/Overlay';
@@ -22,53 +23,25 @@ interface ModalsProps {
     modalTheme?: ModalThemeType
 }
 
-const ANIMATION_DELAY = 300;
-
 export const Modal:FC<ModalsProps> = (props) => {
     const {
         className, children, onClose, isOpen, lazy, modalTheme = ModalTheme.CLEAR,
     } = props;
 
-    const [isClosing, setIsClosing] = useState(false);
-    const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
-    const [isMounted, setIsMounted] = useState(false);
-
-    useEffect(() => {
-        if (isOpen) {
-            setIsMounted(true);
-        }
-    }, [isOpen]);
+    const {
+        isClosing,
+        closeHandler,
+        isMounted,
+    } = useModal({
+        isOpen,
+        onClose,
+        animationDelay: 300,
+    });
 
     const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.closing]: isClosing,
     };
-
-    const closeHandler = useCallback(() => {
-        if (onClose) {
-            setIsClosing(true);
-            timerRef.current = setTimeout(() => {
-                onClose();
-                setIsClosing(false);
-            }, ANIMATION_DELAY);
-        }
-    }, [onClose]);
-
-    const onKeyDown = useCallback((event: KeyboardEvent) => {
-        if (event.key === 'Escape') {
-            closeHandler();
-        }
-    }, [closeHandler]);
-
-    useEffect(() => {
-        if (isOpen) {
-            window.addEventListener('keydown', onKeyDown);
-        }
-        return () => {
-            clearTimeout(timerRef.current);
-            window.removeEventListener('keydown', onKeyDown);
-        };
-    }, [isOpen, onKeyDown]);
 
     if (lazy && !isMounted) {
         return null;

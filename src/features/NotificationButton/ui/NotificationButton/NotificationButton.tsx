@@ -6,7 +6,6 @@ import NotificationIcon from 'shared/assets/icons/notification.svg';
 import { NotificationList } from 'entities/Notification';
 import { Drawer } from 'shared/ui/Drawer/Drawer';
 import { useDetectDevice } from 'shared/hooks/useDetectDevice/useDetectDevice';
-import { Button } from 'shared/ui/Button/Button';
 import cls from './NotificationButton.module.scss';
 
 interface NotificationButtonProps {
@@ -27,9 +26,10 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
     }, []);
 
     const trigger = (
-        <Button onClick={onOpenDrawer}>
+        // eslint-disable-next-line jsx-a11y/interactive-supports-focus
+        <div role="button" onClick={onOpenDrawer}>
             <Icon Svg={NotificationIcon} />
-        </Button>
+        </div>
     );
 
     if (!isMobilDevice) {
@@ -48,7 +48,7 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
             { trigger }
             {
                 isOpenDrawer && (
-                    <Drawer isOpen={isOpenDrawer} onClick={onCloseDrawer}>
+                    <Drawer isOpen={isOpenDrawer} onClose={onCloseDrawer}>
                         <NotificationList />
                     </Drawer>
                 )
