@@ -17,4 +17,8 @@
 .loginBtn {
     border-radius: var(--modal-border-radius);
     background: var(--button-color);
+
+    &:hover {
+        color: var(--primary-color);
+    }
 }
