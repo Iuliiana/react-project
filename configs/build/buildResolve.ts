@@ -7,6 +7,8 @@ export const buildResolve = ({ paths }: BuildOptions): ResolveOptions => ({
     modules: [
         paths.src, 'node_modules',
     ],
-    alias: {},
+    alias: {
+        '@/': paths.src,
+    },
     mainFiles: ['index'],
 });
