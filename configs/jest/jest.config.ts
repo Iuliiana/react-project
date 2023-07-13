@@ -25,6 +25,7 @@ const config = {
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
         // axios: 'axios/dist/node/axios.cjs',
         axios: '<rootDir>/node_modules/axios/dist/node/axios.cjs',
+        '^@/(.*)$': '<rootDir>src/$1',
     },
     setupFilesAfterEnv: ['<rootDir>configs/jest/jest-setup.ts'],
     globals: {

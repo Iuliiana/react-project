@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
-import { RouterDecorator } from 'shared/configs/storybook/RouterDecorator';
+import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
 import { ArticleView } from '../../model/consts/articleViewConst';
 import { articleData } from '../../model/tests/articleData';
 import { ArticleListItem } from './ArticleListItem';

@@ -1,7 +1,7 @@
-import { TestAsyncThunk } from 'shared/lib/tests/helpers/TestAsyncThunk/TestAsyncThunk';
-import { Currency } from 'entities/Currency';
-import { Country } from 'entities/Country';
-import { StateSchema } from 'app/providers/StoreProvider';
+import { TestAsyncThunk } from '@/shared/lib/tests/helpers/TestAsyncThunk/TestAsyncThunk';
+import { Currency } from '@/entities/Currency';
+import { Country } from '@/entities/Country';
+import { StateSchema } from '@/app/providers/StoreProvider';
 import { ProfileErrorsCode } from '../../consts/profileErrorsCodeConsts';
 import { updateProfileData } from './updateProfileData';
 

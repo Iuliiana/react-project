@@ -2,15 +2,15 @@ import React from 'react';
 import {
     ComponentStory, ComponentMeta,
 } from '@storybook/react';
-import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
-import { StoreDecorator } from 'shared/configs/storybook/StoreDecorator';
-import { RouterDecorator } from 'shared/configs/storybook/RouterDecorator';
-import { articleData } from 'entities/Article/model/tests/articleData';
+import withMock from 'storybook-addon-mock';
+import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
+import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
+import { articleData } from '@/entities/Article/model/tests/articleData';
 import {
     articleRecommendationsListData,
-} from 'features/ArticleRecommendationsList/model/tests/articleRecommendationsListData';
-import withMock from 'storybook-addon-mock';
+} from '@/features/ArticleRecommendationsList/model/tests/articleRecommendationsListData';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 export default {

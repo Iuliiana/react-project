@@ -1,5 +1,5 @@
 /* можно брать данные из state или принимать на вход */
-import { Profile } from 'entities/Profile';
+import { Profile } from '@/entities/Profile';
 import { ProfileErrorsCode } from '../../consts/profileErrorsCodeConsts';
 
 export const validateProfileData = (profileData?: Profile) => {

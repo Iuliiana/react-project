@@ -1,7 +1,7 @@
 import {
     Article, ArticleBlockType, ArticleSortField, ArticleType, ArticleView,
-} from 'entities/Article';
-import { TestAsyncThunk } from 'shared/lib/tests/helpers/TestAsyncThunk/TestAsyncThunk';
+} from '@/entities/Article';
+import { TestAsyncThunk } from '@/shared/lib/tests/helpers/TestAsyncThunk/TestAsyncThunk';
 import { fetchArticlesList } from './fetchArticlesList';
 
 const articles: Article[] = [

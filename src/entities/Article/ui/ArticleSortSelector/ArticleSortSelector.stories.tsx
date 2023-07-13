@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
+import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
 import { ArticleSortSelector } from './ArticleSortSelector';
 
 export default {

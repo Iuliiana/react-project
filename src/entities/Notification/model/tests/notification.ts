@@ -1,4 +1,4 @@
-import { UserRole } from 'entities/User';
+import { UserRole } from '@/entities/User';
 import { Notification } from '../types/notification';
 
 export const notificationItemHref: Notification = {

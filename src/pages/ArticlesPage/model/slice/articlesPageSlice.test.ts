@@ -1,6 +1,6 @@
 import {
     Article, ArticleBlockType, ArticleSortField, ArticleType, ArticleView,
-} from 'entities/Article';
+} from '@/entities/Article';
 import {
     fetchArticlesList,
 } from '../services/fetchArticlesList/fetchArticlesList';

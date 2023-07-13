@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta, Story } from '@storybook/react';
-import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
+import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
 import { Avatar } from '../../../Avatar/Avatar';
 import { Button } from '../../../Button/Button';
 import { Dropdown } from './Dropdown';

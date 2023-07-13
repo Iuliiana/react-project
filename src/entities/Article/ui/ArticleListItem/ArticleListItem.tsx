@@ -1,14 +1,14 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import React, { memo } from 'react';
-import { Text } from 'shared/ui/Text/Text';
-import ViewsIcon from 'shared/assets/icons/view.svg';
-import { Icon } from 'shared/ui/Icon/Icon';
-import { Card } from 'shared/ui/Card/Card';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { RoutePath } from 'shared/configs/routerConfig/routerConfig';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text } from '@/shared/ui/Text/Text';
+import ViewsIcon from '@/shared/assets/icons/view.svg';
+import { Icon } from '@/shared/ui/Icon/Icon';
+import { Card } from '@/shared/ui/Card/Card';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { RoutePath } from '@/shared/configs/routerConfig/routerConfig';
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
+import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { ArticleView } from '../../model/consts/articleViewConst';
 import { ArticleBlockType } from '../../model/consts/articleBlockTypeConst';
 import {

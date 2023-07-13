@@ -1,10 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from 'shared/configs/storybook/ThemeDecorator';
-import { StoreDecorator } from 'shared/configs/storybook/StoreDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
-import { Currency } from 'entities/Currency';
-import { Country } from 'entities/Country';
+import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
+import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { Currency } from '@/entities/Currency';
+import { Country } from '@/entities/Country';
 import { ProfileErrorsCode } from '../../model/consts/profileErrorsCodeConsts';
 import { EditableProfileCard } from './EditableProfileCard';
 

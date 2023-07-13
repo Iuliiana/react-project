@@ -1,7 +1,7 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { memo, ReactNode } from 'react';
 import { Menu } from '@headlessui/react';
-import { DropdownDirection } from 'shared/lib/types/ui';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { DropdownDirection } from '@/shared/lib/types/ui';
 import { Button } from '../../../Button/Button';
 import { AppLink } from '../../../AppLink/AppLink';
 import cls from './Dropdown.module.scss';

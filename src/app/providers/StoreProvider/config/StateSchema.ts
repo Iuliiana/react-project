@@ -1,16 +1,16 @@
-import { CounterSchema } from 'entities/Counter';
-import { UserSchema } from 'entities/User';
-import { LoginShema } from 'features/AuthByUsername';
 import { CombinedState, ReducersMapObject } from 'redux';
 import { AnyAction, EnhancedStore, Reducer } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
-import { ArticleDetailsSchema } from 'entities/Article';
-import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
-import { AddCommentFormSchema } from 'features/AddCommentForm';
-import { ArticlesPageSchema } from 'pages/ArticlesPage/model/types/ArticlesPageSchema';
-import { SaveScrollSchema } from 'features/SaveScroll';
-import { rtkApi } from 'shared/api/rtkApi';
-import { EditableProfileCardSchema } from 'features/EditableProfileCard';
+import { CounterSchema } from '@/entities/Counter';
+import { UserSchema } from '@/entities/User';
+import { LoginShema } from '@/features/AuthByUsername';
+import { ArticleDetailsSchema } from '@/entities/Article';
+import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
+import { AddCommentFormSchema } from '@/features/AddCommentForm';
+import { ArticlesPageSchema } from '@/pages/ArticlesPage/model/types/ArticlesPageSchema';
+import { SaveScrollSchema } from '@/features/SaveScroll';
+import { rtkApi } from '@/shared/api/rtkApi';
+import { EditableProfileCardSchema } from '@/features/EditableProfileCard';
 
 export interface StateSchema {
     counter: CounterSchema,
