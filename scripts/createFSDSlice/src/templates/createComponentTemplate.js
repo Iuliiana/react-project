@@ -4,7 +4,7 @@ module.exports = function createComponentTemplate(sliceName, isPage) {
     const upperFirstCharName = toUpperFirstChar(sliceName);
     const interfaceName = 'interface';
 
-    return `import { classNames } from 'shared/lib/classNames/classNames';
+    return `import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import cls from './${upperFirstCharName}.module.scss';

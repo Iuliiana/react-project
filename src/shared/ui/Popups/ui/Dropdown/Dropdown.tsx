@@ -57,16 +57,25 @@ export const Dropdown = memo((props: DropdownProps) => {
                         );
                         if (item.href) {
                             return (
-                                // eslint-disable-next-line react/no-array-index-key
-                                <Menu.Item as={AppLink} to={item.href} disabled={item.disabled} key={index}>
+                                <Menu.Item
+                                    as={AppLink}
+                                    to={item.href}
+                                    disabled={item.disabled}
+                                    // eslint-disable-next-line react/no-array-index-key
+                                    key={`dropdown-index-${index}`}
+                                >
                                     {content}
                                 </Menu.Item>
                             );
                         }
 
                         return (
-                            // eslint-disable-next-line react/no-array-index-key
-                            <Menu.Item disabled={item.disabled} key={index} as="div">
+                            <Menu.Item
+                                disabled={item.disabled}
+                                // eslint-disable-next-line react/no-array-index-key
+                                key={`dropdown-index-${index}`}
+                                as="div"
+                            >
                                 {content}
                             </Menu.Item>
                         );
