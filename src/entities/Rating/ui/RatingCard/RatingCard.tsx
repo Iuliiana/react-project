@@ -17,7 +17,8 @@ interface RatingCardProps {
     hasFeedback?: boolean;
     feedbackTitle?: string,
     onCancel?: (stars: number) => void
-    onSendForm?: (stars: number, text?: string) => void
+    onSendForm?: (stars: number, text?: string) => void,
+    rate?: number
 }
 
 export const RatingCard = memo((props: RatingCardProps) => {
@@ -28,10 +29,11 @@ export const RatingCard = memo((props: RatingCardProps) => {
         onSendForm,
         hasFeedback,
         onCancel,
+        rate = 0,
     } = props;
     const { t } = useTranslation();
 
-    const [starsCount, setStarsCount] = useState(0);
+    const [starsCount, setStarsCount] = useState(rate);
     const [isShowModel, setIsShowModel] = useState(false);
     const [feedbackInput, setFeedbackInput] = useState('');
     const isMobilDevice = useDetectDevice();
@@ -75,7 +77,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
             align="center"
             gap="16"
         >
-            <Text title={title} />
+            <Text title={starsCount ? t('Спасибо за оценку') : title} />
             <StarRating
                 onSelect={onSelect}
                 selectesStars={starsCount}

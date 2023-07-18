@@ -1,5 +1,8 @@
 .RatingCard {
     padding: 1rem;
+    background: var(--card-bg-color);
+    border-radius: var(--modal-border-radius);
+    margin-bottom: 2rem;
 }
 
 .RatingCardModalForm {

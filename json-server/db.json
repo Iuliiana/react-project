@@ -14616,5 +14616,86 @@
       "username": "user",
       "avatar": "https://sun9-11.userapi.com/impg/x1BCzJ8lDEad3xAef-dL4MFgA168qasFDpOfFA/4xNFKwt6TDE.jpg?size=523x604&quality=96&sign=89c368a882b478fa487741c3feb4f888&type=album"
     }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "id": "JEjbA0b"
+    },
+    {
+      "articleId": "22",
+      "userId": "1",
+      "rate": 5,
+      "id": "s1DFyHz"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "rate": 2,
+      "id": "RMy2GOi"
+    },
+    {
+      "articleId": "4",
+      "userId": "1",
+      "rate": 5,
+      "id": "3GcPKaM"
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "rate": 1,
+      "feedback": "фигня",
+      "id": "xTxg8I-"
+    },
+    {
+      "articleId": "6",
+      "userId": "1",
+      "rate": 4,
+      "feedback": "",
+      "id": "voUsxf8"
+    },
+    {
+      "articleId": "72",
+      "userId": "1",
+      "rate": 2,
+      "feedback": "",
+      "id": "vmyZON7"
+    },
+    {
+      "articleId": "77",
+      "userId": "1",
+      "rate": 1,
+      "feedback": "uu",
+      "id": "u4OVz3h"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "2"
+    }
   ]
 }
