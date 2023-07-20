@@ -1,5 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import withMock from 'storybook-addon-mock';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/app/providers/ThemeProvider';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
@@ -17,7 +18,9 @@ export default {
     decorators: [RouterDecorator({
         path: '/profile/:id',
         initialEntries: ['/profile/1'],
-    })],
+    }),
+    withMock,
+    ],
 } as ComponentMeta<typeof ProfilePage>;
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
@@ -39,6 +42,16 @@ ProfilePagePrimary.decorators = [StoreDecorator({
         readonly: true,
     },
 })];
+ProfilePagePrimary.parameters = {
+    mockData: [
+        {
+            url: `${__API__}/profile-ratings?userId=&profileId=2`,
+            method: 'GET',
+            status: 200,
+            response: [],
+        },
+    ],
+};
 
 export const ProfilePagePrimaryDark = Template.bind({});
 ProfilePagePrimaryDark.args = {};
@@ -57,6 +70,16 @@ ProfilePagePrimaryDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator(
         readonly: true,
     },
 })];
+ProfilePagePrimaryDark.parameters = {
+    mockData: [
+        {
+            url: `${__API__}/profile-ratings?userId=&profileId=2`,
+            method: 'GET',
+            status: 200,
+            response: [],
+        },
+    ],
+};
 
 export const ProfilePageEditState = Template.bind({});
 ProfilePageEditState.args = {};
@@ -75,6 +98,16 @@ ProfilePageEditState.decorators = [StoreDecorator({
         readonly: false,
     },
 })];
+ProfilePageEditState.parameters = {
+    mockData: [
+        {
+            url: `${__API__}/profile-ratings?userId=&profileId=2`,
+            method: 'GET',
+            status: 200,
+            response: [],
+        },
+    ],
+};
 
 export const ProfilePageEditStateDark = Template.bind({});
 ProfilePageEditStateDark.args = {};
@@ -93,3 +126,13 @@ ProfilePageEditStateDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorato
         readonly: false,
     },
 })];
+ProfilePageEditStateDark.parameters = {
+    mockData: [
+        {
+            url: `${__API__}/profile-ratings?userId=&profileId=2`,
+            method: 'GET',
+            status: 200,
+            response: [],
+        },
+    ],
+};

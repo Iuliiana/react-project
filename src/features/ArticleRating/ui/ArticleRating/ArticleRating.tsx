@@ -25,7 +25,7 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
                 articleId,
                 userId: userData?.id || '',
                 rate: stars,
-                feedback: text || '',
+                feedback: text,
             });
         } catch (e) {
             // handle error
