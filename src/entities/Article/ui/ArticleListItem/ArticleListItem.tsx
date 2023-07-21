@@ -6,7 +6,6 @@ import ViewsIcon from '@/shared/assets/icons/view.svg';
 import { Icon } from '@/shared/ui/Icon/Icon';
 import { Card } from '@/shared/ui/Card/Card';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
-import { RoutePath } from '@/shared/configs/routerConfig/routerConfig';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
 import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { ArticleView } from '../../model/consts/articleViewConst';
@@ -16,6 +15,7 @@ import {
 } from '../../model/types/article';
 import cls from './ArticleListItem.module.scss';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { RoutePath } from '@/shared/const/route';
 
 interface ArticleItemProps {
     className?: string,

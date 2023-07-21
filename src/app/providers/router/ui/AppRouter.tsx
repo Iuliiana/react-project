@@ -2,9 +2,10 @@ import React, {
     memo, Suspense, useCallback,
 } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { AppRouteProps, routeConfig } from '@/shared/configs/routerConfig/routerConfig';
 import { PageLoader } from '@/widgets/PageLoader';
 import { RequireAuth } from './RequireAuth';
+import { routeConfig } from '@/app/providers/router/config/routerConfig';
+import { AppRouteProps } from '@/app/types/route';
 
 const AppRouter = () => {
     const renderWidthRequireAuth = useCallback((route: AppRouteProps) => {
