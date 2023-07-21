@@ -1,5 +1,5 @@
 import { Article, ArticleBlockType, ArticleType } from '@/entities/Article';
-
+/* eslint-disable max-len */
 export const article: Article = {
     id: '1',
     title: 'Javascript news',

@@ -5,7 +5,7 @@ import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/app/providers/ThemeProvider';
 import { NotificationList } from '@/entities/Notification';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
-import { notificationList } from '@/entities/Notification/model/tests/notificationList';
+import { notificationList } from '@/entities/Notification/testing';
 import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
 import { Drawer } from './Drawer';
 

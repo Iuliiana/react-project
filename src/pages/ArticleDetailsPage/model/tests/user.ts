@@ -1,5 +1,5 @@
 import { User } from '@/entities/User';
-
+/* eslint-disable max-len */
 export const user: User = {
     id: '2',
     username: 'user',

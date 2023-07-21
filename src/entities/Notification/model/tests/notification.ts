@@ -1,6 +1,6 @@
 import { UserRole } from '@/entities/User';
 import { Notification } from '../types/notification';
-
+/* eslint-disable max-len */
 export const notificationItemHref: Notification = {
     id: '2',
     title: 'Уведомление 2',

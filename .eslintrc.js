@@ -71,7 +71,13 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
         'no-param-reassign': 'off',
         'no-undef': 'off',
-        'itretiakova-plugin/path-checker': ['error', { alias: '@' }],
+        'itretiakova-plugin/path-checker': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,
@@ -81,7 +87,7 @@ module.exports = {
     overrides:
         [
             {
-                files: ['**/src/**/*.{test,stories}.{ts,tsx}', '**/src/**/tests/*.{ts,tsx}'],
+                files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
                 rules: {
                     'i18next/no-literal-string': 'off',
                     'max-len': 'off',
