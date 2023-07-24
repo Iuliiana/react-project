@@ -7,7 +7,7 @@ import { LoginShema } from '@/features/AuthByUsername';
 import { ArticleDetailsSchema } from '@/entities/Article';
 import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from '@/features/AddCommentForm';
-import { ArticlesPageSchema } from '@/pages/ArticlesPage/model/types/ArticlesPageSchema';
+import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { SaveScrollSchema } from '@/features/SaveScroll';
 import { rtkApi } from '@/shared/api/rtkApi';
 import { EditableProfileCardSchema } from '@/features/EditableProfileCard';

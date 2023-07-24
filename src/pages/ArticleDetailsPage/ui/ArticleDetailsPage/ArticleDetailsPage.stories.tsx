@@ -3,14 +3,12 @@ import {
     ComponentStory, ComponentMeta,
 } from '@storybook/react';
 import withMock from 'storybook-addon-mock';
+import { articleData } from '@/entities/Article/testing';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/app/providers/ThemeProvider';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
-import { articleData } from '@/entities/Article/model/tests/articleData';
-import {
-    articleRecommendationsListData,
-} from '@/features/ArticleRecommendationsList/model/tests/articleRecommendationsListData';
+import { articleRecommendationsListData } from '@/features/ArticleRecommendationsList/testing';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 export default {
