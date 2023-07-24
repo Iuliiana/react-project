@@ -1,9 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
-import { ArticleType } from '@/entities/Article';
 import { Tabs } from './Tabs';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'shared/Tabs',
@@ -12,27 +11,27 @@ export default {
     args: {
         tabsList: [
             {
-                text: ArticleType.ALL,
-                value: ArticleType.ALL,
+                text: 'ALL',
+                value: 'ALL',
             },
             {
-                text: ArticleType.IT,
-                value: ArticleType.IT,
+                text: 'IT',
+                value: 'IT',
             },
             {
-                text: ArticleType.SCIENCE,
-                value: ArticleType.SCIENCE,
+                text: 'SCIENCE',
+                value: 'SCIENCE',
             },
             {
-                text: ArticleType.POLICY,
-                value: ArticleType.POLICY,
+                text: 'POLICY',
+                value: 'POLICY',
             },
             {
-                text: ArticleType.ECONOMY,
-                value: ArticleType.ECONOMY,
+                text: 'ECONOMY',
+                value: 'ECONOMY',
             },
         ],
-        currentTab: ArticleType.SCIENCE,
+        currentTab: 'SCIENCE',
     },
 } as ComponentMeta<typeof Tabs>;
 

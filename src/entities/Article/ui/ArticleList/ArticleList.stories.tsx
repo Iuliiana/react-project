@@ -1,12 +1,12 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
 import { ArticleView } from '../../model/consts/articleViewConst';
 import { articleData } from '../../model/tests/articleData';
 import { ArticleList } from './ArticleList';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'entities/Article/ArticleList',

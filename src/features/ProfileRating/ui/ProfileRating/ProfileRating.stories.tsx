@@ -2,9 +2,9 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import withMock from 'storybook-addon-mock';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
 import ProfileRating from './ProfileRating';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'features/ProfileRating',

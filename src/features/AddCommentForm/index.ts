@@ -1,5 +1,4 @@
 export {
-    addCommentFormReducer,
     addCommentFormActions,
 } from './model/slice/addCommentFormSlice';
 

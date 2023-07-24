@@ -76,7 +76,7 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+                testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/*.story.*', '**/StoreDecorator.tsx'],
             },
         ],
         'itretiakova-plugin/layer-imports': [

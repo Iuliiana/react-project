@@ -2,11 +2,11 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import withMock from 'storybook-addon-mock';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
 import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { NotificationList } from './NotificationList';
 import { notificationList } from '../../model/tests/notificationList';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'entities/Notification/NotificationList',

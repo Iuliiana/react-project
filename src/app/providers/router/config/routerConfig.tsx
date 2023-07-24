@@ -9,7 +9,7 @@ import { UserRole } from '@/entities/User';
 import { ForbiddenPage } from '@/pages/ForbiddenPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
 import { AppRoutes, RoutePath } from '@/shared/const/route';
-import { AppRouteProps } from '@/app/types/route';
+import { AppRouteProps } from '../../../types/route';
 
 export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     [AppRoutes.MAIN]: {

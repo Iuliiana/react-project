@@ -2,13 +2,13 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import withMock from 'storybook-addon-mock';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 // import AvatariPicTest from 'shared/assets/pic/test/test-avatar.jpg';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
 import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
 import ProfilePage from './ProfilePage';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'pages/ProfilePage',

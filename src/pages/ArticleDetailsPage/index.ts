@@ -1,5 +1,3 @@
-export { articleDetailsPageReducer } from './model/slice';
-
 export type {
     ArticleDetailsPageSchema,
 } from './model/types';

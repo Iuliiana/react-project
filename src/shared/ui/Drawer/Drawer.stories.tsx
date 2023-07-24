@@ -2,12 +2,13 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import withMock from 'storybook-addon-mock';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
+// eslint-disable-next-line itretiakova-plugin/layer-imports
 import { NotificationList } from '@/entities/Notification';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { notificationList } from '@/entities/Notification/testing';
 import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
 import { Drawer } from './Drawer';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'shared/Drawer',
