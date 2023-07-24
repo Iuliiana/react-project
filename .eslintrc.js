@@ -71,11 +71,19 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
         'no-param-reassign': 'off',
         'no-undef': 'off',
-        'itretiakova-plugin/path-checker': [
+        'itretiakova-plugin/path-checker': ['error', { alias: '@' }],
+        'itretiakova-plugin/public-api-imports': [
             'error',
             {
                 alias: '@',
                 testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+            },
+        ],
+        'itretiakova-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
             },
         ],
     },
