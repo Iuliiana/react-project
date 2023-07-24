@@ -7,7 +7,7 @@ import { Country } from '@/entities/Country';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/hooks/useInitialEffect/useInitialEffect';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { Text, TextTheme } from '@/shared/ui/Text/Text';
+import { Text, TextTheme } from '@/shared/ui/Text';
 import { ProfileCard } from '@/entities/Profile';
 import { ProfileErrorsCode } from '../../model/consts/profileErrorsCodeConsts';
 import {

@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import {
     Virtuoso, VirtuosoGrid, VirtuosoGridHandle, VirtuosoHandle,
 } from 'react-virtuoso';
-import { Text } from '@/shared/ui/Text/Text';
+import { Text } from '@/shared/ui/Text';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { ArticleView } from '../../model/consts/articleViewConst';

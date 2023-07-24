@@ -6,7 +6,7 @@ import { Page } from '@/widgets/Page';
 import {
     EditableProfileCard,
 } from '@/features/EditableProfileCard';
-import { Text } from '@/shared/ui/Text/Text';
+import { Text } from '@/shared/ui/Text';
 import { ProfileRating } from '@/features/ProfileRating';
 
 interface ProfilePageProps {

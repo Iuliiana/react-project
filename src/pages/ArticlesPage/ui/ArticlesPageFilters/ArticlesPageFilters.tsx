@@ -13,8 +13,8 @@ import {
     ArticleTypeTabs,
 } from '@/entities/Article';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
-import { Input } from '@/shared/ui/Input/Input';
-import { Card } from '@/shared/ui/Card/Card';
+import { Input } from '@/shared/ui/Input';
+import { Card } from '@/shared/ui/Card';
 import { OrderBy } from '@/shared/lib/types';
 import { useDebounce } from '@/shared/hooks/useDebounce/useDebounce';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';

@@ -5,7 +5,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { RatingCard } from '@/entities/Rating';
 import { getProfileRate, useSetProfileRateMutation } from '../../api/profileRatingApi';
 import { getUserAuthData } from '@/entities/User';
-import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
+import { Skeleton } from '@/shared/ui/Skeleton';
 
 export interface ProfileRatingProps {
     className?: string,
