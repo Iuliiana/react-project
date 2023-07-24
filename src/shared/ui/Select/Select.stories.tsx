@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { Select } from './Select';
 import { Theme } from '@/shared/const/theme';
+import { Select } from './Select';
 
 export default {
     title: 'shared/Select',

@@ -5,14 +5,14 @@ import { useTranslation } from 'react-i18next';
 import {
     Virtuoso, VirtuosoGrid, VirtuosoGridHandle, VirtuosoHandle,
 } from 'react-virtuoso';
-import { Text } from '@/shared/ui/Text';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text } from '@/shared/ui/Text';
+import cls from './ArticleList.module.scss';
+import { ArticlesListFooter, getSkeletons } from './ArticlesListFooter';
 import { ArticleView } from '../../model/consts/articleViewConst';
 import { Article } from '../../model/types/article';
-import cls from './ArticleList.module.scss';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
-import { ArticlesListFooter, getSkeletons } from './ArticlesListFooter';
 
 interface ArticleListProps {
     className?: string,

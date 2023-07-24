@@ -1,12 +1,12 @@
 import { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Text } from '@/shared/ui/Text';
-import { Skeleton } from '@/shared/ui/Skeleton';
-import { AppLink } from '@/shared/ui/AppLink';
-import { Comment } from '../../model/types/comments';
-import cls from './CommentItem.module.scss';
 import { RoutePath } from '@/shared/const/route';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { AppLink } from '@/shared/ui/AppLink';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Skeleton } from '@/shared/ui/Skeleton';
+import { Text } from '@/shared/ui/Text';
+import cls from './CommentItem.module.scss';
+import { Comment } from '../../model/types/comments';
 
 interface CommentItemProps {
     className?: string,

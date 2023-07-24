@@ -1,10 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
-import { ArticleInfiniteList } from './ArticleInfiniteList';
+import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
+import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
+import { ArticleInfiniteList } from './ArticleInfiniteList';
 
 export default {
     title: 'pages/ArticlesPage/ArticleInfiniteList',

@@ -1,7 +1,7 @@
-import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
-import { ProfileErrorsCode } from '../../consts/profileErrorsCodeConsts';
+import { Currency } from '@/entities/Currency';
 import { validateProfileData } from './validateProfileData';
+import { ProfileErrorsCode } from '../../consts/profileErrorsCodeConsts';
 
 const data = {
     first: 'Джейн',

@@ -1,8 +1,8 @@
-import { TestAsyncThunk } from '@/shared/lib/tests/helpers/TestAsyncThunk/TestAsyncThunk';
 import { StateSchema } from '@/app/providers/StoreProvider';
+import { TestAsyncThunk } from '@/shared/lib/tests/helpers/TestAsyncThunk/TestAsyncThunk';
+import { addArticleDetailsComment } from './addArticleDetailsComment';
 import { article } from '../../tests/article';
 import { user } from '../../tests/user';
-import { addArticleDetailsComment } from './addArticleDetailsComment';
 
 describe('addArticleDetailsComment.test', () => {
     const data = {

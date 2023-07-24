@@ -1,9 +1,9 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
-import { EditableProfileCardHeader } from './EditableProfileCardHeader';
+import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
+import { EditableProfileCardHeader } from './EditableProfileCardHeader';
 
 export default {
     title: 'features/ProfileCard/EditableProfileCardHeader',

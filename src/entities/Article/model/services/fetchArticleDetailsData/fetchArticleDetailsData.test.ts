@@ -1,6 +1,6 @@
 import { TestAsyncThunk } from '@/shared/lib/tests/helpers/TestAsyncThunk/TestAsyncThunk';
-import { articleData } from '../../tests/articleData';
 import { fetchArticleDetailsData } from './fetchArticleDetailsData';
+import { articleData } from '../../tests/articleData';
 
 const articleId = '1';
 

@@ -2,11 +2,11 @@ import {
     Article, ArticleBlockType, ArticleSortField, ArticleType, ArticleView,
 } from '@/entities/Article';
 import {
-    fetchArticlesList,
-} from '../services/fetchArticlesList/fetchArticlesList';
-import {
     articlesPageReducer,
 } from './articlesPageSlice';
+import {
+    fetchArticlesList,
+} from '../services/fetchArticlesList/fetchArticlesList';
 import { ArticlesPageSchema } from '../types/ArticlesPageSchema';
 
 const article: Article = {

@@ -1,21 +1,21 @@
-import { useTranslation } from 'react-i18next';
 import React, { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/Text';
+import { useTranslation } from 'react-i18next';
 import ViewsIcon from '@/shared/assets/icons/view.svg';
-import { Icon } from '@/shared/ui/Icon';
-import { Card } from '@/shared/ui/Card';
-import { Avatar } from '@/shared/ui/Avatar';
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
-import { ArticleView } from '../../model/consts/articleViewConst';
+import { RoutePath } from '@/shared/const/route';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Card } from '@/shared/ui/Card';
+import { Icon } from '@/shared/ui/Icon';
+import { Text } from '@/shared/ui/Text';
+import cls from './ArticleListItem.module.scss';
 import { ArticleBlockType } from '../../model/consts/articleBlockTypeConst';
+import { ArticleView } from '../../model/consts/articleViewConst';
 import {
     Article, ArticleBlocksText,
 } from '../../model/types/article';
-import cls from './ArticleListItem.module.scss';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import { RoutePath } from '@/shared/const/route';
 
 interface ArticleItemProps {
     className?: string,

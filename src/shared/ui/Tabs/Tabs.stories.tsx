@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { Tabs } from './Tabs';
 import { Theme } from '@/shared/const/theme';
+import { Tabs } from './Tabs';
 
 export default {
     title: 'shared/Tabs',

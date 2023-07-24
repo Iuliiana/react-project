@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { Listbox } from './Listbox';
 import { Theme } from '@/shared/const/theme';
+import { Listbox } from './Listbox';
 
 export default {
     title: 'shared/Listbox',

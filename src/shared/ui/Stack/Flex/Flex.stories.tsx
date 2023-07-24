@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { Flex } from './Flex';
 import { Theme } from '@/shared/const/theme';
+import { Flex } from './Flex';
 
 export default {
     title: 'shared/Flex',

@@ -1,9 +1,9 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { Country } from '../../model/types/country';
-import { CountrySelect } from './CountrySelect';
 import { Theme } from '@/shared/const/theme';
+import { CountrySelect } from './CountrySelect';
+import { Country } from '../../model/types/country';
 
 export default {
     title: 'entities/CountrySelect',

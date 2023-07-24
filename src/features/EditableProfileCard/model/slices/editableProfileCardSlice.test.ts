@@ -1,9 +1,9 @@
-import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
-import { ProfileErrorsCode } from '../consts/profileErrorsCodeConsts';
-import { EditableProfileCardSchema } from '../types/EditableProfileCardSchema';
-import { updateProfileData } from '../services/updateProfileData/updateProfileData';
+import { Currency } from '@/entities/Currency';
 import { editableProfileCardActions, editableProfileCardReducer } from './editableProfileCardSlice';
+import { ProfileErrorsCode } from '../consts/profileErrorsCodeConsts';
+import { updateProfileData } from '../services/updateProfileData/updateProfileData';
+import { EditableProfileCardSchema } from '../types/EditableProfileCardSchema';
 
 const data = {
     first: 'Джейн',

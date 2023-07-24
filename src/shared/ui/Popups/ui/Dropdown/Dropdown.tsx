@@ -2,11 +2,11 @@ import { memo, ReactNode } from 'react';
 import { Menu } from '@headlessui/react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DropdownDirection } from '@/shared/lib/types/ui';
-import { Button } from '../../../Button/Button';
-import { AppLink } from '../../../AppLink/AppLink';
 import cls from './Dropdown.module.scss';
-import popupsCls from '../../styles/Popups.module.scss';
+import { AppLink } from '../../../AppLink/AppLink';
+import { Button } from '../../../Button/Button';
 import { mapDirectionClass } from '../../styles/consts';
+import popupsCls from '../../styles/Popups.module.scss';
 
 export interface DropdownItem {
     content?: ReactNode;

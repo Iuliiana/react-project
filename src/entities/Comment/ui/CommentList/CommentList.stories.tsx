@@ -1,9 +1,9 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
-import { CommentList } from './CommentList';
+import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
+import { CommentList } from './CommentList';
 
 export default {
     title: 'entities/Comments/CommentList',

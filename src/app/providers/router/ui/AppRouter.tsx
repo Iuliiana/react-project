@@ -4,8 +4,8 @@ import React, {
 import { Route, Routes } from 'react-router-dom';
 import { PageLoader } from '@/widgets/PageLoader';
 import { RequireAuth } from './RequireAuth';
-import { routeConfig } from '../config/routerConfig';
 import { AppRouteProps } from '../../../types/route';
+import { routeConfig } from '../config/routerConfig';
 
 const AppRouter = () => {
     const renderWidthRequireAuth = useCallback((route: AppRouteProps) => {

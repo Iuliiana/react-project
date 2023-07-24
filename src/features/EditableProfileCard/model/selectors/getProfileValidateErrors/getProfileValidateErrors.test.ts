@@ -1,6 +1,6 @@
 import { StateSchema } from '@/app/providers/StoreProvider';
-import { ProfileErrorsCode } from '../../consts/profileErrorsCodeConsts';
 import { getProfileValidateErrors } from './getProfileValidateErrors';
+import { ProfileErrorsCode } from '../../consts/profileErrorsCodeConsts';
 
 describe('getProfileValidateErrors', () => {
     test('should return validation errors array value', () => {

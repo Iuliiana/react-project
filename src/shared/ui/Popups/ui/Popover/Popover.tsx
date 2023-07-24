@@ -3,8 +3,8 @@ import { Popover as HPopover } from '@headlessui/react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DropdownDirection } from '@/shared/lib/types/ui';
 import cls from './Popover.module.scss';
-import popupsCls from '../../styles/Popups.module.scss';
 import { mapDirectionClass } from '../../styles/consts';
+import popupsCls from '../../styles/Popups.module.scss';
 
 interface PopoverProps {
     className?: string,

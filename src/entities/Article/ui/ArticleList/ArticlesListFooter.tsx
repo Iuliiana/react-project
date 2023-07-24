@@ -1,8 +1,8 @@
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import cls from './ArticleList.module.scss';
 import { ArticleView } from '../../model/consts/articleViewConst';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
-import cls from './ArticleList.module.scss';
 
 export const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.GRID ? 15 : 5)
     .fill(0)

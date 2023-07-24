@@ -1,10 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
-import ArticleEditPage from './ArticleEditPage';
+import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
+import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
+import ArticleEditPage from './ArticleEditPage';
 
 export default {
     title: 'pages/ArticleEditPage',

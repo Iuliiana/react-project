@@ -1,12 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
-import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
-import { ProfileErrorsCode } from '../../model/consts/profileErrorsCodeConsts';
-import { EditableProfileCard } from './EditableProfileCard';
+import { Currency } from '@/entities/Currency';
+import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
+import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
+import { EditableProfileCard } from './EditableProfileCard';
+import { ProfileErrorsCode } from '../../model/consts/profileErrorsCodeConsts';
 
 export default {
     title: 'features/ProfileCard/EditableProfileCard',

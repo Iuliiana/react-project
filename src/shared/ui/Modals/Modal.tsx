@@ -1,11 +1,11 @@
 import React, {
     FC, ReactNode,
 } from 'react';
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import { useModal } from '@/shared/hooks/useModal/useModal';
-import { Portal } from '../Portal/Portal';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Modal.module.scss';
 import { Overlay } from '../Overlay/Overlay';
+import { Portal } from '../Portal/Portal';
 
 export const ModalTheme = {
     CLEAR: 'clear',

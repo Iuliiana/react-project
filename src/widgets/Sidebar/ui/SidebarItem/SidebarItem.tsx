@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import { NavLink } from 'react-router-dom';
 import { getUserAuthData } from '@/entities/User';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './SidebarItem.module.scss';
 import { SidebarItemType } from '../../model/types/SidebarItemsType';
 

@@ -1,13 +1,13 @@
 import { memo } from 'react';
-import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { Page } from '@/widgets/Page';
+import { useParams } from 'react-router-dom';
 import {
     EditableProfileCard,
 } from '@/features/EditableProfileCard';
-import { Text } from '@/shared/ui/Text';
 import { ProfileRating } from '@/features/ProfileRating';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text } from '@/shared/ui/Text';
+import { Page } from '@/widgets/Page';
 
 interface ProfilePageProps {
     className?: string,

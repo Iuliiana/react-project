@@ -1,10 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import withMock from 'storybook-addon-mock';
-import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import ArticleRating from './ArticleRating';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
+import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
+import ArticleRating from './ArticleRating';
 
 export default {
     title: 'features/ArticleRating',

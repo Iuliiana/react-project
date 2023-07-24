@@ -4,12 +4,12 @@ import {
 } from '@storybook/react';
 import withMock from 'storybook-addon-mock';
 import { articleData } from '@/entities/Article/testing';
-import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
-import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
 import { articleRecommendationsListData } from '@/features/ArticleRecommendationsList/testing';
-import ArticleDetailsPage from './ArticleDetailsPage';
+import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
+import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
+import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
+import ArticleDetailsPage from './ArticleDetailsPage';
 
 export default {
     title: 'pages/ArticleDetailsPage/ArticleDetailsPage',

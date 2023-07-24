@@ -1,9 +1,9 @@
-import { TestAsyncThunk } from '@/shared/lib/tests/helpers/TestAsyncThunk/TestAsyncThunk';
-import { Currency } from '@/entities/Currency';
-import { Country } from '@/entities/Country';
 import { StateSchema } from '@/app/providers/StoreProvider';
-import { ProfileErrorsCode } from '../../consts/profileErrorsCodeConsts';
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
+import { TestAsyncThunk } from '@/shared/lib/tests/helpers/TestAsyncThunk/TestAsyncThunk';
 import { updateProfileData } from './updateProfileData';
+import { ProfileErrorsCode } from '../../consts/profileErrorsCodeConsts';
 
 describe('updateProfileData.test', () => {
     const data = {

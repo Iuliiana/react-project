@@ -1,9 +1,9 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { ArticleType } from '../../model/consts/articleTypeConst';
-import { ArticleTypeTabs } from './ArticleTypeTabs';
 import { Theme } from '@/shared/const/theme';
+import { ArticleTypeTabs } from './ArticleTypeTabs';
+import { ArticleType } from '../../model/consts/articleTypeConst';
 
 export default {
     title: 'entities/Article/ArticleTypeTabs',

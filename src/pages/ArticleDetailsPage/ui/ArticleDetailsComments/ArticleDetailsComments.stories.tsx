@@ -1,8 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
-import { ArticleDetailsComments } from './ArticleDetailsComments';
+import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
+import { ArticleDetailsComments } from './ArticleDetailsComments';
 
 export default {
     title: 'pages/ArticleDetailsPage/ArticleDetailsComments',

@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { $api } from '@/shared/api/api';
 import {
     withComponentRender,
 } from '@/shared/lib/tests/helpers/withComponentRender/withComponentRender';
-import { $api } from '@/shared/api/api';
+import { EditableProfileCard } from './EditableProfileCard';
 import { editableProfileCardReducer } from '../../model/slices/editableProfileCardSlice';
 import { testProfile } from '../../model/test/testProfile';
-import { EditableProfileCard } from './EditableProfileCard';
 
 const params = {
     initialState: {

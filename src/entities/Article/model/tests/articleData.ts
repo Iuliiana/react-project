@@ -1,5 +1,5 @@
-import { ArticleType } from '../consts/articleTypeConst';
 import { ArticleBlockType } from '../consts/articleBlockTypeConst';
+import { ArticleType } from '../consts/articleTypeConst';
 import { Article } from '../types/article';
 
 export const articleData: Article = {

@@ -1,10 +1,10 @@
-import { articleData } from '../tests/articleData';
-import {
-    fetchArticleDetailsData,
-} from '../services/fetchArticleDetailsData/fetchArticleDetailsData';
 import {
     articleDetailsReducer,
 } from './articleDetailsSlice';
+import {
+    fetchArticleDetailsData,
+} from '../services/fetchArticleDetailsData/fetchArticleDetailsData';
+import { articleData } from '../tests/articleData';
 import { ArticleDetailsSchema } from '../types/ArticleDetailsSchema';
 
 describe('articleDetailsSlice.test', () => {
