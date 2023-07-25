@@ -21,7 +21,7 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
             rules: buildLoaders(options),
         },
         resolve: buildResolve(options),
-        devtool: isDev ? 'inline-source-map' : undefined, // отслеживает в каком файлк ошибка
+        devtool: isDev ? 'eval-cheap-module-source-map' : undefined, // отслеживает в каком файлк ошибка inline-source-map
         devServer: isDev ? buildDevServer(options) : undefined,
     };
 };

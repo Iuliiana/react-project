@@ -24,7 +24,8 @@
     "test:ui:update": "npx loki approve",
     "storybook": "start-storybook -p 6006 -c ./configs/storybook",
     "storybook:build": "build-storybook -c ./configs/storybook",
-    "create:fsd": "node ./scripts/createFSDSlice/index.js "
+    "create:fsd": "node ./scripts/createFSDSlice/index.js",
+    "postinstall": "node ./scripts/clear-cache.js"
   },
   "author": "",
   "license": "ISC",

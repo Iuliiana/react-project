@@ -19,6 +19,7 @@ export const buildLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
 
     const fileLoader = {
         // test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+        exclude: /node_modules/,
         test: /\.(png|jpe?g|gif)$/i,
         use: [
             {
@@ -28,6 +29,7 @@ export const buildLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
     };
 
     const fontsLoader = {
+        exclude: /node_modules/,
         test: /\.(woff(2)?|ttf|eot)$/,
         type: 'asset/resource',
         generator: {

@@ -12,25 +12,18 @@ export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstan
     const {
         paths, isDev, apiUrl, project,
     } = options;
+    const isProd = !isDev;
+
     const plugins: webpack.WebpackPluginInstance[] = [
         new HtmlWebpackPlugin({
             template: paths.html,
             favicon: paths.favicon,
-        }),
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].[contenthash:8].css',
-            chunkFilename: 'css/[name].[contenthash:8].css',
         }),
         new webpack.ProgressPlugin(),
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
             __API__: JSON.stringify(apiUrl),
             __PROJECT__: JSON.stringify(project),
-        }),
-        new CopyPlugin({
-            patterns: [
-                { from: paths.locales, to: paths.buildLocales },
-            ],
         }),
     ];
 
@@ -51,6 +44,22 @@ export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstan
                 mode: 'write-references',
             },
         }));
+    }
+
+    if (isProd) {
+        plugins.push(
+            new MiniCssExtractPlugin({
+                filename: 'css/[name].[contenthash:8].css',
+                chunkFilename: 'css/[name].[contenthash:8].css',
+            }),
+        );
+        plugins.push(
+            new CopyPlugin({
+                patterns: [
+                    { from: paths.locales, to: paths.buildLocales },
+                ],
+            }),
+        );
     }
 
     return plugins;
