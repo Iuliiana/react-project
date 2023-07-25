@@ -5,7 +5,7 @@ import { Theme } from '@/shared/const/theme';
 import { ArticleSortSelector } from './ArticleSortSelector';
 
 export default {
-    title: 'entities/Article/ArticleSortSelector',
+    title: 'features/Article/ArticleSortSelector',
     component: ArticleSortSelector,
     argTypes: {},
     args: {},

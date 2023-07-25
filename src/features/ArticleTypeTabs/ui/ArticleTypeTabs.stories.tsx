@@ -3,10 +3,10 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { ArticleTypeTabs } from './ArticleTypeTabs';
-import { ArticleType } from '../../model/consts/articleTypeConst';
+import { ArticleType } from '../../../entities/Article/model/consts/articleTypeConst';
 
 export default {
-    title: 'entities/Article/ArticleTypeTabs',
+    title: 'features/Article/ArticleTypeTabs',
     component: ArticleTypeTabs,
     argTypes: {},
     args: {
