@@ -30,7 +30,7 @@ jobs:
         run: npm run lint:ts
         if: always()
       - name: Linting css
-        run: npm run stylelint:scss
+        run: npm run lint:scss
         if: always()
       - name: Unit testing
         run: npm run test:unit
