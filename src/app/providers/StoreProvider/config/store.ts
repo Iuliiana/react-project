@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { CombinedState, Reducer, ReducersMapObject } from 'redux';
-import { counterReducer } from '@/entities/Counter';
+// eslint-disable-next-line itretiakova-plugin/public-api-imports
+import { counterReducer } from '@/entities/Counter/testing';
 import { userReducer } from '@/entities/User';
 import { saveScrollReducer } from '@/features/SaveScroll';
 import { $api } from '@/shared/api/api';
