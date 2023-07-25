@@ -7,7 +7,7 @@ import {
 import { LoginModal } from '@/features/AuthByUsername';
 import { AvatarDropdown } from '@/features/AvatarDropdown';
 import { NotificationButton } from '@/features/NotificationButton';
-import { RoutePath } from '@/shared/const/route';
+import { getRouteArticlesCreate } from '@/shared/const/route';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
@@ -37,7 +37,7 @@ export const NavBar = memo(({ className }: NavBarProps) => {
             <header className={classNames(cls.Navbar, {}, [className])}>
                 <Text title={t('Iuliia_App')} className={cls.mainTitle} />
                 <AppLink
-                    to={RoutePath.articles_create}
+                    to={getRouteArticlesCreate()}
                     className={cls.btnNewArtile}
                     theme={AppLinkTheme.NORMAL}
                 >

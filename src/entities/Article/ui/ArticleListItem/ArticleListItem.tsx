@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import ViewsIcon from '@/shared/assets/icons/view.svg';
 import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
-import { RoutePath } from '@/shared/const/route';
+import { getRouteArticlesDetails } from '@/shared/const/route';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { Avatar } from '@/shared/ui/Avatar';
@@ -66,7 +66,7 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
 
                 <div className={cls.footer}>
                     <AppLink
-                        to={RoutePath.articles_details + article.id}
+                        to={getRouteArticlesDetails(article.id)}
                         target={target}
                         theme={AppLinkTheme.NORMAL}
                         onClick={onSaveIndex(index)}
@@ -85,7 +85,7 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
     return (
         <div className={classNames(cls.ArticleItem)}>
             <AppLink
-                to={RoutePath.articles_details + article.id}
+                to={getRouteArticlesDetails(article.id)}
                 target={target}
                 onClick={onSaveIndex(index)}
                 className={classNames('', {}, [cls[view]])}
