@@ -14,7 +14,7 @@ export const ArticleTypeTabs = memo((props: ArticleTypeTabsProps) => {
     const { className, currentType, onChangeTab } = props;
     const { t } = useTranslation('articles');
 
-    const tabsList:SelectOption[] = useMemo(() => [
+    const tabsList:SelectOption<ArticleType>[] = useMemo(() => [
         {
             value: ArticleType.ALL,
             text: t('Все'),
