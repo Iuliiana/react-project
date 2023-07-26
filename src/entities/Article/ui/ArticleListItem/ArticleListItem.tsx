@@ -4,10 +4,12 @@ import ViewsIcon from '@/shared/assets/icons/view.svg';
 import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { getRouteArticlesDetails } from '@/shared/const/route';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { AppImage } from '@/shared/ui/AppImage';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Card } from '@/shared/ui/Card';
 import { Icon } from '@/shared/ui/Icon';
+import { Skeleton } from '@/shared/ui/Skeleton';
 import { Text } from '@/shared/ui/Text';
 import cls from './ArticleListItem.module.scss';
 import { ArticleBlockType } from '../../model/consts/articleBlockTypeConst';
@@ -59,7 +61,13 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
                 </div>
 
                 <div className={cls.mainImg}>
-                    <img alt={article.title} src={article.img} />
+                    <AppImage
+                        alt={article.title}
+                        src={article.img}
+                        isLoadingFallback={(
+                            <Skeleton width="100%" height={250} />
+                        )}
+                    />
                 </div>
 
                 { block && <ArticleTextBlockComponent block={block} className={cls.blockText} /> }
@@ -92,7 +100,17 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
             >
                 <Card>
                     <div className={cls.img}>
-                        <img className={cls.imgPic} alt={article.title} src={article.img} />
+                        <AppImage
+                            className={cls.imgPic}
+                            alt={article.title}
+                            src={article.img}
+                            isLoadingFallback={(
+                                <Skeleton
+                                    width={300}
+                                    height={24}
+                                />
+                            )}
+                        />
                         <Text text={article.createdAt} className={cls.imgDate} />
                     </div>
                     <div className={cls.content}>
