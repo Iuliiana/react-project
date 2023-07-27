@@ -91,6 +91,11 @@ jobs:
       - name: Generate HTML report
         run: npm run test:ui:report
         if: always()
+      - name: unit testing
+        if: always()
+        run: npm run test:unit
+      - name: move loki dir
+        run: mv .loki reports/
       - name: Setup Pages
         uses: actions/configure-pages@v2
         if: always()
@@ -122,6 +127,4 @@ jobs:
         if: always()
       - name: linting css
         run: npm run lint:scss
-      - name: unit testing
-        if: always()
-        run: npm run test:unit
+
