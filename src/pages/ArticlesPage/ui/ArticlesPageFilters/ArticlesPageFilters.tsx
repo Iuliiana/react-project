@@ -14,7 +14,7 @@ import { ArticleViewSelector } from '@/features/ArticleViewSelector';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useDebounce } from '@/shared/hooks/useDebounce/useDebounce';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { OrderBy } from '@/shared/lib/types';
+import { OrderBy } from '@/shared/lib/types/order';
 import { Card } from '@/shared/ui/Card';
 import { Input } from '@/shared/ui/Input';
 import cls from './ArticlesPageFilters.module.scss';

@@ -34,7 +34,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount>
-            <Page className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])} data-testid="ArticleDetailsPage">
                 <ArticleDetailsHeader />
                 <ArticleDetails id={id} />
                 <ArticleRating articleId={id} />
