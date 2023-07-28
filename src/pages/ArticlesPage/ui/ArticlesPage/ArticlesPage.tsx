@@ -29,7 +29,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount={false}>
-            <VStack max justify="between" align="stretch">
+            <VStack max justify="between" align="stretch" data-testid="ArticlesPage">
                 <ArticlesPageFilters />
                 <ArticleInfiniteList className={classNames('', {}, [className])} />
             </VStack>
