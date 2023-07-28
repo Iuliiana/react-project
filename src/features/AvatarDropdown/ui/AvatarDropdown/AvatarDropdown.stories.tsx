@@ -11,6 +11,11 @@ export default {
     component: AvatarDropdown,
     argTypes: {},
     args: {},
+    parameters: {
+        loki: {
+            skip: true,
+        },
+    },
     decorators: [
         StoreDecorator({
             user: {

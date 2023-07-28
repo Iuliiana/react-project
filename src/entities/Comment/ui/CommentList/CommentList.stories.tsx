@@ -11,6 +11,11 @@ export default {
     argTypes: {},
     args: {},
     decorators: [RouterDecorator()],
+    parameters: {
+        loki: {
+            skip: true,
+        },
+    },
 } as ComponentMeta<typeof CommentList>;
 
 const Template: ComponentStory<typeof CommentList> = (args) => <CommentList {...args} />;
