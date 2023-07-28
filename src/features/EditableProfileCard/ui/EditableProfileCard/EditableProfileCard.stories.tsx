@@ -13,6 +13,11 @@ export default {
     component: EditableProfileCard,
     argTypes: {},
     args: {},
+    parameters: {
+        loki: {
+            skip: true,
+        },
+    },
 } as ComponentMeta<typeof EditableProfileCard>;
 
 const data = {

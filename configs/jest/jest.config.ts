@@ -39,7 +39,7 @@ const config = {
             publicPath: '<rootDir>/reports/unit',
             filename: 'report.html',
             // openReport: true,
-            inlineSource: false,
+            inlineSource: true,
         }],
     ],
 };

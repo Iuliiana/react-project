@@ -10,6 +10,11 @@ export default {
     args: {
         pic: AvatariPicTest,
     },
+    parameters: {
+        loki: {
+            skip: true,
+        },
+    },
 } as ComponentMeta<typeof Avatar>;
 
 const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;

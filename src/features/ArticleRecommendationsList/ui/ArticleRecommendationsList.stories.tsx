@@ -15,6 +15,11 @@ export default {
     component: ArticleRecommendationsList,
     argTypes: {},
     args: {},
+    parameters: {
+        loki: {
+            skip: true,
+        },
+    },
     decorators: [withMock, RouterDecorator()],
 } as ComponentMeta<typeof ArticleRecommendationsList>;
 

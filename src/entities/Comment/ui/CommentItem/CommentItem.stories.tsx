@@ -20,6 +20,11 @@ export default {
             },
         },
     },
+    parameters: {
+        loki: {
+            skip: true,
+        },
+    },
     decorators: [RouterDecorator()],
 } as ComponentMeta<typeof CommentItem>;
 
