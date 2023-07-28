@@ -11,6 +11,11 @@ export default {
     component: ProfileCard,
     argTypes: {},
     args: {},
+    parameters: {
+        liki: {
+            skip: true,
+        },
+    },
 } as ComponentMeta<typeof ProfileCard>;
 
 const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />;
