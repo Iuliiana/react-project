@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import withMock from 'storybook-addon-mock';
 // import AvatariPicTest from 'shared/assets/pic/test/test-avatar.jpg';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
@@ -19,7 +18,6 @@ export default {
         path: '/profile/:id',
         initialEntries: ['/profile/1'],
     }),
-    withMock,
     ],
 } as ComponentMeta<typeof ProfilePage>;
 

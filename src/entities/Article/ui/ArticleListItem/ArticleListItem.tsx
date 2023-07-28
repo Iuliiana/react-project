@@ -65,7 +65,7 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
                         alt={article.title}
                         src={article.img}
                         isLoadingFallback={(
-                            <Skeleton width="100%" height={250} />
+                            <Skeleton width="100%" height="12.5rem" />
                         )}
                     />
                 </div>
@@ -107,7 +107,7 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
                             isLoadingFallback={(
                                 <Skeleton
                                     width={300}
-                                    height={24}
+                                    height="12.5rem"
                                 />
                             )}
                         />

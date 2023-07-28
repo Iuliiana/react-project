@@ -2,7 +2,6 @@ import React from 'react';
 import {
     ComponentStory, ComponentMeta,
 } from '@storybook/react';
-import withMock from 'storybook-addon-mock';
 import { articleData } from '@/entities/Article/testing';
 import { articleRecommendationsListData } from '@/features/ArticleRecommendationsList/testing';
 import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
@@ -26,7 +25,6 @@ export default {
             initialEntries: ['/articles/1'],
             path: '/articles/:id',
         }),
-        withMock,
     ],
 } as ComponentMeta<typeof ArticleDetailsPage>;
 
