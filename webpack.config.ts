@@ -14,10 +14,10 @@ export default (env: BuildEnv): webpack.Configuration => {
         favicon: path.resolve(__dirname, 'src', 'shared', 'assets', 'icons', 'favicon.svg'),
     };
 
-    const mode = env.mode || AppMode.DEVELOPMENT_MODE;
+    const mode = env?.mode || AppMode.DEVELOPMENT_MODE;
     const isDev = mode === AppMode.DEVELOPMENT_MODE;
-    const PORT = env.port || 3000;
-    const apiUrl = env.apiUrl || 'http://localhost:8000';
+    const PORT = env?.port || 3000;
+    const apiUrl = env?.apiUrl || 'http://localhost:8000';
 
     return buildWebpackConfig({
         mode,

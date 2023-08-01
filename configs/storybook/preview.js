@@ -1,10 +1,9 @@
 import { addDecorator } from '@storybook/react';
+import { Theme } from '@/shared/const/theme';
 import { StyleDecorator } from '../../src/shared/configs/storybook/StyleDecorator';
+import { SuspenseDecorator } from '../../src/shared/configs/storybook/SuspenseDecorator';
 import { ThemeDecorator } from '../../src/shared/configs/storybook/ThemeDecorator';
 // import { RouterDecorator } from '../../src/shared/configs/storybook/RouterDecorator';
-import { SuspenseDecorator } from '../../src/shared/configs/storybook/SuspenseDecorator';
-import { Theme } from '@/shared/const/theme';
-
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -14,14 +13,14 @@ export const parameters = {
             date: /Date$/,
         },
     },
-    layout:'fullscreen',
+    layout: 'fullscreen',
     parameters: {
         themes: {
             default: 'light',
             list: [
                 { name: 'dark', class: Theme.DARK, color: '#000000' },
                 { name: 'light', class: Theme.LIGHT, color: '#d8d8d8' },
-                { name: 'chocolate', class: Theme.CHOCOLATE, color: '#462f29' }
+                { name: 'chocolate', class: Theme.CHOCOLATE, color: '#462f29' },
             ],
         },
     },
