@@ -14,7 +14,9 @@ export default {
     args: {},
 } as ComponentMeta<typeof ArticlesPageFilters>;
 
-const Template: ComponentStory<typeof ArticlesPageFilters> = (args) => <ArticlesPageFilters {...args} />;
+const Template: ComponentStory<typeof ArticlesPageFilters> = (args) => (
+    <ArticlesPageFilters {...args} />
+);
 
 export const ArticlesPageFiltersNormal = Template.bind({});
 ArticlesPageFiltersNormal.args = {};
@@ -22,4 +24,7 @@ ArticlesPageFiltersNormal.decorators = [StoreDecorator({})];
 
 export const ArticlesPageFiltersDark = Template.bind({});
 ArticlesPageFiltersDark.args = {};
-ArticlesPageFiltersDark.decorators = [StoreDecorator({}), ThemeDecorator(Theme.DARK)];
+ArticlesPageFiltersDark.decorators = [
+    StoreDecorator({}),
+    ThemeDecorator(Theme.DARK),
+];

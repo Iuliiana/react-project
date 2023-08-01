@@ -13,7 +13,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleDetailsComments>;
 
-const Template: ComponentStory<typeof ArticleDetailsComments> = (args) => <ArticleDetailsComments {...args} />;
+const Template: ComponentStory<typeof ArticleDetailsComments> = (args) => (
+    <ArticleDetailsComments {...args} />
+);
 
 export const ArticleDetailsCommentsNormal = Template.bind({});
 ArticleDetailsCommentsNormal.args = {};
@@ -21,4 +23,7 @@ ArticleDetailsCommentsNormal.decorators = [StoreDecorator({})];
 
 export const ArticleDetailsCommentsDark = Template.bind({});
 ArticleDetailsCommentsDark.args = {};
-ArticleDetailsCommentsDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+ArticleDetailsCommentsDark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({}),
+];

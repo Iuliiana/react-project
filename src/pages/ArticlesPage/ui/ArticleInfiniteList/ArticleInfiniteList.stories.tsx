@@ -14,7 +14,9 @@ export default {
     decorators: [RouterDecorator()],
 } as ComponentMeta<typeof ArticleInfiniteList>;
 
-const Template: ComponentStory<typeof ArticleInfiniteList> = (args) => <ArticleInfiniteList {...args} />;
+const Template: ComponentStory<typeof ArticleInfiniteList> = (args) => (
+    <ArticleInfiniteList {...args} />
+);
 
 export const ArticleInfiniteListNormal = Template.bind({});
 ArticleInfiniteListNormal.args = {};
@@ -22,4 +24,7 @@ ArticleInfiniteListNormal.decorators = [StoreDecorator({})];
 
 export const ArticleInfiniteListDark = Template.bind({});
 ArticleInfiniteListDark.args = {};
-ArticleInfiniteListDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+ArticleInfiniteListDark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({}),
+];

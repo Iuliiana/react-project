@@ -1,3 +1,1 @@
-export {
-    editableProfileCardReducer,
-} from './model/slices/editableProfileCardSlice';
+export { editableProfileCardReducer } from './model/slices/editableProfileCardSlice';

@@ -3,18 +3,21 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { NotificationItem } from './NotificationItem';
-import { notificationItem, notificationItemHref } from '../../model/tests/notification';
+import {
+    notificationItem,
+    notificationItemHref,
+} from '../../model/tests/notification';
 
 export default {
     title: 'entities/Notification/NotificationItem',
     component: NotificationItem,
     argTypes: {},
-    args: {
-
-    },
+    args: {},
 } as ComponentMeta<typeof NotificationItem>;
 
-const Template: ComponentStory<typeof NotificationItem> = (args) => <NotificationItem {...args} />;
+const Template: ComponentStory<typeof NotificationItem> = (args) => (
+    <NotificationItem {...args} />
+);
 
 export const NotificationItemNormal = Template.bind({});
 NotificationItemNormal.args = {

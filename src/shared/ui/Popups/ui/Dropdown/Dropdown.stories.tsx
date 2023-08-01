@@ -11,7 +11,12 @@ export default {
     component: Dropdown,
     argTypes: {},
     args: {
-        btn: <Avatar size={30} pic="https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png" />,
+        btn: (
+            <Avatar
+                size={30}
+                pic="https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png"
+            />
+        ),
         direction: 'bottom left',
         items: [
             {
@@ -21,12 +26,27 @@ export default {
     },
 } as ComponentMeta<typeof Dropdown>;
 
-const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} />;
+const Template: ComponentStory<typeof Dropdown> = (args) => (
+    <Dropdown {...args} />
+);
 
 export const DropdownNormal = Template.bind({});
 DropdownNormal.args = {};
-DropdownNormal.decorators = [(StoryComponent: Story) => <div style={{ margin: '10rem' }}><StoryComponent /></div>];
+DropdownNormal.decorators = [
+    (StoryComponent: Story) => (
+        <div style={{ margin: '10rem' }}>
+            <StoryComponent />
+        </div>
+    ),
+];
 
 export const DropdownDark = Template.bind({});
 DropdownDark.args = {};
-DropdownDark.decorators = [ThemeDecorator(Theme.DARK), (StoryComponent: Story) => <div style={{ margin: '10rem' }}><StoryComponent /></div>];
+DropdownDark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    (StoryComponent: Story) => (
+        <div style={{ margin: '10rem' }}>
+            <StoryComponent />
+        </div>
+    ),
+];

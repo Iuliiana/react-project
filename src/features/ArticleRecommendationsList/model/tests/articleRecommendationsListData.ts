@@ -8,9 +8,7 @@ export const articleRecommendationsListData = [
         views: 78,
         createdAt: '03.05.2013',
         userId: '1',
-        type: [
-            'SCIENCE',
-        ],
+        type: ['SCIENCE'],
         blocks: [
             {
                 id: '1',
@@ -45,7 +43,7 @@ export const articleRecommendationsListData = [
             {
                 id: '3',
                 type: 'CODE',
-                code: 'const path = require(\'path\');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, \'db.json\'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);',
+                code: "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);",
             },
             {
                 id: '7',
@@ -86,9 +84,7 @@ export const articleRecommendationsListData = [
         views: 612,
         createdAt: '25.03.2016',
         userId: '1',
-        type: [
-            'SCIENCE',
-        ],
+        type: ['SCIENCE'],
         blocks: [
             {
                 id: '1',
@@ -123,7 +119,7 @@ export const articleRecommendationsListData = [
             {
                 id: '3',
                 type: 'CODE',
-                code: 'const path = require(\'path\');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, \'db.json\'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);',
+                code: "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);",
             },
             {
                 id: '7',
@@ -164,10 +160,7 @@ export const articleRecommendationsListData = [
         views: 852,
         createdAt: '20.10.2018',
         userId: '1',
-        type: [
-            'SCIENCE',
-            'POLICY',
-        ],
+        type: ['SCIENCE', 'POLICY'],
         blocks: [
             {
                 id: '1',
@@ -202,7 +195,7 @@ export const articleRecommendationsListData = [
             {
                 id: '3',
                 type: 'CODE',
-                code: 'const path = require(\'path\');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, \'db.json\'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);',
+                code: "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);",
             },
             {
                 id: '7',
@@ -243,9 +236,7 @@ export const articleRecommendationsListData = [
         views: 875,
         createdAt: '25.06.2010',
         userId: '2',
-        type: [
-            'IT',
-        ],
+        type: ['IT'],
         blocks: [
             {
                 id: '1',
@@ -280,7 +271,7 @@ export const articleRecommendationsListData = [
             {
                 id: '3',
                 type: 'CODE',
-                code: 'const path = require(\'path\');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, \'db.json\'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);',
+                code: "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);",
             },
             {
                 id: '7',

@@ -16,14 +16,14 @@ export default {
     decorators: [RouterDecorator()],
 } as ComponentMeta<typeof ArticleList>;
 
-const articles = new Array(10)
-    .fill(0)
-    .map((item, index) => ({
-        ...articleData,
-        id: String(index),
-    }));
+const articles = new Array(10).fill(0).map((item, index) => ({
+    ...articleData,
+    id: String(index),
+}));
 
-const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />;
+const Template: ComponentStory<typeof ArticleList> = (args) => (
+    <ArticleList {...args} />
+);
 export const ArticlesGrid = Template.bind({});
 ArticlesGrid.args = {
     articles,
@@ -39,24 +39,20 @@ ArticlesGridDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
 
 export const ArticlesList = Template.bind({});
 ArticlesList.args = {
-    articles: new Array(3)
-        .fill(0)
-        .map((item, index) => ({
-            ...articleData,
-            id: String(index),
-        })),
+    articles: new Array(3).fill(0).map((item, index) => ({
+        ...articleData,
+        id: String(index),
+    })),
     view: ArticleView.LIST,
 };
 ArticlesList.decorators = [StoreDecorator({})];
 
 export const ArticlesListDark = Template.bind({});
 ArticlesListDark.args = {
-    articles: new Array(3)
-        .fill(0)
-        .map((item, index) => ({
-            ...articleData,
-            id: String(index),
-        })),
+    articles: new Array(3).fill(0).map((item, index) => ({
+        ...articleData,
+        id: String(index),
+    })),
     view: ArticleView.LIST,
 };
 ArticlesListDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
@@ -75,7 +71,10 @@ ArticlesGridIsLoadingDark.args = {
     view: ArticleView.GRID,
     isLoading: true,
 };
-ArticlesGridIsLoadingDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+ArticlesGridIsLoadingDark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({}),
+];
 
 export const ArticlesListIsLoading = Template.bind({});
 ArticlesListIsLoading.args = {
@@ -91,4 +90,7 @@ ArticlesListIsLoadingDark.args = {
     view: ArticleView.LIST,
     isLoading: true,
 };
-ArticlesListIsLoadingDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+ArticlesListIsLoadingDark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({}),
+];

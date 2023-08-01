@@ -25,7 +25,9 @@ export default {
     },
 } as ComponentMeta<typeof NotificationList>;
 
-const Template: ComponentStory<typeof NotificationList> = (args) => <NotificationList {...args} />;
+const Template: ComponentStory<typeof NotificationList> = (args) => (
+    <NotificationList {...args} />
+);
 
 export const NotificationListNormal = Template.bind({});
 NotificationListNormal.args = {};
@@ -33,4 +35,7 @@ NotificationListNormal.decorators = [StoreDecorator({})];
 
 export const NotificationListDark = Template.bind({});
 NotificationListDark.args = {};
-NotificationListDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+NotificationListDark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({}),
+];

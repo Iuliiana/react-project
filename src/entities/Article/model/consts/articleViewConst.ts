@@ -1,4 +1,4 @@
 export enum ArticleView {
     LIST = 'list',
-    GRID = 'grid'
+    GRID = 'grid',
 }

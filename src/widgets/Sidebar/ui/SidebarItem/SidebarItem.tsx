@@ -8,8 +8,8 @@ import cls from './SidebarItem.module.scss';
 import { SidebarItemType } from '../../model/types/SidebarItemsType';
 
 interface SidebarItemProps {
-    item: SidebarItemType,
-    collapsed: boolean
+    item: SidebarItemType;
+    collapsed: boolean;
 }
 
 export const SidebarItem = memo((props: SidebarItemProps) => {
@@ -23,13 +23,16 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
 
     return (
         <NavLink
-            className={({ isActive }) => classNames(cls.link, { [cls.active]: isActive, [cls.collapsed]: collapsed })}
+            className={({ isActive }) =>
+                classNames(cls.link, {
+                    [cls.active]: isActive,
+                    [cls.collapsed]: collapsed,
+                })
+            }
             to={item.path}
         >
             <item.Icon />
-            <span className={cls.linkTitle}>
-                {t(item.text)}
-            </span>
+            <span className={cls.linkTitle}>{t(item.text)}</span>
         </NavLink>
     );
 });

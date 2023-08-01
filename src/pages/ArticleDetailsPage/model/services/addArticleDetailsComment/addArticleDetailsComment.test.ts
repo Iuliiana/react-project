@@ -23,9 +23,11 @@ describe('addArticleDetailsComment.test', () => {
         };
 
         const thunk = new TestAsyncThunk(addArticleDetailsComment, state);
-        thunk.api.post.mockReturnValue(Promise.resolve({
-            data,
-        }));
+        thunk.api.post.mockReturnValue(
+            Promise.resolve({
+                data,
+            }),
+        );
 
         const result = await thunk.callThunk('новый комментарий');
 
@@ -51,7 +53,9 @@ describe('addArticleDetailsComment.test', () => {
 
         expect(thunk.api.post).toHaveBeenCalled();
         expect(result.meta.requestStatus).toBe('rejected');
-        expect(result.payload).toEqual('error article details add comments query');
+        expect(result.payload).toEqual(
+            'error article details add comments query',
+        );
     });
 
     test('empty state data', async () => {

@@ -13,12 +13,16 @@ describe('getArticleDetailsCommentsIsLoading', () => {
                 },
             },
         };
-        expect(getArticleDetailsCommentsIsLoading(state as StateSchema)).toEqual(false);
+        expect(
+            getArticleDetailsCommentsIsLoading(state as StateSchema),
+        ).toEqual(false);
     });
 
     test('should return empty value', () => {
         const state: DeepPartial<StateSchema> = {};
-        expect(getArticleDetailsCommentsIsLoading(state as StateSchema)).toEqual(undefined);
+        expect(
+            getArticleDetailsCommentsIsLoading(state as StateSchema),
+        ).toEqual(undefined);
     });
 });
 
@@ -32,11 +36,15 @@ describe('getArticleDetailsCommentsError', () => {
                 },
             },
         };
-        expect(getArticleDetailsCommentsError(state as StateSchema)).toEqual('error');
+        expect(getArticleDetailsCommentsError(state as StateSchema)).toEqual(
+            'error',
+        );
     });
 
     test('should return empty value', () => {
         const state: DeepPartial<StateSchema> = {};
-        expect(getArticleDetailsCommentsError(state as StateSchema)).toEqual('');
+        expect(getArticleDetailsCommentsError(state as StateSchema)).toEqual(
+            '',
+        );
     });
 });

@@ -1,3 +1,4 @@
 import { StateSchema } from '@/app/providers/StoreProvider';
 
-export const getProfileData = (state: StateSchema) => state?.editableProfileCard?.data || undefined;
+export const getProfileData = (state: StateSchema) =>
+    state?.editableProfileCard?.data || undefined;

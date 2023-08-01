@@ -7,26 +7,24 @@ import { mapDirectionClass } from '../../styles/consts';
 import popupsCls from '../../styles/Popups.module.scss';
 
 interface PopoverProps {
-    className?: string,
-    children: ReactNode,
-    direction?: DropdownDirection,
-    btn: ReactNode,
+    className?: string;
+    children: ReactNode;
+    direction?: DropdownDirection;
+    btn: ReactNode;
 }
 
 export const Popover = memo((props: PopoverProps) => {
-    const {
-        className, children, btn, direction = 'bottom left',
-    } = props;
+    const { className, children, btn, direction = 'bottom left' } = props;
 
-    const mapClasses = [mapDirectionClass[direction], popupsCls.options, className];
+    const mapClasses = [
+        mapDirectionClass[direction],
+        popupsCls.options,
+        className,
+    ];
 
     return (
-
         <HPopover className={classNames('', {}, [popupsCls.popup])}>
-            <HPopover.Button
-                className={classNames(cls.button)}
-                as="div"
-            >
+            <HPopover.Button className={classNames(cls.button)} as="div">
                 {btn}
             </HPopover.Button>
 
@@ -34,6 +32,5 @@ export const Popover = memo((props: PopoverProps) => {
                 {children}
             </HPopover.Panel>
         </HPopover>
-
     );
 });

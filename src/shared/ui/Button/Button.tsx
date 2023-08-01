@@ -1,17 +1,15 @@
-import {
-    ButtonHTMLAttributes, forwardRef, ReactNode,
-} from 'react';
+import { ButtonHTMLAttributes, forwardRef, ReactNode } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
 export enum ButtonTheme {
     CLEAR = 'clear',
     OUTLINE = 'outline',
-    CANCEL= 'cancel',
+    CANCEL = 'cancel',
     SQUARE = 'square',
     BACKGROUND = 'background',
     BACKGROUND_INVERTRD = 'backgroundInverted',
-    HIGHLIGHT = 'highlight'
+    HIGHLIGHT = 'highlight',
 }
 
 export enum ButtonSize {
@@ -21,11 +19,11 @@ export enum ButtonSize {
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    className?: string,
-    themeButton?: ButtonTheme,
-    square?: boolean,
-    size?:ButtonSize,
-    children: ReactNode
+    className?: string;
+    themeButton?: ButtonTheme;
+    square?: boolean;
+    size?: ButtonSize;
+    children: ReactNode;
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -39,7 +37,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             ...otherProps
         } = props;
 
-        const mods:Mods = {
+        const mods: Mods = {
             [cls.square]: square,
             [cls[size]]: true,
         };
@@ -47,7 +45,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         return (
             <button
                 type="button"
-                className={classNames(cls.Button, mods, [className, cls[themeButton]])}
+                className={classNames(cls.Button, mods, [
+                    className,
+                    cls[themeButton],
+                ])}
                 ref={ref}
                 {...otherProps}
             >

@@ -8,7 +8,8 @@ project.addSourceFilesAtPaths('src/**/*.tsx');
 const files = project.getSourceFiles();
 
 const layers = ['app', 'entities', 'features', 'pages', 'shared', 'widgets'];
-const isAbsoluteLayerImport = (src: string) => layers.some((layer) => src.startsWith(layer));
+const isAbsoluteLayerImport = (src: string) =>
+    layers.some((layer) => src.startsWith(layer));
 
 files.forEach((file) => {
     const imports = file.getImportDeclarations();

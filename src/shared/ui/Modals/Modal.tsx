@@ -1,6 +1,4 @@
-import React, {
-    FC, ReactNode,
-} from 'react';
+import React, { FC, ReactNode } from 'react';
 import { useModal } from '@/shared/hooks/useModal/useModal';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Modal.module.scss';
@@ -15,24 +13,25 @@ type ValueOf<T> = T[keyof T];
 // type ModalTheme = typeof ModalTheme[keyof typeof ModalTheme]
 type ModalThemeType = ValueOf<typeof ModalTheme>;
 interface ModalsProps {
-    className?: string,
-    children?: ReactNode,
-    isOpen?: boolean,
-    onClose?: () => void,
-    lazy?: boolean,
-    modalTheme?: ModalThemeType
+    className?: string;
+    children?: ReactNode;
+    isOpen?: boolean;
+    onClose?: () => void;
+    lazy?: boolean;
+    modalTheme?: ModalThemeType;
 }
 
-export const Modal:FC<ModalsProps> = (props) => {
+export const Modal: FC<ModalsProps> = (props) => {
     const {
-        className, children, onClose, isOpen, lazy, modalTheme = ModalTheme.CLEAR,
+        className,
+        children,
+        onClose,
+        isOpen,
+        lazy,
+        modalTheme = ModalTheme.CLEAR,
     } = props;
 
-    const {
-        isClosing,
-        closeHandler,
-        isMounted,
-    } = useModal({
+    const { isClosing, closeHandler, isMounted } = useModal({
         isOpen,
         onClose,
         animationDelay: 300,
@@ -49,13 +48,14 @@ export const Modal:FC<ModalsProps> = (props) => {
 
     return (
         <Portal>
-            <div className={classNames(cls.Modal, mods, [className, cls[modalTheme]])}>
+            <div
+                className={classNames(cls.Modal, mods, [
+                    className,
+                    cls[modalTheme],
+                ])}
+            >
                 <Overlay onClick={closeHandler} />
-                <div
-                    className={cls.content}
-                >
-                    {children}
-                </div>
+                <div className={cls.content}>{children}</div>
             </div>
         </Portal>
     );

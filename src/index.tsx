@@ -9,7 +9,7 @@ import '@/shared/configs/i18n/i18n';
 
 const container = document.getElementById('root');
 if (!container) {
-    throw new Error('Нет root контейнера');// или createRoot(container!)
+    throw new Error('Нет root контейнера'); // или createRoot(container!)
 }
 
 const root = createRoot(container);

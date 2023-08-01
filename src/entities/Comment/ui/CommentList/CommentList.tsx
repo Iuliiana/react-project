@@ -7,9 +7,9 @@ import { Comment } from '../../model/types/comments';
 import { CommentItem } from '../CommentItem/CommentItem';
 
 interface CommentListProps {
-    className?: string,
-    comments: Comment[],
-    isLoading?: boolean,
+    className?: string;
+    comments: Comment[];
+    isLoading?: boolean;
 }
 
 export const CommentList = memo((props: CommentListProps) => {
@@ -27,10 +27,21 @@ export const CommentList = memo((props: CommentListProps) => {
     }
 
     return (
-        <div className={classNames(cls.CommentList, {}, [className])} data-testid="CommentList">
-            {(comments?.length)
-                ? comments.map((comment) => (<CommentItem comment={comment} isLoading={isLoading} key={comment.id} />))
-                : <Text text={t('Комментарии отсутствуют')} />}
+        <div
+            className={classNames(cls.CommentList, {}, [className])}
+            data-testid="CommentList"
+        >
+            {comments?.length ? (
+                comments.map((comment) => (
+                    <CommentItem
+                        comment={comment}
+                        isLoading={isLoading}
+                        key={comment.id}
+                    />
+                ))
+            ) : (
+                <Text text={t('Комментарии отсутствуют')} />
+            )}
         </div>
     );
 });

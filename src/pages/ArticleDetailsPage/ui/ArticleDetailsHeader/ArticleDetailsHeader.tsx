@@ -11,7 +11,7 @@ import cls from './ArticleDetailsHeader.module.scss';
 import { isCanEdit } from '../../model/selectors/article/article';
 
 interface ArticleDetailsHeaderProps {
-    className?: string,
+    className?: string;
 }
 
 export const ArticleDetailsHeader = memo((props: ArticleDetailsHeaderProps) => {
@@ -41,18 +41,15 @@ export const ArticleDetailsHeader = memo((props: ArticleDetailsHeaderProps) => {
                 {t('Назад к списку статей')}
             </Button>
 
-            {
-                canEdit && (
-                    <Button
-                        themeButton={ButtonTheme.HIGHLIGHT}
-                        className={cls.btnEdit}
-                        onClick={onEditArticle}
-                    >
-                        {t('Редактировать')}
-                    </Button>
-                )
-            }
-
+            {canEdit && (
+                <Button
+                    themeButton={ButtonTheme.HIGHLIGHT}
+                    className={cls.btnEdit}
+                    onClick={onEditArticle}
+                >
+                    {t('Редактировать')}
+                </Button>
+            )}
         </HStack>
     );
 });

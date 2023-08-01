@@ -4,30 +4,27 @@ import { Theme } from '@/shared/const/theme';
 import { ThemeContext } from '@/shared/context/ThemeContext';
 
 interface UseThemeResult {
-    theme: Theme,
-    toggleTheme: () => void
+    theme: Theme;
+    toggleTheme: () => void;
 }
 
 export const useTheme = (): UseThemeResult => {
-    const {
-        theme,
-        setTheme,
-    } = useContext(ThemeContext);
+    const { theme, setTheme } = useContext(ThemeContext);
     document.body.className = theme || Theme.LIGHT;
     let newTheme: Theme;
     const toggleTheme = () => {
         switch (theme) {
-        case Theme.LIGHT:
-            newTheme = Theme.DARK;
-            break;
-        case Theme.DARK:
-            newTheme = Theme.CHOCOLATE;
-            break;
-        case Theme.CHOCOLATE:
-            newTheme = Theme.LIGHT;
-            break;
-        default:
-            newTheme = Theme.LIGHT;
+            case Theme.LIGHT:
+                newTheme = Theme.DARK;
+                break;
+            case Theme.DARK:
+                newTheme = Theme.CHOCOLATE;
+                break;
+            case Theme.CHOCOLATE:
+                newTheme = Theme.LIGHT;
+                break;
+            default:
+                newTheme = Theme.LIGHT;
         }
 
         setTheme?.(newTheme);

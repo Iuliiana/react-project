@@ -7,7 +7,10 @@ import { ProfileCard } from '@/entities/Profile';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/hooks/useInitialEffect/useInitialEffect';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { TestsProps } from '@/shared/lib/types/tests';
 import { Text, TextTheme } from '@/shared/ui/Text';
 import { ProfileErrorsCode } from '../../model/consts/profileErrorsCodeConsts';
@@ -15,21 +18,17 @@ import { getProfileError } from '../../model/selectors/getProfileError/getProfil
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
-import {
-    getProfileValidateErrors,
-} from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
+import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
 import {
     editableProfileCardActions,
     editableProfileCardReducer,
 } from '../../model/slices/editableProfileCardSlice';
-import {
-    EditableProfileCardHeader,
-} from '../EditableProfileCardHeader/EditableProfileCardHeader';
+import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 
 interface EditableProfileCardProps extends TestsProps {
-    className?: string,
-    id: string
+    className?: string;
+    id: string;
 }
 
 const asyncReducers: ReducersList = {
@@ -52,61 +51,110 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
         }
     });
 
-    const onChangeFirst = useCallback((value?: string) => {
-        dispatch(editableProfileCardActions.setFormData({ first: value || '' }));
-    }, [dispatch]);
+    const onChangeFirst = useCallback(
+        (value?: string) => {
+            dispatch(
+                editableProfileCardActions.setFormData({ first: value || '' }),
+            );
+        },
+        [dispatch],
+    );
 
-    const onChangeLastname = useCallback((value?: string) => {
-        dispatch(editableProfileCardActions.setFormData({ lastname: value || '' }));
-    }, [dispatch]);
+    const onChangeLastname = useCallback(
+        (value?: string) => {
+            dispatch(
+                editableProfileCardActions.setFormData({
+                    lastname: value || '',
+                }),
+            );
+        },
+        [dispatch],
+    );
 
-    const onChangeAge = useCallback((value?: string) => {
-        const age = value?.trim().replace('[^0-9]', '');
-        dispatch(editableProfileCardActions.setFormData({ age: Number(age) }));
-    }, [dispatch]);
+    const onChangeAge = useCallback(
+        (value?: string) => {
+            const age = value?.trim().replace('[^0-9]', '');
+            dispatch(
+                editableProfileCardActions.setFormData({ age: Number(age) }),
+            );
+        },
+        [dispatch],
+    );
 
-    const onChangeCity = useCallback((value?: string) => {
-        dispatch(editableProfileCardActions.setFormData({ city: value || '' }));
-    }, [dispatch]);
+    const onChangeCity = useCallback(
+        (value?: string) => {
+            dispatch(
+                editableProfileCardActions.setFormData({ city: value || '' }),
+            );
+        },
+        [dispatch],
+    );
 
-    const onChangeUsername = useCallback((value?: string) => {
-        dispatch(editableProfileCardActions.setFormData({ username: value || '' }));
-    }, [dispatch]);
+    const onChangeUsername = useCallback(
+        (value?: string) => {
+            dispatch(
+                editableProfileCardActions.setFormData({
+                    username: value || '',
+                }),
+            );
+        },
+        [dispatch],
+    );
 
-    const onChangeAvatar = useCallback((value?: string) => {
-        dispatch(editableProfileCardActions.setFormData({ avatar: value || '' }));
-    }, [dispatch]);
+    const onChangeAvatar = useCallback(
+        (value?: string) => {
+            dispatch(
+                editableProfileCardActions.setFormData({ avatar: value || '' }),
+            );
+        },
+        [dispatch],
+    );
 
-    const onChangeCurrency = useCallback((value?: Currency) => {
-        dispatch(editableProfileCardActions.setFormData({ currency: value }));
-    }, [dispatch]);
+    const onChangeCurrency = useCallback(
+        (value?: Currency) => {
+            dispatch(
+                editableProfileCardActions.setFormData({ currency: value }),
+            );
+        },
+        [dispatch],
+    );
 
-    const onChangeCountry = useCallback((value?: Country) => {
-        dispatch(editableProfileCardActions.setFormData({ country: value }));
-    }, [dispatch]);
+    const onChangeCountry = useCallback(
+        (value?: Country) => {
+            dispatch(
+                editableProfileCardActions.setFormData({ country: value }),
+            );
+        },
+        [dispatch],
+    );
 
     const errorsMap = {
-        [ProfileErrorsCode.INCORRECT_USERDATA]: t('Введите корректные пользовательские данные'),
+        [ProfileErrorsCode.INCORRECT_USERDATA]: t(
+            'Введите корректные пользовательские данные',
+        ),
         [ProfileErrorsCode.INCORRECT_AGE]: t('Введите корректный возраст'),
         [ProfileErrorsCode.INCORRECT_CITY]: t('Введите корректный город'),
         [ProfileErrorsCode.INCORRECT_USERNAME]: t('Введите корректный логин'),
-        [ProfileErrorsCode.EMPTY_DATA]: t('Вы пытаетесь отправить пустой профиль'),
-        [ProfileErrorsCode.SERVER_ERROR]: t('Ошибка при обновлении данных. Попробуйте ещё раз.'),
+        [ProfileErrorsCode.EMPTY_DATA]: t(
+            'Вы пытаетесь отправить пустой профиль',
+        ),
+        [ProfileErrorsCode.SERVER_ERROR]: t(
+            'Ошибка при обновлении данных. Попробуйте ещё раз.',
+        ),
     };
 
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount>
             <EditableProfileCardHeader isLoading={isLoading} />
-            {
-                validateErrors && validateErrors.map((error) => (
+            {validateErrors &&
+                validateErrors.map((error) => (
                     <Text
                         textTheme={TextTheme.ERROR}
                         text={errorsMap[error]}
                         key={errorsMap[error]}
                         data-testid="EditableProfileCard.Error"
                     />
-                ))
-            }
+                ))}
             <ProfileCard
                 data={data}
                 readonly={readonly}

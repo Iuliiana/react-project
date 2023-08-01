@@ -15,14 +15,14 @@ export interface ListboxOption {
 }
 
 interface ListboxProps {
-    className?: string,
-    label?: string,
-    value?: string,
-    defaultValue?: string,
-    readonly?: boolean,
-    onChange?: (value: string) => void,
-    options?: ListboxOption[],
-    direction?: DropdownDirection,
+    className?: string;
+    label?: string;
+    value?: string;
+    defaultValue?: string;
+    readonly?: boolean;
+    onChange?: (value: string) => void;
+    options?: ListboxOption[];
+    direction?: DropdownDirection;
 }
 
 export const Listbox = (props: ListboxProps) => {
@@ -47,15 +47,18 @@ export const Listbox = (props: ListboxProps) => {
                 value={value}
                 onChange={onChange}
                 disabled={readonly}
-                className={classNames(cls.Listbox, {}, [className, popupsCls.popup])}
+                className={classNames(cls.Listbox, {}, [
+                    className,
+                    popupsCls.popup,
+                ])}
             >
                 <HListbox.Button as="div">
-                    <Button disabled={readonly}>
-                        {value ?? defaultValue}
-                    </Button>
+                    <Button disabled={readonly}>{value ?? defaultValue}</Button>
                 </HListbox.Button>
 
-                <HListbox.Options className={classNames(popupsCls.options, {}, optionClasses)}>
+                <HListbox.Options
+                    className={classNames(popupsCls.options, {}, optionClasses)}
+                >
                     {options?.map((option) => (
                         <HListbox.Option
                             key={option.value}

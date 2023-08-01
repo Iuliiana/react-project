@@ -12,11 +12,16 @@ export default {
     args: {},
 } as ComponentMeta<typeof NotificationButton>;
 
-const Template: ComponentStory<typeof NotificationButton> = (args) => <NotificationButton {...args} />;
+const Template: ComponentStory<typeof NotificationButton> = (args) => (
+    <NotificationButton {...args} />
+);
 
 export const NotificationButtonNormal = Template.bind({});
 NotificationButtonNormal.args = {};
 NotificationButtonNormal.decorators = [StoreDecorator({})];
 export const NotificationButtonDark = Template.bind({});
 NotificationButtonDark.args = {};
-NotificationButtonDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+NotificationButtonDark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({}),
+];

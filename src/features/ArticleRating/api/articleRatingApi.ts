@@ -9,8 +9,8 @@ interface GetArticleRatingArg {
 interface SetArticleRatingArg {
     userId: string;
     articleId: string;
-    rate: number,
-    feedback?: string
+    rate: number;
+    feedback?: string;
 }
 
 const articleRatingApi = rtkApi.injectEndpoints({
@@ -34,5 +34,6 @@ const articleRatingApi = rtkApi.injectEndpoints({
     }),
     overrideExisting: false,
 });
-export const getArticleRateByUser = articleRatingApi.useGetArticleRateByUserQuery;
+export const getArticleRateByUser =
+    articleRatingApi.useGetArticleRateByUserQuery;
 export const { useSetArticleRateMutation } = articleRatingApi;

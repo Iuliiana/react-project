@@ -1,15 +1,17 @@
 import { Article } from '@/entities/Article';
 import { defaultArticle } from '../../helpers/data';
 
-export function createArticle(article?:Article) {
-    return cy.request({
-        url: 'http://localhost:8000/articles',
-        method: 'post',
-        body: article ?? defaultArticle,
-        headers: {
-            Authorization: '123',
-        },
-    }).then(({ body }) => body);
+export function createArticle(article?: Article) {
+    return cy
+        .request({
+            url: 'http://localhost:8000/articles',
+            method: 'post',
+            body: article ?? defaultArticle,
+            headers: {
+                Authorization: '123',
+            },
+        })
+        .then(({ body }) => body);
 }
 
 export function deleteArticle(articleId: string) {

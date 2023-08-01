@@ -1,6 +1,4 @@
-import React, {
-    memo, useMemo, useState,
-} from 'react';
+import React, { memo, useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { LangSwitcher } from '@/features/LangSwitcher';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
@@ -12,33 +10,34 @@ import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 
 interface SidebarProps {
-    className?: string,
+    className?: string;
 }
 
-export const Sidebar = memo(({ className } :SidebarProps) => {
+export const Sidebar = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(true);
     const sidebarItemsList = useSelector(getSidebarItems);
     const toggleCollapsed = () => {
         setCollapsed((prevState) => !prevState);
     };
 
-    const itemsList = useMemo(() => (
-        sidebarItemsList
-            .map((item) => (
+    const itemsList = useMemo(
+        () =>
+            sidebarItemsList.map((item) => (
                 <SidebarItem
                     item={item}
                     key={item.path}
                     collapsed={collapsed}
                 />
-            ))
-    ), [collapsed, sidebarItemsList]);
+            )),
+        [collapsed, sidebarItemsList],
+    );
 
     return (
         <aside
             data-testid="test-sidebar"
-            className={
-                classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])
-            }
+            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
+                className,
+            ])}
         >
             <Button
                 type="button"
@@ -49,7 +48,7 @@ export const Sidebar = memo(({ className } :SidebarProps) => {
                 square
                 size={ButtonSize.L}
             >
-                { collapsed ? '<' : '>'}
+                {collapsed ? '<' : '>'}
             </Button>
 
             <VStack gap="16" align="end" role="navigation">

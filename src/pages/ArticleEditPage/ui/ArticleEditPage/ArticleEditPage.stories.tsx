@@ -14,7 +14,9 @@ export default {
     decorators: [RouterDecorator()],
 } as ComponentMeta<typeof ArticleEditPage>;
 
-const Template: ComponentStory<typeof ArticleEditPage> = (args) => <ArticleEditPage {...args} />;
+const Template: ComponentStory<typeof ArticleEditPage> = (args) => (
+    <ArticleEditPage {...args} />
+);
 
 export const ArticleEditPageNormal = Template.bind({});
 ArticleEditPageNormal.args = {};
@@ -22,4 +24,7 @@ ArticleEditPageNormal.decorators = [StoreDecorator({})];
 
 export const ArticleEditPageDark = Template.bind({});
 ArticleEditPageDark.args = {};
-ArticleEditPageDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+ArticleEditPageDark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({}),
+];

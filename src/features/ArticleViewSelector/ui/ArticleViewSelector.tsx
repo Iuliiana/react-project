@@ -8,8 +8,8 @@ import { Icon } from '@/shared/ui/Icon';
 import cls from './ArticleViewSelector.module.scss';
 
 interface ArticleViewButton {
-    view: ArticleView,
-    Icon: React.FC<React.SVGProps<SVGSVGElement>>
+    view: ArticleView;
+    Icon: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 
 const articleViewButtons: ArticleViewButton[] = [
@@ -24,9 +24,9 @@ const articleViewButtons: ArticleViewButton[] = [
 ];
 
 interface ArticleViewSelectorProps {
-    className?: string,
-    view: ArticleView,
-    onChangeViewArticles?: (view: ArticleView) => void
+    className?: string;
+    view: ArticleView;
+    onChangeViewArticles?: (view: ArticleView) => void;
 }
 
 export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
@@ -46,10 +46,11 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
                 >
                     <Icon
                         Svg={item.Icon}
-                        className={classNames('', { [cls.selected]: view === item.view })}
+                        className={classNames('', {
+                            [cls.selected]: view === item.view,
+                        })}
                     />
                 </Button>
-
             ))}
         </div>
     );

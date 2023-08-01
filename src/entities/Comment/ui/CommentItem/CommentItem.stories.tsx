@@ -28,7 +28,9 @@ export default {
     decorators: [RouterDecorator()],
 } as ComponentMeta<typeof CommentItem>;
 
-const Template: ComponentStory<typeof CommentItem> = (args) => <CommentItem {...args} />;
+const Template: ComponentStory<typeof CommentItem> = (args) => (
+    <CommentItem {...args} />
+);
 
 export const CommentItemNormal = Template.bind({});
 CommentItemNormal.args = {};

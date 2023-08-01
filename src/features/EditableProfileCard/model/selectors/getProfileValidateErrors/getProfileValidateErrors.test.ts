@@ -6,9 +6,7 @@ describe('getProfileValidateErrors', () => {
     test('should return validation errors array value', () => {
         const state: DeepPartial<StateSchema> = {
             editableProfileCard: {
-                validationErrors: [
-                    ProfileErrorsCode.SERVER_ERROR,
-                ],
+                validationErrors: [ProfileErrorsCode.SERVER_ERROR],
             },
         };
         expect(getProfileValidateErrors(state as StateSchema)).toEqual([

@@ -1,3 +1,1 @@
-export {
-    articleRecommendationsListData,
-} from './model/tests/articleRecommendationsListData';
+export { articleRecommendationsListData } from './model/tests/articleRecommendationsListData';

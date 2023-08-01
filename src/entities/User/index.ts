@@ -1,10 +1,6 @@
-export {
-    getUserIsInitAuth,
-} from './model/selectors/getUserIsInitAuth/getUserIsInitAuth';
+export { getUserIsInitAuth } from './model/selectors/getUserIsInitAuth/getUserIsInitAuth';
 
-export {
-    getUserAuthData,
-} from './model/selectors/getUserAuthData/getUserAuthData';
+export { getUserAuthData } from './model/selectors/getUserAuthData/getUserAuthData';
 
 export {
     getUserRoles,
@@ -12,14 +8,8 @@ export {
     isManagerRole,
 } from './model/selectors/getUserRoles/getUserRoles';
 
-export {
-    userReducer,
-    userActions,
-} from './model/slice/userSlice';
+export { userReducer, userActions } from './model/slice/userSlice';
 
-export type {
-    User,
-    UserSchema,
-} from './model/types/UserSchema';
+export type { User, UserSchema } from './model/types/UserSchema';
 
 export { UserRole } from './model/consts/userConsts';

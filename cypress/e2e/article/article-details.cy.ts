@@ -16,7 +16,10 @@ describe('Пользователь открывает статью', () => {
 
     it('Страница успешно открывается', () => {
         cy.selectByDataTestId('ArticleDetailsPage').should('exist');
-        cy.selectByDataTestId('ArticleDetails.Title.Head').should('have.text', 'Test article');
+        cy.selectByDataTestId('ArticleDetails.Title.Head').should(
+            'have.text',
+            'Test article',
+        );
     });
 
     it('На странице отображаются рекоммендации', () => {

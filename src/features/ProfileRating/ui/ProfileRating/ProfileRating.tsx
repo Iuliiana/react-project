@@ -5,11 +5,14 @@ import { RatingCard } from '@/entities/Rating';
 import { getUserAuthData } from '@/entities/User';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Skeleton } from '@/shared/ui/Skeleton';
-import { getProfileRate, useSetProfileRateMutation } from '../../api/profileRatingApi';
+import {
+    getProfileRate,
+    useSetProfileRateMutation,
+} from '../../api/profileRatingApi';
 
 export interface ProfileRatingProps {
-    className?: string,
-    profileId: string
+    className?: string;
+    profileId: string;
 }
 
 const ProfileRating = memo((props: ProfileRatingProps) => {
@@ -19,26 +22,35 @@ const ProfileRating = memo((props: ProfileRatingProps) => {
     const isCurrentUserProfile = user?.id === profileId;
     const [setProfileRate] = useSetProfileRateMutation();
 
-    const handleSendData = useCallback((stars: number, text?: string) => {
-        try {
-            setProfileRate({
-                rate: stars,
-                profileId,
-                userId: user?.id || '',
-                feedback: text,
-            });
-        } catch (e) {
-        // handle error
-        }
-    }, [profileId, setProfileRate, user?.id]);
+    const handleSendData = useCallback(
+        (stars: number, text?: string) => {
+            try {
+                setProfileRate({
+                    rate: stars,
+                    profileId,
+                    userId: user?.id || '',
+                    feedback: text,
+                });
+            } catch (e) {
+                // handle error
+            }
+        },
+        [profileId, setProfileRate, user?.id],
+    );
 
-    const onSendForm = useCallback((stars: number, text?: string) => {
-        handleSendData(stars, text);
-    }, [handleSendData]);
+    const onSendForm = useCallback(
+        (stars: number, text?: string) => {
+            handleSendData(stars, text);
+        },
+        [handleSendData],
+    );
 
-    const onCancel = useCallback((stars: number) => {
-        handleSendData(stars);
-    }, [handleSendData]);
+    const onCancel = useCallback(
+        (stars: number) => {
+            handleSendData(stars);
+        },
+        [handleSendData],
+    );
 
     if (isCurrentUserProfile) {
         return null;

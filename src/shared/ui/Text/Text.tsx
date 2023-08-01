@@ -38,10 +38,10 @@ interface TextProps {
     className?: string;
     title?: string;
     text?: string;
-    textTheme?:TextThemeType;
+    textTheme?: TextThemeType;
     align?: TextAlignType;
     size?: TextSizeType;
-    'data-testid'?: string
+    'data-testid'?: string;
 }
 
 export const Text = memo((props: TextProps) => {
@@ -58,7 +58,14 @@ export const Text = memo((props: TextProps) => {
     const HeadTag: HeadTagBySizeType = HeadTagBySize[size];
 
     return (
-        <div className={classNames(cls.Text, {}, [className, cls[textTheme], cls[align], cls[size]])}>
+        <div
+            className={classNames(cls.Text, {}, [
+                className,
+                cls[textTheme],
+                cls[align],
+                cls[size],
+            ])}
+        >
             {title && (
                 <HeadTag
                     className={classNames(cls.TextTitle, {}, [cls.TextItem])}
@@ -69,7 +76,9 @@ export const Text = memo((props: TextProps) => {
             )}
             {text && (
                 <p
-                    className={classNames(cls.TextParagraph, {}, [cls.TextItem])}
+                    className={classNames(cls.TextParagraph, {}, [
+                        cls.TextItem,
+                    ])}
                     data-testid={`${dataTestId}.Paragraph`}
                 >
                     {text}

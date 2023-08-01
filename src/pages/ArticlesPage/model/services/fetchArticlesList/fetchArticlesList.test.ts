@@ -1,5 +1,9 @@
 import {
-    Article, ArticleBlockType, ArticleSortField, ArticleType, ArticleView,
+    Article,
+    ArticleBlockType,
+    ArticleSortField,
+    ArticleType,
+    ArticleView,
 } from '@/entities/Article';
 import { TestAsyncThunk } from '@/shared/lib/tests/helpers/TestAsyncThunk/TestAsyncThunk';
 import { fetchArticlesList } from './fetchArticlesList';
@@ -17,9 +21,7 @@ const articles: Article[] = [
             username: 'admin',
             avatar: 'https://sun1-95.userapi.com/s/v1/ig2/xzx1BbeV9lr8KAWLbMiKM6fnfCD0H2p8R8xUUx25QcZHh4a8H4hjFSGrBKDd7O-_BkZmwM2-eokVbZWliFqknf47.jpg?size=400x400&quality=95&crop=95,79,426,426&ava=1',
         },
-        type: [
-            ArticleType.IT,
-        ],
+        type: [ArticleType.IT],
         blocks: [
             {
                 id: '1',
@@ -93,9 +95,7 @@ const articles: Article[] = [
             username: 'admin',
             avatar: 'https://sun1-95.userapi.com/s/v1/ig2/xzx1BbeV9lr8KAWLbMiKM6fnfCD0H2p8R8xUUx25QcZHh4a8H4hjFSGrBKDd7O-_BkZmwM2-eokVbZWliFqknf47.jpg?size=400x400&quality=95&crop=95,79,426,426&ava=1',
         },
-        type: [
-            ArticleType.SCIENCE,
-        ],
+        type: [ArticleType.SCIENCE],
         blocks: [
             {
                 id: '1',
@@ -169,10 +169,7 @@ const articles: Article[] = [
             username: 'admin',
             avatar: 'https://sun1-95.userapi.com/s/v1/ig2/xzx1BbeV9lr8KAWLbMiKM6fnfCD0H2p8R8xUUx25QcZHh4a8H4hjFSGrBKDd7O-_BkZmwM2-eokVbZWliFqknf47.jpg?size=400x400&quality=95&crop=95,79,426,426&ava=1',
         },
-        type: [
-            ArticleType.SCIENCE,
-            ArticleType.POLICY,
-        ],
+        type: [ArticleType.SCIENCE, ArticleType.POLICY],
         blocks: [
             {
                 id: '1',
@@ -233,7 +230,8 @@ const articles: Article[] = [
                 ],
             },
         ],
-    }];
+    },
+];
 
 describe('fetchArticlesList.test', () => {
     test('success', async () => {

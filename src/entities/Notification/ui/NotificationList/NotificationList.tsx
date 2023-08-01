@@ -6,7 +6,7 @@ import { useGetNotificationsQuery } from '../../api/notificationApi';
 import { NotificationItem } from '../NotificationItem/NotificationItem';
 
 interface NotificationListProps {
-    className?: string,
+    className?: string;
 }
 
 export const NotificationList = memo((props: NotificationListProps) => {
@@ -31,9 +31,9 @@ export const NotificationList = memo((props: NotificationListProps) => {
 
     return (
         <VStack gap="16" max className={classNames('', {}, [className])}>
-            {
-                data?.map((item) => <NotificationItem item={item} key={item.id} />)
-            }
+            {data?.map((item) => (
+                <NotificationItem item={item} key={item.id} />
+            ))}
         </VStack>
     );
 });

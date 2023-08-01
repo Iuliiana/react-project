@@ -5,10 +5,10 @@ import { Button } from '@/shared/ui/Button';
 import cls from './PageError.module.scss';
 
 interface PageErrorProps {
-    className?: string,
+    className?: string;
 }
 
-export const PageError:FC<PageErrorProps> = (props) => {
+export const PageError: FC<PageErrorProps> = (props) => {
     const { className } = props;
     const { t } = useTranslation();
     const reloadPage = () => {

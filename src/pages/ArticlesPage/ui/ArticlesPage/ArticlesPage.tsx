@@ -3,7 +3,10 @@ import { useSearchParams } from 'react-router-dom';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/hooks/useInitialEffect/useInitialEffect';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { VStack } from '@/shared/ui/Stack';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { articlesPageReducer } from '../../model/slice/articlesPageSlice';
@@ -11,7 +14,7 @@ import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList'
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 
 interface ArticlesPageProps {
-    className?: string,
+    className?: string;
 }
 
 const asyncReducers: ReducersList = {
@@ -28,12 +31,21 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     });
 
     return (
-        <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount={false}>
-            <VStack max justify="between" align="stretch" data-testid="ArticlesPage">
+        <DynamicModuleLoader
+            asyncReducers={asyncReducers}
+            removeAfterUnmount={false}
+        >
+            <VStack
+                max
+                justify="between"
+                align="stretch"
+                data-testid="ArticlesPage"
+            >
                 <ArticlesPageFilters />
-                <ArticleInfiniteList className={classNames('', {}, [className])} />
+                <ArticleInfiniteList
+                    className={classNames('', {}, [className])}
+                />
             </VStack>
-
         </DynamicModuleLoader>
     );
 };

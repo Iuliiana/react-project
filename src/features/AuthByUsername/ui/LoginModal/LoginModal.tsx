@@ -5,12 +5,12 @@ import { Modal, ModalTheme } from '@/shared/ui/Modals';
 import { LoginFormAsync } from '../LoginForm/LoginForm.async';
 
 interface LoginModalProps {
-    className?: string,
-    isOpen?: boolean,
-    onClose?: () => void
+    className?: string;
+    isOpen?: boolean;
+    onClose?: () => void;
 }
 
-export const LoginModal:FC<LoginModalProps> = (props) => {
+export const LoginModal: FC<LoginModalProps> = (props) => {
     const { isOpen, onClose, className } = props;
     return (
         <Modal

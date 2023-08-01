@@ -16,14 +16,22 @@ describe('Пользователь открывает страницу проф�
     });
 
     it('Открывает успешно страницу своего профиля', () => {
-        cy.selectByDataTestId('EditableProfileCard.ProfileCard').should('exist');
+        cy.selectByDataTestId('EditableProfileCard.ProfileCard').should(
+            'exist',
+        );
     });
 
     it('Редактирует её', () => {
         const newFirstname = 'newFirst';
         const newLastname = 'newLast';
         cy.changeProfileData(newFirstname, newLastname);
-        cy.selectByDataTestId('ProfileCard.firstname').should('have.value', newFirstname);
-        cy.selectByDataTestId('ProfileCard.lastname').should('have.value', newLastname);
+        cy.selectByDataTestId('ProfileCard.firstname').should(
+            'have.value',
+            newFirstname,
+        );
+        cy.selectByDataTestId('ProfileCard.lastname').should(
+            'have.value',
+            newLastname,
+        );
     });
 });

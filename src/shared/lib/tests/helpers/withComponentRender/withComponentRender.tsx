@@ -12,15 +12,15 @@ import '@/app/styles/index.scss';
 import { ThemeProvider } from '@/app/providers/ThemeProvider';
 
 export interface withComponentRenderParams {
-    route?: string,
-    initialState?:DeepPartial<StateSchema>,
+    route?: string;
+    initialState?: DeepPartial<StateSchema>;
     asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>;
-    theme?: Theme
+    theme?: Theme;
 }
 
 interface TestProviderProps {
-    children: ReactNode,
-    params?: withComponentRenderParams
+    children: ReactNode;
+    params?: withComponentRenderParams;
 }
 
 export const TestProvider = ({ children, params = {} }: TestProviderProps) => {
@@ -33,22 +33,22 @@ export const TestProvider = ({ children, params = {} }: TestProviderProps) => {
 
     return (
         <MemoryRouter initialEntries={[route]}>
-            <StoreProvider initialState={initialState} asyncReducers={asyncReducers}>
+            <StoreProvider
+                initialState={initialState}
+                asyncReducers={asyncReducers}
+            >
                 <I18nextProvider i18n={i18nForTest}>
                     <ThemeProvider initialTheme={theme}>
-                        <div className={`app ${theme}`}>
-                            {children}
-                        </div>
+                        <div className={`app ${theme}`}>{children}</div>
                     </ThemeProvider>
                 </I18nextProvider>
             </StoreProvider>
         </MemoryRouter>
     );
 };
-export function withComponentRender(component: ReactNode, params: withComponentRenderParams = {}) {
-    return render(
-        <TestProvider params={params}>
-            {component}
-        </TestProvider>,
-    );
+export function withComponentRender(
+    component: ReactNode,
+    params: withComponentRenderParams = {},
+) {
+    return render(<TestProvider params={params}>{component}</TestProvider>);
 }

@@ -12,7 +12,9 @@ export default {
     args: {},
 } as ComponentMeta<typeof ArticleViewSelector>;
 
-const Template: ComponentStory<typeof ArticleViewSelector> = (args) => <ArticleViewSelector {...args} />;
+const Template: ComponentStory<typeof ArticleViewSelector> = (args) => (
+    <ArticleViewSelector {...args} />
+);
 
 export const ArticleViewSelectorNormal = Template.bind({});
 ArticleViewSelectorNormal.args = {

@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-    ComponentStory, ComponentMeta,
-} from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { articleData } from '@/entities/Article/testing';
 import { articleRecommendationsListData } from '@/features/ArticleRecommendationsList/testing';
 import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
@@ -28,7 +26,9 @@ export default {
     ],
 } as ComponentMeta<typeof ArticleDetailsPage>;
 
-const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDetailsPage {...args} />;
+const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => (
+    <ArticleDetailsPage {...args} />
+);
 
 export const ArticleDetailsPageNormal = Template.bind({});
 ArticleDetailsPageNormal.args = {};
@@ -44,13 +44,15 @@ ArticleDetailsPageNormal.parameters = {
             url: `${__API__}/article-ratings?userId=&articleId=1`,
             method: 'GET',
             status: 200,
-            response: [{
-                articleId: '77',
-                userId: '1',
-                rate: 1,
-                feedback: 'uu',
-                id: 'u4OVz3h',
-            }],
+            response: [
+                {
+                    articleId: '77',
+                    userId: '1',
+                    rate: 1,
+                    feedback: 'uu',
+                    id: 'u4OVz3h',
+                },
+            ],
         },
     ],
 };
@@ -70,13 +72,15 @@ ArticleDetailsPageDark.parameters = {
             url: `${__API__}/article-ratings?userId=&articleId=1`,
             method: 'GET',
             status: 200,
-            response: [{
-                articleId: '77',
-                userId: '1',
-                rate: 1,
-                feedback: 'uu',
-                id: 'u4OVz3h',
-            }],
+            response: [
+                {
+                    articleId: '77',
+                    userId: '1',
+                    rate: 1,
+                    feedback: 'uu',
+                    id: 'u4OVz3h',
+                },
+            ],
         },
     ],
 };

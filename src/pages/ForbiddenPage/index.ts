@@ -1,3 +1,1 @@
-export {
-    ForbiddenPage,
-} from './ui/ForbiddenPage/ForbiddenPage';
+export { ForbiddenPage } from './ui/ForbiddenPage/ForbiddenPage';

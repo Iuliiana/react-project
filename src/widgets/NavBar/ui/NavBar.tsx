@@ -1,9 +1,7 @@
 import React, { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import {
-    getUserAuthData,
-} from '@/entities/User';
+import { getUserAuthData } from '@/entities/User';
 import { LoginModal } from '@/features/AuthByUsername';
 import { AvatarDropdown } from '@/features/AvatarDropdown';
 import { NotificationButton } from '@/features/NotificationButton';
@@ -16,7 +14,7 @@ import { Text } from '@/shared/ui/Text';
 import cls from './NavBar.module.scss';
 
 interface NavBarProps {
-    className?: string
+    className?: string;
 }
 
 export const NavBar = memo(({ className }: NavBarProps) => {
@@ -54,9 +52,9 @@ export const NavBar = memo(({ className }: NavBarProps) => {
     return (
         <header className={classNames(cls.Navbar, {}, [className])}>
             <div className={cls.navLinks}>
-                {
-                    isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
-                }
+                {isAuthModal && (
+                    <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+                )}
                 <Button
                     onClick={onShowModal}
                     type="button"
@@ -66,6 +64,5 @@ export const NavBar = memo(({ className }: NavBarProps) => {
                 </Button>
             </div>
         </header>
-
     );
 });

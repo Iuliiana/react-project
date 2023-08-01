@@ -14,32 +14,37 @@ export default {
     component: ProfilePage,
     argTypes: {},
     args: {},
-    decorators: [RouterDecorator({
-        path: '/profile/:id',
-        initialEntries: ['/profile/1'],
-    }),
+    decorators: [
+        RouterDecorator({
+            path: '/profile/:id',
+            initialEntries: ['/profile/1'],
+        }),
     ],
 } as ComponentMeta<typeof ProfilePage>;
 
-const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
+const Template: ComponentStory<typeof ProfilePage> = (args) => (
+    <ProfilePage {...args} />
+);
 
 export const ProfilePagePrimary = Template.bind({});
 ProfilePagePrimary.args = {};
-ProfilePagePrimary.decorators = [StoreDecorator({
-    editableProfileCard: {
-        form: {
-            first: 'Джейн',
-            lastname: 'Доу',
-            age: 28,
-            currency: Currency.USD,
-            country: Country.Canada,
-            city: 'Moscow',
-            username: 'admin',
-            avatar: 'https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png',
+ProfilePagePrimary.decorators = [
+    StoreDecorator({
+        editableProfileCard: {
+            form: {
+                first: 'Джейн',
+                lastname: 'Доу',
+                age: 28,
+                currency: Currency.USD,
+                country: Country.Canada,
+                city: 'Moscow',
+                username: 'admin',
+                avatar: 'https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png',
+            },
+            readonly: true,
         },
-        readonly: true,
-    },
-})];
+    }),
+];
 ProfilePagePrimary.parameters = {
     mockData: [
         {
@@ -53,21 +58,24 @@ ProfilePagePrimary.parameters = {
 
 export const ProfilePagePrimaryDark = Template.bind({});
 ProfilePagePrimaryDark.args = {};
-ProfilePagePrimaryDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    editableProfileCard: {
-        form: {
-            first: 'Джейн',
-            lastname: 'Доу',
-            age: 28,
-            currency: Currency.USD,
-            country: Country.Canada,
-            city: 'Moscow',
-            username: 'admin',
-            avatar: 'https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png',
+ProfilePagePrimaryDark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        editableProfileCard: {
+            form: {
+                first: 'Джейн',
+                lastname: 'Доу',
+                age: 28,
+                currency: Currency.USD,
+                country: Country.Canada,
+                city: 'Moscow',
+                username: 'admin',
+                avatar: 'https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png',
+            },
+            readonly: true,
         },
-        readonly: true,
-    },
-})];
+    }),
+];
 ProfilePagePrimaryDark.parameters = {
     mockData: [
         {
@@ -81,21 +89,23 @@ ProfilePagePrimaryDark.parameters = {
 
 export const ProfilePageEditState = Template.bind({});
 ProfilePageEditState.args = {};
-ProfilePageEditState.decorators = [StoreDecorator({
-    editableProfileCard: {
-        form: {
-            first: 'Джейн',
-            lastname: 'Доу',
-            age: 28,
-            currency: Currency.USD,
-            country: Country.Canada,
-            city: 'Moscow',
-            username: 'admin',
-            avatar: 'https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png',
+ProfilePageEditState.decorators = [
+    StoreDecorator({
+        editableProfileCard: {
+            form: {
+                first: 'Джейн',
+                lastname: 'Доу',
+                age: 28,
+                currency: Currency.USD,
+                country: Country.Canada,
+                city: 'Moscow',
+                username: 'admin',
+                avatar: 'https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png',
+            },
+            readonly: false,
         },
-        readonly: false,
-    },
-})];
+    }),
+];
 ProfilePageEditState.parameters = {
     mockData: [
         {
@@ -109,21 +119,24 @@ ProfilePageEditState.parameters = {
 
 export const ProfilePageEditStateDark = Template.bind({});
 ProfilePageEditStateDark.args = {};
-ProfilePageEditStateDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    editableProfileCard: {
-        form: {
-            first: 'Джейн',
-            lastname: 'Доу',
-            age: 28,
-            currency: Currency.USD,
-            country: Country.Canada,
-            city: 'Moscow',
-            username: 'admin',
-            avatar: 'https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png',
+ProfilePageEditStateDark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        editableProfileCard: {
+            form: {
+                first: 'Джейн',
+                lastname: 'Доу',
+                age: 28,
+                currency: Currency.USD,
+                country: Country.Canada,
+                city: 'Moscow',
+                username: 'admin',
+                avatar: 'https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png',
+            },
+            readonly: false,
         },
-        readonly: false,
-    },
-})];
+    }),
+];
 ProfilePageEditStateDark.parameters = {
     mockData: [
         {

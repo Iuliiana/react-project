@@ -5,9 +5,7 @@ import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
-import {
-    articleRecommendationsListData,
-} from '../model/tests/articleRecommendationsListData';
+import { articleRecommendationsListData } from '../model/tests/articleRecommendationsListData';
 
 export default {
     title: 'features/Article/ArticleRecommendationsList',
@@ -22,13 +20,13 @@ export default {
     decorators: [RouterDecorator()],
 } as ComponentMeta<typeof ArticleRecommendationsList>;
 
-const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => <ArticleRecommendationsList {...args} />;
+const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => (
+    <ArticleRecommendationsList {...args} />
+);
 
 export const ArticleRecommendationsListNormal = Template.bind({});
 ArticleRecommendationsListNormal.args = {};
-ArticleRecommendationsListNormal.decorators = [
-    StoreDecorator({}),
-];
+ArticleRecommendationsListNormal.decorators = [StoreDecorator({})];
 
 ArticleRecommendationsListNormal.parameters = {
     mockData: [
@@ -43,7 +41,10 @@ ArticleRecommendationsListNormal.parameters = {
 
 export const ArticleRecommendationsListDark = Template.bind({});
 ArticleRecommendationsListDark.args = {};
-ArticleRecommendationsListDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+ArticleRecommendationsListDark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({}),
+];
 ArticleRecommendationsListDark.parameters = {
     mockData: [
         {

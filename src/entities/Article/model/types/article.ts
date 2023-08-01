@@ -3,14 +3,14 @@ import { ArticleBlockType } from '../consts/articleBlockTypeConst';
 import { ArticleType } from '../consts/articleTypeConst';
 
 interface ArticleBlocksBase {
-    id: string,
-    type: ArticleBlockType,
+    id: string;
+    type: ArticleBlockType;
 }
 
 export interface ArticleBlocksText extends ArticleBlocksBase {
     type: ArticleBlockType.TEXT;
     title?: string;
-    paragraphs: string[]
+    paragraphs: string[];
 }
 
 export interface ArticleBlocksCode extends ArticleBlocksBase {
@@ -19,12 +19,15 @@ export interface ArticleBlocksCode extends ArticleBlocksBase {
 }
 
 export interface ArticleBlocksImage extends ArticleBlocksBase {
-    type: ArticleBlockType.IMAGE,
-    src: string,
-    title?: string
+    type: ArticleBlockType.IMAGE;
+    src: string;
+    title?: string;
 }
 
-export type ArticleBlock = ArticleBlocksText | ArticleBlocksImage | ArticleBlocksCode;
+export type ArticleBlock =
+    | ArticleBlocksText
+    | ArticleBlocksImage
+    | ArticleBlocksCode;
 export interface Article {
     id: string;
     title: string;

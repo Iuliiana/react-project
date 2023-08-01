@@ -1,11 +1,5 @@
-export {
-    addCommentFormActions,
-} from './model/slice/addCommentFormSlice';
+export { addCommentFormActions } from './model/slice/addCommentFormSlice';
 
-export type {
-    AddCommentFormSchema,
-} from './model/types/AddCommentFormSchema';
+export type { AddCommentFormSchema } from './model/types/AddCommentFormSchema';
 
-export {
-    AddCommentFormAsync as AddCommentForm,
-} from './ui/AddCommentForm.async';
+export { AddCommentFormAsync as AddCommentForm } from './ui/AddCommentForm.async';

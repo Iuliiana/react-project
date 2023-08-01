@@ -6,46 +6,59 @@ import { OrderBy } from '@/shared/lib/types/order';
 import { Select, SelectOption } from '@/shared/ui/Select';
 
 interface ArticleSortSelectorProps {
-    className?: string,
-    onChangeSort: (sort: ArticleSortField) => void,
-    onChangeOrder: (order: OrderBy) => void,
-    currentSort: ArticleSortField,
-    currentOrder: OrderBy
+    className?: string;
+    onChangeSort: (sort: ArticleSortField) => void;
+    onChangeOrder: (order: OrderBy) => void;
+    currentSort: ArticleSortField;
+    currentOrder: OrderBy;
 }
 
 export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
     const {
-        className, currentSort, onChangeSort, onChangeOrder, currentOrder,
+        className,
+        currentSort,
+        onChangeSort,
+        onChangeOrder,
+        currentOrder,
     } = props;
     const { t } = useTranslation('articles');
 
-    const sortOptions: SelectOption<ArticleSortField>[] = useMemo(() => [
-        {
-            value: ArticleSortField.VIEWS,
-            text: t('Просмотрам'),
-        },
-        {
-            value: ArticleSortField.TITLE,
-            text: t('Заголовку'),
-        },
-        {
-            value: ArticleSortField.CREATED,
-            text: t('Дате создания'),
-        },
-    ], [t]);
-    const orderOptions: SelectOption<OrderBy>[] = useMemo(() => [
-        {
-            value: 'asc',
-            text: t('Возрастанию'),
-        },
-        {
-            value: 'desc',
-            text: t('Убыванию'),
-        },
-    ], [t]);
+    const sortOptions: SelectOption<ArticleSortField>[] = useMemo(
+        () => [
+            {
+                value: ArticleSortField.VIEWS,
+                text: t('Просмотрам'),
+            },
+            {
+                value: ArticleSortField.TITLE,
+                text: t('Заголовку'),
+            },
+            {
+                value: ArticleSortField.CREATED,
+                text: t('Дате создания'),
+            },
+        ],
+        [t],
+    );
+    const orderOptions: SelectOption<OrderBy>[] = useMemo(
+        () => [
+            {
+                value: 'asc',
+                text: t('Возрастанию'),
+            },
+            {
+                value: 'desc',
+                text: t('Убыванию'),
+            },
+        ],
+        [t],
+    );
 
     return (
-        <div className={classNames('', {}, [className])} data-testid="ArticleSortSelector">
+        <div
+            className={classNames('', {}, [className])}
+            data-testid="ArticleSortSelector"
+        >
             <Select<ArticleSortField>
                 label={t('Сортировать по')}
                 options={sortOptions}

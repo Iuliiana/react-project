@@ -30,9 +30,7 @@ export default {
 const Template: ComponentStory<typeof Select> = (args) => <Select {...args} />;
 
 export const SelectPrimary = Template.bind({});
-SelectPrimary.args = {
-
-};
+SelectPrimary.args = {};
 
 export const SelectPrimaryDark = Template.bind({});
 SelectPrimaryDark.args = {};

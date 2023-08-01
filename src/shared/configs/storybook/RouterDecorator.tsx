@@ -1,28 +1,25 @@
 import React from 'react';
 import { Story } from '@storybook/react';
-import {
-    BrowserRouter, MemoryRouter, Route, Routes,
-} from 'react-router-dom';
+import { BrowserRouter, MemoryRouter, Route, Routes } from 'react-router-dom';
 
 interface RouterDecoratorProps {
-    initialEntries: string[],
-    path: string
+    initialEntries: string[];
+    path: string;
 }
-export const RouterDecorator = (
-    params?: RouterDecoratorProps,
-) => (StoryComponent: Story) => {
-    if (!params) {
+export const RouterDecorator =
+    (params?: RouterDecoratorProps) => (StoryComponent: Story) => {
+        if (!params) {
+            return (
+                <BrowserRouter>
+                    <StoryComponent />
+                </BrowserRouter>
+            );
+        }
         return (
-            <BrowserRouter>
-                <StoryComponent />
-            </BrowserRouter>
+            <MemoryRouter initialEntries={params.initialEntries}>
+                <Routes>
+                    <Route path={params.path} element={<StoryComponent />} />
+                </Routes>
+            </MemoryRouter>
         );
-    }
-    return (
-        <MemoryRouter initialEntries={params.initialEntries}>
-            <Routes>
-                <Route path={params.path} element={<StoryComponent />} />
-            </Routes>
-        </MemoryRouter>
-    );
-};
+    };

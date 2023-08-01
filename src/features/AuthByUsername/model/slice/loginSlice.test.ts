@@ -5,16 +5,16 @@ describe('loginSlice.test', () => {
     test('setUsername', () => {
         const state: LoginShema = { username: 'dfgdg' };
 
-        expect(
-            loginReducer(state, loginActions.setUsername('dddd')),
-        ).toEqual({ username: 'dddd' });
+        expect(loginReducer(state, loginActions.setUsername('dddd'))).toEqual({
+            username: 'dddd',
+        });
     });
 
     test('setPassword', () => {
         const state: LoginShema = { password: '' };
 
-        expect(
-            loginReducer(state, loginActions.setPassword('123')),
-        ).toEqual({ password: '123' });
+        expect(loginReducer(state, loginActions.setPassword('123'))).toEqual({
+            password: '123',
+        });
     });
 });

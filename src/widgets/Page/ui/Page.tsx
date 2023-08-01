@@ -1,6 +1,4 @@
-import {
-    MutableRefObject, ReactNode, UIEvent, useRef,
-} from 'react';
+import { MutableRefObject, ReactNode, UIEvent, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { StateSchema } from '@/app/providers/StoreProvider';
@@ -13,21 +11,26 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { TestsProps } from '@/shared/lib/types/tests';
 import cls from './Page.module.scss';
 
-interface PageProps extends TestsProps{
-    className?: string,
-    children: ReactNode,
-    onScrollEnd?: () => void,
+interface PageProps extends TestsProps {
+    className?: string;
+    children: ReactNode;
+    onScrollEnd?: () => void;
 }
 
 export const Page = (props: PageProps) => {
     const {
-        className, children, onScrollEnd, 'data-testid': dataTestId = 'Page',
+        className,
+        children,
+        onScrollEnd,
+        'data-testid': dataTestId = 'Page',
     } = props;
     const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
     const dispatch = useAppDispatch();
     const { pathname } = useLocation();
-    const scrollPosition = useSelector((state: StateSchema) => getSaveScrollByPath(state, pathname));
+    const scrollPosition = useSelector((state: StateSchema) =>
+        getSaveScrollByPath(state, pathname),
+    );
 
     useInfiniteScroll({
         wrapperRef,
@@ -40,10 +43,12 @@ export const Page = (props: PageProps) => {
     });
 
     const onScrollSave = useThrottle((event: UIEvent<HTMLDivElement>) => {
-        dispatch(saveScrollActions.setScrollPosition({
-            path: pathname,
-            scrollPosition: event.currentTarget.scrollTop,
-        }));
+        dispatch(
+            saveScrollActions.setScrollPosition({
+                path: pathname,
+                scrollPosition: event.currentTarget.scrollTop,
+            }),
+        );
     }, 500);
 
     return (
@@ -53,8 +58,10 @@ export const Page = (props: PageProps) => {
             onScroll={onScrollSave}
             data-testid={dataTestId}
         >
-            { children }
-            {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
+            {children}
+            {onScrollEnd ? (
+                <div className={cls.trigger} ref={triggerRef} />
+            ) : null}
             <div className={cls.trigger} ref={triggerRef} />
         </main>
     );

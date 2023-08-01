@@ -60,12 +60,16 @@ describe('getArticlesPageView', () => {
                 page: 1,
             },
         };
-        expect(getArticlesPageView(state as StateSchema)).toBe(ArticleView.LIST);
+        expect(getArticlesPageView(state as StateSchema)).toBe(
+            ArticleView.LIST,
+        );
     });
 
     test('should return empty value', () => {
         const state: DeepPartial<StateSchema> = {};
-        expect(getArticlesPageView(state as StateSchema)).toBe(ArticleView.GRID);
+        expect(getArticlesPageView(state as StateSchema)).toBe(
+            ArticleView.GRID,
+        );
     });
 });
 

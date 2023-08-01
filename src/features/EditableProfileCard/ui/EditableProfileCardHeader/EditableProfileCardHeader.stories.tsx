@@ -12,36 +12,48 @@ export default {
     args: {},
 } as ComponentMeta<typeof EditableProfileCardHeader>;
 
-const Template: ComponentStory<typeof EditableProfileCardHeader> = (args) => <EditableProfileCardHeader {...args} />;
+const Template: ComponentStory<typeof EditableProfileCardHeader> = (args) => (
+    <EditableProfileCardHeader {...args} />
+);
 
 export const EditableProfileCardHeaderNormal = Template.bind({});
 EditableProfileCardHeaderNormal.args = {};
-EditableProfileCardHeaderNormal.decorators = [StoreDecorator({
-    editableProfileCard: {
-        readonly: false,
-    },
-})];
+EditableProfileCardHeaderNormal.decorators = [
+    StoreDecorator({
+        editableProfileCard: {
+            readonly: false,
+        },
+    }),
+];
 
 export const EditableProfileCardHeaderDark = Template.bind({});
 EditableProfileCardHeaderDark.args = {};
-EditableProfileCardHeaderDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    editableProfileCard: {
-        readonly: false,
-    },
-})];
+EditableProfileCardHeaderDark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        editableProfileCard: {
+            readonly: false,
+        },
+    }),
+];
 
 export const EditableProfileCardHeaderNormalReadonly = Template.bind({});
 EditableProfileCardHeaderNormalReadonly.args = {};
-EditableProfileCardHeaderNormalReadonly.decorators = [StoreDecorator({
-    editableProfileCard: {
-        readonly: true,
-    },
-})];
+EditableProfileCardHeaderNormalReadonly.decorators = [
+    StoreDecorator({
+        editableProfileCard: {
+            readonly: true,
+        },
+    }),
+];
 
 export const EditableProfileCardHeaderReadonlyDark = Template.bind({});
 EditableProfileCardHeaderReadonlyDark.args = {};
-EditableProfileCardHeaderReadonlyDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    editableProfileCard: {
-        readonly: true,
-    },
-})];
+EditableProfileCardHeaderReadonlyDark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        editableProfileCard: {
+            readonly: true,
+        },
+    }),
+];

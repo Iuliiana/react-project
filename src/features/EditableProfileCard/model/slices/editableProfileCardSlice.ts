@@ -17,10 +17,10 @@ export const editableProfileCardSlice = createSlice({
     name: 'editableProfileCard',
     initialState,
     reducers: {
-        setReadonly: (state, action:PayloadAction<boolean>) => {
+        setReadonly: (state, action: PayloadAction<boolean>) => {
             state.readonly = action.payload;
         },
-        setFormData: (state, action:PayloadAction<Profile>) => {
+        setFormData: (state, action: PayloadAction<Profile>) => {
             state.form = { ...state.form, ...action.payload };
         },
         cancelEdit: (state) => {

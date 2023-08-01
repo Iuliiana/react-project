@@ -1,9 +1,8 @@
-export {
-    getSaveScrollByPath,
-} from './model/selectors/getSaveScrollSelectors';
+export { getSaveScrollByPath } from './model/selectors/getSaveScrollSelectors';
 
 export type { SaveScrollSchema } from './model/types/SaveScrollSchema';
 
 export {
-    saveScrollActions, saveScrollReducer,
+    saveScrollActions,
+    saveScrollReducer,
 } from './model/slice/saveScrollSlice';

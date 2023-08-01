@@ -24,7 +24,9 @@ describe('updateProfileData.test', () => {
         };
 
         const thunk = new TestAsyncThunk(updateProfileData, state);
-        thunk.api.put.mockReturnValue(Promise.resolve({ data: { ...data, first: 'Джулия' } }));
+        thunk.api.put.mockReturnValue(
+            Promise.resolve({ data: { ...data, first: 'Джулия' } }),
+        );
 
         const result = await thunk.callThunk();
 
@@ -46,9 +48,7 @@ describe('updateProfileData.test', () => {
 
         expect(thunk.api.put).toHaveBeenCalled();
         expect(result.meta.requestStatus).toBe('rejected');
-        expect(result.payload).toEqual([
-            ProfileErrorsCode.SERVER_ERROR,
-        ]);
+        expect(result.payload).toEqual([ProfileErrorsCode.SERVER_ERROR]);
     });
 
     test('validate error', async () => {
@@ -61,8 +61,6 @@ describe('updateProfileData.test', () => {
         const result = await thunk.callThunk();
 
         expect(result.meta.requestStatus).toBe('rejected');
-        expect(result.payload).toEqual([
-            ProfileErrorsCode.INCORRECT_USERDATA,
-        ]);
+        expect(result.payload).toEqual([ProfileErrorsCode.INCORRECT_USERDATA]);
     });
 });

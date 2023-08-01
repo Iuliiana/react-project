@@ -1,6 +1,9 @@
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
-import { editableProfileCardActions, editableProfileCardReducer } from './editableProfileCardSlice';
+import {
+    editableProfileCardActions,
+    editableProfileCardReducer,
+} from './editableProfileCardSlice';
 import { ProfileErrorsCode } from '../consts/profileErrorsCodeConsts';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 import { EditableProfileCardSchema } from '../types/EditableProfileCardSchema';
@@ -24,7 +27,10 @@ describe('editableProfileCardSlice.test', () => {
         };
 
         expect(
-            editableProfileCardReducer(state, editableProfileCardActions.setReadonly(false)),
+            editableProfileCardReducer(
+                state,
+                editableProfileCardActions.setReadonly(false),
+            ),
         ).toEqual({ readonly: false, isLoading: false });
     });
 
@@ -37,13 +43,19 @@ describe('editableProfileCardSlice.test', () => {
             },
         };
         expect(
-            editableProfileCardReducer(state, editableProfileCardActions.setFormData({ first: 'Джулия' })),
+            editableProfileCardReducer(
+                state,
+                editableProfileCardActions.setFormData({ first: 'Джулия' }),
+            ),
         ).toEqual({ ...state, form: { ...state.form, first: 'Джулия' } });
     });
 
     test('undefined state', () => {
         expect(
-            editableProfileCardReducer(undefined, editableProfileCardActions.cancelEdit()),
+            editableProfileCardReducer(
+                undefined,
+                editableProfileCardActions.cancelEdit(),
+            ),
         ).toEqual({
             readonly: true,
             form: undefined,
@@ -77,7 +89,10 @@ describe('editableProfileCardSlice.test', () => {
             isLoading: false,
         };
         expect(
-            editableProfileCardReducer(state, updateProfileData.fulfilled(data, '')),
+            editableProfileCardReducer(
+                state,
+                updateProfileData.fulfilled(data, ''),
+            ),
         ).toEqual({
             readonly: true,
             validationErrors: undefined,

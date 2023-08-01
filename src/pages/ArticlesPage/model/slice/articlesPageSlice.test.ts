@@ -1,12 +1,12 @@
 import {
-    Article, ArticleBlockType, ArticleSortField, ArticleType, ArticleView,
+    Article,
+    ArticleBlockType,
+    ArticleSortField,
+    ArticleType,
+    ArticleView,
 } from '@/entities/Article';
-import {
-    articlesPageReducer,
-} from './articlesPageSlice';
-import {
-    fetchArticlesList,
-} from '../services/fetchArticlesList/fetchArticlesList';
+import { articlesPageReducer } from './articlesPageSlice';
+import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
 import { ArticlesPageSchema } from '../types/ArticlesPageSchema';
 
 const article: Article = {
@@ -83,18 +83,14 @@ const article: Article = {
         },
     ],
 };
-const articles: Article[] = new Array(3)
-    .fill(0)
-    .map((item, index) => ({
-        ...article,
-        id: String(index),
-    }));
-const articles2: Article[] = new Array(3)
-    .fill(0)
-    .map((item, index) => ({
-        ...article,
-        id: String(index + 3),
-    }));
+const articles: Article[] = new Array(3).fill(0).map((item, index) => ({
+    ...article,
+    id: String(index),
+}));
+const articles2: Article[] = new Array(3).fill(0).map((item, index) => ({
+    ...article,
+    id: String(index + 3),
+}));
 
 describe('articlesPageSlice.test', () => {
     test('undefined state', () => {
@@ -135,7 +131,10 @@ describe('articlesPageSlice.test', () => {
         };
 
         expect(
-            articlesPageReducer(state, fetchArticlesList.fulfilled(articles, '', { replace: true })),
+            articlesPageReducer(
+                state,
+                fetchArticlesList.fulfilled(articles, '', { replace: true }),
+            ),
         ).toEqual({
             ids: ['0', '1', '2'],
             entities: {
@@ -179,7 +178,12 @@ describe('articlesPageSlice.test', () => {
         };
 
         expect(
-            articlesPageReducer(state, fetchArticlesList.fulfilled([...articles, ...articles2], '', { replace: false })),
+            articlesPageReducer(
+                state,
+                fetchArticlesList.fulfilled([...articles, ...articles2], '', {
+                    replace: false,
+                }),
+            ),
         ).toEqual({
             ids: ['0', '1', '2', '3', '4', '5'],
             entities: {

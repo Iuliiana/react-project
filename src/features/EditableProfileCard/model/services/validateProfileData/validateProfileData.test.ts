@@ -20,7 +20,9 @@ describe('validateProfileData.test', () => {
     });
 
     test('invalid firstname, username', () => {
-        expect(validateProfileData({ ...data, username: '', first: '' })).toEqual([
+        expect(
+            validateProfileData({ ...data, username: '', first: '' }),
+        ).toEqual([
             ProfileErrorsCode.INCORRECT_USERDATA,
             ProfileErrorsCode.INCORRECT_USERNAME,
         ]);

@@ -1,9 +1,5 @@
-import {
-    articleDetailsReducer,
-} from './articleDetailsSlice';
-import {
-    fetchArticleDetailsData,
-} from '../services/fetchArticleDetailsData/fetchArticleDetailsData';
+import { articleDetailsReducer } from './articleDetailsSlice';
+import { fetchArticleDetailsData } from '../services/fetchArticleDetailsData/fetchArticleDetailsData';
 import { articleData } from '../tests/articleData';
 import { ArticleDetailsSchema } from '../types/ArticleDetailsSchema';
 
@@ -26,7 +22,10 @@ describe('articleDetailsSlice.test', () => {
         };
 
         expect(
-            articleDetailsReducer(state, fetchArticleDetailsData.fulfilled(articleData, '1', '')),
+            articleDetailsReducer(
+                state,
+                fetchArticleDetailsData.fulfilled(articleData, '1', ''),
+            ),
         ).toEqual({
             isLoading: false,
             error: undefined,

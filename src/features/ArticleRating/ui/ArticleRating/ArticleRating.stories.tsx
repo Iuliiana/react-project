@@ -13,7 +13,9 @@ export default {
     decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof ArticleRating>;
 
-const Template: ComponentStory<typeof ArticleRating> = (args) => <ArticleRating {...args} />;
+const Template: ComponentStory<typeof ArticleRating> = (args) => (
+    <ArticleRating {...args} />
+);
 
 export const ArticleRatingSelected = Template.bind({});
 ArticleRatingSelected.args = {};
@@ -23,13 +25,15 @@ ArticleRatingSelected.parameters = {
             url: `${__API__}/article-ratings?userId=1`,
             method: 'GET',
             status: 200,
-            response: [{
-                articleId: '77',
-                userId: '1',
-                rate: 1,
-                feedback: 'uu',
-                id: 'u4OVz3h',
-            }],
+            response: [
+                {
+                    articleId: '77',
+                    userId: '1',
+                    rate: 1,
+                    feedback: 'uu',
+                    id: 'u4OVz3h',
+                },
+            ],
         },
     ],
 };

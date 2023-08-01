@@ -15,7 +15,9 @@ export default {
     decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof ProfileRating>;
 
-const Template: ComponentStory<typeof ProfileRating> = (args) => <ProfileRating {...args} />;
+const Template: ComponentStory<typeof ProfileRating> = (args) => (
+    <ProfileRating {...args} />
+);
 
 export const ProfileRatingNormal = Template.bind({});
 ProfileRatingNormal.args = {};
@@ -26,13 +28,15 @@ ProfileRatingNormal.parameters = {
             url: `${__API__}/profile-ratings?userId=&profileId=2`,
             method: 'GET',
             status: 200,
-            response: [{
-                profileId: '2',
-                userId: '1',
-                rate: 1,
-                feedback: 'uu',
-                id: 'u4OVz3h',
-            }],
+            response: [
+                {
+                    profileId: '2',
+                    userId: '1',
+                    rate: 1,
+                    feedback: 'uu',
+                    id: 'u4OVz3h',
+                },
+            ],
         },
     ],
 };

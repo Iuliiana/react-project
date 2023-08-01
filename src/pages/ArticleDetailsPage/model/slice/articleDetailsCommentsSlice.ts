@@ -1,7 +1,4 @@
-import {
-    createEntityAdapter,
-    createSlice,
-} from '@reduxjs/toolkit';
+import { createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { Comment } from '@/entities/Comment';
 import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
@@ -13,17 +10,20 @@ const commentsAdapter = createEntityAdapter<Comment>({
 
 // селекторы
 export const getArticleComments = commentsAdapter.getSelectors<StateSchema>(
-    (state) => state.articleDetailsPage?.comments || commentsAdapter.getInitialState(),
+    (state) =>
+        state.articleDetailsPage?.comments || commentsAdapter.getInitialState(),
 );
 
 const articleDetailsCommentsSlice = createSlice({
     name: 'comments',
-    initialState: commentsAdapter.getInitialState<ArticleDetailsCommentsSchema>({
-        error: undefined,
-        isLoading: false,
-        ids: [],
-        entities: {},
-    }),
+    initialState: commentsAdapter.getInitialState<ArticleDetailsCommentsSchema>(
+        {
+            error: undefined,
+            isLoading: false,
+            ids: [],
+            entities: {},
+        },
+    ),
     reducers: {},
     extraReducers: (builder) => {
         builder
@@ -31,15 +31,22 @@ const articleDetailsCommentsSlice = createSlice({
                 state.isLoading = true;
                 state.error = undefined;
             })
-            .addCase(fetchCommentsByArticleId.fulfilled, (state, { payload }) => {
-                state.isLoading = false;
-                state.error = undefined;
-                commentsAdapter.setAll(state, payload);
-            })
-            .addCase(fetchCommentsByArticleId.rejected, (state, { payload }) => {
-                state.isLoading = false;
-                state.error = payload;
-            });
+            .addCase(
+                fetchCommentsByArticleId.fulfilled,
+                (state, { payload }) => {
+                    state.isLoading = false;
+                    state.error = undefined;
+                    commentsAdapter.setAll(state, payload);
+                },
+            )
+            .addCase(
+                fetchCommentsByArticleId.rejected,
+                (state, { payload }) => {
+                    state.isLoading = false;
+                    state.error = payload;
+                },
+            );
     },
 });
-export const { reducer: articleDetailsCommentsReducer } = articleDetailsCommentsSlice;
+export const { reducer: articleDetailsCommentsReducer } =
+    articleDetailsCommentsSlice;

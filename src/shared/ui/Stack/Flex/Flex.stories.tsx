@@ -10,7 +10,14 @@ export default {
     argTypes: {},
     args: {
         /* eslint-disable-next-line */
-        children: <><div>block 1</div><div>block 2</div><div>block 3</div><div>block 4</div></>,
+        children: (
+            <>
+                <div>block 1</div>
+                <div>block 2</div>
+                <div>block 3</div>
+                <div>block 4</div>
+            </>
+        ),
     },
 } as ComponentMeta<typeof Flex>;
 

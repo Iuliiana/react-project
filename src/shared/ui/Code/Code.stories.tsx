@@ -9,20 +9,21 @@ export default {
     component: Code,
     argTypes: {},
     args: {
-        text: ' case ArticleBlockType.CODE:\n'
-            + '            return (\n'
-            + '                <ArticleCodeBlockComponent\n'
-            + '                    block={block}\n'
-            + '                    key={block.id}\n'
-            + '                    className={cls.block}\n'
-            + '                />\n'
-            + '            );\n'
-            + '        case ArticleBlockType.TEXT:\n'
-            + '            return (\n'
-            + '                <ArticleTextBlockComponent\n'
-            + '                    block={block}\n'
-            + '                    key={block.id}\n'
-            + '                    className={cls.block}',
+        text:
+            ' case ArticleBlockType.CODE:\n' +
+            '            return (\n' +
+            '                <ArticleCodeBlockComponent\n' +
+            '                    block={block}\n' +
+            '                    key={block.id}\n' +
+            '                    className={cls.block}\n' +
+            '                />\n' +
+            '            );\n' +
+            '        case ArticleBlockType.TEXT:\n' +
+            '            return (\n' +
+            '                <ArticleTextBlockComponent\n' +
+            '                    block={block}\n' +
+            '                    key={block.id}\n' +
+            '                    className={cls.block}',
     },
 } as ComponentMeta<typeof Code>;
 

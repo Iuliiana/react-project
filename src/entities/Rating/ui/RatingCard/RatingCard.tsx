@@ -12,14 +12,14 @@ import { StarRating } from '@/shared/ui/StarRating';
 import { Text } from '@/shared/ui/Text';
 import cls from './RatingCard.module.scss';
 
-interface RatingCardProps extends TestsProps{
-    className?: string,
-    title?: string,
+interface RatingCardProps extends TestsProps {
+    className?: string;
+    title?: string;
     hasFeedback?: boolean;
-    feedbackTitle?: string,
-    onCancel?: (stars: number) => void
-    onSendForm?: (stars: number, text?: string) => void,
-    rate?: number
+    feedbackTitle?: string;
+    onCancel?: (stars: number) => void;
+    onSendForm?: (stars: number, text?: string) => void;
+    rate?: number;
 }
 
 export const RatingCard = memo((props: RatingCardProps) => {
@@ -45,14 +45,17 @@ export const RatingCard = memo((props: RatingCardProps) => {
         setIsShowModel(false);
     }, [onCancel, starsCount]);
 
-    const onSelect = useCallback((starCount: number) => {
-        setStarsCount(starCount);
-        if (hasFeedback) {
-            setIsShowModel(true);
-        } else {
-            onSendForm?.(starCount);
-        }
-    }, [hasFeedback, onSendForm]);
+    const onSelect = useCallback(
+        (starCount: number) => {
+            setStarsCount(starCount);
+            if (hasFeedback) {
+                setIsShowModel(true);
+            } else {
+                onSendForm?.(starCount);
+            }
+        },
+        [hasFeedback, onSendForm],
+    );
 
     const onSendFormHandler = useCallback(() => {
         onSendForm?.(starsCount, feedbackInput);
@@ -88,57 +91,49 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 size={40}
                 data-testid={`${dataTestId}.StarRating`}
             />
-            {
-                !isMobilDevice && (
-                    <Modal
-                        isOpen={isShowModel}
-                        onClose={cancelHandle}
-                        lazy
+            {!isMobilDevice && (
+                <Modal isOpen={isShowModel} onClose={cancelHandle} lazy>
+                    <VStack
+                        className={cls.RatingCardModalForm}
+                        max
+                        align="stretch"
+                        gap="24"
                     >
-                        <VStack
-                            className={cls.RatingCardModalForm}
-                            max
-                            align="stretch"
-                            gap="24"
+                        {formContent}
+                        <Button
+                            themeButton={ButtonTheme.BACKGROUND_INVERTRD}
+                            onClick={onSendFormHandler}
+                            data-testid={`${dataTestId}.Button`}
                         >
-                            {formContent}
-                            <Button
-                                themeButton={ButtonTheme.BACKGROUND_INVERTRD}
-                                onClick={onSendFormHandler}
-                                data-testid={`${dataTestId}.Button`}
-                            >
-                                {t('Отправить')}
-                            </Button>
-                            <Button
-                                themeButton={ButtonTheme.CANCEL}
-                                onClick={cancelHandle}
-                            >
-                                {t('Отменить')}
-                            </Button>
-                        </VStack>
-                    </Modal>
-                )
-            }
-            {
-                isMobilDevice && (
-                    <Drawer isOpen={isShowModel} onClose={cancelHandle}>
-                        <VStack
-                            className={cls.RatingCardModalForm}
-                            max
-                            align="stretch"
-                            gap="24"
+                            {t('Отправить')}
+                        </Button>
+                        <Button
+                            themeButton={ButtonTheme.CANCEL}
+                            onClick={cancelHandle}
                         >
-                            {formContent}
-                            <Button
-                                themeButton={ButtonTheme.BACKGROUND_INVERTRD}
-                                onClick={onSendFormHandler}
-                            >
-                                {t('Отправить')}
-                            </Button>
-                        </VStack>
-                    </Drawer>
-                )
-            }
+                            {t('Отменить')}
+                        </Button>
+                    </VStack>
+                </Modal>
+            )}
+            {isMobilDevice && (
+                <Drawer isOpen={isShowModel} onClose={cancelHandle}>
+                    <VStack
+                        className={cls.RatingCardModalForm}
+                        max
+                        align="stretch"
+                        gap="24"
+                    >
+                        {formContent}
+                        <Button
+                            themeButton={ButtonTheme.BACKGROUND_INVERTRD}
+                            onClick={onSendFormHandler}
+                        >
+                            {t('Отправить')}
+                        </Button>
+                    </VStack>
+                </Drawer>
+            )}
         </VStack>
     );
 });

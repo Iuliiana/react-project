@@ -4,14 +4,15 @@ import { TEST_PASSWORD, TEST_USERNAME } from '../../helpers/data';
 import { selectTestId } from '../../helpers/selectTestId';
 
 export function login(username = TEST_USERNAME, password = TEST_PASSWORD) {
-    return cy.request({
-        url: 'http://localhost:8000/login',
-        method: 'POST',
-        body: {
-            username,
-            password,
-        },
-    })
+    return cy
+        .request({
+            url: 'http://localhost:8000/login',
+            method: 'POST',
+            body: {
+                username,
+                password,
+            },
+        })
         .then(({ body }) => {
             localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(body));
             return body;
