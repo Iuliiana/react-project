@@ -34,8 +34,8 @@ describe('Пользователь открывает статью', () => {
             .find(selectTestId('CommentItem.Text.Paragraph'))
             .should('have.text', text);
     });
-
     it('Пользователь оценивает статью', () => {
+        //  cy.intercept('GET', '**/articles/*', { fixture: 'article-details.json' });
         const rate = 4;
         cy.selectByDataTestId('RatingCard').scrollIntoView();
         cy.addRate(rate, 'Test feedback');
