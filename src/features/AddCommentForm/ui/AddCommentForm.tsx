@@ -42,11 +42,13 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
                     value={text}
                     className={cls.input}
                     onChange={onSetComment}
+                    data-testid="AddCommentForm.Input"
                 />
                 <Button
                     type="submit"
                     themeButton={ButtonTheme.BACKGROUND_INVERTRD}
                     onClick={onSendCommentHandler}
+                    data-testid="AddCommentForm.Button"
                 >
                     {t('Отправить')}
                 </Button>

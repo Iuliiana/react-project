@@ -3,8 +3,7 @@ import { selectTestId } from '../../helpers/selectTestId';
 describe('Проверка роутинга', () => {
     describe('Пользователь авторизован', () => {
         beforeEach(() => {
-            // вынести в отдельный файл + добавить тестового пользователя в db
-            cy.login('admin', '123');
+            cy.login();
         });
         it('Переход страницу профиля', () => {
             cy.visit('/profile/1');

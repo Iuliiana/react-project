@@ -27,7 +27,7 @@ export const CommentList = memo((props: CommentListProps) => {
     }
 
     return (
-        <div className={classNames(cls.CommentList, {}, [className])}>
+        <div className={classNames(cls.CommentList, {}, [className])} data-testid="CommentList">
             {(comments?.length)
                 ? comments.map((comment) => (<CommentItem comment={comment} isLoading={isLoading} key={comment.id} />))
                 : <Text text={t('Комментарии отсутствуют')} />}

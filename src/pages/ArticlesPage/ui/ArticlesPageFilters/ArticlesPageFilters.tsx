@@ -77,7 +77,12 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     }, [dispatch, fetchData]);
 
     return (
-        <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
+        <div
+            className={
+                classNames(cls.ArticlesPageFilters, {}, [className])
+            }
+            data-testid="ArticlesPageFilters"
+        >
             <div className={cls.selectors}>
                 <ArticleSortSelector
                     onChangeSort={onChangeSort}

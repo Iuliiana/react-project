@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Country, CountrySelect } from '@/entities/Country';
 import { Currency, CurrencySelect } from '@/entities/Currency';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { TestsProps } from '@/shared/lib/types/tests';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Input } from '@/shared/ui/Input';
 import { Loader } from '@/shared/ui/Loader';
@@ -12,7 +13,7 @@ import {
 import cls from './ProfileCard.module.scss';
 import { Profile } from '../../model/types/ProfileSchema';
 
-interface ProfileCardProps {
+interface ProfileCardProps extends TestsProps {
 
     data?: Profile,
     readonly?:boolean,
@@ -44,6 +45,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
         onChangeAvatar,
         onChangeCurrency,
         onChangeCountry,
+        'data-testid': dataTestId = 'ProfileCard',
     } = props;
     const { t } = useTranslation('profile');
 
@@ -70,7 +72,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
     }
 
     return (
-        <div className={classNames('', {}, [className])}>
+        <div className={classNames('', {}, [className])} data-testid={dataTestId}>
             <div className={cls.content}>
                 <HStack justify="center">
                     {data?.avatar && <Avatar alt={t('Фото')} pic={data?.avatar} size={150} />}

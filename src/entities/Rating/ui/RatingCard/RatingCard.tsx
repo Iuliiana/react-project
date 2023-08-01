@@ -2,6 +2,7 @@ import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDetectDevice } from '@/shared/hooks/useDetectDevice/useDetectDevice';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { TestsProps } from '@/shared/lib/types/tests';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { Drawer } from '@/shared/ui/Drawer';
 import { Input } from '@/shared/ui/Input';
@@ -11,7 +12,7 @@ import { StarRating } from '@/shared/ui/StarRating';
 import { Text } from '@/shared/ui/Text';
 import cls from './RatingCard.module.scss';
 
-interface RatingCardProps {
+interface RatingCardProps extends TestsProps{
     className?: string,
     title?: string,
     hasFeedback?: boolean;
@@ -30,6 +31,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
         hasFeedback,
         onCancel,
         rate = 0,
+        'data-testid': dataTestId = 'RatingCard',
     } = props;
     const { t } = useTranslation();
 
@@ -67,6 +69,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 value={feedbackInput}
                 onChange={setFeedbackInput}
                 required={hasFeedback}
+                data-testid={`${dataTestId}.Input`}
             />
         </>
     );
@@ -76,12 +79,14 @@ export const RatingCard = memo((props: RatingCardProps) => {
             className={classNames(cls.RatingCard, {}, [className])}
             align="center"
             gap="16"
+            data-testid={dataTestId}
         >
             <Text title={starsCount ? t('Спасибо за оценку') : title} />
             <StarRating
                 onSelect={onSelect}
                 selectesStars={starsCount}
                 size={40}
+                data-testid={`${dataTestId}.StarRating`}
             />
             {
                 !isMobilDevice && (
@@ -100,6 +105,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                             <Button
                                 themeButton={ButtonTheme.BACKGROUND_INVERTRD}
                                 onClick={onSendFormHandler}
+                                data-testid={`${dataTestId}.Button`}
                             >
                                 {t('Отправить')}
                             </Button>

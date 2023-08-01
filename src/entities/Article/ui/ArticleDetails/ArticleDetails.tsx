@@ -100,7 +100,12 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
         content = (
             <>
                 <Avatar pic={data?.img} size={200} className={cls.avatar} />
-                <Text title={data?.title} align={TextAlign.LEFT} size={TextSize.L} />
+                <Text
+                    title={data?.title}
+                    align={TextAlign.LEFT}
+                    size={TextSize.L}
+                    data-testid="ArticleDetails.Title"
+                />
                 <Text title={data?.subtitle} align={TextAlign.LEFT} size={TextSize.M} />
                 <div className={cls.articleInfo}>
                     <Icon Svg={ViewsIcon} className={cls.icon} />

@@ -42,6 +42,7 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
             gap="8"
             align="stretch"
             className={classNames('', {}, [className])}
+            data-testid="ArticleDetailsComments"
         >
             <Text title={t('Комментарии')} />
             <AddCommentForm

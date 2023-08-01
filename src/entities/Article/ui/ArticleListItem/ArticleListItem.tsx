@@ -42,7 +42,10 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
     if (view === ArticleView.LIST) {
         const block = article.blocks.find((block) => block.type === ArticleBlockType.TEXT) as ArticleBlocksText;
         return (
-            <Card className={classNames(cls.ArticleItem, {}, [className, cls[view]])}>
+            <Card
+                className={classNames(cls.ArticleItem, {}, [className, cls[view]])}
+                data-testid="ArticleItem"
+            >
                 <div className={cls.header}>
                     <div className={cls.headerInfo}>
                         <div className={cls.headerInfoUser}>
@@ -82,7 +85,7 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
                         {t('Читать далее...')}
                     </AppLink>
                     <div className={cls.view}>
-                        <span>{article.views}</span>
+                        <span data-testid="ArticleListItem.views">{article.views}</span>
                         <Icon Svg={ViewsIcon} />
                     </div>
                 </div>
@@ -91,7 +94,7 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
     }
 
     return (
-        <div className={classNames(cls.ArticleItem)}>
+        <div className={classNames(cls.ArticleItem)} data-testid="ArticleItem">
             <AppLink
                 to={getRouteArticlesDetails(article.id)}
                 target={target}
@@ -106,7 +109,7 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
                             src={article.img}
                             isLoadingFallback={(
                                 <Skeleton
-                                    width={300}
+                                    width="100%"
                                     height="12.5rem"
                                 />
                             )}
@@ -117,7 +120,7 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
                         <div className={cls.heading}>
                             <Text text={article.type.join(', ')} className={cls.headingTypes} />
                             <div className={cls.view}>
-                                <span>{article.views}</span>
+                                <span data-testid="ArticleListItem.views">{article.views}</span>
                                 <Icon Svg={ViewsIcon} />
                             </div>
                         </div>

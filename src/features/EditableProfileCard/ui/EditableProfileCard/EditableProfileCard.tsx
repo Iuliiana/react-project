@@ -8,6 +8,7 @@ import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/hooks/useInitialEffect/useInitialEffect';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { TestsProps } from '@/shared/lib/types/tests';
 import { Text, TextTheme } from '@/shared/ui/Text';
 import { ProfileErrorsCode } from '../../model/consts/profileErrorsCodeConsts';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
@@ -26,7 +27,7 @@ import {
     EditableProfileCardHeader,
 } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 
-interface EditableProfileCardProps {
+interface EditableProfileCardProps extends TestsProps {
     className?: string,
     id: string
 }

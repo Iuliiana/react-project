@@ -36,7 +36,7 @@ export const CommentItem = memo((props: CommentItemProps) => {
     }
 
     return (
-        <div className={classNames(cls.CommentItem, {}, [className])}>
+        <div className={classNames(cls.CommentItem, {}, [className])} data-testid="CommentItem">
             <AppLink to={getRouteProfile(comment.user.id)}>
                 <div className={cls.header}>
                     {comment.user?.avatar
@@ -54,7 +54,7 @@ export const CommentItem = memo((props: CommentItemProps) => {
             </AppLink>
 
             <div className={cls.content}>
-                <Text text={comment.text} className={cls.contentText} />
+                <Text text={comment.text} className={cls.contentText} data-testid="CommentItem.Text" />
             </div>
         </div>
     );

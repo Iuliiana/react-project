@@ -81,7 +81,10 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
     if (isVirtuoso) {
         return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+            <div
+                className={classNames(cls.ArticleList, {}, [className, cls[view]])}
+                data-testid="ArticleList.Virtuoso"
+            >
                 {
                     (view === ArticleView.LIST) ? (
                         <Virtuoso
@@ -123,7 +126,10 @@ export const ArticleList = memo((props: ArticleListProps) => {
         );
     }
     return (
-        <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+        <div
+            className={classNames(cls.ArticleList, {}, [className, cls[view]])}
+            data-testid="ArticleList.Normal"
+        >
             {
                 Boolean(articles?.length) && (
                     articles.map(renderArticles)

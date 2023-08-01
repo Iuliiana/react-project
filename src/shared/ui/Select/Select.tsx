@@ -1,5 +1,6 @@
 import { ChangeEvent, useMemo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { TestsProps } from '@/shared/lib/types/tests';
 import cls from './Select.module.scss';
 
 export interface SelectOption<T extends string> {
@@ -7,7 +8,7 @@ export interface SelectOption<T extends string> {
     text: string;
 }
 
-interface SelectProps<T extends string> {
+interface SelectProps<T extends string> extends TestsProps {
     className?: string,
     label?: string,
     value?: T,
@@ -25,6 +26,7 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
         readonly,
         onChange,
         options,
+        'data-testid': dataTestId = 'Select',
     } = props;
 
     const optionsList = useMemo(() => options?.map((optionItem) => (
@@ -54,6 +56,7 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
                     onChange={onChangeHandler}
                     disabled={readonly}
                     value={value}
+                    data-testid={dataTestId}
                 >
                     {optionsList}
                 </select>

@@ -46,6 +46,7 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
             gap="16"
             align="start"
             className={classNames(cls.ArticleRecommendationsList, {}, [className])}
+            data-testid="ArticleRecommendationsList"
         >
             <Text title={t('Читайте также')} className={cls.commentsTitle} />
             <ArticleList
