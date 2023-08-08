@@ -83,6 +83,13 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
                         isLoadingFallback={
                             <Skeleton width="100%" height="12.5rem" />
                         }
+                        errorFallback={
+                            <Skeleton
+                                width="100%"
+                                height="12.5rem"
+                                isAnimated={false}
+                            />
+                        }
                     />
                 </div>
 
@@ -129,6 +136,13 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
                             src={article.img}
                             isLoadingFallback={
                                 <Skeleton width="100%" height="12.5rem" />
+                            }
+                            errorFallback={
+                                <Skeleton
+                                    width="100%"
+                                    height="12.5rem"
+                                    isAnimated={false}
+                                />
                             }
                         />
                         <Text

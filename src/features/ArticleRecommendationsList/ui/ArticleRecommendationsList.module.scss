@@ -7,4 +7,9 @@
     overflow-x: scroll;
     padding: 1rem 0;
     width: 100%;
+
+    & > div {
+        flex: 1 1 0;
+        width: 0;
+    }
 }

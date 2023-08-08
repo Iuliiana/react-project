@@ -92,7 +92,7 @@ export const ArticleListItemSkeleton = memo(
                         ])}
                     >
                         <Skeleton
-                            width={120}
+                            width="100%"
                             height={16}
                             className={cls.headingTypes}
                         />

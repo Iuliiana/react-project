@@ -7,10 +7,11 @@ interface SkeletonProps {
     width?: string | number;
     height?: string | number;
     radius?: string;
+    isAnimated?: boolean;
 }
 
 export const Skeleton = memo((props: SkeletonProps) => {
-    const { className, width, height, radius } = props;
+    const { className, width, height, radius, isAnimated = true } = props;
 
     const styles = useMemo<CSSProperties>(
         () => ({
@@ -23,7 +24,9 @@ export const Skeleton = memo((props: SkeletonProps) => {
 
     return (
         <div
-            className={classNames(cls.Skeleton, {}, [className])}
+            className={classNames(cls.Skeleton, { [cls.static]: !isAnimated }, [
+                className,
+            ])}
             style={styles}
         />
     );

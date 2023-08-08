@@ -8,7 +8,7 @@ module.exports = {
         'plugin:react/recommended',
         'airbnb',
         'plugin:i18next/recommended',
-        'prettier'
+        'prettier',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -28,7 +28,8 @@ module.exports = {
     ],
     rules: {
         'react/jsx-filename-extension': [
-            2, { extensions: ['.js', '.jsx', '.tsx'] },
+            2,
+            { extensions: ['.js', '.jsx', '.tsx'] },
         ],
         'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
         'import/no-unresolved': 'off',
@@ -48,7 +49,8 @@ module.exports = {
             { argsIgnorePattern: '^_' },
         ],
         'i18next/no-literal-string': [
-            'error', {
+            'error',
+            {
                 markupOnly: true,
                 ignoreAttribute: [
                     'as',
@@ -77,7 +79,12 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.stories.*',
+                    '**/*.story.*',
+                    '**/StoreDecorator.tsx',
+                ],
             },
         ],
         'itretiakova-plugin/layer-imports': [
@@ -110,20 +117,20 @@ module.exports = {
                 },
             },
         ],
+        'react/no-unstable-nested-components': 'warn',
     },
     globals: {
         __IS_DEV__: true,
         __API__: true,
         __PROJECT__: true,
     },
-    overrides:
-        [
-            {
-                files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
-                rules: {
-                    'i18next/no-literal-string': 'off',
-                    'max-len': 'off',
-                },
+    overrides: [
+        {
+            files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+                'max-len': 'off',
             },
-        ],
+        },
+    ],
 };
