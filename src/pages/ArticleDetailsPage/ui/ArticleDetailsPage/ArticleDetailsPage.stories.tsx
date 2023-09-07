@@ -6,6 +6,7 @@ import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
+import { setFeaturesFlags } from '@/shared/lib/features';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 export default {
@@ -26,9 +27,13 @@ export default {
     ],
 } as ComponentMeta<typeof ArticleDetailsPage>;
 
-const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => (
-    <ArticleDetailsPage {...args} />
-);
+const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => {
+    setFeaturesFlags({
+        isArticleRatingEnabled: true,
+        isCounterEnabled: false,
+    });
+    return <ArticleDetailsPage {...args} />;
+};
 
 export const ArticleDetailsPageNormal = Template.bind({});
 ArticleDetailsPageNormal.args = {};
