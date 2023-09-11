@@ -16,9 +16,16 @@ const userApi = rtkApi.injectEndpoints({
                 body: { jsonSettings },
             }),
         }),
+        getInitAuthData: build.query<User, string>({
+            query: (userId) => ({
+                url: `/users/${userId}`,
+                method: 'GET',
+            }),
+        }),
     }),
-    overrideExisting: false,
 });
 
 export const setJsonSettingsMutation =
     userApi.endpoints.setJsonSettings.initiate;
+
+export const getInitAuthDataById = userApi.endpoints.getInitAuthData.initiate;
