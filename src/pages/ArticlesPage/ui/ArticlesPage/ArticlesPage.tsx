@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { ArticlePageGreeting } from '@/features/ArticlePageGreeting';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/hooks/useInitialEffect/useInitialEffect';
 import { classNames } from '@/shared/lib/classNames/classNames';
@@ -46,6 +47,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
                     className={classNames('', {}, [className])}
                 />
             </VStack>
+            <ArticlePageGreeting />
         </DynamicModuleLoader>
     );
 };
