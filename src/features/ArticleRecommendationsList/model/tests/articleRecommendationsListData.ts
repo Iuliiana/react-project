@@ -156,7 +156,7 @@ export const articleRecommendationsListData = [
         id: '3',
         title: 'PHP news',
         subtitle: 'Что нового в JS за 2022 год?',
-        img: 'https://image.pngaaa.com/5/2197005-middle.png',
+        img: 'https://i.pinimg.com/736x/d9/f6/35/d9f635b7c2ef10d04d66eec17a0613a6.jpg',
         views: 852,
         createdAt: '20.10.2018',
         userId: '1',

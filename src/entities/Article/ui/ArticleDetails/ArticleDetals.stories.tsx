@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
@@ -30,12 +30,12 @@ ArticleDetalsPrimary.decorators = [
 export const ArticleDetalsPrimaryDark = Template.bind({});
 ArticleDetalsPrimaryDark.args = {};
 ArticleDetalsPrimaryDark.decorators = [
-    ThemeDecorator(Theme.DARK),
     StoreDecorator({
         articleDetails: {
             data: articleData,
         },
     }),
+    ThemeDecorator(Theme.DARK),
 ];
 
 export const ArticleDetalsLoading = Template.bind({});

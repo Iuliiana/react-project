@@ -20,9 +20,11 @@ const ThemeProvider: React.FC<ThemeProviderlProps> = (props) => {
     );
 
     useEffect(() => {
-        if (!isThemeInited && defaultTheme) {
-            setTheme(defaultTheme);
-            setThemeInited(true);
+        if (__PROJECT__ !== 'storybook') {
+            if (!isThemeInited && defaultTheme) {
+                setTheme(defaultTheme);
+                setThemeInited(true);
+            }
         }
     }, [defaultTheme, isThemeInited]);
 
