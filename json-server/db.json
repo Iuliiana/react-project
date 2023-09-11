@@ -7849,7 +7849,7 @@
         "isCounterEnabled": true
       },
       "jsonSettings": {
-        "theme": "app_chocolate_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": false,
         "settingsPageHasBeenOpen": false
       },
@@ -7915,7 +7915,7 @@
       "id": "1",
       "first": "Джейн",
       "lastname": "Доу",
-      "age": 29,
+      "age": 25,
       "currency": "RUB",
       "country": "Russia",
       "city": "Moscow",

@@ -1,3 +1,7 @@
+export { setJsonSettings } from './model/services/setJsonSettings';
+
+export { useJsonSettings } from './model/selectors/getJsonSettings/getJsonSettings';
+
 export { getUserIsInitAuth } from './model/selectors/getUserIsInitAuth/getUserIsInitAuth';
 
 export { getUserAuthData } from './model/selectors/getUserAuthData/getUserAuthData';
