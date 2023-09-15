@@ -64,6 +64,7 @@ module.exports = {
                     'direction',
                     'role',
                     'radius',
+                    'feature',
                 ],
             },
         ],

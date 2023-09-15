@@ -9,7 +9,7 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { toggleFeatureFlag } from '@/shared/lib/features';
+import { ToggleFeatureFlag } from '@/shared/lib/features';
 import { Text } from '@/shared/ui/Text';
 import { Page } from '@/widgets/Page';
 import { articleDetailsPageReducer } from '../../model/slice';
@@ -36,12 +36,6 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
         );
     }
 
-    const articleRating = toggleFeatureFlag({
-        name: 'isArticleRatingEnabled',
-        on: () => <ArticleRating articleId={id} />,
-        off: () => <Text title={t('Здесь скоро будет оценка статьи')} />,
-    });
-
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount>
             <Page
@@ -50,7 +44,13 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
             >
                 <ArticleDetailsHeader />
                 <ArticleDetails id={id} />
-                {articleRating}
+
+                <ToggleFeatureFlag
+                    feature="isArticleRatingEnabled"
+                    on={<ArticleRating articleId={id} />}
+                    off={<Text title={t('Здесь скоро будет оценка статьи')} />}
+                />
+
                 <ArticleRecommendationsList />
                 <ArticleDetailsComments id={id} />
             </Page>
