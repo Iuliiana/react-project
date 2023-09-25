@@ -8,7 +8,7 @@ const MainPage = memo(() => {
     return (
         <Page data-testid="MainPage">
             {t('Главная страница')}
-            1223
+            1223597
         </Page>
     );
 });
