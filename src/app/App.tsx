@@ -4,6 +4,7 @@ import { getUserIsInitAuth, initAuthData } from '@/entities/User';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useTheme } from '@/shared/hooks/useTheme/useTheme';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { ToggleFeatureFlag } from '@/shared/lib/features';
 import { NavBar } from '@/widgets/NavBar';
 import { PageLoader } from '@/widgets/PageLoader';
 import { Sidebar } from '@/widgets/Sidebar';
@@ -24,15 +25,31 @@ const App = () => {
 
     document.body.className = theme;
     return (
-        <div className={classNames('app')}>
-            <Suspense fallback="">
-                <NavBar />
-                <div className="main-wrapper">
-                    <Sidebar />
-                    {isAuthUser && <AppRouter />}
+        <ToggleFeatureFlag
+            feature="isAppRedesigned"
+            on={
+                <div className={classNames('app-redesigned')}>
+                    <Suspense fallback="">
+                        <NavBar />
+                        <div className="main-wrapper">
+                            <Sidebar />
+                            {isAuthUser && <AppRouter />}
+                        </div>
+                    </Suspense>
                 </div>
-            </Suspense>
-        </div>
+            }
+            off={
+                <div className={classNames('app')}>
+                    <Suspense fallback="">
+                        <NavBar />
+                        <div className="main-wrapper">
+                            <Sidebar />
+                            {isAuthUser && <AppRouter />}
+                        </div>
+                    </Suspense>
+                </div>
+            }
+        />
     );
 };
 export default App;

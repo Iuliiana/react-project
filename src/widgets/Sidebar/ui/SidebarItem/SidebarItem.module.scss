@@ -24,26 +24,24 @@
         background: var(--bg-color);
         border-radius: 1rem 0 0 1rem;
 
-        &:not(:first-child)::before,
-        &::after {
-            content: "";
-            position: absolute;
-            width: var(--sidebar-nav-rounding);
-            height: var(--sidebar-nav-rounding);
-            border-radius: var(--sidebar-nav-rounding);
-        }
-
-        &:not(:first-child)::before {
-            top: var(--sidebar-nav-rounding-inverted);
-            right: 0;
-            box-shadow: 1rem 1rem 0 var(--bg-color);
-        }
-
-        &::after {
-            bottom: var(--sidebar-nav-rounding-inverted);
-            right: 0;
-            box-shadow: 1rem -1rem 0 var(--bg-color);
-        }
+        // &:not(:first-child)::before,
+        // &::after {
+        //    content: "";
+        //    position: absolute;
+        //    width: var(--sidebar-nav-rounding);
+        //    height: var(--sidebar-nav-rounding);
+        //    border-radius: var(--sidebar-nav-rounding);
+        // }
+        // &:not(:first-child)::before {
+        //    top: var(--sidebar-nav-rounding-inverted);
+        //    right: 0;
+        //    box-shadow: 1rem 1rem 0 var(--bg-color);
+        // }
+        // &::after {
+        //    bottom: var(--sidebar-nav-rounding-inverted);
+        //    right: 0;
+        //    box-shadow: 1rem -1rem 0 var(--bg-color);
+        // }
     }
 
     .linkTitle {

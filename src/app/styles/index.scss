@@ -6,7 +6,7 @@
 @import "./themes/app_chocolate_theme";
 
 ::selection {
-    background: var(--button-color);
+    background: var(--bg);
 }
 
 *::-webkit-scrollbar {
@@ -15,22 +15,27 @@
 }
 
 *::-webkit-scrollbar-track {
-    background: var(--bg-color);        /* color of the tracking area */
+    background: var(--bg);        /* color of the tracking area */
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--block-bg-color);    /* color of the scroll thumb */
+    background-color: var(--dark-bg);    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 2px solid var(--inversion-bg-color);  /* creates padding around scroll thumb */
+    border: 2px solid var(--light-bg);  /* creates padding around scroll thumb */
 }
 
 body {
-    font: var(--font-m);
-    color: var(--primary-color);
+    font: var(--font-m-text);
+    color: var(--text-color);
 }
 
 .app {
     background: var(--bg-color);
+    min-height: 100vh;
+}
+
+.app-redesigned {
+    background-color: var(--bg);
     min-height: 100vh;
 }
 

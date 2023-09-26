@@ -35,4 +35,14 @@
     /* z-index */
 
     --overlay-index: 10;
+
+    /*   - redesigned -   */
+
+    /*   fonts   */
+    --font-family-nunito: "Nunito", sans-serif;
+    --font-family-roboto: "Roboto", sans-serif;
+    --font-s-text: var(--font-size-s) / var(--font-line-s) var(--font-family-nunito);
+    --font-m-text: var(--font-size-m) / var(--font-line-m) var(--font-family-nunito);
+    --font-l-title: var(--font-size-l) / var(--font-line-l) var(--font-family-roboto);
+    --font-xl-title: var(--font-size-xl) / var(--font-line-xl) var(--font-family-roboto);
 }
