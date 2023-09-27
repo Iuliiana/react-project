@@ -5,7 +5,15 @@
     svg {
         width: 100%;
         height: 100%;
+    }
+
+    .ThemeSwitcherSvg {
         fill: var(--icon-theme-color);
         filter: drop-shadow(1px 1px 1px var(--inversion-bg-color));
+    }
+
+    .ThemeSwitcherSvgNew {
+        fill: var(--icon-theme);
+        filter: drop-shadow(1px 1px 1px var(--shadow-icon-theme));
     }
 }
