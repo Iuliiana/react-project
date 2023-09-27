@@ -3,11 +3,16 @@ import { Country, CountrySelect } from '@/entities/Country';
 import { Currency, CurrencySelect } from '@/entities/Currency';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { TestsProps } from '@/shared/lib/types/tests';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Input } from '@/shared/ui/Input';
-import { Loader } from '@/shared/ui/Loader';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Input } from '@/shared/ui/deprecated/Input';
+import { Loader } from '@/shared/ui/deprecated/Loader';
+import {
+    Text,
+    TextAlign,
+    TextSize,
+    TextTheme,
+} from '@/shared/ui/deprecated/Text';
 import { HStack, VStack } from '@/shared/ui/Stack';
-import { Text, TextAlign, TextSize, TextTheme } from '@/shared/ui/Text';
 import cls from './ProfileCard.module.scss';
 import { Profile } from '../../model/types/ProfileSchema';
 

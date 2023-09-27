@@ -3,10 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { setJsonSettings, useJsonSettings } from '@/entities/User';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useDetectDevice } from '@/shared/hooks/useDetectDevice/useDetectDevice';
-import { Card } from '@/shared/ui/Card';
-import { Drawer } from '@/shared/ui/Drawer';
-import { Modal } from '@/shared/ui/Modals';
-import { Text } from '@/shared/ui/Text';
+import { Card } from '@/shared/ui/deprecated/Card';
+import { Drawer } from '@/shared/ui/deprecated/Drawer';
+import { Modal } from '@/shared/ui/deprecated/Modals';
+import { Text } from '@/shared/ui/deprecated/Text';
 
 export const ArticlePageGreeting = memo(() => {
     const { t } = useTranslation('articles');

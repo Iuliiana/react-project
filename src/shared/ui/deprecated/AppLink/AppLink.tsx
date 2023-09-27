@@ -15,6 +15,10 @@ interface AppLinkProps extends LinkProps {
     children?: ReactNode;
 }
 
+/**
+ * @deprecated
+ * Этот компонент устарел и больше не поддерживается
+ */
 export const AppLink = forwardRef<HTMLAnchorElement, AppLinkProps>(
     (props: AppLinkProps, ref) => {
         const {

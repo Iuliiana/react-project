@@ -8,10 +8,10 @@ import { NotificationButton } from '@/features/NotificationButton';
 import { getRouteArticlesCreate } from '@/shared/const/route';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ToggleFeatureFlag } from '@/shared/lib/features';
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Text } from '@/shared/ui/deprecated/Text';
 import { HStack } from '@/shared/ui/Stack';
-import { Text } from '@/shared/ui/Text';
 import cls from './NavBar.module.scss';
 
 interface NavBarProps {

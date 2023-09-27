@@ -3,8 +3,8 @@ import { ArticleView } from '@/entities/Article';
 import ViewGridIcon from '@/shared/assets/icons/view_grid.svg';
 import ViewListIcon from '@/shared/assets/icons/view_list.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button } from '@/shared/ui/Button';
-import { Icon } from '@/shared/ui/Icon';
+import { Button } from '@/shared/ui/deprecated/Button';
+import { Icon } from '@/shared/ui/deprecated/Icon';
 import cls from './ArticleViewSelector.module.scss';
 
 interface ArticleViewButton {

@@ -1,8 +1,8 @@
 import React, { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArticleType } from '@/entities/Article';
-import { SelectOption } from '@/shared/ui/Select';
-import { TabItem, Tabs } from '@/shared/ui/Tabs';
+import { SelectOption } from '@/shared/ui/deprecated/Select';
+import { TabItem, Tabs } from '@/shared/ui/deprecated/Tabs';
 
 interface ArticleTypeTabsProps {
     className?: string;

@@ -8,7 +8,7 @@ import {
 } from 'react-virtuoso';
 import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/deprecated/Text';
 import cls from './ArticleList.module.scss';
 import { ArticlesListFooter, getSkeletons } from './ArticlesListFooter';
 import { ArticleView } from '../../model/consts/articleViewConst';

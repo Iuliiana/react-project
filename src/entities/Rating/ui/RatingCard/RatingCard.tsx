@@ -3,13 +3,13 @@ import { useTranslation } from 'react-i18next';
 import { useDetectDevice } from '@/shared/hooks/useDetectDevice/useDetectDevice';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { TestsProps } from '@/shared/lib/types/tests';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { Drawer } from '@/shared/ui/Drawer';
-import { Input } from '@/shared/ui/Input';
-import { Modal } from '@/shared/ui/Modals';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Drawer } from '@/shared/ui/deprecated/Drawer';
+import { Input } from '@/shared/ui/deprecated/Input';
+import { Modal } from '@/shared/ui/deprecated/Modals';
+import { StarRating } from '@/shared/ui/deprecated/StarRating';
+import { Text } from '@/shared/ui/deprecated/Text';
 import { VStack } from '@/shared/ui/Stack';
-import { StarRating } from '@/shared/ui/StarRating';
-import { Text } from '@/shared/ui/Text';
 import cls from './RatingCard.module.scss';
 
 interface RatingCardProps extends TestsProps {
