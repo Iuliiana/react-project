@@ -7,33 +7,73 @@
     position: relative;
 
     // padding: var(--sidebar-padding);
+    .switcherContainer {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% - var(--sidebar-padding));
+        bottom: 2rem;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .collapsedButton {
+        position: absolute;
+        bottom: 2rem;
+        right: -2rem;
+        background: var(--block-bg-color);
+        color: var(--icon-color);
+    }
+
+    &.collapsed {
+        max-width: var(--sidebar-width-collapsed);
+
+        .switcherContainer {
+            flex-direction: row;
+            transition: 0.3s all;
+        }
+    }
 }
 
-.switcherContainer {
+.SidebarRedesigned {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    justify-content: center;
     align-items: center;
-    width: calc(100% - var(--sidebar-padding));
-    bottom: 2rem;
-    gap: 1rem;
-    padding: 0 1rem;
-}
+    border-radius: 2rem;
+    background-color: var(--light-bg);
+    height: 100%;
+    position: relative;
 
-.collapsedButton {
-    position: absolute;
-    bottom: 2rem;
-    right: -2rem;
-    background: var(--block-bg-color);
-    color: var(--icon-color);
-}
+    &.collapsed {
+        max-width: var(--sidebar-width-collapsed);
 
-.collapsed {
-    max-width: var(--sidebar-width-collapsed);
+        .switcherContainer {
+            flex-direction: row;
+            transition: 0.3s all;
+        }
+    }
 
-    .switcherContainer {
-        flex-direction: row;
-        transition: 0.3s all;
+    .AppLogo {
+        margin-top: 2rem;
+    }
+
+    .SidebarListItems {
+        position: relative;
+        z-index: 4;
+    }
+
+    .collapsedButton {
+        position: absolute;
+        bottom: 2rem;
+        right: -2rem;
+        background: var(--block-bg-color);
+        color: var(--icon-color);
+    }
+
+    .switcherContainer {/* stylelint-disable-line */
+        margin-top: auto;
+        width: 80px;
     }
 }

@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { getUserIsInitAuth, initAuthData } from '@/entities/User';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useTheme } from '@/shared/hooks/useTheme/useTheme';
+import { MainLayout } from '@/shared/layouts';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ToggleFeatureFlag } from '@/shared/lib/features';
 import { NavBar } from '@/widgets/NavBar';
@@ -30,11 +31,12 @@ const App = () => {
             on={
                 <div className={classNames('app-redesigned')}>
                     <Suspense fallback="">
-                        <NavBar />
-                        <div className="main-wrapper">
-                            <Sidebar />
-                            {isAuthUser && <AppRouter />}
-                        </div>
+                        <MainLayout
+                            header={<NavBar />}
+                            sidebar={<Sidebar />}
+                            content={<AppRouter />}
+                            toolbar={<div>123665</div>}
+                        />
                     </Suspense>
                 </div>
             }

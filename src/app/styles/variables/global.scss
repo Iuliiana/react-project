@@ -45,4 +45,14 @@
     --font-m-text: var(--font-size-m) / var(--font-line-m) var(--font-family-nunito);
     --font-l-title: var(--font-size-l) / var(--font-line-l) var(--font-family-roboto);
     --font-xl-title: var(--font-size-xl) / var(--font-line-xl) var(--font-family-roboto);
+
+    /*    sizes    */
+    --h-navbar: 5rem;
+    --w-sidebar: 17.75rem;
+    --w-rightbar: 11rem;
+    --w-sidebar-collapsed: 20rem;
+    --p-sidebar: 2rem;
+    --p-navbar: 2rem;
+    --h-filter-articles: 17rem;
+    --h-head-articles: calc(var(--navbar-height) + var(--filter-articles-height));
 }

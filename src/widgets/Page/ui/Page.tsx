@@ -8,6 +8,7 @@ import { useInfiniteScroll } from '@/shared/hooks/useInfiniteScroll/useInfiniteS
 import { useInitialEffect } from '@/shared/hooks/useInitialEffect/useInitialEffect';
 import { useThrottle } from '@/shared/hooks/useThrottle/useThrottle';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { toggleFeatureFlag } from '@/shared/lib/features';
 import { TestsProps } from '@/shared/lib/types/tests';
 import cls from './Page.module.scss';
 
@@ -51,9 +52,15 @@ export const Page = (props: PageProps) => {
         );
     }, 500);
 
+    const classNamePage = toggleFeatureFlag({
+        name: 'isAppRedesigned',
+        off: () => cls.Page,
+        on: () => cls.PageRedesigned,
+    });
+
     return (
         <main
-            className={classNames(cls.Page, {}, [className])}
+            className={classNames(classNamePage, {}, [className])}
             ref={wrapperRef}
             onScroll={onScrollSave}
             data-testid={dataTestId}
