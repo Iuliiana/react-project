@@ -1,7 +1,8 @@
 .AppLogo {
     position: relative;
     z-index: 3;
-    width: 80px;
+    width: fit-content;
+    transition: 0.5s all;
 
     &::before,
     &::after {
@@ -9,6 +10,7 @@
         position: absolute;
         border-radius: 50%;
         opacity: 0.6;
+        pointer-events: none;
     }
 
     &::before {
@@ -18,7 +20,7 @@
         height: 12rem;
         z-index: 2;
         top: -4rem;
-        right: -3.5rem;
+        left: calc(var(--w-sidebar-collapsed) / (-5));
     }
 
     &::after {
@@ -28,12 +30,48 @@
         height: 19rem;
         z-index: 1;
         top: -6rem;
-        right: -7rem;
+        left: calc(var(--w-sidebar-collapsed) / (-2.5));
+    }
+
+    @keyframes blink {
+        from {
+            background: #1f353c;
+        }
+
+        50% {
+            background: #63bad0;
+        }
+
+        to {
+            background: #4b8a9b;
+        }
     }
 
     .AppLogoIcon {
-        fill: #000;
         position: relative;
         z-index: 3;
+        display: block;
+        margin: 0 auto;
+        transition: 0.5s all;
+
+        .logoEyes {
+            opacity: 0;
+            background: #5399ab;
+            transition: background 2s;
+        }
+
+        &:hover + .logoEyes {
+            position: absolute;
+            top: 52%;
+            background: #5399ab;
+            width: 50%;
+            height: 10%;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            animation: blink 2s alternate infinite ease-in;
+        }
     }
 }

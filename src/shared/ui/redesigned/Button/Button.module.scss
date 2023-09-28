@@ -1,0 +1,72 @@
+.Button {
+    padding: 0.5rem 1rem;
+    margin: 0;
+    cursor: pointer;
+    color: var(--text-color);
+
+    &:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+.clear {
+    padding: 0;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.cancel {
+    color: var(--cancel);
+}
+
+.save {
+    color: var(--save);
+}
+
+.square {
+    padding: 0;
+}
+
+.square.m {
+    width: var(--font-line-m);
+    height: var(--font-line-m);
+}
+
+.square.l {
+    width: var(--font-line-l);
+    height: var(--font-line-l);
+}
+
+.square.xl {
+    width: var(--font-line-xl);
+    height: var(--font-line-xl);
+}
+
+.s {
+    font: var(--font-s-text);
+}
+
+.m {
+    font: var(--font-m-text);
+}
+
+.l {
+    font: var(--font-l-title);
+}
+
+.xl {
+    font: var(--font-xl-title);
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.disabled,
+.Button:disabled {
+    // or   opacity: 0.5;
+    color: var(--light-bg);
+    fill: var(--light-bg);
+}

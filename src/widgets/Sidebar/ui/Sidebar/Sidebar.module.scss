@@ -45,35 +45,76 @@
     background-color: var(--light-bg);
     height: 100%;
     position: relative;
+    max-width: var(--w-sidebar);
+    width: 100%;
+    overflow: hidden;
+    transition: 0.5s max-width;
+
+    .collapsedButton {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        height: 251px;
+        width: 32px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        margin: auto;
+    }
+
+    .arrow {
+        transform: rotate(-90deg);
+        transition: 0.5s transform;
+
+        &:hover {
+            fill: var(--accent);
+        }
+    }
 
     &.collapsed {
-        max-width: var(--sidebar-width-collapsed);
+        max-width: var(--w-sidebar-collapsed);
+
+        .SidebarListItems {
+            align-items: start;
+        }
 
         .switcherContainer {
+            margin-bottom: 2.5rem;
             flex-direction: row;
-            transition: 0.3s all;
+            transition: 0.5s all;
+        }
+
+        .collapsedButton {
+            left: auto;
+            margin: auto 0;
+        }
+
+        .isButtonCollapsed {
+            transform: rotate(90deg);
         }
     }
 
     .AppLogo {
         margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
-    .SidebarListItems {
-        position: relative;
-        z-index: 4;
-    }
-
-    .collapsedButton {
-        position: absolute;
-        bottom: 2rem;
-        right: -2rem;
-        background: var(--block-bg-color);
-        color: var(--icon-color);
+    .SidebarListItems {/* stylelint-disable-line */
+        width: 100%;
+        align-items: center;
     }
 
     .switcherContainer {/* stylelint-disable-line */
         margin-top: auto;
-        width: 80px;
+        margin-bottom: 1rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.5s all;
     }
 }

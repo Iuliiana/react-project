@@ -2,23 +2,25 @@ import { memo } from 'react';
 import MainLogo from '@/shared/assets/icons/logo.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './AppLogo.module.scss';
-import { Icon } from '../deprecated/Icon';
 
 interface AppLogoProps {
     className?: string;
+    size?: string;
+    color?: string;
 }
 
 export const AppLogo = memo((props: AppLogoProps) => {
-    const { className } = props;
+    const { className, size = 60, color = '#000' } = props;
 
     return (
         <div className={classNames(cls.AppLogo, {}, [className])}>
-            <Icon
-                Svg={MainLogo}
-                width={80}
-                height={80}
+            <MainLogo
+                width={size}
+                height={size}
+                fill={color}
                 className={cls.AppLogoIcon}
             />
+            <div className={cls.logoEyes} />
         </div>
     );
 });
