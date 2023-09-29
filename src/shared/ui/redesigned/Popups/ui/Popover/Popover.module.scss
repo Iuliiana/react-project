@@ -1,0 +1,14 @@
+.button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.panel {
+    background: var(--bg);
+    position: absolute;
+    z-index: 10000;
+    border-radius: 18px;
+    padding: 1rem;
+}

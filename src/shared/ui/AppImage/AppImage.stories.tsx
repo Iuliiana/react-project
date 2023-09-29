@@ -4,8 +4,8 @@ import DefaultUserAvatar from '@/shared/assets/icons/carbon_user-avatar-filled.s
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { AppImage } from './AppImage';
-import { Icon } from '../Icon';
-import { Skeleton } from '../Skeleton';
+import { Icon } from '../deprecated/Icon';
+import { Skeleton } from '../deprecated/Skeleton';
 
 export default {
     title: 'shared/AppImage',

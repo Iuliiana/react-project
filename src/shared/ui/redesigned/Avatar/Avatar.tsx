@@ -1,5 +1,5 @@
 import { CSSProperties, useMemo } from 'react';
-import DefaultUserAvatar from '@/shared/assets/icons/carbon_user-avatar-filled.svg';
+import DefaultUserAvatar from '@/shared/assets/icons/new/Avatar.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Avatar.module.scss';
 import { AppImage } from '../../AppImage';
@@ -8,40 +8,32 @@ import { Skeleton } from '../Skeleton';
 
 interface AvatarProps {
     className?: string;
-    pic?: string;
+    src?: string;
     alt?: string;
     size?: number;
 }
 
-/**
- * @deprecated
- * Этот компонент устарел и больше не поддерживается
- */
-
 export const Avatar = (props: AvatarProps) => {
-    const { className, pic, alt, size = 100 } = props;
+    const { className, src, alt, size = 100 } = props;
 
     const styles = useMemo<CSSProperties>(
         () => ({ width: size, height: size }),
         [size],
     );
+
+    const fallback = <Skeleton width={size} height={size} radius="50%" />;
+    const errorFallback = (
+        <Icon width={size} height={size} Svg={DefaultUserAvatar} />
+    );
+
     return (
         <AppImage
             className={classNames(cls.Avatar, {}, [className])}
-            src={pic}
+            src={src}
             alt={alt}
             style={styles}
-            isLoadingFallback={
-                <Skeleton width={size} height={size} radius="50%" />
-            }
-            errorFallback={
-                <Icon
-                    Svg={DefaultUserAvatar}
-                    width={size}
-                    height={size}
-                    className={cls.Avatar}
-                />
-            }
+            isLoadingFallback={fallback}
+            errorFallback={errorFallback}
         />
     );
 };

@@ -52,7 +52,10 @@
     --w-sidebar: 3.125rem;
     --w-rightbar: 11rem;
     --p-sidebar: 2rem;
-    --p-navbar: 2rem;
+    --p-navbar: 1rem;
     --h-filter-articles: 17rem;
     --h-head-articles: calc(var(--navbar-height) + var(--filter-articles-height));
+    --m-text: 1rem;
+    --p-min: 0.5rem;
+    --p-mid: 1rem;
 }

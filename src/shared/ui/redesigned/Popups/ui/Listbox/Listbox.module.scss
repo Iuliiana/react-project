@@ -1,0 +1,25 @@
+.Listbox {
+    background: var(--bg-color);
+    z-index: 3;
+}
+
+.ListboxItem {
+    &.active {
+        background-color: var(--accent-color);
+    }
+
+    &.selected {
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 50%;
+            left: 0.3rem;
+            width: 0.6rem;
+            height: 0.3rem;
+            border-right: 2px solid var(--icon-color);
+            border-top: 3px solid var(--icon-color);
+            transform: rotate(135deg);
+        }
+    }
+}

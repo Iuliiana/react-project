@@ -6,8 +6,8 @@ import {
     useAnimationLibs,
 } from '@/shared/lib/components/AnimationProvider';
 import cls from './Drawer.module.scss';
-import { Portal } from '../../Portal/Portal';
 import { Overlay } from '../Overlay/Overlay';
+import { Portal } from '../Portal/Portal';
 
 interface DrawerProps {
     className?: string;
@@ -19,10 +19,6 @@ interface DrawerProps {
 
 const height = window.screen.height - 100;
 
-/**
- * @deprecated
- * Этот компонент устарел и больше не поддерживается
- */
 const DrawerContent = memo((props: DrawerProps) => {
     const { className, children, onClose, isOpen } = props;
 
@@ -120,10 +116,6 @@ const DrawerAsync = (props: DrawerProps) => {
     return <DrawerContent {...props} />;
 };
 
-/**
- * @deprecated
- * Этот компонент устарел и больше не поддерживается
- */
 export const Drawer = (props: DrawerProps) => (
     <AnimationProvider>
         <DrawerAsync {...props} />

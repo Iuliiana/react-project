@@ -1,0 +1,43 @@
+.popup {
+    position: relative;
+}
+
+.popupItem {
+    position: relative;
+    padding: var(--p-min) var(--p-mid);
+    line-height: var(--font-line-l);
+    cursor: pointer;
+    background: var(--bg);
+}
+
+.options {
+    overflow: hidden;
+    position: absolute;
+    border-radius: 18px;
+    border: 1px solid var(--accent);
+    box-shadow: 0 3px 10px 0 rgb(16 55 163 / 60%);
+
+    &.bottom {
+        top: 100%;
+    }
+
+    &.topLeft {
+        right: 100%;
+        bottom: 100%;
+    }
+
+    &.topRight {
+        left: 100%;
+        bottom: 100%;
+    }
+
+    &.bottomRight {
+        left: 100%;
+        top: 100%;
+    }
+
+    &.bottomLeft {
+        right: 100%;
+        top: 100%;
+    }
+}

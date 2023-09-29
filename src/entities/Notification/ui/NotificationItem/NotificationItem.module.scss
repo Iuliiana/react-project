@@ -11,3 +11,20 @@
     border: 1px solid var(--icon-color);
     box-shadow: 2px 2px 10px var(--icon-color);
 }
+
+.NotificationItemRedesigned,
+.linkRedesigned {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0;
+    transition: 0.3s all;
+}
+
+.NotificationItemRedesigned:not(:last-child),
+.linkRedesigned:not(:last-child) {
+    border-bottom: 2px solid var(--light-bg);
+}
+
+.NotificationItemRedesigned:hover {
+    background: var(--light-bg);
+}

@@ -4,9 +4,9 @@ import { setJsonSettings, useJsonSettings } from '@/entities/User';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useDetectDevice } from '@/shared/hooks/useDetectDevice/useDetectDevice';
 import { Card } from '@/shared/ui/deprecated/Card';
-import { Drawer } from '@/shared/ui/deprecated/Drawer';
 import { Modal } from '@/shared/ui/deprecated/Modals';
 import { Text } from '@/shared/ui/deprecated/Text';
+import { Drawer } from '@/shared/ui/Drawer';
 
 export const ArticlePageGreeting = memo(() => {
     const { t } = useTranslation('articles');

@@ -11,9 +11,10 @@
         fill: var(--icon-theme-color);
         filter: drop-shadow(1px 1px 1px var(--inversion-bg-color));
     }
+}
 
-    .ThemeSwitcherSvgNew {
-        fill: var(--icon-theme);
-        filter: drop-shadow(1px 1px 1px var(--shadow-icon-theme));
-    }
+.ThemeSwitcherRedesigned {
+    fill: var(--icon-theme);
+    filter: drop-shadow(1px 1px 1px var(--shadow-icon-theme));
+    transition: 0.2s all;
 }

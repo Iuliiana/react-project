@@ -1,11 +1,15 @@
 import React, { memo, useCallback, useState } from 'react';
 import { NotificationList } from '@/entities/Notification';
-import NotificationIcon from '@/shared/assets/icons/notification.svg';
+import NotificationIcon from '@/shared/assets/icons/new/notify.svg';
+import NotificationIconDeprecated from '@/shared/assets/icons/notification.svg';
 import { useDetectDevice } from '@/shared/hooks/useDetectDevice/useDetectDevice';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Drawer } from '@/shared/ui/deprecated/Drawer';
-import { Icon } from '@/shared/ui/deprecated/Icon';
-import { Popover } from '@/shared/ui/deprecated/Popups';
+import { ToggleFeatureFlag } from '@/shared/lib/features';
+import { Icon as IconDeprecated } from '@/shared/ui/deprecated/Icon';
+import { Popover as PopoverDeprecated } from '@/shared/ui/deprecated/Popups';
+import { Drawer } from '@/shared/ui/Drawer';
+import { Icon } from '@/shared/ui/redesigned/Icon';
+import { Popover } from '@/shared/ui/redesigned/Popups';
 import cls from './NotificationButton.module.scss';
 
 interface NotificationButtonProps {
@@ -26,20 +30,51 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
     }, []);
 
     const trigger = (
-        // eslint-disable-next-line jsx-a11y/interactive-supports-focus
-        <div role="button" onClick={onOpenDrawer}>
-            <Icon Svg={NotificationIcon} />
-        </div>
+        <ToggleFeatureFlag
+            feature="isAppRedesigned"
+            on={
+                <Icon
+                    Svg={NotificationIcon}
+                    isClickable
+                    onClick={onOpenDrawer}
+                />
+            }
+            off={
+                // eslint-disable-next-line jsx-a11y/interactive-supports-focus
+                <div role="button" onClick={onOpenDrawer}>
+                    <IconDeprecated Svg={NotificationIconDeprecated} />
+                </div>
+            }
+        />
     );
 
     if (!isMobilDevice) {
         return (
-            <Popover
-                className={classNames(cls.NotificationButton, {}, [className])}
-                btn={trigger}
-            >
-                <NotificationList />
-            </Popover>
+            <ToggleFeatureFlag
+                feature="isAppRedesigned"
+                on={
+                    <Popover
+                        className={classNames(cls.NotificationPanel, {}, [
+                            className,
+                        ])}
+                        btn={trigger}
+                    >
+                        <div className={cls.NotificationWrapper}>
+                            <NotificationList />
+                        </div>
+                    </Popover>
+                }
+                off={
+                    <PopoverDeprecated
+                        className={classNames(cls.NotificationButton, {}, [
+                            className,
+                        ])}
+                        btn={trigger}
+                    >
+                        <NotificationList />
+                    </PopoverDeprecated>
+                }
+            />
         );
     }
 

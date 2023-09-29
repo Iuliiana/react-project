@@ -1,0 +1,79 @@
+.Text {
+    // margin-bottom: var(--m-text);
+}
+
+.TextItem:not(:last-child) {
+    margin-bottom: var(--m-text);
+}
+
+.size_s {
+    .TextTitle {
+        font: var(--font-m-text);
+    }
+
+    .TextParagraph {
+        font: var(--font-s-text);
+    }
+}
+
+.size_m {
+    .TextTitle {
+        font: var(--font-l-title);
+    }
+
+    .TextParagraph {
+        font: var(--font-m-text);
+    }
+}
+
+.size_l {
+    .TextTitle {
+        font: var(--font-l-title);
+    }
+
+    .TextParagraph {
+        font: var(--font-xl-title);
+    }
+}
+
+.error {
+    .TextTitle {
+        color: var(--cancel);
+    }
+
+    .TextParagraph {
+        color: var(--cancel);
+    }
+}
+
+.primary {
+    .TextTitle {
+        color: var(--text-color);
+    }
+
+    .TextParagraph {
+        color: var(--text-color);
+    }
+}
+
+.accent {
+    .TextTitle {
+        color: var(--accent);
+    }
+
+    .TextParagraph {
+        color: var(--accent);
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}

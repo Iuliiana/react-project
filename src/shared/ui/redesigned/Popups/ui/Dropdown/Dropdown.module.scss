@@ -1,0 +1,23 @@
+.Dropdown {
+    z-index: 3;
+}
+
+.MenuItem {
+    width: 100%;
+    white-space: nowrap;
+    text-align: left;
+    transition: 0.3s all;
+
+    &.active {
+        background-color: var(--light-bg);
+        color: var(--accent);
+    }
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+}

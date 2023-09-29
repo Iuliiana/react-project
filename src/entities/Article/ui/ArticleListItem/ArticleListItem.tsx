@@ -4,7 +4,7 @@ import ViewsIcon from '@/shared/assets/icons/view.svg';
 import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { getRouteArticlesDetails } from '@/shared/const/route';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { AppImage } from '@/shared/ui/deprecated/AppImage';
+import { AppImage } from '@/shared/ui/AppImage';
 import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
 import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import { Card } from '@/shared/ui/deprecated/Card';
