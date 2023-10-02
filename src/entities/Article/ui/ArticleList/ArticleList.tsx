@@ -14,6 +14,7 @@ import { ArticlesListFooter, getSkeletons } from './ArticlesListFooter';
 import { ArticleView } from '../../model/consts/articleViewConst';
 import { Article } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 
 interface ArticleListProps {
     className?: string;
@@ -65,15 +66,24 @@ export const ArticleList = memo((props: ArticleListProps) => {
         return () => clearTimeout(timer);
     }, [articleIndex, view]);
 
-    const renderArticles = (article: Article, index?: number) => (
-        <ArticleListItem
-            key={article.id}
-            article={article}
-            view={view}
-            target={target}
-            index={index}
-        />
-    );
+    const renderArticles = (
+        article: Article,
+        isLoading?: boolean,
+        index?: number,
+    ) => {
+        if (isLoading) {
+            return <ArticleListItemSkeleton key={index} view={view} />;
+        }
+        return (
+            <ArticleListItem
+                key={article.id}
+                article={article}
+                view={view}
+                target={target}
+                index={index}
+            />
+        );
+    };
 
     if (!isLoading && articles?.length === 0) {
         return (
@@ -104,9 +114,9 @@ export const ArticleList = memo((props: ArticleListProps) => {
                         components={{
                             Footer: ArticlesListFooter,
                         }}
-                        //    useWindowScroll
-                        itemContent={(index, article) =>
-                            renderArticles(article, index)
+                        useWindowScroll
+                        itemContent={(index, article, { isLoading }) =>
+                            renderArticles(article, isLoading, index)
                         }
                     />
                 ) : (
@@ -121,14 +131,14 @@ export const ArticleList = memo((props: ArticleListProps) => {
                         data={articles}
                         listClassName={classNames(cls.grid)}
                         itemClassName={classNames(cls.ArticleItem)}
-                        itemContent={(index, article) =>
-                            renderArticles(article, index)
+                        itemContent={(index, article, { isLoading }) =>
+                            renderArticles(article, isLoading, index)
                         }
                         endReached={onScrollEnd}
                         components={{
                             Footer: ArticlesListFooter,
                         }}
-                        // useWindowScroll
+                        useWindowScroll
                     />
                 )}
             </div>
@@ -139,7 +149,8 @@ export const ArticleList = memo((props: ArticleListProps) => {
             className={classNames(cls.ArticleList, {}, [className, cls[view]])}
             data-testid="ArticleList.Normal"
         >
-            {Boolean(articles?.length) && articles.map(renderArticles)}
+            {Boolean(articles?.length) &&
+                articles.map((article) => renderArticles(article))}
             {isLoading && getSkeletons(view)}
         </div>
     );

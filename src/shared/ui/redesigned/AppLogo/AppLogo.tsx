@@ -17,7 +17,7 @@ export const AppLogo = memo((props: AppLogoProps) => {
             <MainLogo
                 width={size}
                 height={size}
-                fill={color}
+                color={color}
                 className={cls.AppLogoIcon}
             />
             <div className={cls.logoEyes} />

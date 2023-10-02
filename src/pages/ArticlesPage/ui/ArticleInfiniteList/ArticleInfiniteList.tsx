@@ -2,7 +2,6 @@ import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { ArticleList } from '@/entities/Article';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
-import { useDebounce } from '@/shared/hooks/useDebounce/useDebounce';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticleInfiniteList.module.scss';
 import {
@@ -29,19 +28,13 @@ export const ArticleInfiniteList = memo((props: ArticleInfiniteListProps) => {
         }
     }, [dispatch]);
 
-    const debounceOnLoadMoreArticles = useDebounce(onLoadMoreArticles, 1000);
-
-    const onScrollEnd = useCallback(() => {
-        debounceOnLoadMoreArticles();
-    }, [debounceOnLoadMoreArticles]);
-
     return (
         <div className={classNames(cls.ArticleInfiniteList, {}, [className])}>
             <ArticleList
                 isLoading={isLoading}
                 view={view}
                 articles={articles}
-                onScrollEnd={onScrollEnd}
+                onScrollEnd={onLoadMoreArticles}
                 isVirtuoso
             />
         </div>

@@ -14,7 +14,7 @@ export default {
         btn: (
             <Avatar
                 size={30}
-                pic="https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png"
+                src="https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png"
             />
         ),
         direction: 'bottom left',

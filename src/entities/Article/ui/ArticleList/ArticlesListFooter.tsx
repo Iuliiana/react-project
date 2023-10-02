@@ -10,20 +10,6 @@ export const getSkeletons = (view: ArticleView) =>
         <ArticleListItemSkeleton key={index} view={view} />
     ));
 
-export const ArticlesListFooter = memo(
-    ({
-        context,
-    }: {
-        context?: { isLoading?: boolean; view: ArticleView } | undefined;
-    }) => {
-        // @ts-ignore
-        const { isLoading, view } = context;
-        return (
-            <div
-                className={classNames(cls.ArticlesListFooter, {}, [cls[view]])}
-            >
-                {isLoading ? getSkeletons(view) : ''}
-            </div>
-        );
-    },
-);
+export const ArticlesListFooter = memo(() => (
+    <div className={classNames(cls.ArticlesListFooter)} />
+));
