@@ -4,18 +4,20 @@
 
 .popupItem {
     position: relative;
-    padding: var(--p-min) var(--p-mid);
+    padding: var(--p-8px) var(--p-16px);
     line-height: var(--font-line-l);
     cursor: pointer;
     background: var(--bg);
+    white-space: nowrap;
 }
 
 .options {
     overflow: hidden;
     position: absolute;
     border-radius: 18px;
-    border: 1px solid var(--accent);
+    border: 1px solid var(--icon);
     box-shadow: 0 3px 10px 0 rgb(16 55 163 / 60%);
+    z-index: 10;
 
     &.bottom {
         top: 100%;

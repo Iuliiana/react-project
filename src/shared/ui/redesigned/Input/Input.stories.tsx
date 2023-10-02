@@ -5,7 +5,7 @@ import { Theme } from '@/shared/const/theme';
 import { Input } from './Input';
 
 export default {
-    title: 'shared/deprecated/Input',
+    title: 'shared/Input',
     component: Input,
     argTypes: {},
     args: {

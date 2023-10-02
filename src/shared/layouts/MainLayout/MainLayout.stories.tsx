@@ -5,7 +5,7 @@ import { Theme } from '@/shared/const/theme';
 import { MainLayout } from './MainLayout';
 
 export default {
-    title: 'STORIES_DIR/MainLayout',
+    title: 'shared/layouts/MainLayout',
     component: MainLayout,
     argTypes: {},
     args: {},

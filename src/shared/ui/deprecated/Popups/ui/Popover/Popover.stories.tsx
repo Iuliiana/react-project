@@ -5,7 +5,7 @@ import { Theme } from '@/shared/const/theme';
 import { Popover } from './Popover';
 
 export default {
-    title: 'shared/Popover',
+    title: 'shared/deprecated/Popover',
     component: Popover,
     argTypes: {},
     args: {},

@@ -1,4 +1,9 @@
-import { ButtonHTMLAttributes, forwardRef, ReactNode } from 'react';
+import {
+    ButtonHTMLAttributes,
+    forwardRef,
+    ReactElement,
+    ReactNode,
+} from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
@@ -13,6 +18,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     disabled?: boolean;
     children: ReactNode;
     fullWidth?: boolean;
+    addonRight?: ReactElement;
+    addonLeft?: ReactElement;
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -25,6 +32,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             size = 'm',
             disabled,
             fullWidth,
+            addonRight,
+            addonLeft,
             ...otherProps
         } = props;
 
@@ -46,7 +55,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 disabled={disabled}
                 {...otherProps}
             >
+                {addonLeft && <div className={cls.addonLeft}>{addonLeft}</div>}
                 {children}
+                {addonRight && (
+                    <div className={cls.addonRight}>{addonRight}</div>
+                )}
             </button>
         );
     },

@@ -7,7 +7,7 @@ import { Avatar } from '../../../Avatar/Avatar';
 import { Button } from '../../../Button/Button';
 
 export default {
-    title: 'shared/Dropdown',
+    title: 'shared/deprecated/Dropdown',
     component: Dropdown,
     argTypes: {},
     args: {

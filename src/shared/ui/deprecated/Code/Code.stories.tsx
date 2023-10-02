@@ -5,7 +5,7 @@ import { Theme } from '@/shared/const/theme';
 import { Code } from './Code';
 
 export default {
-    title: 'shared/Code',
+    title: 'shared/deprecated/Code',
     component: Code,
     argTypes: {},
     args: {

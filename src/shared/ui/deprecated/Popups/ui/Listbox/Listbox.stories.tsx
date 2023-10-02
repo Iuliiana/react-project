@@ -5,7 +5,7 @@ import { Theme } from '@/shared/const/theme';
 import { Listbox } from './Listbox';
 
 export default {
-    title: 'shared/Listbox',
+    title: 'shared/deprecated/Listbox',
     component: Listbox,
     argTypes: {},
     args: {

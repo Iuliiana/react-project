@@ -5,7 +5,7 @@ import { Theme } from '@/shared/const/theme';
 import { Tabs } from './Tabs';
 
 export default {
-    title: 'shared/deprecated/Tabs',
+    title: 'shared/Tabs',
     component: Tabs,
     argTypes: {},
     args: {

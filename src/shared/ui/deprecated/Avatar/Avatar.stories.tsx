@@ -4,7 +4,7 @@ import AvatariPicTest from '@/shared/assets/pic/test/test-avatar.jpg';
 import { Avatar } from './Avatar';
 
 export default {
-    title: 'shared/Avatar',
+    title: 'shared/deprecated/Avatar',
     component: Avatar,
     argTypes: {},
     args: {

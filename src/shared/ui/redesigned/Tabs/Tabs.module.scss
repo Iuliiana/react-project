@@ -1,0 +1,14 @@
+.Tabs {
+    width: 100%;
+}
+
+.TabItem {
+    padding: var(--p-8px) var(--p-16px);
+    cursor: pointer;
+    transition: 0.3s all;
+
+    &:hover {
+        transform: scale(1.05);
+        color: var(--accent);
+    }
+}

@@ -37,3 +37,14 @@ CardOutlineDark.args = {
     variant: 'outline',
 };
 CardOutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const CardLight = Template.bind({});
+CardLight.args = {
+    variant: 'light',
+};
+
+export const CardLightDark = Template.bind({});
+CardLightDark.args = {
+    variant: 'light',
+};
+CardLightDark.decorators = [ThemeDecorator(Theme.DARK)];

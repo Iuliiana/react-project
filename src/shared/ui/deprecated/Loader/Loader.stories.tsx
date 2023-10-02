@@ -4,7 +4,7 @@ import { Theme } from '@/shared/const/theme';
 import { Loader } from './Loader';
 
 export default {
-    title: 'shared/Loader',
+    title: 'shared/deprecated/Loader',
     component: Loader,
     argTypes: {},
 } as ComponentMeta<typeof Loader>;

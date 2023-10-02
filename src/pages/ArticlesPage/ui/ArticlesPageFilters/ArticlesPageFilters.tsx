@@ -1,26 +1,11 @@
-import React, { memo, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
-import { ArticleType, ArticleView, ArticleSortField } from '@/entities/Article';
+import React, { memo } from 'react';
 import { ArticleSortSelector } from '@/features/ArticleSortSelector';
 import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
-import { ArticleViewSelector } from '@/features/ArticleViewSelector';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
-import { useDebounce } from '@/shared/hooks/useDebounce/useDebounce';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { OrderBy } from '@/shared/lib/types/order';
 import { Card } from '@/shared/ui/deprecated/Card';
 import { Input } from '@/shared/ui/deprecated/Input';
 import cls from './ArticlesPageFilters.module.scss';
-import {
-    getArticlesOrder,
-    getArticlesPageView,
-    getArticlesSearch,
-    getArticlesSort,
-    getArticlesType,
-} from '../../model/selectors/articlesPage';
-import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
-import { articlesPageActions } from '../../model/slice/articlesPageSlice';
+import { useArticlePage } from '../../lib/hooks/useArticlePage';
 
 interface ArticlesPageFiltersProps {
     className?: string;
@@ -31,59 +16,17 @@ interface ArticlesPageFiltersProps {
 
 export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     const { className } = props;
-    const { t } = useTranslation('articles');
-    const dispatch = useAppDispatch();
-    const view = useSelector(getArticlesPageView);
-    const sort = useSelector(getArticlesSort);
-    const order = useSelector(getArticlesOrder);
-    const search = useSelector(getArticlesSearch);
-    const type = useSelector(getArticlesType);
-
-    const onChangeViewArticles = useCallback(
-        (view: ArticleView) => {
-            dispatch(articlesPageActions.setView(view));
-        },
-        [dispatch],
-    );
-
-    const fetchData = useCallback(() => {
-        dispatch(articlesPageActions.setPage(1));
-        dispatch(fetchArticlesList({ replace: true }));
-    }, [dispatch]);
-
-    const debounceData = useDebounce(fetchData, 1000);
-
-    const onChangeSort = useCallback(
-        (sort: ArticleSortField) => {
-            dispatch(articlesPageActions.setSort(sort));
-            fetchData();
-        },
-        [dispatch, fetchData],
-    );
-
-    const onChangeOrder = useCallback(
-        (order: OrderBy) => {
-            dispatch(articlesPageActions.setOrder(order));
-            fetchData();
-        },
-        [dispatch, fetchData],
-    );
-
-    const onChangeSearch = useCallback(
-        (search: string) => {
-            dispatch(articlesPageActions.setSearch(search));
-            debounceData();
-        },
-        [debounceData, dispatch],
-    );
-
-    const onChangeTab = useCallback(
-        (value: ArticleType) => {
-            dispatch(articlesPageActions.setType(value));
-            fetchData();
-        },
-        [dispatch, fetchData],
-    );
+    const {
+        t,
+        sort,
+        onChangeSort,
+        onChangeSearch,
+        search,
+        onChangeTab,
+        onChangeOrder,
+        order,
+        type,
+    } = useArticlePage();
 
     return (
         <div
@@ -96,11 +39,6 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
                     onChangeOrder={onChangeOrder}
                     currentSort={sort}
                     currentOrder={order}
-                />
-                <ArticleViewSelector
-                    view={view}
-                    onChangeViewArticles={onChangeViewArticles}
-                    className={cls.btnsViewArticles}
                 />
             </div>
             <Card className={cls.search}>

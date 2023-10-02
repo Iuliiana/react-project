@@ -1,25 +1,39 @@
 .Listbox {
-    background: var(--bg-color);
-    z-index: 3;
+    background: var(--bg);
+}
+
+.ListboxButton {
+    padding: 0 var(--p-16px);
+    background: var(--light-bg);
+    border-radius: 34px;
+    outline: none;
+    border: none;
+
+    &.btnOpen {
+        color: var(--accent);
+    }
+
+    .ListboxButtonArrow {
+        fill: var(--hint);
+        vertical-align: middle;
+        width: 32px;
+        height: 32px;
+        transition: 0.3s all;
+
+        &.open {
+            transform: rotate(-180deg);
+            fill: var(--accent);
+        }
+    }
 }
 
 .ListboxItem {
     &.active {
-        background-color: var(--accent-color);
+        background-color: var(--light-bg);
+        color: var(--accent);
     }
 
     &.selected {
-        &::before {
-            content: "";
-            display: block;
-            position: absolute;
-            bottom: 50%;
-            left: 0.3rem;
-            width: 0.6rem;
-            height: 0.3rem;
-            border-right: 2px solid var(--icon-color);
-            border-top: 3px solid var(--icon-color);
-            transform: rotate(135deg);
-        }
+        background: var(--light-bg);
     }
 }
