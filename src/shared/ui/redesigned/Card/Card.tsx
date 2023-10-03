@@ -2,7 +2,7 @@ import { HTMLAttributes, memo, ReactNode } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Card.module.scss';
 
-type CardVariant = 'outline' | 'standard' | 'light';
+type CardVariant = 'outline' | 'standard' | 'light' | 'dark';
 type CardPadding = '0' | '8' | '16' | '24' | '32';
 
 const cardPaddingMap: Record<CardPadding, string> = {

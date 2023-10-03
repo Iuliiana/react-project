@@ -1,22 +1,20 @@
-import { useTranslation } from 'react-i18next';
-import { Country, CountrySelect } from '@/entities/Country';
-import { Currency, CurrencySelect } from '@/entities/Currency';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
+import { ToggleFeatureFlag } from '@/shared/lib/features';
 import { TestsProps } from '@/shared/lib/types/tests';
-import { Avatar } from '@/shared/ui/deprecated/Avatar';
-import { Input } from '@/shared/ui/deprecated/Input';
-import { Loader } from '@/shared/ui/deprecated/Loader';
-import {
-    Text,
-    TextAlign,
-    TextSize,
-    TextTheme,
-} from '@/shared/ui/deprecated/Text';
-import { HStack, VStack } from '@/shared/ui/Stack';
-import cls from './ProfileCard.module.scss';
 import { Profile } from '../../model/types/ProfileSchema';
+import {
+    ProfileCardDeprecated,
+    ProfileCardDeprecatedError,
+    ProfileCardDeprecatedLoading,
+} from '../ProfileCardDeprecated/ProfileCardDeprecated';
+import {
+    ProfileCardRedesigned,
+    ProfileCardRedesignedError,
+    ProfileCardRedesignedLoading,
+} from '../ProfileCardRedesigned/ProfileCardRedesigned';
 
-interface ProfileCardProps extends TestsProps {
+export interface ProfileCardProps extends TestsProps {
     data?: Profile;
     readonly?: boolean;
     isLoading?: boolean;
@@ -33,126 +31,33 @@ interface ProfileCardProps extends TestsProps {
 }
 
 export const ProfileCard = (props: ProfileCardProps) => {
-    const {
-        className,
-        data,
-        error,
-        isLoading,
-        readonly,
-        onChangeFirst,
-        onChangeLastname,
-        onChangeAge,
-        onChangeCity,
-        onChangeUsername,
-        onChangeAvatar,
-        onChangeCurrency,
-        onChangeCountry,
-        'data-testid': dataTestId = 'ProfileCard',
-    } = props;
-    const { t } = useTranslation('profile');
+    const { error, isLoading } = props;
 
     if (isLoading) {
         return (
-            <VStack
-                justify="center"
-                className={classNames('', {}, [className, cls.minH])}
-            >
-                <Loader />
-            </VStack>
+            <ToggleFeatureFlag
+                feature="isAppRedesigned"
+                on={<ProfileCardRedesignedLoading />}
+                off={<ProfileCardDeprecatedLoading />}
+            />
         );
     }
 
     if (error) {
         return (
-            <VStack
-                justify="center"
-                className={classNames('', {}, [className, cls.minH])}
-            >
-                <Text
-                    textTheme={TextTheme.ERROR}
-                    size={TextSize.L}
-                    title={t('Произошла ошибка')}
-                    text={t('Попробуйте перезагрузить страницу')}
-                    align={TextAlign.CENTER}
-                />
-            </VStack>
+            <ToggleFeatureFlag
+                feature="isAppRedesigned"
+                on={<ProfileCardRedesignedError />}
+                off={<ProfileCardDeprecatedError />}
+            />
         );
     }
 
     return (
-        <div
-            className={classNames('', {}, [className])}
-            data-testid={dataTestId}
-        >
-            <div className={cls.content}>
-                <HStack justify="center">
-                    {data?.avatar && (
-                        <Avatar alt={t('Фото')} pic={data?.avatar} size={150} />
-                    )}
-                </HStack>
-                <VStack gap="16" align="start" max>
-                    <Input
-                        className={cls.input}
-                        value={data?.first}
-                        onChange={onChangeFirst}
-                        placeholder={t('Ваше имя')}
-                        readonly={readonly}
-                        data-testid="ProfileCard.firstname"
-                    />
-
-                    <Input
-                        className={cls.input}
-                        value={data?.lastname}
-                        placeholder={t('Ваша фамилия')}
-                        readonly={readonly}
-                        onChange={onChangeLastname}
-                        data-testid="ProfileCard.lastname"
-                    />
-
-                    <Input
-                        className={cls.input}
-                        value={data?.age}
-                        placeholder={t('Возраст')}
-                        readonly={readonly}
-                        onChange={onChangeAge}
-                    />
-
-                    <Input
-                        className={cls.input}
-                        value={data?.city}
-                        placeholder={t('Город')}
-                        readonly={readonly}
-                        onChange={onChangeCity}
-                    />
-
-                    <Input
-                        className={cls.input}
-                        value={data?.username}
-                        placeholder={t('Логин')}
-                        readonly={readonly}
-                        onChange={onChangeUsername}
-                    />
-
-                    <Input
-                        className={cls.input}
-                        value={data?.avatar}
-                        placeholder={t('Фото')}
-                        readonly={readonly}
-                        onChange={onChangeAvatar}
-                    />
-
-                    <CurrencySelect
-                        readonly={readonly}
-                        value={data?.currency}
-                        onChange={onChangeCurrency}
-                    />
-                    <CountrySelect
-                        readonly={readonly}
-                        value={data?.country}
-                        onChange={onChangeCountry}
-                    />
-                </VStack>
-            </div>
-        </div>
+        <ToggleFeatureFlag
+            feature="isAppRedesigned"
+            on={<ProfileCardRedesigned {...props} />}
+            off={<ProfileCardDeprecated {...props} />}
+        />
     );
 };

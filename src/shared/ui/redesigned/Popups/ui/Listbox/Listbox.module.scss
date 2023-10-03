@@ -3,11 +3,13 @@
 }
 
 .ListboxButton {
-    padding: 0 var(--p-16px);
+    padding: 2px var(--p-16px);
     background: var(--light-bg);
     border-radius: 34px;
     outline: none;
     border: none;
+    display: flex;
+    align-items: center;
 
     &.btnOpen {
         color: var(--accent);

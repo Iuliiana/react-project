@@ -3,27 +3,21 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
-// import AvatariPicTest from 'shared/assets/pic/test/test-avatar.jpg';
-import { ProfileCard } from './ProfileCard';
+import { ProfileCardDeprecated } from './ProfileCardDeprecated';
 
 export default {
-    title: 'entities/ProfileCard',
-    component: ProfileCard,
+    title: 'entities/ProfileCardDeprecated',
+    component: ProfileCardDeprecated,
     argTypes: {},
     args: {},
-    parameters: {
-        liki: {
-            skip: true,
-        },
-    },
-} as ComponentMeta<typeof ProfileCard>;
+} as ComponentMeta<typeof ProfileCardDeprecated>;
 
-const Template: ComponentStory<typeof ProfileCard> = (args) => (
-    <ProfileCard {...args} />
+const Template: ComponentStory<typeof ProfileCardDeprecated> = (args) => (
+    <ProfileCardDeprecated {...args} />
 );
 
-export const ProfileCardPrimary = Template.bind({});
-ProfileCardPrimary.args = {
+export const ProfileCardDeprecatedNormal = Template.bind({});
+ProfileCardDeprecatedNormal.args = {
     data: {
         first: 'Джейн',
         lastname: 'Доу',
@@ -36,10 +30,10 @@ ProfileCardPrimary.args = {
     },
     readonly: true,
 };
-ProfileCardPrimary.decorators = [StoreDecorator({})];
+ProfileCardDeprecatedNormal.decorators = [StoreDecorator({})];
 
-export const ProfileCardEditState = Template.bind({});
-ProfileCardEditState.args = {
+export const ProfileCardDeprecatedEditState = Template.bind({});
+ProfileCardDeprecatedEditState.args = {
     data: {
         first: 'Джейн',
         lastname: 'Доу',
@@ -52,18 +46,18 @@ ProfileCardEditState.args = {
     },
     readonly: false,
 };
-ProfileCardEditState.decorators = [StoreDecorator({})];
+ProfileCardDeprecatedEditState.decorators = [StoreDecorator({})];
 
-export const ProfileCardLoading = Template.bind({});
-ProfileCardLoading.args = {
+export const ProfileCardDeprecatedLoading = Template.bind({});
+ProfileCardDeprecatedLoading.args = {
     data: undefined,
     isLoading: true,
 };
-ProfileCardLoading.decorators = [StoreDecorator({})];
+ProfileCardDeprecatedLoading.decorators = [StoreDecorator({})];
 
-export const ProfileCardError = Template.bind({});
-ProfileCardError.args = {
+export const ProfileCardDeprecatedError = Template.bind({});
+ProfileCardDeprecatedError.args = {
     data: undefined,
     error: 'true',
 };
-ProfileCardError.decorators = [StoreDecorator({})];
+ProfileCardDeprecatedError.decorators = [StoreDecorator({})];

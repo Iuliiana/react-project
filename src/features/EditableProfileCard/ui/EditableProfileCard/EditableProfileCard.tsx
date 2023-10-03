@@ -1,5 +1,4 @@
 import { memo, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
@@ -13,12 +12,11 @@ import {
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { TestsProps } from '@/shared/lib/types/tests';
 import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
-import { ProfileErrorsCode } from '../../model/consts/profileErrorsCodeConsts';
+import { useProfileCardError } from '../../model/lib/hooks/useProfileCardError';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
-import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
 import {
     editableProfileCardActions,
@@ -37,13 +35,12 @@ const asyncReducers: ReducersList = {
 
 export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     const { className, id } = props;
-    const { t } = useTranslation('profile');
     const dispatch = useAppDispatch();
     const data = useSelector(getProfileForm);
     const error = useSelector(getProfileError);
     const isLoading = useSelector(getProfileIsLoading);
     const readonly = useSelector(getProfileReadonly);
-    const validateErrors = useSelector(getProfileValidateErrors);
+    const { validateErrors, errorsMap } = useProfileCardError();
 
     useInitialEffect(() => {
         if (id) {
@@ -127,21 +124,6 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
         },
         [dispatch],
     );
-
-    const errorsMap = {
-        [ProfileErrorsCode.INCORRECT_USERDATA]: t(
-            'Введите корректные пользовательские данные',
-        ),
-        [ProfileErrorsCode.INCORRECT_AGE]: t('Введите корректный возраст'),
-        [ProfileErrorsCode.INCORRECT_CITY]: t('Введите корректный город'),
-        [ProfileErrorsCode.INCORRECT_USERNAME]: t('Введите корректный логин'),
-        [ProfileErrorsCode.EMPTY_DATA]: t(
-            'Вы пытаетесь отправить пустой профиль',
-        ),
-        [ProfileErrorsCode.SERVER_ERROR]: t(
-            'Ошибка при обновлении данных. Попробуйте ещё раз.',
-        ),
-    };
 
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount>

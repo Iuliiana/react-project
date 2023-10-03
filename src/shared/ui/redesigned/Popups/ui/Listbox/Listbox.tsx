@@ -48,8 +48,8 @@ export const Listbox = <T extends string>(props: ListboxProps<T>) => {
     );
 
     return (
-        <HStack gap="4" justify="start">
-            {label && <span>{`${label}>`}</span>}
+        <HStack gap="8" justify="start">
+            {label && <span>{`${label}`}</span>}
             <HListbox
                 as="div"
                 value={currentValue?.text}

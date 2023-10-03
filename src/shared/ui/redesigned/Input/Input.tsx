@@ -24,6 +24,7 @@ interface InputProps extends InputPropsType {
     readonly?: boolean;
     addonRight?: ReactElement;
     addonLeft?: ReactElement;
+    labelText?: string;
 }
 export const Input: FC<InputProps> = memo((props: InputProps) => {
     const {
@@ -36,6 +37,7 @@ export const Input: FC<InputProps> = memo((props: InputProps) => {
         readonly,
         addonRight,
         addonLeft,
+        labelText,
         ...otherProps
     } = props;
 
@@ -68,7 +70,7 @@ export const Input: FC<InputProps> = memo((props: InputProps) => {
         [cls.withAddonRight]: Boolean(addonRight),
     };
 
-    return (
+    const input = (
         <div className={classNames(cls.InputWrapper, mods, [className])}>
             {addonLeft && <div className={cls.addonLeft}>{addonLeft}</div>}
             <input
@@ -86,4 +88,21 @@ export const Input: FC<InputProps> = memo((props: InputProps) => {
             {addonRight && <div className={cls.addonRight}>{addonRight}</div>}
         </div>
     );
+
+    if (labelText) {
+        return (
+            // eslint-disable-next-line jsx-a11y/label-has-associated-control
+            <label
+                className={classNames(cls.labelWrapper, {
+                    [cls.readonlyLabel]: readonly,
+                    [cls.focusedLabel]: isFocused,
+                })}
+            >
+                {labelText}
+                {input}
+            </label>
+        );
+    }
+
+    return input;
 });
