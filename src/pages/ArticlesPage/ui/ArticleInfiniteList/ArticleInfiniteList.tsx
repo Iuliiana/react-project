@@ -2,8 +2,6 @@ import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { ArticleList } from '@/entities/Article';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './ArticleInfiniteList.module.scss';
 import {
     getArticlesPageIsLoading,
     getArticlesPageView,
@@ -29,14 +27,13 @@ export const ArticleInfiniteList = memo((props: ArticleInfiniteListProps) => {
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.ArticleInfiniteList, {}, [className])}>
-            <ArticleList
-                isLoading={isLoading}
-                view={view}
-                articles={articles}
-                onScrollEnd={onLoadMoreArticles}
-                isVirtuoso
-            />
-        </div>
+        <ArticleList
+            isLoading={isLoading}
+            view={view}
+            articles={articles}
+            onScrollEnd={onLoadMoreArticles}
+            isVirtuoso
+            className={className}
+        />
     );
 });

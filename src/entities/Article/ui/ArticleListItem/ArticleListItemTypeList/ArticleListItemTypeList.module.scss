@@ -1,0 +1,65 @@
+.ArticleListItemTypeList {
+    padding: 2rem;
+    margin-bottom: 1rem;
+
+    .header {
+        margin-bottom: 1rem;
+    }
+
+    .headerInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .headerInfoUser {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .headerInfoUserAvatar {
+        margin-right: 0.5rem;
+    }
+
+    .headerInfoUserUsername {
+        margin: 0;
+    }
+
+    .headerInfoDate {
+        margin-left: auto;
+        margin-bottom: 0;
+    }
+
+    .headerTitle {
+        margin-bottom: 0;
+    }
+
+    .mainImg {
+        width: 100%;
+        max-height: 11rem;
+
+        img {
+            object-fit: contain;
+            max-height: inherit;
+            width: 100%;
+        }
+    }
+
+    .blockText {
+        max-height: 11rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+
+    .mBottomSkeleton {
+        margin-bottom: 1rem;
+    }
+}

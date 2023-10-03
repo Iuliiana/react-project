@@ -1,0 +1,57 @@
+.ArticleItemGridCard {
+    .linkWrapper {
+        transition: 0.2s all;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .content {
+        position: relative;
+    }
+
+    .aricleDate {
+        position: absolute;
+        top: 0.3rem;
+        right: 0.3rem;
+        opacity: 0;
+        transition: 0.3s all;
+    }
+
+    .articleImage {
+        object-fit: contain;
+        height: 12.5rem;
+        width: 100%;
+
+        &:hover {
+            & + .aricleDate {
+                opacity: 1;
+            }
+        }
+    }
+
+    .headingTypes {
+        p {
+            max-width: 8rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        margin-bottom: 0;
+    }
+
+    .text {
+        margin-bottom: 0;
+
+        div {
+            max-width: 14rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    .mBottomSkeleton {
+        margin-bottom: 1rem;
+    }
+}

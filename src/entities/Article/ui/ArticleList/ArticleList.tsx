@@ -8,6 +8,7 @@ import {
 } from 'react-virtuoso';
 import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { toggleFeatureFlag } from '@/shared/lib/features';
 import { Text } from '@/shared/ui/deprecated/Text';
 import cls from './ArticleList.module.scss';
 import { ArticlesListFooter, getSkeletons } from './ArticlesListFooter';
@@ -81,6 +82,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
                 view={view}
                 target={target}
                 index={index}
+                className={cls.ArticleListItem}
             />
         );
     };
@@ -94,6 +96,19 @@ export const ArticleList = memo((props: ArticleListProps) => {
     }
 
     if (isVirtuoso) {
+        if (isLoading && articles?.length === 0) {
+            return (
+                <div
+                    className={classNames(cls.ArticleList, {}, [
+                        className,
+                        cls[view],
+                    ])}
+                    data-testid="ArticleList.Virtuoso"
+                >
+                    {getSkeletons(view, cls.ArticleListItem)}
+                </div>
+            );
+        }
         return (
             <div
                 className={classNames(cls.ArticleList, {}, [
@@ -105,7 +120,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
                 {view === ArticleView.LIST ? (
                     <Virtuoso
                         ref={virtuosoListRef}
-                        context={{ isLoading, view }}
+                        context={{ isLoading }}
                         style={{
                             height: 'calc(100vh - var(--head-articles-height))',
                         }}
@@ -114,7 +129,11 @@ export const ArticleList = memo((props: ArticleListProps) => {
                         components={{
                             Footer: ArticlesListFooter,
                         }}
-                        useWindowScroll
+                        useWindowScroll={toggleFeatureFlag({
+                            name: 'isAppRedesigned',
+                            on: () => true,
+                            off: () => false,
+                        })}
                         itemContent={(index, article, { isLoading }) =>
                             renderArticles(article, isLoading, index)
                         }
@@ -122,15 +141,15 @@ export const ArticleList = memo((props: ArticleListProps) => {
                 ) : (
                     <VirtuosoGrid
                         ref={virtuosoGridRef}
-                        context={{ isLoading, view }}
+                        context={{ isLoading }}
                         style={{
                             height: 'calc(100vh - var(--head-articles-height))',
                             width: '100%',
                         }}
                         totalCount={articles?.length}
                         data={articles}
-                        listClassName={classNames(cls.grid)}
-                        itemClassName={classNames(cls.ArticleItem)}
+                        listClassName={classNames(cls.ArticleListGrid)}
+                        itemClassName={classNames(cls.ArticleListGridItem)}
                         itemContent={(index, article, { isLoading }) =>
                             renderArticles(article, isLoading, index)
                         }
@@ -138,7 +157,11 @@ export const ArticleList = memo((props: ArticleListProps) => {
                         components={{
                             Footer: ArticlesListFooter,
                         }}
-                        useWindowScroll
+                        useWindowScroll={toggleFeatureFlag({
+                            name: 'isAppRedesigned',
+                            on: () => true,
+                            off: () => false,
+                        })}
                     />
                 )}
             </div>

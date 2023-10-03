@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import { ArticleSortSelector } from '@/features/ArticleSortSelector';
 import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
+import { ArticleViewSelector } from '@/features/ArticleViewSelector';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Card } from '@/shared/ui/deprecated/Card';
 import { Input } from '@/shared/ui/deprecated/Input';
@@ -26,6 +27,8 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
         onChangeOrder,
         order,
         type,
+        view,
+        onChangeViewArticles,
     } = useArticlePage();
 
     return (
@@ -39,6 +42,11 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
                     onChangeOrder={onChangeOrder}
                     currentSort={sort}
                     currentOrder={order}
+                />
+                <ArticleViewSelector
+                    view={view}
+                    onChangeViewArticles={onChangeViewArticles}
+                    className={cls.btnsViewArticles}
                 />
             </div>
             <Card className={cls.search}>
