@@ -5,10 +5,10 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { TestsProps } from '@/shared/lib/types/tests';
 import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { Input } from '@/shared/ui/deprecated/Input';
-import { Modal } from '@/shared/ui/deprecated/Modals';
 import { StarRating } from '@/shared/ui/deprecated/StarRating';
 import { Text } from '@/shared/ui/deprecated/Text';
 import { Drawer } from '@/shared/ui/Drawer';
+import { Modal } from '@/shared/ui/Modals';
 import { VStack } from '@/shared/ui/Stack';
 import cls from './RatingCard.module.scss';
 

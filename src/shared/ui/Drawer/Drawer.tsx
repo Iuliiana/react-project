@@ -5,6 +5,7 @@ import {
     AnimationProvider,
     useAnimationLibs,
 } from '@/shared/lib/components/AnimationProvider';
+import { toggleFeatureFlag } from '@/shared/lib/features';
 import cls from './Drawer.module.scss';
 import { Overlay } from '../Overlay/Overlay';
 import { Portal } from '../Portal/Portal';
@@ -80,6 +81,12 @@ const DrawerContent = memo((props: DrawerProps) => {
 
     const display = y.to((py) => (py < height ? 'block' : 'none'));
 
+    const drowerClass = toggleFeatureFlag({
+        name: 'isAppRedesigned',
+        on: () => cls.DrawerRedesigned,
+        off: () => cls.DrawerOld,
+    });
+
     return (
         <Portal>
             <div
@@ -87,6 +94,7 @@ const DrawerContent = memo((props: DrawerProps) => {
                     className,
                     theme,
                     'app_drawer',
+                    drowerClass,
                 ])}
             >
                 <Overlay onClick={close} />

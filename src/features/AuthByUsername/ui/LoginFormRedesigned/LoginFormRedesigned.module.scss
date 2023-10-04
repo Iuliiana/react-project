@@ -1,0 +1,12 @@
+.LoginForm {
+    border-radius: 32px;
+    padding: 2rem;
+    background: var(--bg);
+    color: var(--text-color);
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.loginBtn:hover {
+    color: var(--accent);
+}

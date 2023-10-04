@@ -17,7 +17,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     size?: ButtonSize;
     disabled?: boolean;
     children: ReactNode;
-    fullWidth?: boolean;
+    max?: boolean;
     addonRight?: ReactElement;
     addonLeft?: ReactElement;
 }
@@ -31,7 +31,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             square,
             size = 'm',
             disabled,
-            fullWidth,
+            max,
             addonRight,
             addonLeft,
             ...otherProps
@@ -41,7 +41,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             [cls.square]: square,
             [cls[size]]: true,
             [cls.disabled]: disabled,
-            [cls.fullWidth]: fullWidth,
+            [cls.max]: max,
         };
 
         return (

@@ -3,10 +3,13 @@ import { useTranslation } from 'react-i18next';
 import { setJsonSettings, useJsonSettings } from '@/entities/User';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useDetectDevice } from '@/shared/hooks/useDetectDevice/useDetectDevice';
-import { Card } from '@/shared/ui/deprecated/Card';
-import { Modal } from '@/shared/ui/deprecated/Modals';
-import { Text } from '@/shared/ui/deprecated/Text';
+import { ToggleFeatureFlag } from '@/shared/lib/features';
+import { Card as CardDeprecated } from '@/shared/ui/deprecated/Card';
+import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text';
 import { Drawer } from '@/shared/ui/Drawer';
+import { Modal } from '@/shared/ui/Modals';
+import { Card } from '@/shared/ui/redesigned/Card';
+import { Text } from '@/shared/ui/redesigned/Text';
 
 export const ArticlePageGreeting = memo(() => {
     const { t } = useTranslation('articles');
@@ -31,12 +34,25 @@ export const ArticlePageGreeting = memo(() => {
     }, []);
 
     const text = (
-        <Card>
-            <Text
-                title={t('Страница статей')}
-                text={t('Здесь можно просматривать любые статьи')}
-            />
-        </Card>
+        <ToggleFeatureFlag
+            feature="isAppRedesigned"
+            on={
+                <Card padding="32">
+                    <Text
+                        title={t('Страница статей')}
+                        text={t('Здесь можно просматривать любые статьи')}
+                    />
+                </Card>
+            }
+            off={
+                <CardDeprecated>
+                    <TextDeprecated
+                        title={t('Страница статей')}
+                        text={t('Здесь можно просматривать любые статьи')}
+                    />
+                </CardDeprecated>
+            }
+        />
     );
 
     if (isMobil) {

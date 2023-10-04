@@ -7,7 +7,6 @@
     opacity: 0;
     z-index: -1;
     pointer-events: none;
-    color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,12 +15,27 @@
 .content {
     width: 60%;
     padding: 1rem;
-    background: var(--inversion-bg-color);
     transform: scale(0.5);
     transition: 0.3s transform;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.modalRedesigned {
+    color: var(--text-color);
+
+    .content {
+        background: var(--bg);
+    }
+}
+
+.modalOld {
+    color: var(--primary-color);
+
+    .content {
+        background: var(--inversion-bg-color);
+    }
 }
 
 .opened {

@@ -29,7 +29,7 @@ body {
     color: var(--text-color);
 }
 
-.app {
+.app-deprecated {
     background: var(--bg-color);
     min-height: 100vh;
 }
@@ -37,6 +37,8 @@ body {
 .app-redesigned {
     background-color: var(--bg);
     min-height: 100vh;
+    font: var(--font-m-text);
+    color: var(--text-color);
 }
 
 .main-wrapper {

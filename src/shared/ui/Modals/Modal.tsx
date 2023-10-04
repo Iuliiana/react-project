@@ -1,9 +1,10 @@
 import React, { FC, ReactNode } from 'react';
 import { useModal } from '@/shared/hooks/useModal/useModal';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { toggleFeatureFlag } from '@/shared/lib/features';
 import cls from './Modal.module.scss';
-import { Overlay } from '../../Overlay/Overlay';
-import { Portal } from '../../Portal/Portal';
+import { Overlay } from '../Overlay/Overlay';
+import { Portal } from '../Portal/Portal';
 
 export const ModalTheme = {
     CLEAR: 'clear',
@@ -21,10 +22,6 @@ interface ModalsProps {
     modalTheme?: ModalThemeType;
 }
 
-/**
- * @deprecated
- * Этот компонент устарел и больше не поддерживается
- */
 export const Modal: FC<ModalsProps> = (props) => {
     const {
         className,
@@ -50,12 +47,19 @@ export const Modal: FC<ModalsProps> = (props) => {
         return null;
     }
 
+    const modalClass = toggleFeatureFlag({
+        name: 'isAppRedesigned',
+        on: () => cls.modalRedesigned,
+        off: () => cls.modalOld,
+    });
+
     return (
         <Portal>
             <div
                 className={classNames(cls.Modal, mods, [
                     className,
                     cls[modalTheme],
+                    modalClass,
                 ])}
             >
                 <Overlay onClick={closeHandler} />

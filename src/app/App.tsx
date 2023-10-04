@@ -29,7 +29,7 @@ const App = () => {
         <ToggleFeatureFlag
             feature="isAppRedesigned"
             on={
-                <div className={classNames('app-redesigned')}>
+                <div id="app" className={classNames('app-redesigned')}>
                     <Suspense fallback="">
                         <MainLayout
                             header={<NavBar />}
@@ -41,7 +41,7 @@ const App = () => {
                 </div>
             }
             off={
-                <div className={classNames('app')}>
+                <div id="app" className={classNames('app-deprecated')}>
                     <Suspense fallback="">
                         <NavBar />
                         <div className="main-wrapper">
