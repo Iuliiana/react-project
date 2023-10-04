@@ -1,0 +1,32 @@
+.RadioGroup {
+    display: flex;
+    gap: 8px;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.horizontal {
+    flex-direction: row;
+    align-items: center;
+}
+
+.RadioGroupOption {
+    outline: none;
+    list-style: none;
+    cursor: pointer;
+    border: 1px solid var(--hint);
+    border-radius: 32px;
+    padding: 8px 16px;
+}
+
+.active {
+    color: var(--accent);
+}
+
+.checked {
+    border: 1px solid var(--icon);
+    color: var(--accent);
+    opacity: 0.8;
+}

@@ -1,4 +1,4 @@
-import { FeatureFlags } from '../types/featureFlags';
+import { FeatureFlags } from '../../types/featureFlags';
 
 let featuresFlags: FeatureFlags;
 export function setFeaturesFlags(newFlags?: FeatureFlags) {
@@ -9,4 +9,8 @@ export function setFeaturesFlags(newFlags?: FeatureFlags) {
 
 export function getFeaturesFlags(flag: keyof FeatureFlags) {
     return featuresFlags?.[flag];
+}
+
+export function getAllFeaturesFlags() {
+    return featuresFlags;
 }

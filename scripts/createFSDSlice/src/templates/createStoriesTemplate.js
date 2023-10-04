@@ -11,7 +11,7 @@ module.exports = function createStoriesTemplate(layer, sliceName, isPage) {
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 // import { StoreDecorator } from 'shared/configs/storybook/StoreDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
+import { Theme } from '@/shared/const/theme';
 ${componentImport}
 
 export default {
