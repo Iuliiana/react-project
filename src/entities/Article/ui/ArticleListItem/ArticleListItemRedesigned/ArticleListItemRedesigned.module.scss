@@ -1,0 +1,41 @@
+.ArticleItemGridCard {
+    background-color: var(--dark-bg);
+    border-radius: 32px;
+    cursor: pointer;
+    overflow: hidden;
+
+    .linkWrapper {
+        width: 100%;
+    }
+
+    .articleImage {
+        object-fit: contain;
+        max-height: 141px;
+        height: 100%;
+    }
+
+    .content {
+        padding: 8px 8px 16px;
+    }
+}
+
+.ArticleListItemTypeList {
+    padding: var(--p-24px);
+    margin-bottom: 1rem;
+
+    .articleTypeListImage {
+        width: 100%;
+        max-height: 26.25rem;
+        object-fit: contain;
+    }
+
+    .textBlock {
+        max-height: 4.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.mBottomSkeleton {
+    margin-bottom: 1rem;
+}

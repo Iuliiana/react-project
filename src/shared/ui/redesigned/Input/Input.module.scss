@@ -4,6 +4,7 @@
     border-radius: 48px;
     border: 2px solid var(--icon);
     width: 100%;
+    padding: 6px var(--p-16px);
 
     .addonLeft,
     .addonRight {
@@ -56,12 +57,9 @@
 
     &.withAddonLeft,
     &.withAddonRight {
+        padding-top: 0;
+        padding-bottom: 0;
         fill: var(--icon);
-    }
-
-    &:not(&.withAddonLeft),
-    &:not(&.withAddonRight) {
-        padding: 6px var(--p-16px);
     }
 }
 

@@ -28,11 +28,11 @@
 
 .size_l {
     .TextTitle {
-        font: var(--font-l-title);
+        font: var(--font-xl-title);
     }
 
     .TextParagraph {
-        font: var(--font-xl-title);
+        font: var(--font-l-title);
     }
 }
 
@@ -66,6 +66,13 @@
     }
 }
 
+.bold {
+    .TextTitle,
+    .TextParagraph {
+        font-weight: 700;
+    }
+}
+
 .center {
     text-align: center;
 }
@@ -76,4 +83,24 @@
 
 .left {
     text-align: left;
+}
+
+.margin_0 {
+    margin-bottom: 0;
+}
+
+.margin_8 {
+    margin-bottom: 8px;
+}
+
+.margin_16 {
+    margin-bottom: 16px;
+}
+
+.margin_24 {
+    margin-bottom: 24px;
+}
+
+.margin_32 {
+    margin-bottom: 32px;
 }

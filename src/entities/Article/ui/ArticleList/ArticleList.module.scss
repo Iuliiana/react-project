@@ -23,6 +23,18 @@
     height: 22rem;
 }
 
+.ArticleListRedesigned.grid:not(.ArticleListGrid) .ArticleListItem,
+.ArticleListRedesigned .ArticleListGridItem {
+    width: 236px;
+    max-height: 346px;
+    overflow: hidden;
+}
+
+.ArticleListRedesigned {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .ArticlesListFooter {
     padding-bottom: 2rem;
 }

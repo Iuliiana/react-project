@@ -1,7 +1,8 @@
 import React, { memo, useCallback } from 'react';
 import { ARTICLE_SCROLL_TO_INDEX_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
-import { ArticleListItemTypeGrid } from './ArticleListItemTypeGrid/ArticleListItemTypeGrid';
-import { ArticleListItemTypeList } from './ArticleListItemTypeList/ArticleListItemTypeList';
+import { ToggleFeatureFlag } from '@/shared/lib/features';
+import { ArticleListItemDeprecated } from './ArticleListItemDeprecated/ArticleListItemDeprecated';
+import { ArticleListItemRedesigned } from './ArticleListItemRedesigned/ArticleListItemRedesigned';
 import { ArticleView } from '../../model/consts/articleViewConst';
 import { Article } from '../../model/types/article';
 
@@ -14,8 +15,6 @@ export interface ArticleItemProps {
 }
 
 export const ArticleListItem = memo((props: ArticleItemProps) => {
-    const { view } = props;
-
     const onSaveIndex = useCallback(
         (index?: number) => () => {
             if (index) {
@@ -28,9 +27,21 @@ export const ArticleListItem = memo((props: ArticleItemProps) => {
         [],
     );
 
-    if (view === ArticleView.LIST) {
-        return <ArticleListItemTypeList {...props} onSaveIndex={onSaveIndex} />;
-    }
-
-    return <ArticleListItemTypeGrid {...props} onSaveIndex={onSaveIndex} />;
+    return (
+        <ToggleFeatureFlag
+            feature="isAppRedesigned"
+            on={
+                <ArticleListItemRedesigned
+                    {...props}
+                    onSaveIndex={onSaveIndex}
+                />
+            }
+            off={
+                <ArticleListItemDeprecated
+                    {...props}
+                    onSaveIndex={onSaveIndex}
+                />
+            }
+        />
+    );
 });

@@ -1,11 +1,23 @@
 .AppLink {
     text-decoration: none;
     cursor: pointer;
+    transition: 0.3s all;
 
     &.primary {
         color: var(--text-color);
 
         &:hover {
+            color: var(--accent);
+        }
+    }
+
+    &.outline {
+        border-radius: 16px;
+        padding: 8px 16px;
+        border: 1px solid var(--icon);
+
+        &:hover {
+            border: 1px solid var(--accent);
             color: var(--accent);
         }
     }

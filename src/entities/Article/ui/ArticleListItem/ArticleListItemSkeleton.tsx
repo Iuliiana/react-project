@@ -6,8 +6,7 @@ import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton'
 import { Card as CardRedesigned } from '@/shared/ui/redesigned/Card';
 import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton';
 import { HStack, VStack } from '@/shared/ui/Stack';
-import clsGrid from './ArticleListItemTypeGrid/ArticleListItemTypeGrid.module.scss';
-import clsList from './ArticleListItemTypeList/ArticleListItemTypeList.module.scss';
+import cls from './ArticleListItemDeprecated/ArticleListItemDeprecated.module.scss';
 import { ArticleView } from '../../model/consts/articleViewConst';
 
 interface ArticleListItemSkeletonProps {
@@ -34,15 +33,15 @@ export const ArticleListItemSkeleton = memo(
         if (view === ArticleView.LIST) {
             return (
                 <Card
-                    className={classNames(clsList.ArticleListItemTypeList, {}, [
+                    className={classNames(cls.ArticleListItemTypeList, {}, [
                         className,
                     ])}
                 >
-                    <div className={clsList.header}>
-                        <div className={clsList.headerInfo}>
-                            <div className={clsList.headerInfoUser}>
+                    <div className={cls.header}>
+                        <div className={cls.headerInfo}>
+                            <div className={cls.headerInfoUser}>
                                 <Skeleton
-                                    className={clsList.headerInfoUserAvatar}
+                                    className={cls.headerInfoUserAvatar}
                                     width={32}
                                     height={32}
                                     radius="50%"
@@ -54,33 +53,33 @@ export const ArticleListItemSkeleton = memo(
                         <Skeleton
                             width={300}
                             height={24}
-                            className={clsList.mBottomSkeleton}
+                            className={cls.mBottomSkeleton}
                         />
                         <Skeleton
                             width={100}
                             height={16}
-                            className={clsList.mBottomSkeleton}
+                            className={cls.mBottomSkeleton}
                         />
                     </div>
 
                     <Skeleton
                         width="100%"
                         height={200}
-                        className={clsList.mBottomSkeleton}
+                        className={cls.mBottomSkeleton}
                     />
 
                     <Skeleton
                         width="100%"
                         height={30}
-                        className={clsList.mBottomSkeleton}
+                        className={cls.mBottomSkeleton}
                     />
                     <Skeleton
                         width="100%"
                         height={50}
-                        className={clsList.mBottomSkeleton}
+                        className={cls.mBottomSkeleton}
                     />
 
-                    <div className={clsList.footer}>
+                    <div className={cls.footer}>
                         <Skeleton width={80} height={24} />
                         <Skeleton width={60} height={24} />
                     </div>
@@ -90,14 +89,12 @@ export const ArticleListItemSkeleton = memo(
 
         return (
             <Card
-                className={classNames(clsGrid.ArticleItemGridCard, {}, [
-                    className,
-                ])}
+                className={classNames(cls.ArticleItemGridCard, {}, [className])}
             >
                 <Skeleton
                     width="100%"
                     height={250}
-                    className={clsGrid.mBottomSkeleton}
+                    className={cls.mBottomSkeleton}
                 />
                 <VStack gap="16">
                     <HStack align="center" justify="between" max>

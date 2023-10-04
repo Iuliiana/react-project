@@ -87,9 +87,20 @@ export const ArticleList = memo((props: ArticleListProps) => {
         );
     };
 
+    const classNamePage = toggleFeatureFlag({
+        name: 'isAppRedesigned',
+        on: () =>
+            classNames(cls.ArticleList, {}, [
+                className,
+                cls.ArticleListRedesigned,
+                cls[view],
+            ]),
+        off: () => classNames(cls.ArticleList, {}, [className, cls[view]]),
+    });
+
     if (!isLoading && articles?.length === 0) {
         return (
-            <div className={classNames(cls.ArticleList, {}, [className])}>
+            <div className={classNamePage}>
                 <Text title={t('Статьи не найдены')} />
             </div>
         );
@@ -99,10 +110,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         if (isLoading && articles?.length === 0) {
             return (
                 <div
-                    className={classNames(cls.ArticleList, {}, [
-                        className,
-                        cls[view],
-                    ])}
+                    className={classNamePage}
                     data-testid="ArticleList.Virtuoso"
                 >
                     {getSkeletons(view, cls.ArticleListItem)}
@@ -110,13 +118,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
             );
         }
         return (
-            <div
-                className={classNames(cls.ArticleList, {}, [
-                    className,
-                    cls[view],
-                ])}
-                data-testid="ArticleList.Virtuoso"
-            >
+            <div className={classNamePage} data-testid="ArticleList.Virtuoso">
                 {view === ArticleView.LIST ? (
                     <Virtuoso
                         ref={virtuosoListRef}
@@ -168,10 +170,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         );
     }
     return (
-        <div
-            className={classNames(cls.ArticleList, {}, [className, cls[view]])}
-            data-testid="ArticleList.Normal"
-        >
+        <div className={classNamePage} data-testid="ArticleList.Normal">
             {Boolean(articles?.length) &&
                 articles.map((article) => renderArticles(article))}
             {isLoading && getSkeletons(view)}
