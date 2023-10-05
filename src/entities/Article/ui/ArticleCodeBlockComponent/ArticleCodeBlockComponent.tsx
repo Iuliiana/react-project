@@ -1,5 +1,6 @@
 import { memo } from 'react';
-import { Code } from '@/shared/ui/deprecated/Code';
+import { Code } from '@/shared/ui/Code';
+import { HStack } from '@/shared/ui/Stack';
 import { ArticleBlocksCode } from '../../model/types/article';
 
 interface ArticleCodeBlockComponentProps {
@@ -11,9 +12,9 @@ export const ArticleCodeBlockComponent = memo(
     (props: ArticleCodeBlockComponentProps) => {
         const { className, block } = props;
         return (
-            <div className={className}>
+            <HStack max className={className}>
                 <Code text={block.code} />
-            </div>
+            </HStack>
         );
     },
 );

@@ -6,15 +6,24 @@
     background: var(--code-bg-color);
     color: var(--primary-color);
     position: relative;
-}
 
-.icon {
-    stroke: var(--icon-color);
-    fill: transparent;
+    .icon {
+        stroke: var(--icon-color);
+        fill: transparent;
+    }
 }
 
 .btnCopy {
     position: absolute;
     right: 1rem;
     top: 1rem;
+}
+
+.CodeRedesigned {
+    width: 100%;
+    padding: 2rem;
+    border: 2px solid var(--icon);
+    overflow: auto;
+    background: var(--bg);
+    position: relative;
 }

@@ -64,7 +64,7 @@ export const ArticleListItemSkeleton = memo(
 
                     <Skeleton
                         width="100%"
-                        height={200}
+                        height="26.25rem"
                         className={cls.mBottomSkeleton}
                     />
 

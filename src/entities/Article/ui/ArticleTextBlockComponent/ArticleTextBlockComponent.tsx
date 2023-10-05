@@ -1,7 +1,7 @@
 import { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextSize } from '@/shared/ui/deprecated/Text';
-import cls from './ArticleTextBlockComponent.module.scss';
+import { ToggleFeatureFlag } from '@/shared/lib/features';
+import { Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { ArticleBlocksText } from '../../model/types/article';
 
 interface ArticleTextBlockComponentProps {
@@ -14,16 +14,34 @@ export const ArticleTextBlockComponent = memo(
         const { className, block } = props;
 
         return (
-            <div
-                className={classNames(cls.ArticleTextBlockComponent, {}, [
-                    className,
-                ])}
-            >
-                {block.title && <Text title={block.title} size={TextSize.M} />}
-                {block.paragraphs.map((paragraph) => (
-                    <Text text={paragraph} key={paragraph} size={TextSize.M} />
-                ))}
-            </div>
+            <ToggleFeatureFlag
+                feature="isAppRedesigned"
+                on={
+                    <div className={className}>
+                        {block.title && <Text title={block.title} />}
+                        {block.paragraphs.map((paragraph) => (
+                            <Text text={paragraph} key={paragraph} />
+                        ))}
+                    </div>
+                }
+                off={
+                    <div className={className}>
+                        {block.title && (
+                            <TextDeprecated
+                                title={block.title}
+                                size={TextSize.M}
+                            />
+                        )}
+                        {block.paragraphs.map((paragraph) => (
+                            <TextDeprecated
+                                text={paragraph}
+                                key={paragraph}
+                                size={TextSize.M}
+                            />
+                        ))}
+                    </div>
+                }
+            />
         );
     },
 );

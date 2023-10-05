@@ -86,12 +86,12 @@ export const ArticleListItemRedesigned = memo(
                             alt={article.title}
                             src={article.img}
                             isLoadingFallback={
-                                <Skeleton width="100%" height="12.5rem" />
+                                <Skeleton width="100%" height="26.25rem" />
                             }
                             errorFallback={
                                 <Skeleton
                                     width="100%"
-                                    height="12.5rem"
+                                    height="26.25rem"
                                     isAnimated={false}
                                 />
                             }
@@ -136,12 +136,12 @@ export const ArticleListItemRedesigned = memo(
                             alt={article.title}
                             src={article.img}
                             isLoadingFallback={
-                                <Skeleton width="100%" height="12.5rem" />
+                                <Skeleton width="100%" height="141px" />
                             }
                             errorFallback={
                                 <Skeleton
                                     width="100%"
-                                    height="12.5rem"
+                                    height="141px"
                                     isAnimated={false}
                                 />
                             }
