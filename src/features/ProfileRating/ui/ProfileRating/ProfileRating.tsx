@@ -4,7 +4,9 @@ import { useSelector } from 'react-redux';
 import { RatingCard } from '@/entities/Rating';
 import { getUserAuthData } from '@/entities/User';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { ToggleFeatureFlag } from '@/shared/lib/features';
+import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
+import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 import {
     getProfileRate,
     useSetProfileRateMutation,
@@ -56,13 +58,23 @@ const ProfileRating = memo((props: ProfileRatingProps) => {
         return null;
     }
 
-    const { data, isLoading } = getProfileRate({
+    const { data, isLoading, error } = getProfileRate({
         userId: user?.id || '',
         profileId,
     });
 
     if (isLoading) {
-        return <Skeleton width="100%" height={170} />;
+        return (
+            <ToggleFeatureFlag
+                feature="isAppRedesigned"
+                on={<Skeleton width="100%" height={150} />}
+                off={<SkeletonDeprecated width="100%" height={170} />}
+            />
+        );
+    }
+
+    if (!data || error) {
+        return null;
     }
 
     const rateProfile = data?.[0];

@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { CountrySelect } from '@/entities/Country';
 import { CurrencySelect } from '@/entities/Currency';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Avatar } from '@/shared/ui/redesigned/Avatar';
 import { Card } from '@/shared/ui/redesigned/Card';
 import { Input } from '@/shared/ui/redesigned/Input';
 import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
@@ -13,7 +12,7 @@ import cls from './ProfileCardRedesigned.module.scss';
 import { ProfileCardProps } from '../ProfileCard/ProfileCard';
 
 export const ProfileCardRedesignedLoading = memo(() => (
-    <Card max className={cls.ProfileCardRedesigned}>
+    <VStack max align="center">
         <HStack justify="center" className={cls.ProfileCardAvatar}>
             <Skeleton radius="50%" height={128} width={128} />
         </HStack>
@@ -36,7 +35,7 @@ export const ProfileCardRedesignedLoading = memo(() => (
                 <Skeleton radius="48px" height={38} width="100%" />
             </VStack>
         </HStack>
-    </Card>
+    </VStack>
 ));
 
 export const ProfileCardRedesignedError = memo(() => {
@@ -78,15 +77,11 @@ export const ProfileCardRedesigned = memo((props: ProfileCardProps) => {
     return (
         <Card
             max
+            variant="clear"
             className={classNames(cls.ProfileCardRedesigned, {}, [className])}
             data-testid={dataTestId}
         >
             <VStack gap="16">
-                <HStack justify="center" className={cls.ProfileCardAvatar}>
-                    {data?.avatar && (
-                        <Avatar alt={t('Фото')} src={data?.avatar} size={128} />
-                    )}
-                </HStack>
                 <HStack gap="24" align="start" max>
                     <VStack gap="16" align="start" max>
                         <Input

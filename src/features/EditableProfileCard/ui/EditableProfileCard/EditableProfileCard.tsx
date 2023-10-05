@@ -10,8 +10,10 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { ToggleFeatureFlag } from '@/shared/lib/features';
 import { TestsProps } from '@/shared/lib/types/tests';
-import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Text as TextDeprecated, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { useProfileCardError } from '../../model/lib/hooks/useProfileCardError';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
@@ -41,6 +43,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     const isLoading = useSelector(getProfileIsLoading);
     const readonly = useSelector(getProfileReadonly);
     const { validateErrors, errorsMap } = useProfileCardError();
+    // const { t } = useTranslation('profile');
 
     useInitialEffect(() => {
         if (id) {
@@ -125,16 +128,36 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
         [dispatch],
     );
 
+    // if (!data && !isLoading) {
+    //     return <Text align="center" title={t('Профиль не найден')} />;
+    // }
+
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount>
-            <EditableProfileCardHeader isLoading={isLoading} />
+            <EditableProfileCardHeader
+                isLoading={isLoading}
+                avatar={data?.avatar}
+            />
             {validateErrors &&
                 validateErrors.map((error) => (
-                    <Text
-                        textTheme={TextTheme.ERROR}
-                        text={errorsMap[error]}
-                        key={errorsMap[error]}
-                        data-testid="EditableProfileCard.Error"
+                    <ToggleFeatureFlag
+                        feature="isAppRedesigned"
+                        on={
+                            <Text
+                                variant="error"
+                                text={errorsMap[error]}
+                                key={errorsMap[error]}
+                                data-testid="EditableProfileCard.Error"
+                            />
+                        }
+                        off={
+                            <TextDeprecated
+                                textTheme={TextTheme.ERROR}
+                                text={errorsMap[error]}
+                                key={errorsMap[error]}
+                                data-testid="EditableProfileCard.Error"
+                            />
+                        }
                     />
                 ))}
             <ProfileCard

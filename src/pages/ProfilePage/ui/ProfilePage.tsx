@@ -5,6 +5,7 @@ import { EditableProfileCard } from '@/features/EditableProfileCard';
 import { ProfileRating } from '@/features/ProfileRating';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text } from '@/shared/ui/deprecated/Text';
+import { Card } from '@/shared/ui/redesigned/Card';
 import { Page } from '@/widgets/Page';
 
 interface ProfilePageProps {
@@ -25,8 +26,10 @@ const ProfilePage = memo((props: ProfilePageProps) => {
             className={classNames('', {}, [className])}
             data-testid="ProfilePage"
         >
-            <EditableProfileCard id={id} />
-            <ProfileRating profileId={id} />
+            <Card max variant="dark" padding="24">
+                <EditableProfileCard id={id} />
+                <ProfileRating profileId={id} />
+            </Card>
         </Page>
     );
 });

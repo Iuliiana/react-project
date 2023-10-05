@@ -115,7 +115,10 @@ export const RatingCard = memo((props: RatingCardProps) => {
             <ToggleFeatureFlag
                 feature="isAppRedesigned"
                 on={
-                    <Text title={starsCount ? t('Спасибо за оценку') : title} />
+                    <Text
+                        title={starsCount ? t('Спасибо за оценку') : title}
+                        marginBottom="0"
+                    />
                 }
                 off={
                     <TextDeprecated
