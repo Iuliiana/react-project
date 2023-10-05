@@ -7,10 +7,14 @@ import { AvatarDropdown } from '@/features/AvatarDropdown';
 import { NotificationButton } from '@/features/NotificationButton';
 import { getRouteArticlesCreate } from '@/shared/const/route';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { ToggleFeatureFlag } from '@/shared/lib/features';
+import { toggleFeatureFlag, ToggleFeatureFlag } from '@/shared/lib/features';
 import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import {
+    Button as ButtonDeprecated,
+    ButtonTheme,
+} from '@/shared/ui/deprecated/Button';
 import { Text } from '@/shared/ui/deprecated/Text';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { HStack } from '@/shared/ui/Stack';
 import cls from './NavBar.module.scss';
 
@@ -70,19 +74,39 @@ export const NavBar = memo(({ className }: NavBarProps) => {
         );
     }
 
+    const navbarClass = toggleFeatureFlag({
+        name: 'isAppRedesigned',
+        on: () => cls.NavbarRedesigned,
+        off: () => cls.Navbar,
+    });
+
     return (
-        <header className={classNames(cls.Navbar, {}, [className])}>
+        <header className={classNames(navbarClass, {}, [className])}>
             <div className={cls.navLinks}>
                 {isAuthModal && (
                     <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
                 )}
-                <Button
-                    onClick={onShowModal}
-                    type="button"
-                    themeButton={ButtonTheme.HIGHLIGHT}
-                >
-                    {t('Войти')}
-                </Button>
+                <ToggleFeatureFlag
+                    feature="isAppRedesigned"
+                    off={
+                        <ButtonDeprecated
+                            onClick={onShowModal}
+                            type="button"
+                            themeButton={ButtonTheme.HIGHLIGHT}
+                        >
+                            {t('Войти')}
+                        </ButtonDeprecated>
+                    }
+                    on={
+                        <Button
+                            onClick={onShowModal}
+                            type="button"
+                            variant="clear"
+                        >
+                            {t('Войти')}
+                        </Button>
+                    }
+                />
             </div>
         </header>
     );

@@ -3,7 +3,7 @@
     margin: 0;
     cursor: pointer;
     color: var(--text-color);
-    transition: 0.3s all;
+    transition: 0.2s all;
 
     svg {
         fill: var(--icon);
@@ -11,6 +11,7 @@
 
     &:hover {
         opacity: 0.8;
+        color: var(--accent);
 
         .addonLeft svg,
         .addonRight svg {

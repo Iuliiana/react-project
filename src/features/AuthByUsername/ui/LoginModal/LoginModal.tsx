@@ -1,5 +1,6 @@
 import { FC, Suspense } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { ToggleFeatureFlag } from '@/shared/lib/features';
 import { Loader } from '@/shared/ui/deprecated/Loader';
 import { Modal, ModalTheme } from '@/shared/ui/Modals';
 import { LoginFormAsync } from '../LoginForm/LoginForm.async';
@@ -12,6 +13,12 @@ interface LoginModalProps {
 
 export const LoginModal: FC<LoginModalProps> = (props) => {
     const { isOpen, onClose, className } = props;
+
+    // fixme
+    const loader = (
+        // @ts-ignore
+        <ToggleFeatureFlag feature="isAppRedesigned" on="" off={<Loader />} />
+    );
     return (
         <Modal
             isOpen={isOpen}
@@ -20,7 +27,7 @@ export const LoginModal: FC<LoginModalProps> = (props) => {
             lazy
             modalTheme={ModalTheme.CLEAR}
         >
-            <Suspense fallback={<Loader />}>
+            <Suspense fallback={loader}>
                 <LoginFormAsync onSuccess={onClose} />
             </Suspense>
         </Modal>
