@@ -1,6 +1,7 @@
 import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
+import { useForceUpdate } from '@/shared/lib/render/forceUpdate';
 import { getLoginError } from '../../selectors/getLoginError/getLoginError';
 import { getLoginIsLoading } from '../../selectors/getLoginIsLoading/getLoginIsLoading';
 import { getLoginPassword } from '../../selectors/getLoginPassword/getLoginPassword';
@@ -14,6 +15,7 @@ export const useAuthByUsername = (onSuccess?: () => void) => {
     const isLoading = useSelector(getLoginIsLoading);
     const error = useSelector(getLoginError);
     const dispatch = useAppDispatch();
+    const forceUpdate = useForceUpdate();
 
     const setUsernameValue = useCallback(
         (value: string) => {
@@ -34,9 +36,10 @@ export const useAuthByUsername = (onSuccess?: () => void) => {
         if (result.meta.requestStatus === 'fulfilled') {
             if (onSuccess) {
                 onSuccess();
+                forceUpdate();
             }
         }
-    }, [dispatch, onSuccess, password, username]);
+    }, [dispatch, forceUpdate, onSuccess, password, username]);
 
     return {
         username,
