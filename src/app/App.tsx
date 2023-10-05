@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { getUserIsInitAuth, initAuthData } from '@/entities/User';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useTheme } from '@/shared/hooks/useTheme/useTheme';
-import { MainLayout } from '@/shared/layouts';
+import { AppLoaderLayout, MainLayout } from '@/shared/layouts';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ToggleFeatureFlag } from '@/shared/lib/features';
 import { NavBar } from '@/widgets/NavBar';
@@ -21,7 +21,17 @@ const App = () => {
     }, [dispatch]);
 
     if (!isAuthUser) {
-        return <PageLoader />;
+        return (
+            <ToggleFeatureFlag
+                feature="isAppRedesigned"
+                on={
+                    <div id="app" className={classNames('app-redesigned')}>
+                        <AppLoaderLayout />
+                    </div>
+                }
+                off={<PageLoader />}
+            />
+        );
     }
 
     document.body.className = theme;

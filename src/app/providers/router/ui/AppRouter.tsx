@@ -1,5 +1,7 @@
 import React, { memo, Suspense, useCallback } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { PageLoaderLayout } from '@/shared/layouts/PageLoaderLayout/PageLoaderLayout';
+import { ToggleFeatureFlag } from '@/shared/lib/features';
 import { PageLoader } from '@/widgets/PageLoader';
 import { RequireAuth } from './RequireAuth';
 import { AppRouteProps } from '../../../types/route';
@@ -7,8 +9,16 @@ import { routeConfig } from '../config/routerConfig';
 
 const AppRouter = () => {
     const renderWidthRequireAuth = useCallback((route: AppRouteProps) => {
+        const fallback = (
+            <ToggleFeatureFlag
+                feature="isAppRedesigned"
+                off={<PageLoader />}
+                on={<PageLoaderLayout />}
+            />
+        );
+
         const element = (
-            <Suspense fallback={<PageLoader />}>{route.element}</Suspense>
+            <Suspense fallback={fallback}>{route.element}</Suspense>
         );
 
         return (
