@@ -46,6 +46,7 @@ export const ArticleRecommendationsList = memo(
                     className={classNames(cls.ArticleRecommendationsList, {}, [
                         className,
                     ])}
+                    max
                 >
                     <Text
                         title={t(
@@ -65,6 +66,7 @@ export const ArticleRecommendationsList = memo(
                     className,
                 ])}
                 data-testid="ArticleRecommendationsList"
+                max
             >
                 <Text
                     title={t('Читайте также')}

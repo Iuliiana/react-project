@@ -41,5 +41,8 @@
     "Настройки пользователя": "User Settings",
     "Новый дизайн": "New design",
     "Старый дизайн":"Old design",
-    "Изменить дизайн": "Change design"
+    "Изменить дизайн": "Change design",
+    "{{count}} просмотров_zero": "{{count}} views",
+    "{{count}} просмотров_one": "{{count}} view",
+    "{{count}} просмотров_other": "{{count}} views"
 }

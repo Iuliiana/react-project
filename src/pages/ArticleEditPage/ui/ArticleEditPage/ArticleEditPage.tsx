@@ -19,7 +19,7 @@ const ArticleEditPage = memo((props: ArticleEditPageProps) => {
     return (
         <Page className={classNames(cls.ArticleEditPage, {}, [className])}>
             {isEdit ? (
-                <Text title={t('Редактирование статьи')} />
+                <Text title={`${t('Редактирование статьи')} ${id}`} />
             ) : (
                 <Text title={t('Создание статьи')} />
             )}

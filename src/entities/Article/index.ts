@@ -5,6 +5,7 @@ export { ArticleType } from './model/consts/articleTypeConst';
 export { ArticleList } from './ui/ArticleList/ArticleList';
 
 export { getArticleDetailsData } from './model/selectors/getArticlesDetailsData';
+export { getArticleDetailsIsLoading } from './model/selectors/getArticlesDetailsData';
 
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
 
