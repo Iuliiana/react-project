@@ -7865,7 +7865,7 @@
         "USER"
       ],
       "features": {
-        "isArticleRatingEnabled": false,
+        "isArticleRatingEnabled": true,
         "isCounterEnabled": true
       },
       "jsonSettings": {
