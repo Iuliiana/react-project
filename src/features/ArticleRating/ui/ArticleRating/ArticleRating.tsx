@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { RatingCard } from '@/entities/Rating';
 import { getUserAuthData } from '@/entities/User';
-import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { ToggleFeatureFlag } from '@/shared/lib/features';
+import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
+import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 import {
     getArticleRateByUser,
     useSetArticleRateMutation,
@@ -56,7 +58,13 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
     );
 
     if (isLoading) {
-        return <Skeleton height={170} width="100%" />;
+        return (
+            <ToggleFeatureFlag
+                feature="isAppRedesigned"
+                on={<Skeleton height={170} width="100%" />}
+                off={<SkeletonDeprecated height={170} width="100%" />}
+            />
+        );
     }
 
     return (

@@ -22,10 +22,10 @@ export const ArticleDetailsCardContainer = memo(
 
         return (
             <Card
-                variant="dark"
-                padding="24"
+                padding="0"
                 className={classNames('', {}, [className])}
                 max
+                variant="dark"
             >
                 <ArticleDetails id={id} />
             </Card>

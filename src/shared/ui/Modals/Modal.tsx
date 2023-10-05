@@ -8,6 +8,7 @@ import { Portal } from '../Portal/Portal';
 
 export const ModalTheme = {
     CLEAR: 'clear',
+    STANDARD: 'standard',
 } as const;
 
 type ValueOf<T> = T[keyof T];
@@ -29,7 +30,7 @@ export const Modal: FC<ModalsProps> = (props) => {
         onClose,
         isOpen,
         lazy,
-        modalTheme = ModalTheme.CLEAR,
+        modalTheme = 'standard',
     } = props;
 
     const { isClosing, closeHandler, isMounted } = useModal({

@@ -14,20 +14,12 @@
 
 .content {
     width: 60%;
-    padding: 1rem;
+    padding: 2rem;
     transform: scale(0.5);
     transition: 0.3s transform;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.modalRedesigned {
-    color: var(--text-color);
-
-    .content {
-        background: var(--bg);
-    }
 }
 
 .modalOld {
@@ -61,5 +53,20 @@
 .clear {
     .content {
         background: transparent;
+    }
+}
+
+.standard {
+    .content {
+        background: var(--bg);
+    }
+}
+
+.modalRedesigned {
+    color: var(--text-color);
+
+    .content {
+        background: var(--bg);
+        border-radius: var(--b-radius-mid);
     }
 }

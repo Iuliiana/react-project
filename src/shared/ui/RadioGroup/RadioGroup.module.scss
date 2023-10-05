@@ -17,7 +17,7 @@
     list-style: none;
     cursor: pointer;
     border: 1px solid var(--hint);
-    border-radius: 32px;
+    border-radius: var(--b-radius-mid);
     padding: 8px 16px;
 }
 

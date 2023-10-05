@@ -3,6 +3,7 @@
     margin: 0;
     cursor: pointer;
     color: var(--text-color);
+    transition: 0.3s all;
 
     svg {
         fill: var(--icon);
@@ -31,18 +32,31 @@
 }
 
 .cancel {
-    color: var(--cancel);
+    background: none;
+    border-radius: var(--b-radius-min);
+    border: 1px solid var(--cancel);
+
+    &:hover {
+        background: var(--dark-bg);
+        color: var(--cancel);
+    }
 }
 
 .save {
-    color: var(--save);
+    background: none;
+    border-radius: var(--b-radius-min);
+    border: 1px solid var(--save);
+
+    &:hover {
+        background: var(--dark-bg);
+        color: var(--save);
+    }
 }
 
 .outline {
-    border-radius: 16px;
+    border-radius: var(--b-radius-min);
     border: 2px solid var(--icon);
     padding: 8px 16px;
-    transition: 0.3s all;
     background: none;
     box-shadow: 0 0 3px var(--shadow-icon-theme);
 

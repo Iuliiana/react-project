@@ -10,6 +10,7 @@ import { Article } from '../../..';
 import { renderArticlesBlocks } from '../renderArticlesBlocks';
 
 interface ArticleDetailsContentRedesignProps {
+    className?: string;
     isLoading?: boolean;
     error?: string;
     data?: Article;
@@ -17,7 +18,7 @@ interface ArticleDetailsContentRedesignProps {
 
 export const ArticleDetailsContentRedesign = memo(
     (props: ArticleDetailsContentRedesignProps) => {
-        const { error, data, isLoading } = props;
+        const { error, data, isLoading, className } = props;
         const { t } = useTranslation('article-details');
 
         if (isLoading) {
@@ -45,7 +46,7 @@ export const ArticleDetailsContentRedesign = memo(
         }
 
         return (
-            <VStack gap="16" max align="start">
+            <VStack gap="16" max align="start" className={className}>
                 <HStack gap="8" align="center" justify="start">
                     <Avatar
                         src={data?.user?.avatar}

@@ -1,6 +1,7 @@
 .Icon {
-    fill: var(--icon-color);
+    fill: var(--icon);
     transition: 0.3s all;
+    color: var(--icon);
 }
 
 .button {
@@ -14,5 +15,5 @@
 
 .button:hover .Icon {
     color: var(--accent);
-    fill: var(--icon-color);
+    fill: var(--icon);
 }

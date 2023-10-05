@@ -1,9 +1,10 @@
-import { memo, useState } from 'react';
+import React, { memo, useState } from 'react';
 import Star from '@/shared/assets/icons/star.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { toggleFeatureFlag } from '@/shared/lib/features';
 import { TestsProps } from '@/shared/lib/types/tests';
 import cls from './StarRating.module.scss';
-import { Icon } from '../Icon/Icon';
+import { Icon } from '../redesigned/Icon/Icon';
 
 interface StarRatingProps extends TestsProps {
     className?: string;
@@ -14,10 +15,6 @@ interface StarRatingProps extends TestsProps {
 
 const stars: number[] = [1, 2, 3, 4, 5];
 
-/**
- * @deprecated
- * Этот компонент устарел и больше не поддерживается
- */
 export const StarRating = memo((props: StarRatingProps) => {
     const {
         className,
@@ -26,6 +23,7 @@ export const StarRating = memo((props: StarRatingProps) => {
         selectesStars = 0,
         'data-testid': dataTestId = 'StarRating',
     } = props;
+
     const [isSelected, setIsSelected] = useState(Boolean(selectesStars));
     const [currentStar, setCurrentStar] = useState(selectesStars);
     const onHover = (star: number) => () => {
@@ -49,26 +47,35 @@ export const StarRating = memo((props: StarRatingProps) => {
 
     return (
         <div
-            className={classNames(cls.StarRating, {}, [className])}
+            className={classNames(
+                toggleFeatureFlag({
+                    name: 'isAppRedesigned',
+                    on: () => cls.StarRatingRedesigned,
+                    off: () => cls.StarRating,
+                }),
+                {},
+                [className],
+            )}
             data-testid={dataTestId}
         >
-            {stars.map((starNumber) => (
-                <Icon
-                    Svg={Star}
-                    width={size}
-                    height={size}
-                    key={starNumber}
-                    className={classNames(cls.StarRatingItem, {
+            {stars.map((starNumber) => {
+                const commonProps = {
+                    className: classNames(cls.StarRatingItem, {
                         [cls.hovered]: starNumber <= currentStar,
                         [cls.selected]: isSelected,
-                    })}
-                    onClick={onClickHandler(starNumber)}
-                    onMouseEnter={onHover(starNumber)}
-                    onMouseLeave={onLeave}
-                    data-testid={`${dataTestId}.${starNumber}`}
-                    data-selected={starNumber <= currentStar}
-                />
-            ))}
+                    }),
+                    Svg: Star,
+                    key: starNumber,
+                    width: size,
+                    height: size,
+                    onMouseLeave: onLeave,
+                    onMouseEnter: onHover(starNumber),
+                    onClick: onClickHandler(starNumber),
+                    'data-testid': `StarRating.${starNumber}`,
+                    'data-selected': currentStar >= starNumber,
+                };
+                return <Icon isClickable={!isSelected} {...commonProps} />;
+            })}
         </div>
     );
 });

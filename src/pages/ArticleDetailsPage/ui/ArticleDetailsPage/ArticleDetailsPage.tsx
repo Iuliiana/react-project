@@ -12,6 +12,7 @@ import {
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { ToggleFeatureFlag } from '@/shared/lib/features';
 import { Text } from '@/shared/ui/deprecated/Text';
+import { Card } from '@/shared/ui/redesigned/Card';
 import { VStack } from '@/shared/ui/Stack';
 import { Page } from '@/widgets/Page';
 import { articleDetailsPageReducer } from '../../model/slice';
@@ -52,12 +53,14 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                                 className={classNames('', {}, [className])}
                                 data-testid="ArticleDetailsPage"
                             >
-                                <VStack gap="16" max align="start">
-                                    <ArticleDetailsCardContainer />
-                                    <ArticleRating articleId={id} />
-                                    <ArticleRecommendationsList />
-                                    <ArticleDetailsComments id={id} />
-                                </VStack>
+                                <Card variant="dark" padding="24" max>
+                                    <VStack gap="16" max align="center">
+                                        <ArticleDetailsCardContainer />
+                                        <ArticleRating articleId={id} />
+                                        <ArticleRecommendationsList />
+                                        <ArticleDetailsComments id={id} />
+                                    </VStack>
+                                </Card>
                             </Page>
                         }
                         right={<ArticlesDetailsNavigationContainer />}

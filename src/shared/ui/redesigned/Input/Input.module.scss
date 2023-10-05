@@ -1,7 +1,7 @@
 .InputWrapper {
     display: flex;
     align-items: center;
-    border-radius: 48px;
+    border-radius: var(--b-radius-max);
     border: 2px solid var(--icon);
     width: 100%;
     padding: 6px var(--p-16px);

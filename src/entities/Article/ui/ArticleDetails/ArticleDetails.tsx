@@ -1,7 +1,6 @@
 import React, { memo, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader,
     ReducersList,
@@ -42,25 +41,25 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount>
-            <div className={classNames('', {}, [className])}>
-                <ToggleFeatureFlag
-                    feature="isAppRedesigned"
-                    on={
-                        <ArticleDetailsContentRedesign
-                            isLoading={isLoading}
-                            error={error}
-                            data={data}
-                        />
-                    }
-                    off={
-                        <ArticleDetailsContentDeprecated
-                            isLoading={isLoading}
-                            error={error}
-                            data={data}
-                        />
-                    }
-                />
-            </div>
+            <ToggleFeatureFlag
+                feature="isAppRedesigned"
+                on={
+                    <ArticleDetailsContentRedesign
+                        isLoading={isLoading}
+                        error={error}
+                        data={data}
+                        className={className}
+                    />
+                }
+                off={
+                    <ArticleDetailsContentDeprecated
+                        isLoading={isLoading}
+                        error={error}
+                        data={data}
+                        className={className}
+                    />
+                }
+            />
         </DynamicModuleLoader>
     );
 });

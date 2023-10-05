@@ -11,6 +11,7 @@ import { Article } from '../../..';
 import { renderArticlesBlocks } from '../renderArticlesBlocks';
 
 interface ArticleDetailsContentDeprecatedProps {
+    className?: string;
     isLoading?: boolean;
     error?: string;
     data?: Article;
@@ -18,7 +19,7 @@ interface ArticleDetailsContentDeprecatedProps {
 
 export const ArticleDetailsContentDeprecated = memo(
     (props: ArticleDetailsContentDeprecatedProps) => {
-        const { error, data, isLoading } = props;
+        const { error, data, isLoading, className } = props;
         const { t } = useTranslation('article-details');
 
         if (isLoading) {
@@ -69,6 +70,7 @@ export const ArticleDetailsContentDeprecated = memo(
                 <Text
                     title={t('Произошла ошибка при загрузке статьи')}
                     align={TextAlign.CENTER}
+                    className={className}
                 />
             );
         }

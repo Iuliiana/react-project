@@ -11,7 +11,7 @@
 .ArticleViewSelectorRedesigned {
     display: flex;
     justify-content: center;
-    border-radius: 32px;
+    border-radius: var(--b-radius-mid);
     overflow: hidden;
 
     .Icon {

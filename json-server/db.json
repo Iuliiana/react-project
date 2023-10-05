@@ -8022,6 +8022,25 @@
       "rate": 1,
       "feedback": "uu",
       "id": "u4OVz3h"
+    },
+    {
+      "articleId": "43",
+      "userId": "1",
+      "rate": 3,
+      "feedback": "",
+      "id": "15EKXKW"
+    },
+    {
+      "articleId": "71",
+      "userId": "1",
+      "rate": 3,
+      "id": "WVQfvPs"
+    },
+    {
+      "articleId": "76",
+      "userId": "1",
+      "rate": 3,
+      "id": "sRpbolt"
     }
   ],
   "profile-ratings": [

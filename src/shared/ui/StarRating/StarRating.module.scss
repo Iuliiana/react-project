@@ -1,0 +1,32 @@
+.StarRating {
+    .StarRatingItem {
+        fill: none;
+        cursor: pointer;
+        color: var(--dark-bg);
+
+        &.hovered {
+            fill: var(--icon-color);
+        }
+
+        &.selected {
+            cursor: auto;
+        }
+    }
+}
+
+.StarRatingRedesigned {
+    .StarRatingItem {
+        cursor: pointer;
+        fill: none;
+        color: var(--icon);
+
+        &.hovered {
+            fill: var(--icon);
+        }
+
+        &.selected {
+            cursor: auto;
+            fill: var(--icon);
+        }
+    }
+}
