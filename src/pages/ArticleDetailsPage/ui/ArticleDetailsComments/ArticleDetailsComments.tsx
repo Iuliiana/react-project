@@ -6,7 +6,9 @@ import { AddCommentForm } from '@/features/AddCommentForm';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/hooks/useInitialEffect/useInitialEffect';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/deprecated/Text';
+import { ToggleFeatureFlag } from '@/shared/lib/features';
+import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { VStack } from '@/shared/ui/Stack';
 import { getArticleDetailsCommentsIsLoading } from '../../model/selectors/comments/comments';
 import { addArticleDetailsComment } from '../../model/services/addArticleDetailsComment/addArticleDetailsComment';
@@ -41,12 +43,18 @@ export const ArticleDetailsComments = memo(
 
         return (
             <VStack
-                gap="8"
+                gap="16"
+                max
                 align="stretch"
                 className={classNames('', {}, [className])}
                 data-testid="ArticleDetailsComments"
             >
-                <Text title={t('Комментарии')} />
+                <ToggleFeatureFlag
+                    feature="isAppRedesigned"
+                    on={<Text title={t('Комментарии')} />}
+                    off={<TextDeprecated title={t('Комментарии')} />}
+                />
+
                 <AddCommentForm onSendComment={onSendComment} />
                 <CommentList
                     comments={commentsList}
