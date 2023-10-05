@@ -131,7 +131,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     // if (!data && !isLoading) {
     //     return <Text align="center" title={t('Профиль не найден')} />;
     // }
-
+    // fixme обработать ошибку когда профиль не найден
     return (
         <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount>
             <EditableProfileCardHeader
