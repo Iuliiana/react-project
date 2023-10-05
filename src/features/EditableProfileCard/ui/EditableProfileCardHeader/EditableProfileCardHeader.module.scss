@@ -2,6 +2,7 @@
     display: grid;
     grid-template-areas: "left avatar righ";
     grid-template-columns: 200px 1fr 200px;
+    padding: var(--p-24px);
 }
 
 .left {
@@ -14,4 +15,5 @@
 
 .righ {
     grid-area: righ;
+    justify-self: end;
 }
