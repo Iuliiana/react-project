@@ -9,12 +9,14 @@ import { ToggleFeatureFlag } from '@/shared/lib/features';
 import { NavBar } from '@/widgets/NavBar';
 import { PageLoader } from '@/widgets/PageLoader';
 import { Sidebar } from '@/widgets/Sidebar';
+import { useToolbarByUrl } from './lib/useToolbarByUrl';
 import { AppRouter } from './providers/router';
 
 const App = () => {
     const dispatch = useAppDispatch();
     const isAuthUser = useSelector(getUserIsInitAuth);
     const { theme } = useTheme();
+    const toolbar = useToolbarByUrl();
 
     useEffect(() => {
         dispatch(initAuthData());
@@ -45,7 +47,7 @@ const App = () => {
                             header={<NavBar />}
                             sidebar={<Sidebar />}
                             content={<AppRouter />}
-                            toolbar={<div>123665</div>}
+                            toolbar={toolbar}
                         />
                     </Suspense>
                 </div>

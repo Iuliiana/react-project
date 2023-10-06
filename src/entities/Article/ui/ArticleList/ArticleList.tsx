@@ -42,6 +42,8 @@ export const ArticleList = memo((props: ArticleListProps) => {
     const virtuosoListRef = useRef<VirtuosoHandle>(null);
     const virtuosoGridRef = useRef<VirtuosoGridHandle>(null);
     const { t } = useTranslation('articles');
+    const currentVirtuosoRef =
+        view === ArticleView.GRID ? virtuosoGridRef : virtuosoListRef;
 
     useEffect(() => {
         const index = localStorage.getItem(
@@ -54,18 +56,18 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
     useEffect(() => {
         let timer: ReturnType<typeof setTimeout>;
-        const currentRef =
-            view === ArticleView.GRID ? virtuosoGridRef : virtuosoListRef;
+        // const currentRef =
+        //     view === ArticleView.GRID ? virtuosoGridRef : virtuosoListRef;
         if (articleIndex !== 0) {
             timer = setTimeout(() => {
-                if (currentRef.current) {
-                    currentRef.current.scrollToIndex(articleIndex);
+                if (currentVirtuosoRef.current) {
+                    currentVirtuosoRef.current.scrollToIndex(articleIndex);
                 }
             }, 100);
         }
 
         return () => clearTimeout(timer);
-    }, [articleIndex, view]);
+    }, [articleIndex, currentVirtuosoRef, view]);
 
     const renderArticles = (
         article: Article,
@@ -125,8 +127,13 @@ export const ArticleList = memo((props: ArticleListProps) => {
                         context={{ isLoading }}
                         style={{
                             height: 'calc(100vh - var(--head-articles-height))',
+                            width: '100%',
                         }}
+                        totalCount={articles?.length}
                         data={articles}
+                        itemContent={(index, article, { isLoading }) =>
+                            renderArticles(article, isLoading, index)
+                        }
                         endReached={onScrollEnd}
                         components={{
                             Footer: ArticlesListFooter,
@@ -136,9 +143,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
                             on: () => true,
                             off: () => false,
                         })}
-                        itemContent={(index, article, { isLoading }) =>
-                            renderArticles(article, isLoading, index)
-                        }
                     />
                 ) : (
                     <VirtuosoGrid
