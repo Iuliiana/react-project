@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom';
 import { EditableProfileCard } from '@/features/EditableProfileCard';
 import { ProfileRating } from '@/features/ProfileRating';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/deprecated/Text';
 import { Card } from '@/shared/ui/redesigned/Card';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { Page } from '@/widgets/Page';
 
 interface ProfilePageProps {

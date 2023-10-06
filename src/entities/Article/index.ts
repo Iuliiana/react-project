@@ -6,6 +6,7 @@ export { ArticleList } from './ui/ArticleList/ArticleList';
 
 export { getArticleDetailsData } from './model/selectors/getArticlesDetailsData';
 export { getArticleDetailsIsLoading } from './model/selectors/getArticlesDetailsData';
+export { getArticleDetailsError } from './model/selectors/getArticlesDetailsData';
 
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
 

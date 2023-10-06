@@ -1,3 +1,5 @@
+export { getProfileError } from './model/selectors/getProfileError/getProfileError';
+
 export { ProfileErrorsCode } from './model/consts/profileErrorsCodeConsts';
 export { EditableProfileCard } from './ui/EditableProfileCard/EditableProfileCard';
 export { editableProfileCardActions } from './model/slices/editableProfileCardSlice';

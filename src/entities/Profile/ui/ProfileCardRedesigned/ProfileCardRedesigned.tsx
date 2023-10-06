@@ -12,7 +12,7 @@ import cls from './ProfileCardRedesigned.module.scss';
 import { ProfileCardProps } from '../ProfileCard/ProfileCard';
 
 export const ProfileCardRedesignedLoading = memo(() => (
-    <VStack max align="center">
+    <VStack max align="center" className={cls.ProfileCardRedesignedSkeleton}>
         <HStack justify="center" className={cls.ProfileCardAvatar}>
             <Skeleton radius="50%" height={128} width={128} />
         </HStack>

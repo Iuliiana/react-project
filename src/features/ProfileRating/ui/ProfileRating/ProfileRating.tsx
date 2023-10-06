@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { RatingCard } from '@/entities/Rating';
 import { getUserAuthData } from '@/entities/User';
+// eslint-disable-next-line itretiakova-plugin/layer-imports
+import { getProfileError } from '@/features/EditableProfileCard';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ToggleFeatureFlag } from '@/shared/lib/features';
 import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
@@ -23,6 +25,7 @@ const ProfileRating = memo((props: ProfileRatingProps) => {
     const user = useSelector(getUserAuthData);
     const isCurrentUserProfile = user?.id === profileId;
     const [setProfileRate] = useSetProfileRateMutation();
+    const errorProfile = useSelector(getProfileError);
 
     const handleSendData = useCallback(
         (stars: number, text?: string) => {
@@ -58,12 +61,16 @@ const ProfileRating = memo((props: ProfileRatingProps) => {
         return null;
     }
 
-    const { data, isLoading, error } = getProfileRate({
+    const {
+        data,
+        isLoading: isLoadingProfileRate,
+        error: errorProfileRate,
+    } = getProfileRate({
         userId: user?.id || '',
         profileId,
     });
 
-    if (isLoading) {
+    if (isLoadingProfileRate) {
         return (
             <ToggleFeatureFlag
                 feature="isAppRedesigned"
@@ -73,7 +80,7 @@ const ProfileRating = memo((props: ProfileRatingProps) => {
         );
     }
 
-    if (!data || error) {
+    if (!data || errorProfileRate || errorProfile) {
         return null;
     }
 

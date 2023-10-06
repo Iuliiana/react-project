@@ -1,6 +1,10 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import {
+    getArticleDetailsError,
+    getArticleDetailsIsLoading,
+} from '@/entities/Article';
 import { RatingCard } from '@/entities/Rating';
 import { getUserAuthData } from '@/entities/User';
 import { ToggleFeatureFlag } from '@/shared/lib/features';
@@ -26,6 +30,8 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
     });
     const rate = data?.[0];
     const [setArticleRate] = useSetArticleRateMutation();
+    const isLoadingArticleDetail = useSelector(getArticleDetailsIsLoading);
+    const errorArticleDetail = useSelector(getArticleDetailsError);
 
     const handleSendForm = useCallback(
         (stars: number, text?: string) => {
@@ -56,6 +62,10 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
         },
         [handleSendForm],
     );
+
+    if (!isLoadingArticleDetail && errorArticleDetail) {
+        return null;
+    }
 
     if (isLoading) {
         return (

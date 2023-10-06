@@ -1,4 +1,5 @@
 import { memo, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
@@ -43,7 +44,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     const isLoading = useSelector(getProfileIsLoading);
     const readonly = useSelector(getProfileReadonly);
     const { validateErrors, errorsMap } = useProfileCardError();
-    // const { t } = useTranslation('profile');
+    const { t } = useTranslation('profile');
 
     useInitialEffect(() => {
         if (id) {
@@ -128,12 +129,15 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
         [dispatch],
     );
 
-    // if (!data && !isLoading) {
-    //     return <Text align="center" title={t('Профиль не найден')} />;
-    // }
-    // fixme обработать ошибку когда профиль не найден
+    if (error && !isLoading) {
+        return <Text align="center" title={t('Профиль не найден')} />;
+    }
+
     return (
-        <DynamicModuleLoader asyncReducers={asyncReducers} removeAfterUnmount>
+        <DynamicModuleLoader
+            asyncReducers={asyncReducers}
+            removeAfterUnmount={false}
+        >
             <EditableProfileCardHeader
                 isLoading={isLoading}
                 avatar={data?.avatar}

@@ -1,6 +1,10 @@
 import React, { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import {
+    getArticleDetailsError,
+    getArticleDetailsIsLoading,
+} from '@/entities/Article';
 import { CommentList } from '@/entities/Comment';
 import { AddCommentForm } from '@/features/AddCommentForm';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
@@ -29,6 +33,8 @@ export const ArticleDetailsComments = memo(
             getArticleDetailsCommentsIsLoading,
         );
         const commentsList = useSelector(getArticleComments.selectAll);
+        const isLoadingArticleDetail = useSelector(getArticleDetailsIsLoading);
+        const errorArticleDetail = useSelector(getArticleDetailsError);
 
         useInitialEffect(() => {
             dispatch(fetchCommentsByArticleId(id));
@@ -40,6 +46,10 @@ export const ArticleDetailsComments = memo(
             },
             [dispatch],
         );
+
+        if (!isLoadingArticleDetail && errorArticleDetail) {
+            return null;
+        }
 
         return (
             <VStack
