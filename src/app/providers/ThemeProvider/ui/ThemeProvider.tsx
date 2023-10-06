@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { useJsonSettings } from '@/entities/User';
 import { LOCAL_STORAGE_THEME_KEY } from '@/shared/const/localstorage';
 import { Theme } from '@/shared/const/theme';
 import { ThemeContext, ThemeContextProps } from '@/shared/context/ThemeContext';
@@ -13,21 +12,20 @@ interface ThemeProviderlProps {
 }
 const ThemeProvider: React.FC<ThemeProviderlProps> = (props) => {
     const { initialTheme, children } = props;
-    const { theme: defaultTheme } = useJsonSettings();
     const [isThemeInited, setThemeInited] = useState(false);
 
     const [theme, setTheme] = useState<Theme>(
-        initialTheme || fallbackTheme || defaultTheme || Theme.LIGHT,
+        initialTheme || fallbackTheme || Theme.LIGHT,
     );
 
     useEffect(() => {
         if (__PROJECT__ !== 'storybook') {
-            if (!isThemeInited && defaultTheme) {
-                setTheme(defaultTheme);
+            if (!isThemeInited && initialTheme) {
+                setTheme(initialTheme);
                 setThemeInited(true);
             }
         }
-    }, [defaultTheme, isThemeInited]);
+    }, [initialTheme, isThemeInited]);
 
     useEffect(() => {
         document.body.className = theme;

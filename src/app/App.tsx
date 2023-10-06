@@ -11,6 +11,7 @@ import { PageLoader } from '@/widgets/PageLoader';
 import { Sidebar } from '@/widgets/Sidebar';
 import { useToolbarByUrl } from './lib/useToolbarByUrl';
 import { AppRouter } from './providers/router';
+import { withTheme } from './providers/ThemeProvider/ui/withTheme';
 
 const App = () => {
     const dispatch = useAppDispatch();
@@ -66,4 +67,4 @@ const App = () => {
         />
     );
 };
-export default App;
+export default withTheme(App);

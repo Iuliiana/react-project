@@ -1,10 +1,10 @@
 import { addDecorator } from '@storybook/react';
-import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
-import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
-import { Theme } from '@/shared/const/theme';
+import { FeatureFlagDecorator } from '../../src/shared/configs/storybook/FeatureFlagDecorator';
+import { RouterDecorator } from '../../src/shared/configs/storybook/RouterDecorator';
 import { StyleDecorator } from '../../src/shared/configs/storybook/StyleDecorator';
 import { SuspenseDecorator } from '../../src/shared/configs/storybook/SuspenseDecorator';
-// import { RouterDecorator } from '../../src/shared/configs/storybook/RouterDecorator';
+import { ThemeDecorator } from '../../src/shared/configs/storybook/ThemeDecorator';
+import { Theme } from '../../src/shared/const/theme';
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -29,17 +29,6 @@ export const parameters = {
 
 addDecorator(StyleDecorator);
 addDecorator(ThemeDecorator(Theme.LIGHT));
-addDecorator(
-    StoreDecorator({
-        user: {
-            authData: {
-                jsonSettings: {
-                    theme: Theme.LIGHT,
-                    isVisitedArticlesPage: true,
-                },
-            },
-        },
-    }),
-);
-// addDecorator(RouterDecorator());
+addDecorator(RouterDecorator());
 addDecorator(SuspenseDecorator);
+addDecorator(FeatureFlagDecorator({}));
