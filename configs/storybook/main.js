@@ -1,7 +1,5 @@
 module.exports = {
-    stories: [
-        '../../src/**/*.stories.@(js|jsx|ts|tsx)',
-    ],
+    stories: ['../../src/**/*.stories.@(js|jsx|ts|tsx)'],
     addons: [
         '@storybook/addon-links',
         {
@@ -14,6 +12,7 @@ module.exports = {
         'storybook-addon-mock',
         'storybook-addon-themes',
     ],
+    staticDirs: ['../../public', '../../static'],
     framework: '@storybook/react',
     core: {
         builder: '@storybook/builder-webpack5',

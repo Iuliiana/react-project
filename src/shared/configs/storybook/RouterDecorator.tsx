@@ -8,7 +8,7 @@ interface RouterDecoratorProps {
 }
 export const RouterDecorator =
     (params?: RouterDecoratorProps) => (StoryComponent: Story) => {
-        if (!params) {
+        if (!params?.path) {
             return (
                 <BrowserRouter>
                     <StoryComponent />

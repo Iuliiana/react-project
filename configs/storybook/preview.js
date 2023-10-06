@@ -4,7 +4,10 @@ import { RouterDecorator } from '../../src/shared/configs/storybook/RouterDecora
 import { StyleDecorator } from '../../src/shared/configs/storybook/StyleDecorator';
 import { SuspenseDecorator } from '../../src/shared/configs/storybook/SuspenseDecorator';
 import { ThemeDecorator } from '../../src/shared/configs/storybook/ThemeDecorator';
+import { withI18next } from '../../src/shared/configs/storybook/withI18next';
 import { Theme } from '../../src/shared/const/theme';
+// eslint-disable-next-line
+import i18n from '../../src/shared/configs/i18n/i18n.ts';
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -30,5 +33,6 @@ export const parameters = {
 addDecorator(StyleDecorator);
 addDecorator(ThemeDecorator(Theme.LIGHT));
 addDecorator(RouterDecorator());
+addDecorator(withI18next);
 addDecorator(SuspenseDecorator);
 addDecorator(FeatureFlagDecorator({}));
