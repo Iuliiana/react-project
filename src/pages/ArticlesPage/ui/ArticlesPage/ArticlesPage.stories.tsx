@@ -6,6 +6,7 @@ import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import ArticlesPage from './ArticlesPage';
+import { articles } from '../../lib/mock/articles';
 
 export default {
     title: 'pages/ArticlesPage/ArticlesPage',
@@ -18,6 +19,8 @@ export default {
             user: {
                 authData: user,
             },
+            // @ts-ignore
+            articlesPage: articles,
         }),
     ],
 } as ComponentMeta<typeof ArticlesPage>;
