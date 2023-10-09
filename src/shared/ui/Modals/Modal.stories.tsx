@@ -1,11 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { NewDesignDecorator } from '@/shared/configs/storybook/NewDesignDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { Modal } from './Modal';
 
 export default {
-    title: 'shared/deprecated/Modal',
+    title: 'shared/Modal',
     component: Modal,
     argTypes: {},
     args: {
@@ -23,3 +24,17 @@ ModalPrimary.args = {};
 export const ModalPrimaryDark = Template.bind({});
 ModalPrimaryDark.args = {};
 ModalPrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const ModalPrimaryRedesigned = Template.bind({});
+ModalPrimaryRedesigned.args = {};
+ModalPrimaryRedesigned.decorators = [
+    NewDesignDecorator,
+    ThemeDecorator(Theme.LIGHT),
+];
+
+export const ModalPrimaryDarkRedesigned = Template.bind({});
+ModalPrimaryDarkRedesigned.args = {};
+ModalPrimaryDarkRedesigned.decorators = [
+    NewDesignDecorator,
+    ThemeDecorator(Theme.DARK),
+];

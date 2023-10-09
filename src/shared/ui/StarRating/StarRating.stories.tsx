@@ -5,7 +5,7 @@ import { Theme } from '@/shared/const/theme';
 import { StarRating } from './StarRating';
 
 export default {
-    title: 'shared/deprecated/StarRating',
+    title: 'shared/StarRating',
     component: StarRating,
     argTypes: {},
     args: {},

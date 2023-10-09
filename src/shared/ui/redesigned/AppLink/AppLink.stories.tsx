@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { AppLink } from './AppLink';
@@ -13,7 +12,7 @@ export default {
         to: '/',
         children: 'Test',
     },
-    decorators: [RouterDecorator()],
+    decorators: [],
 } as ComponentMeta<typeof AppLink>;
 
 const Template: ComponentStory<typeof AppLink> = (args) => (
@@ -41,3 +40,14 @@ RedDark.args = {
     variant: 'red',
 };
 RedDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Outline = Template.bind({});
+Outline.args = {
+    variant: 'outline',
+};
+
+export const OutlineDark = Template.bind({});
+OutlineDark.args = {
+    variant: 'outline',
+};
+OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];

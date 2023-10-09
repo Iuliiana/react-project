@@ -1,11 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import DefaultUserAvatar from '@/shared/assets/icons/carbon_user-avatar-filled.svg';
+import Image from '@/shared/assets/pic/test/test-avatar.jpg';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { AppImage } from './AppImage';
-import { Icon } from '../deprecated/Icon';
-import { Skeleton } from '../deprecated/Skeleton';
+import { Icon } from '../redesigned/Icon';
+import { Skeleton } from '../redesigned/Skeleton';
 
 export default {
     title: 'shared/AppImage',
@@ -14,6 +15,9 @@ export default {
     args: {
         errorFallback: <Icon Svg={DefaultUserAvatar} />,
         isLoadingFallback: <Skeleton height={50} width={50} radius="50%" />,
+        src: Image,
+        width: 50,
+        height: 50,
     },
 } as ComponentMeta<typeof AppImage>;
 

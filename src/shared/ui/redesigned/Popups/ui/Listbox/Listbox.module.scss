@@ -30,6 +30,8 @@
 }
 
 .ListboxItem {
+    color: var(--text-color);
+
     &.active {
         background-color: var(--light-bg);
         color: var(--accent);

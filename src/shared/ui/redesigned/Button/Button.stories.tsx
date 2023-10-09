@@ -65,40 +65,6 @@ SquareMDark.args = {
 };
 SquareMDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const SquareL = Template.bind({});
-SquareL.args = {
-    children: '>',
-    variant: 'clear',
-    square: true,
-    size: 'l',
-};
-
-export const SquareLDark = Template.bind({});
-SquareLDark.args = {
-    children: '>',
-    variant: 'clear',
-    square: true,
-    size: 'l',
-};
-SquareLDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const SquareXL = Template.bind({});
-SquareXL.args = {
-    children: '>',
-    variant: 'clear',
-    square: true,
-    size: 'xl',
-};
-
-export const SquareXLDark = Template.bind({});
-SquareXLDark.args = {
-    children: '>',
-    variant: 'clear',
-    square: true,
-    size: 'xl',
-};
-SquareXLDark.decorators = [ThemeDecorator(Theme.DARK)];
-
 export const Disabled = Template.bind({});
 Disabled.args = {
     variant: 'clear',

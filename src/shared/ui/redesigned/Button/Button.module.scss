@@ -109,7 +109,7 @@
 
 .disabled,
 .Button:disabled {
-    // or   opacity: 0.5;
     //  color: var(--light-bg);
+    opacity: 0.8;
     fill: var(--light-bg);
 }

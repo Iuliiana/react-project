@@ -32,6 +32,7 @@ export default {
             },
         ],
         currentTab: 'SCIENCE',
+        direction: 'column',
     },
 } as ComponentMeta<typeof Tabs>;
 

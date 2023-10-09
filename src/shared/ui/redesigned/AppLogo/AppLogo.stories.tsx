@@ -5,7 +5,7 @@ import { Theme } from '@/shared/const/theme';
 import { AppLogo } from './AppLogo';
 
 export default {
-    title: 'STORIES_DIR/AppLogo',
+    title: 'shared/AppLogo',
     component: AppLogo,
     argTypes: {},
     args: {},
