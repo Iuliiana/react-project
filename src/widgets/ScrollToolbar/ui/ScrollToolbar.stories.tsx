@@ -5,7 +5,7 @@ import { Theme } from '@/shared/const/theme';
 import { ScrollToolbar } from './ScrollToolbar';
 
 export default {
-    title: 'STORIES_DIR/ScrollToolbar',
+    title: 'widgets/ScrollToolbar',
     component: ScrollToolbar,
     argTypes: {},
     args: {},

@@ -1,14 +1,21 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ArticleSortField, ArticleType } from '@/entities/Article';
+import { NewDesignDecorator } from '@/shared/configs/storybook/NewDesignDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { ArticlesFilters } from './ArticlesFilters';
 
 export default {
-    title: 'STORIES_DIR/ArticlesFilters',
+    title: 'widgets/ArticlesFilters',
     component: ArticlesFilters,
     argTypes: {},
-    args: {},
+    args: {
+        currentOrder: 'desc',
+        currentSort: ArticleSortField.VIEWS,
+        currentType: ArticleType.ECONOMY,
+    },
+    decorators: [NewDesignDecorator],
 } as ComponentMeta<typeof ArticlesFilters>;
 
 const Template: ComponentStory<typeof ArticlesFilters> = (args) => (

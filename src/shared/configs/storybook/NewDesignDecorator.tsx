@@ -5,7 +5,7 @@ import { getAllFeaturesFlags } from '@/shared/lib/features/lib/setGetFeaturesFla
 export const NewDesignDecorator = (StoryComponent: Story) => {
     setFeaturesFlags({ ...getAllFeaturesFlags(), isAppRedesigned: true });
     return (
-        <div className="app_redesigned">
+        <div className="app-redesigned">
             <StoryComponent />
         </div>
     );
