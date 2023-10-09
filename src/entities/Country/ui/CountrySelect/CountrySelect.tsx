@@ -3,6 +3,7 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ToggleFeatureFlag } from '@/shared/lib/features';
+import { DropdownDirection } from '@/shared/lib/types/ui';
 import { Listbox as ListboxDeprecated } from '@/shared/ui/deprecated/Popups';
 import { Listbox } from '@/shared/ui/redesigned/Popups';
 import { Country } from '../../model/types/country';
@@ -11,8 +12,8 @@ interface CountrySelectProps {
     className?: string;
     readonly?: boolean;
     onChange?: (value: Country) => void;
-
     value?: Country;
+    direction?: DropdownDirection;
 }
 
 const countryList = [
@@ -22,7 +23,13 @@ const countryList = [
     { value: Country.Canada, text: Country.Canada },
 ];
 export const CountrySelect = memo((props: CountrySelectProps) => {
-    const { className, onChange, readonly, value } = props;
+    const {
+        className,
+        onChange,
+        readonly,
+        value,
+        direction = 'top right',
+    } = props;
     const { t } = useTranslation();
 
     const onChangeHandler = useCallback(
@@ -39,7 +46,7 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
         onChange: onChangeHandler,
         label: t('Страна'),
         value,
-        direction: 'top right' as const,
+        direction,
         defaultValue: value,
     };
 

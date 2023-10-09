@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import ViewsIcon from '@/shared/assets/icons/new/View-new.svg';
 import { getRouteArticlesDetails } from '@/shared/const/route';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppImage } from '@/shared/ui/AppImage';
 import { AppLink } from '@/shared/ui/redesigned/AppLink';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
@@ -22,7 +23,7 @@ interface ArticleListItemRedesignedProps extends ArticleItemProps {
 
 export const ArticleListItemRedesigned = memo(
     (props: ArticleListItemRedesignedProps) => {
-        const { view, target, index, onSaveIndex, article } = props;
+        const { view, target, index, onSaveIndex, article, className } = props;
         const { t } = useTranslation();
         const onSaveIndexHandler = () => {
             onSaveIndex?.(index);
@@ -43,8 +44,10 @@ export const ArticleListItemRedesigned = memo(
             return (
                 <Card
                     data-testid="ArticleItem"
-                    className={cls.ArticleListItemTypeList}
                     variant="dark"
+                    className={classNames(cls.ArticleListItemTypeList, {}, [
+                        className,
+                    ])}
                 >
                     <VStack gap="16" align="start">
                         <VStack gap="8" align="start">
@@ -123,7 +126,10 @@ export const ArticleListItemRedesigned = memo(
         }
 
         return (
-            <Card className={cls.ArticleItemGridCard} padding="0">
+            <Card
+                className={classNames(cls.ArticleItemGridCard, {}, [className])}
+                padding="0"
+            >
                 <AppLink
                     to={getRouteArticlesDetails(article.id)}
                     target={target}

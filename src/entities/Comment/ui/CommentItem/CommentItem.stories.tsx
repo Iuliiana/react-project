@@ -1,5 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { NewDesignDecorator } from '@/shared/configs/storybook/NewDesignDecorator';
 import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
@@ -49,3 +50,17 @@ CommentItemIsLoadingDark.args = {
     isLoading: true,
 };
 CommentItemIsLoadingDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const CommentItemNormalRedesigned = Template.bind({});
+CommentItemNormalRedesigned.args = {};
+CommentItemNormalRedesigned.decorators = [
+    NewDesignDecorator,
+    ThemeDecorator(Theme.LIGHT),
+];
+
+export const CommentItemDarkRedesigned = Template.bind({});
+CommentItemDarkRedesigned.args = {};
+CommentItemDarkRedesigned.decorators = [
+    NewDesignDecorator,
+    ThemeDecorator(Theme.DARK),
+];

@@ -3,12 +3,15 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { ArticleDetailsContentDeprecated } from './ArticleDetailsContentDeprecated';
+import { articleData } from '../../../model/tests/articleData';
 
 export default {
-    title: 'STORIES_DIR/ArticleDetailsContentDeprecated',
+    title: 'entities/Article/ArticleDetals/ArticleDetailsContentDeprecated',
     component: ArticleDetailsContentDeprecated,
     argTypes: {},
-    args: {},
+    args: {
+        data: articleData,
+    },
 } as ComponentMeta<typeof ArticleDetailsContentDeprecated>;
 
 const Template: ComponentStory<typeof ArticleDetailsContentDeprecated> = (

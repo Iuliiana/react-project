@@ -1,5 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { NewDesignDecorator } from '@/shared/configs/storybook/NewDesignDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { CurrencySelect } from './CurrencySelect';
@@ -11,6 +12,7 @@ export default {
     argTypes: {},
     args: {
         value: Currency.EUR,
+        direction: 'bottom right',
     },
 } as ComponentMeta<typeof CurrencySelect>;
 
@@ -24,3 +26,17 @@ CurrencySelectPrimary.args = {};
 export const CurrencySelectPrimaryDark = Template.bind({});
 CurrencySelectPrimaryDark.args = {};
 CurrencySelectPrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const CurrencySelectPrimaryRedesigned = Template.bind({});
+CurrencySelectPrimaryRedesigned.args = {};
+CurrencySelectPrimaryRedesigned.decorators = [
+    NewDesignDecorator,
+    ThemeDecorator(Theme.LIGHT),
+];
+
+export const CurrencySelectPrimaryDarkRedesigned = Template.bind({});
+CurrencySelectPrimaryDarkRedesigned.args = {};
+CurrencySelectPrimaryDarkRedesigned.decorators = [
+    NewDesignDecorator,
+    ThemeDecorator(Theme.DARK),
+];

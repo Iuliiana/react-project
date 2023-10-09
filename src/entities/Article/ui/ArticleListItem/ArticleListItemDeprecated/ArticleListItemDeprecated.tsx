@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import ViewsIcon from '@/shared/assets/icons/view.svg';
 import { getRouteArticlesDetails } from '@/shared/const/route';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppImage } from '@/shared/ui/AppImage';
 import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
 import { Avatar } from '@/shared/ui/deprecated/Avatar';
@@ -23,7 +24,7 @@ interface ArticleListItemDeprecatedProps extends ArticleItemProps {
 
 export const ArticleListItemDeprecated = memo(
     (props: ArticleListItemDeprecatedProps) => {
-        const { view, target, index, onSaveIndex, article } = props;
+        const { view, target, index, onSaveIndex, article, className } = props;
         const { t } = useTranslation();
         const onSaveIndexHandler = () => {
             onSaveIndex?.(index);
@@ -37,7 +38,9 @@ export const ArticleListItemDeprecated = memo(
             return (
                 <Card
                     data-testid="ArticleItem"
-                    className={cls.ArticleListItemTypeList}
+                    className={classNames(cls.ArticleListItemTypeList, {}, [
+                        className,
+                    ])}
                 >
                     <div className={cls.header}>
                         <div className={cls.headerInfo}>
@@ -113,7 +116,9 @@ export const ArticleListItemDeprecated = memo(
         }
 
         return (
-            <Card className={cls.ArticleItemGridCard}>
+            <Card
+                className={classNames(cls.ArticleItemGridCard, {}, [className])}
+            >
                 <AppLink
                     to={getRouteArticlesDetails(article.id)}
                     target={target}

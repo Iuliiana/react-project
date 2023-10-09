@@ -1,5 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { NewDesignDecorator } from '@/shared/configs/storybook/NewDesignDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { NotificationItem } from './NotificationItem';
@@ -40,3 +41,21 @@ NotificationItemHrefDark.args = {
     item: notificationItemHref,
 };
 NotificationItemHrefDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const NotificationItemNormalRedesigned = Template.bind({});
+NotificationItemNormalRedesigned.args = {
+    item: notificationItem,
+};
+NotificationItemNormalRedesigned.decorators = [
+    NewDesignDecorator,
+    ThemeDecorator(Theme.LIGHT),
+];
+
+export const NotificationItemDarkRedesigned = Template.bind({});
+NotificationItemDarkRedesigned.args = {
+    item: notificationItem,
+};
+NotificationItemDarkRedesigned.decorators = [
+    NewDesignDecorator,
+    ThemeDecorator(Theme.DARK),
+];

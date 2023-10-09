@@ -2,13 +2,13 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
-import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
+import { NewDesignDecorator } from '@/shared/configs/storybook/NewDesignDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { ProfileCardRedesigned } from './ProfileCardRedesigned';
 
 export default {
-    title: 'entities/ProfileCardRedesigned',
+    title: 'entities/ProfileCard/ProfileCardRedesigned',
     component: ProfileCardRedesigned,
     argTypes: {},
     args: {},
@@ -32,6 +32,7 @@ ProfileCardRedesignedNormal.args = {
     },
     readonly: true,
 };
+ProfileCardRedesignedNormal.decorators = [NewDesignDecorator];
 
 export const ProfileCardRedesignedDark = Template.bind({});
 ProfileCardRedesignedDark.args = {
@@ -47,18 +48,7 @@ ProfileCardRedesignedDark.args = {
     },
     readonly: true,
 };
-ProfileCardRedesignedDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const ProfileCardRedesignedLoading = Template.bind({});
-ProfileCardRedesignedLoading.args = {
-    data: undefined,
-    isLoading: true,
-};
-ProfileCardRedesignedLoading.decorators = [StoreDecorator({})];
-
-export const ProfileCardRedesignedError = Template.bind({});
-ProfileCardRedesignedError.args = {
-    data: undefined,
-    error: 'true',
-};
-ProfileCardRedesignedError.decorators = [StoreDecorator({})];
+ProfileCardRedesignedDark.decorators = [
+    NewDesignDecorator,
+    ThemeDecorator(Theme.DARK),
+];

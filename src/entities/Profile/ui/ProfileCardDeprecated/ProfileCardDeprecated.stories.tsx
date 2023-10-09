@@ -6,7 +6,7 @@ import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { ProfileCardDeprecated } from './ProfileCardDeprecated';
 
 export default {
-    title: 'entities/ProfileCardDeprecated',
+    title: 'entities/ProfileCard/ProfileCardDeprecated',
     component: ProfileCardDeprecated,
     argTypes: {},
     args: {},
@@ -47,17 +47,3 @@ ProfileCardDeprecatedEditState.args = {
     readonly: false,
 };
 ProfileCardDeprecatedEditState.decorators = [StoreDecorator({})];
-
-export const ProfileCardDeprecatedLoading = Template.bind({});
-ProfileCardDeprecatedLoading.args = {
-    data: undefined,
-    isLoading: true,
-};
-ProfileCardDeprecatedLoading.decorators = [StoreDecorator({})];
-
-export const ProfileCardDeprecatedError = Template.bind({});
-ProfileCardDeprecatedError.args = {
-    data: undefined,
-    error: 'true',
-};
-ProfileCardDeprecatedError.decorators = [StoreDecorator({})];
