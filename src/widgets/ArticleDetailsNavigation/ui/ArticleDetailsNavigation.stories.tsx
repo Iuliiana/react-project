@@ -1,6 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { NewDesignDecorator } from '@/shared/configs/storybook/NewDesignDecorator';
+import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
 import { StickyLayoutDecorator } from '@/shared/configs/storybook/StickyLayoutDecorator';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
@@ -17,7 +18,7 @@ export default {
         views: 150,
         username: 'user',
     },
-    decorators: [StoreDecorator({})],
+    decorators: [StoreDecorator({}), RouterDecorator()],
 } as ComponentMeta<typeof ArticleDetailsNavigation>;
 
 const Template: ComponentStory<typeof ArticleDetailsNavigation> = (args) => (

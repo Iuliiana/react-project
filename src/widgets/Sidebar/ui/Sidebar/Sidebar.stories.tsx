@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { MainLayoutDecorator } from '@/shared/configs/storybook/MainLayoutDecorator';
 import { NewDesignDecorator } from '@/shared/configs/storybook/NewDesignDecorator';
+import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
@@ -10,7 +11,7 @@ export default {
     title: 'widgets/Sidebar',
     component: Sidebar,
     argTypes: {},
-    decorators: [StoreDecorator({})],
+    decorators: [StoreDecorator({}), RouterDecorator()],
 } as ComponentMeta<typeof Sidebar>;
 
 const Template: ComponentStory<typeof Sidebar> = (args) => (

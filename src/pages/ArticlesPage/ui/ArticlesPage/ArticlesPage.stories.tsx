@@ -1,6 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { user } from '@/pages/ArticleDetailsPage/testing';
 import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
+import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import ArticlesPage from './ArticlesPage';
@@ -10,7 +12,14 @@ export default {
     component: ArticlesPage,
     argTypes: {},
     args: {},
-    decorators: [RouterDecorator()],
+    decorators: [
+        RouterDecorator(),
+        StoreDecorator({
+            user: {
+                authData: user,
+            },
+        }),
+    ],
 } as ComponentMeta<typeof ArticlesPage>;
 
 const Template: ComponentStory<typeof ArticlesPage> = (args) => (

@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { MainLayoutDecorator } from '@/shared/configs/storybook/MainLayoutDecorator';
 import { NewDesignDecorator } from '@/shared/configs/storybook/NewDesignDecorator';
+import { RouterDecorator } from '@/shared/configs/storybook/RouterDecorator';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
@@ -10,7 +11,7 @@ export default {
     title: 'widgets/NavBar',
     component: NavBar,
     argTypes: {},
-    decorators: [],
+    decorators: [RouterDecorator()],
 } as ComponentMeta<typeof NavBar>;
 
 const Template: ComponentStory<typeof NavBar> = (args) => <NavBar {...args} />;

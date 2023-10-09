@@ -27,7 +27,6 @@ const Template: ComponentStory<typeof ProfilePage> = (args) => (
 );
 
 export const ProfilePagePrimary = Template.bind({});
-ProfilePagePrimary.args = {};
 ProfilePagePrimary.decorators = [
     StoreDecorator({
         editableProfileCard: {
