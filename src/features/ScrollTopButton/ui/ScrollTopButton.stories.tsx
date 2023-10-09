@@ -1,11 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { NewDesignDecorator } from '@/shared/configs/storybook/NewDesignDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { ScrollTopButton } from './ScrollTopButton';
 
 export default {
-    title: 'STORIES_DIR/ScrollTopButton',
+    title: 'features/ScrollTopButton',
     component: ScrollTopButton,
     argTypes: {},
     args: {},
@@ -17,7 +18,14 @@ const Template: ComponentStory<typeof ScrollTopButton> = (args) => (
 
 export const ScrollTopButtonNormal = Template.bind({});
 ScrollTopButtonNormal.args = {};
+ScrollTopButtonNormal.decorators = [
+    NewDesignDecorator,
+    ThemeDecorator(Theme.LIGHT),
+];
 
 export const ScrollTopButtonDark = Template.bind({});
 ScrollTopButtonDark.args = {};
-ScrollTopButtonDark.decorators = [ThemeDecorator(Theme.DARK)];
+ScrollTopButtonDark.decorators = [
+    NewDesignDecorator,
+    ThemeDecorator(Theme.DARK),
+];

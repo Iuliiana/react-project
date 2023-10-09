@@ -6,7 +6,7 @@ import { Theme } from '@/shared/const/theme';
 import LoginForm from './LoginForm';
 
 export default {
-    title: 'features/LoginForm',
+    title: 'features/LoginForm/LoginForm',
     component: LoginForm,
     argTypes: {},
     args: {},
@@ -55,22 +55,5 @@ LoginFormErrorDark.decorators = [
             password: 'rrr',
             error: 'Введен неверный логин / пароль',
         },
-    }),
-];
-
-export const LoginFormLoading = Template.bind({});
-LoginFormLoading.args = {};
-LoginFormLoading.decorators = [
-    StoreDecorator({
-        loginForm: { username: 'admin', password: 'sdsd', isLoading: true },
-    }),
-];
-
-export const LoginFormLoadingDark = Template.bind({});
-LoginFormLoadingDark.args = {};
-LoginFormLoadingDark.decorators = [
-    ThemeDecorator(Theme.DARK),
-    StoreDecorator({
-        loginForm: { username: 'admin', password: 'rrr', isLoading: true },
     }),
 ];

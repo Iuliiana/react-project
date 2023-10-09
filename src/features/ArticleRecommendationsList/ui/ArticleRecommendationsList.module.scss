@@ -1,15 +1,15 @@
 .ArticleRecommendationsList {
     margin-bottom: 2rem;
-}
 
-.recommendationsList {
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    padding: 1rem 0;
-    width: 100%;
+    & .recommendations.recommendationsList {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        padding: 1rem 0;
+        width: 100%;
 
-    & > div {
-        flex: 1 1 0;
-        width: 0;
+        & > div {
+            width: 100%;
+            min-width: 200px;
+        }
     }
 }

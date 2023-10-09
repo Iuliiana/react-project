@@ -6,7 +6,7 @@ import { Theme } from '@/shared/const/theme';
 import ArticleRating from './ArticleRating';
 
 export default {
-    title: 'features/ArticleRating',
+    title: 'features/Article/ArticleRating',
     component: ArticleRating,
     argTypes: {},
     args: {},

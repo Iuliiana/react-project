@@ -6,7 +6,7 @@ import { Theme } from '@/shared/const/theme';
 import ProfileRating from './ProfileRating';
 
 export default {
-    title: 'features/ProfileRating',
+    title: 'features/ProfileCard/ProfileRating',
     component: ProfileRating,
     argTypes: {},
     args: {

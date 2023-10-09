@@ -4,8 +4,8 @@ import { ArticleList, ArticleView } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ToggleFeatureFlag } from '@/shared/lib/features';
 import { Loader } from '@/shared/ui/deprecated/Loader';
-import { Text } from '@/shared/ui/deprecated/Text';
 import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { VStack } from '@/shared/ui/Stack';
 import cls from './ArticleRecommendationsList.module.scss';
 import { useGetArticleRecommendationsQuery } from '../api/aritcleRecommendationsApi';
@@ -82,7 +82,9 @@ export const ArticleRecommendationsList = memo(
                     isLoading={recommendationsIsLoading}
                     articles={recommendationsList}
                     view={ArticleView.GRID}
-                    className={cls.recommendationsList}
+                    className={classNames(cls.recommendationsList, {}, [
+                        cls.recommendations,
+                    ])}
                     target="_blank"
                 />
             </VStack>

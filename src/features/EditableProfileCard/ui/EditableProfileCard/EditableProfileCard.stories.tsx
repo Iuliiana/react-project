@@ -1,12 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Country } from '@/entities/Country';
-import { Currency } from '@/entities/Currency';
+import { NewDesignDecorator } from '@/shared/configs/storybook/NewDesignDecorator';
 import { StoreDecorator } from '@/shared/configs/storybook/StoreDecorator';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { EditableProfileCard } from './EditableProfileCard';
 import { ProfileErrorsCode } from '../../model/consts/profileErrorsCodeConsts';
+import { testProfile } from '../../model/test/testProfile';
 
 export default {
     title: 'features/ProfileCard/EditableProfileCard',
@@ -20,17 +20,6 @@ export default {
     },
 } as ComponentMeta<typeof EditableProfileCard>;
 
-const data = {
-    first: 'Джейн',
-    lastname: 'Доу',
-    age: 28,
-    currency: Currency.USD,
-    country: Country.Canada,
-    city: 'Moscow',
-    username: 'admin',
-    avatar: 'https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png',
-};
-
 const Template: ComponentStory<typeof EditableProfileCard> = (args) => (
     <EditableProfileCard {...args} />
 );
@@ -40,7 +29,7 @@ EditableProfileCardNormal.args = {};
 EditableProfileCardNormal.decorators = [
     StoreDecorator({
         editableProfileCard: {
-            form: data,
+            form: testProfile,
             readonly: true,
         },
     }),
@@ -52,7 +41,7 @@ EditableProfileCardDark.decorators = [
     ThemeDecorator(Theme.DARK),
     StoreDecorator({
         editableProfileCard: {
-            form: data,
+            form: testProfile,
             readonly: true,
         },
     }),
@@ -64,7 +53,7 @@ EditableProfileCardIsEdit.args = {};
 EditableProfileCardIsEdit.decorators = [
     StoreDecorator({
         editableProfileCard: {
-            form: data,
+            form: testProfile,
             readonly: false,
         },
     }),
@@ -75,7 +64,7 @@ EditableProfileCardValidationErrors.args = {};
 EditableProfileCardValidationErrors.decorators = [
     StoreDecorator({
         editableProfileCard: {
-            form: data,
+            form: testProfile,
             validationErrors: [
                 ProfileErrorsCode.INCORRECT_USERDATA,
                 ProfileErrorsCode.INCORRECT_CITY,
@@ -93,4 +82,17 @@ EditableProfileCardError.decorators = [
             error: '123',
         },
     }),
+];
+
+export const ProfileRedesignedCardNormal = Template.bind({});
+ProfileRedesignedCardNormal.args = {};
+ProfileRedesignedCardNormal.decorators = [
+    StoreDecorator({
+        editableProfileCard: {
+            form: testProfile,
+            readonly: true,
+        },
+    }),
+    NewDesignDecorator,
+    ThemeDecorator(Theme.DARK),
 ];
