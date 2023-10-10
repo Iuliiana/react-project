@@ -1,9 +1,10 @@
 import React, { memo, useState } from 'react';
 import Star from '@/shared/assets/icons/star.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { toggleFeatureFlag } from '@/shared/lib/features';
+import { ToggleFeatureFlag, toggleFeatureFlag } from '@/shared/lib/features';
 import { TestsProps } from '@/shared/lib/types/tests';
 import cls from './StarRating.module.scss';
+import { Icon as IconDeprecated } from '../deprecated/Icon/Icon';
 import { Icon } from '../redesigned/Icon/Icon';
 
 interface StarRatingProps extends TestsProps {
@@ -71,10 +72,18 @@ export const StarRating = memo((props: StarRatingProps) => {
                     onMouseLeave: onLeave,
                     onMouseEnter: onHover(starNumber),
                     onClick: onClickHandler(starNumber),
-                    'data-testid': `StarRating.${starNumber}`,
-                    'data-selected': currentStar >= starNumber,
+                    'data-testid': `${dataTestId}.${starNumber}`,
+                    'data-selected': starNumber <= currentStar,
                 };
-                return <Icon isClickable={!isSelected} {...commonProps} />;
+
+                return (
+                    <ToggleFeatureFlag
+                        feature="isAppRedesigned"
+                        on={<Icon isClickable={!isSelected} {...commonProps} />}
+                        off={<IconDeprecated {...commonProps} />}
+                        key={starNumber}
+                    />
+                );
             })}
         </div>
     );
