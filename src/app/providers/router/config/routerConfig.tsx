@@ -67,6 +67,7 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     [AppRoutes.SETTINGS]: {
         element: <SettingsPage />,
         path: getRouteSettings(),
+        authOnly: true,
     },
 
     [AppRoutes.FORBIDDEN]: {
