@@ -139,6 +139,7 @@
         "react-virtuoso": "^4.2.2"
     },
     "loki": {
+        "chromeSelector": "#app > *",
         "configurations": {
             "chrome.laptop": {
                 "target": "chrome.docker",
