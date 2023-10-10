@@ -5,7 +5,7 @@ import { ArticleView } from '../../model/consts/articleViewConst';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 
 export const getSkeletons = (view: ArticleView, className?: string) =>
-    new Array(view === ArticleView.GRID ? 15 : 5).fill(0).map((item, index) => (
+    new Array(view === ArticleView.GRID ? 9 : 3).fill(0).map((item, index) => (
         <ArticleListItemSkeleton
             // eslint-disable-next-line react/no-array-index-key
             key={index}

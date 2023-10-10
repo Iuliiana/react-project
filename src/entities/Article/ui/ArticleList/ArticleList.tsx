@@ -112,7 +112,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         if (isLoading && articles?.length === 0) {
             return (
                 <div
-                    className={classNamePage}
+                    className={`${classNamePage} ${cls.ArticleListNormal}`}
                     data-testid="ArticleList.Virtuoso"
                 >
                     {getSkeletons(view, cls.ArticleListItem)}
@@ -174,7 +174,10 @@ export const ArticleList = memo((props: ArticleListProps) => {
         );
     }
     return (
-        <div className={classNamePage} data-testid="ArticleList.Normal">
+        <div
+            className={`${classNamePage} ${cls.ArticleListNormal}`}
+            data-testid="ArticleList.Normal"
+        >
             {Boolean(articles?.length) &&
                 articles.map((article) => renderArticles(article))}
             {isLoading && getSkeletons(view)}

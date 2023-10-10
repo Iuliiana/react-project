@@ -17,15 +17,25 @@
     }
 }
 
-.ArticleList.grid:not(.ArticleListGrid) .ArticleListItem,
+.ArticleListNormal {
+    height: calc(100vh - var(--head-articles-height));
+    overflow-y: scroll;
+}
+
+.ArticleListNormal:not(.list) .ArticleListItem,
 .ArticleListGridItem {
     width: calc((100% - 2rem) / 3);
     height: 22rem;
 }
 
+.ArticleListRedesigned.ArticleListNormal {
+    height: auto;
+}
+
 .ArticleListRedesigned.grid:not(.ArticleListGrid) .ArticleListItem,
+.ArticleListRedesigned.grid.ArticleListNormal .ArticleListItem,
 .ArticleListRedesigned .ArticleListGridItem {
-    width: 236px;
+    width: 230px;
     max-height: 346px;
     overflow: hidden;
 }
