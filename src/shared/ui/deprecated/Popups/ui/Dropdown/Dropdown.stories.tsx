@@ -1,5 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta, Story } from '@storybook/react';
+import AvatariPicTest from 'shared/assets/pic/test/test-avatar.jpg';
 import { ThemeDecorator } from '@/shared/configs/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 import { Dropdown } from './Dropdown';
@@ -11,12 +12,7 @@ export default {
     component: Dropdown,
     argTypes: {},
     args: {
-        btn: (
-            <Avatar
-                size={30}
-                pic="https://cs13.pikabu.ru/avatars/658/x658267-1013849002.png"
-            />
-        ),
+        btn: <Avatar size={30} pic={AvatariPicTest} />,
         direction: 'bottom left',
         items: [
             {
